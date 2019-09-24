@@ -15,6 +15,7 @@
 |visiteur|Pouvoir contacter l'agence|pouvoir poser mes questions|
 |visiteur|me connecter|avoir accès aux parties admin du site|
 
+| En tant que | Je veux | Afin de (optionnel) |
 |--|--|--|
 |adm|pouvoir me connecter à l'interface d'administration|--|
 |adm|supprimer une vidéo|--|
