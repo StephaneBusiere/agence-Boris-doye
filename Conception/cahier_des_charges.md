@@ -124,18 +124,17 @@ Nous souhaitons afficher sur le site ces contenus :
 Films et vidéos
 Photos
 Textes de présentations
-Article
+Articles
 
 # * Contraintes techniques * 
 
 Nous aimerions une interface administrateur codées en java script sans CMS.
 Nous souhaitons une interface utilisateur codée avec Reactjs.
+Serveur OVH.
 
 # * Planning *
 
-Pas de deadlines 
-Date de création et validation des maquettes :
-Date de création et de validation des contenus :
-date de création et de validation du site :
-Date des tests :
-date de mise en ligne :
+Date de création et validation des maquettes : 26 septembre 2019.
+Date de création et de validation du site : 17 octobre 2019.
+Date des tests : inconnue.
+Date de mise en ligne : inconnue.
