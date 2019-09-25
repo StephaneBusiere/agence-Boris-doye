@@ -32,6 +32,7 @@ Les moyens de paiements se font sur le site Vimeo.
 # * Objectifs du site * 
 
 Donner encore plus envie au visiteur d'aller voir des extraits de vidéos ou d'en acheter ainsi que de se renseigner sur mon travail et mes projets.
+Faire en sorte que le visiteur croit être sur le site d’une agence web plutôt que sur le site d’un freelance en solitaire.
 
 Pour la première version (V1):
 
@@ -96,10 +97,10 @@ Le site doit avoir une version en anglais.
 La charte graphique : 
 
 Identité visuelle de l’entreprise : 
-Codes couleurs : 
-Logo : 
-Les couleurs : 
-Les polices :
+Codes couleurs : à définir
+Logo : vous utiliserez mon logo officiel 
+Les couleurs : à définir
+Les polices :parmis d'autres la police Hoswald pourra être utilisée pour les textes
 
 Exemples de site que nous aimons : 
 https://bluemaxmedia.com/
@@ -107,7 +108,7 @@ http://www.capsusfilms.com/
 
 Animations :nous aimerions des effets de parallaxe au scroll et de transitions sur la home page
 
-Couleurs :
+
 
 # * Wireframe et maquettage *
 
