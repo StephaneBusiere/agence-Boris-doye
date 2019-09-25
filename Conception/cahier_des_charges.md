@@ -38,7 +38,17 @@ Pour la première version (V1):
 
 Nous espérons améliorer l’interface utilisateur et le design.
 
-Pouvoir modifier le contenu du site facilement grâce à une nouvelle interface administrateur.
+Pouvoir modifier le contenu du site facilement grâce à une nouvelle interface administrateur:
+- Ajouter ou modifier tout le contenu textuel de présentations.
+- Ajouter ou supprimer des photos sur toutes les pages ayant des photos.
+- Ajouter ou supprimer des vidéos sur les toutes les pages ayant des vidéos.
+- Ajouter, supprimer ou modifier des articles du blog.
+- Ajouter ou supprimer des collaborateurs sur les pages Team.
+- Ajouter ou supprimer des logos de clients sur la page client .
+- Ajouter ou supprimer de l’équipement sur la page Equipement.
+-Ajouter, modifier ou supprimer les informations de contact :Email, téléphone, adresse.
+
+Pouvoir décider des rôles des collaborateurs pour filtrer les connexions à l’interface administrateur.
 
 Pouvoir être contacté par les utilisateurs grâce à un formulaire de contact.
 
