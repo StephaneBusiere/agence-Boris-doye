@@ -4,29 +4,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
+import { Route, Switch } from 'react-router-dom';
 /**
  * Local import
  */
 import { updateInputValue } from 'src/store/reducer';
-
+import categories from 'src/data/categories';
+import posts from 'src/data/posts';
 // Composants enfants éventuels
-import ClicCounter from 'src/components/ClicCounter';
-
+import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import Main from 'src/components/Main';
 // Styles et assets
 import './app.sass';
 
-const App = ({ title, greeting, handleChange }) => (
+const App = () => (
+  
+ 
   <div id="app">
-    <h1 id="app-title">{title}</h1>
-    <input
-      type="text"
-      id="app-content"
-      value={greeting}
-      onChange={handleChange}
-    />
-    <br/>
-    <ClicCounter label="Clic-me!" />
+  <Header  />
+  <Main  />
+  <Footer  />
+    
+    
+    
+    
   </div>
 );
 
@@ -45,7 +47,7 @@ const connectionStrategies = connect(
   (state, ownProps) => {
     return {
       title: ownProps.title,
-      greeting: state.greetingMessage
+    
     };
   },
 

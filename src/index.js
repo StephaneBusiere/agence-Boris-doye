@@ -5,7 +5,7 @@ import '@babel/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 /**
  * Local import
  */
@@ -17,9 +17,9 @@ import { sideEffect } from 'src/store/reducer';
  * Code
  */
 
-const reactRootElement = <Provider store={kastore}>
-  <AppContainer title="Modèle React" />
-</Provider>;
+const reactRootElement = <Router><Provider store={kastore}>
+  <AppContainer  />
+</Provider></Router>;
 
 const renderingArea = document.querySelector('#root');
 render(reactRootElement, renderingArea);
