@@ -18,14 +18,23 @@
 | En tant que | Je veux | Afin de (optionnel) |
 |--|--|--|
 |adm|pouvoir me connecter à l'interface d'administration|--|
-|adm|supprimer une vidéo|--|
-|adm|ajouter une vidéo|--|
+|adm|visualiser toutes les vidéos (API Viméo)|--|
+|adm|supprimer une vidéo (API Viméo)|--|
+|adm|ajouter une vidéo (API Viméo)|--|
+|adm|modifier une vidéo (API Viméo)|--|
+|adm|visualiser toutes les descriptions de vidéos|--|
+|adm|supprimer la description d'une vidéo|--|
+|adm|ajouter la description d'une vidéo|--|
+|adm|modifier la description d'une vidéo|--|
+|adm|visualiser toutes les images|--|
+|adm|supprimer une image|--|
+|adm|ajouter une image|--|
+|adm|modifier une image|--|
+|adm|visualiser tous les articles du blog|--|
 |adm|supprimer un article|--|
 |adm|ajouter un article|--|
-|adm|visualiser tous les articles du blog|--|
-|adm|modifier les articles du blog|--|
-|adm|modifier la présentation du site|--|
-|adm|modifier les textes des vidéos|--|
+|adm|modifier un article|--|
+|adm|modifier les données professionnelles affichées sur le site|--|
 |superadmin|pouvoir ajouter un utilisateur (admin) de l'interface d'administration| - |
 |superadmin|pouvoir supprimer un utilisateur (admin) de l'interface d'administration| - |
 
