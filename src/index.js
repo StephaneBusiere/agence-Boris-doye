@@ -17,9 +17,9 @@ import { sideEffect } from 'src/store/reducer';
  * Code
  */
 
-const reactRootElement = <Router><Provider store={kastore}>
-  <AppContainer  />
-</Provider></Router>;
+const reactRootElement = <Provider store={kastore}>
+<Router><AppContainer  /></Router>
+</Provider>;
 
 const renderingArea = document.querySelector('#root');
 render(reactRootElement, renderingArea);

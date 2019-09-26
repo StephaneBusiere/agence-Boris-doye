@@ -14,7 +14,10 @@ import posts from 'src/data/posts';
 // Composants enfants éventuels
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import Main from 'src/components/Main';
+import Home from 'src/components/Home';
+import Work from 'src/components/Work';
+import Nav from 'src/containers/Nav';
+import NotFound from 'src/components/NotFound';
 // Styles et assets
 import './app.sass';
 
@@ -23,7 +26,20 @@ const App = () => (
  
   <div id="app">
   <Header  />
-  <Main  />
+  <div className="app-nav">
+      <Nav />
+    </div>
+    <main className="app-main">
+      {/* Switch : une seule route à la fois peut matcher. */}
+      <Switch>
+        {/* Homepage */}
+        <Route exact path="/" component={Home} />
+        {/* Recettes */}
+        <Route path="/work/" component={Work} />
+        {/* Fallback global (match sans condition si rien n'a matché avant) */}
+         <Route component={NotFound} /> 
+      </Switch>
+    </main>
   <Footer  />
     
     
