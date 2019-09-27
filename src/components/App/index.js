@@ -17,7 +17,16 @@ import Footer from 'src/components/Footer';
 import Home from 'src/components/Home';
 import Work from 'src/components/Work';
 import Nav from 'src/containers/Nav';
+import Team from 'src/components/Team';
+import Clients from 'src/components/Clients';
+import Equipements from 'src/components/Equipements';
+import Aventures from 'src/components/Aventures';
 import NotFound from 'src/components/NotFound';
+import News from 'src/components/News';
+import Contact from 'src/components/Contact';
+import AdminLogin from 'src/components/AdminLogin';
+import AdminPage from 'src/components/AdminPage';
+
 // Styles et assets
 import './app.sass';
 
@@ -34,8 +43,16 @@ const App = () => (
       <Switch>
         {/* Homepage */}
         <Route exact path="/" component={Home} />
-        {/* Recettes */}
+        {/* Work */}
         <Route path="/work/" component={Work} />
+        <Route path="/team/" component={Team} />
+        <Route path="/clients/" component={Clients} />
+        <Route path="/equipements/" component={Equipements} />
+        <Route path="/aventures/" component={Aventures} />
+        <Route path="/news/" component={News} />
+        <Route path="/contact/" component={Contact} />
+        <Route path="/adminlogin/" component={AdminLogin} />
+        <Route path="/adminpage/" component={AdminPage} />
         {/* Fallback global (match sans condition si rien n'a matché avant) */}
          <Route component={NotFound} /> 
       </Switch>

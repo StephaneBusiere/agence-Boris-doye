@@ -8,7 +8,9 @@ import './nav.sass';
 
 const Nav = () => (
     <nav className="nav">
+      
       {/* Home */}
+      
       <NavLink
         exact
         to="/"
@@ -30,6 +32,84 @@ const Nav = () => (
          Work
         </NavLink>
       
+      {/* Team */}
+
+        <NavLink
+          exact
+          to={getURL('/team', name)}
+          key={name}
+          className="nav-link"
+          activeClassName="nav-link--active"
+        >
+         Team
+        </NavLink>
+
+      {/* Clients */}
+
+         <NavLink
+         exact
+         to={getURL('/clients', name)}
+         key={name}
+         className="nav-link"
+         activeClassName="nav-link--active"
+       >
+        Clients
+       </NavLink>
+        
+      {/* equipements */}
+
+        <NavLink
+        exact
+        to={getURL('/equipements', name)}
+        key={name}
+        className="nav-link"
+        activeClassName="nav-link--active"
+        >
+        Equipements
+        </NavLink>
+
+      {/* aventures */}
+
+        <NavLink
+        exact
+        to={getURL('/aventures', name)}
+        key={name}
+        className="nav-link"
+        activeClassName="nav-link--active"
+        >
+        Aventures
+        </NavLink>
+
+      {/* News */}
+
+         <NavLink
+         exact
+         to={getURL('/news', name)}
+         key={name}
+         className="nav-link"
+         activeClassName="nav-link--active"
+         >
+         News
+         </NavLink>
+
+      {/* Contact */}
+
+         <NavLink
+         exact
+         to={getURL('/contact', name)}
+         key={name}
+         className="nav-link"
+         activeClassName="nav-link--active"
+         >
+         Contact
+         </NavLink>
+
+      
+
+      
+ 
+
+
     </nav>
   );
   
