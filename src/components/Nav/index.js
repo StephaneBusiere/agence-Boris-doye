@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-
+import { slide as Menu } from 'react-burger-menu';
 
 import { getURL } from 'src/utils/url';
 import './nav.sass';
@@ -105,7 +105,7 @@ const Nav = () => (
          </NavLink>
 
       
-
+       
       
  
 

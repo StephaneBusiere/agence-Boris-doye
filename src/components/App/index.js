@@ -26,7 +26,7 @@ import News from 'src/components/News';
 import Contact from 'src/components/Contact';
 import AdminLogin from 'src/components/AdminLogin';
 import AdminPage from 'src/components/AdminPage';
-
+import Menu from 'src/components/Menu';
 // Styles et assets
 import './app.sass';
 
@@ -35,10 +35,12 @@ const App = () => (
  
   <div id="app">
   <Header  />
+  <Menu />
+  <Nav />
   <div className="app-nav">
-      <Nav />
+  
     </div>
-    <main className="app-main">
+    <main id="page-wrap" >
       {/* Switch : une seule route à la fois peut matcher. */}
       <Switch>
         {/* Homepage */}
@@ -56,6 +58,7 @@ const App = () => (
         {/* Fallback global (match sans condition si rien n'a matché avant) */}
          <Route component={NotFound} /> 
       </Switch>
+      
     </main>
   <Footer  />
     

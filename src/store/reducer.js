@@ -2,7 +2,7 @@ export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE';
 export const SIDE_EFFECT = 'SIDE_EFFECT';
 
 const initialState = {
-  greetingMessage: 'c est parti pour l aventure !'
+  
 };
 
 const defaultAction = {};
