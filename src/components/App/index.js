@@ -36,7 +36,7 @@ const App = () => (
   <div id="app">
   <Header  />
   <div className="app-nav">
-      <Nav />
+ 
     </div>
     <main className="app-main">
       {/* Switch : une seule route à la fois peut matcher. */}
