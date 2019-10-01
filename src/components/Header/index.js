@@ -14,13 +14,13 @@ const BurgerElement = <FontAwesomeIcon className="burgerIcon" icon={faBars}/>
 const windowCloseElement = <FontAwesomeIcon className="burgerIcon" icon={faWindowClose} />
 
 
-const Header = ({ onClick,menuOff }) => {
+const Header = ({ onClick,onClick2,burgerOn }) => {
   
   let menu;
-  if (menuOff) {
+  if (burgerOn) {
     menu = <image onClick={onClick} >{BurgerElement}</image>
   } else {
-    menu = <image onClick={onClick} >{windowCloseElement}</image>
+    menu = <image onClick={onClick2} >{windowCloseElement}</image>
   }
 
   return (
@@ -40,7 +40,7 @@ const connectionStrategies = connect(
   // 1er argument : stratégie de lecture (dans le state privé global)
   (state, ownProps) => {
     return {
-      menuOff: state.menuOff
+      burgerOn: state.burgerOn
     
     };
   },
@@ -48,10 +48,18 @@ const connectionStrategies = connect(
   // 2d argument : stratégie d'écriture (dans le state privé global)
   (dispatch, ownProps) => {
     return {
+
+    onClick2:(event) => {
+      console.log('yea')
+      const action = {
+        type: 'BURGER_OFF'
+      };
+      dispatch(action);
+    },
       onClick: (event) => {
         console.log('ok')
         const action = {
-          type: 'MENU_OFF'
+          type: 'BURGER_ON'
         };
         dispatch(action);
       }

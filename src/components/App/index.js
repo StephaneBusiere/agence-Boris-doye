@@ -13,10 +13,11 @@ import categories from 'src/data/categories';
 import posts from 'src/data/posts';
 // Composants enfants éventuels
 import HeaderContainer from 'src/components/Header';
+import NavBurgerContainer from 'src/components/NavBurger';
 import Footer from 'src/components/Footer';
 import Home from 'src/components/Home';
 import Work from 'src/components/Work';
-import Nav from 'src/containers/Nav';
+import NavBurger from 'src/containers/NavBurger';
 import Team from 'src/components/Team';
 import Clients from 'src/components/Clients';
 import Equipements from 'src/components/Equipements';
@@ -30,41 +31,53 @@ import AdminPage from 'src/components/AdminPage';
 // Styles et assets
 import './app.sass';
 
-const App = ({menuOff}) => (
+const App = ({burgerOn,onClick}) => {
   
-  
- 
+  let menuSlide;
+  if (burgerOn) {
+    menuSlide = <main className="app-main">
+    {/* Switch : une seule route à la fois peut matcher. */}
+    <Switch>
+      {/* Homepage */}
+      <Route exact path="/" component={Home} />
+      {/* Work */}
+      <Route path="/work/" component={Work} />
+      <Route path="/team/" component={Team} />
+      <Route path="/clients/" component={Clients} />
+      <Route path="/equipements/" component={Equipements} />
+      <Route path="/aventures/" component={Aventures} />
+      <Route path="/news/" component={News} />
+      <Route path="/contact/" component={Contact} />
+      <Route path="/adminlogin/" component={AdminLogin} />
+      <Route path="/adminpage/" component={AdminPage} />
+      {/* Fallback global (match sans condition si rien n'a matché avant) */}
+       <Route component={NotFound} /> 
+    </Switch>
+  </main>
+  } else {
+    menuSlide = <div>
+    
+    <NavBurgerContainer 
+    
+    
+    /></div>
+  }
+
+  return (
   <div id="app">
   <HeaderContainer  />
-  <div className="app-nav">
- 
+  <div className="app-navBurger">
+  
     </div>
-    <main className="app-main">
-      {/* Switch : une seule route à la fois peut matcher. */}
-      <Switch>
-        {/* Homepage */}
-        <Route exact path="/" component={Home} />
-        {/* Work */}
-        <Route path="/work/" component={Work} />
-        <Route path="/team/" component={Team} />
-        <Route path="/clients/" component={Clients} />
-        <Route path="/equipements/" component={Equipements} />
-        <Route path="/aventures/" component={Aventures} />
-        <Route path="/news/" component={News} />
-        <Route path="/contact/" component={Contact} />
-        <Route path="/adminlogin/" component={AdminLogin} />
-        <Route path="/adminpage/" component={AdminPage} />
-        {/* Fallback global (match sans condition si rien n'a matché avant) */}
-         <Route component={NotFound} /> 
-      </Switch>
-    </main>
+    {menuSlide}
   <Footer  />
     
     
     
     
   </div>
-);
+  );
+};
 
 App.propTypes = {
   /** Titre de l'application React */
@@ -80,7 +93,7 @@ const connectionStrategies = connect(
   // 1er argument : stratégie de lecture (dans le state privé global)
   (state, ownProps) => {
     return {
-      menuOff: state.menuOff
+      burgerOn: state.burgerOn
     
     };
   },
@@ -88,8 +101,12 @@ const connectionStrategies = connect(
   // 2d argument : stratégie d'écriture (dans le state privé global)
   (dispatch, ownProps) => {
     return {
-      handleChange: (event) => {
-        dispatch(updateInputValue(event.target.value));
+      onClick: (event) => {
+        console.log('ok')
+        const action = {
+          type: 'BURGER_ON'
+        };
+        dispatch(action);
       }
     };
   },

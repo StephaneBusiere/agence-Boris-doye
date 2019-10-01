@@ -2,17 +2,24 @@ export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE';
 export const SIDE_EFFECT = 'SIDE_EFFECT';
 
 const initialState = {
-  menuOff: true
+  burgerOn: true
 };
 
 const defaultAction = {};
 
 const reducer = (state = initialState, action = defaultAction) => {
   switch (action.type) {
-    case 'MENU_OFF': {
+    case 'BURGER_ON': {
       return {
         ...state,
-        menuOff: false
+        burgerOn: false
+      }
+    }
+
+    case 'BURGER_OFF': {
+      return {
+        ...state,
+        burgerOn: true
       }
     }
     default: {
