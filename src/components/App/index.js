@@ -12,7 +12,7 @@ import { updateInputValue } from 'src/store/reducer';
 import categories from 'src/data/categories';
 import posts from 'src/data/posts';
 // Composants enfants éventuels
-import Header from 'src/components/Header';
+import HeaderContainer from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Home from 'src/components/Home';
 import Work from 'src/components/Work';
@@ -30,11 +30,12 @@ import AdminPage from 'src/components/AdminPage';
 // Styles et assets
 import './app.sass';
 
-const App = () => (
+const App = ({menuOff}) => (
+  
   
  
   <div id="app">
-  <Header  />
+  <HeaderContainer  />
   <div className="app-nav">
  
     </div>
@@ -79,7 +80,7 @@ const connectionStrategies = connect(
   // 1er argument : stratégie de lecture (dans le state privé global)
   (state, ownProps) => {
     return {
-      title: ownProps.title,
+      menuOff: state.menuOff
     
     };
   },

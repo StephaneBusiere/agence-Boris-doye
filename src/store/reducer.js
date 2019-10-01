@@ -2,17 +2,17 @@ export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE';
 export const SIDE_EFFECT = 'SIDE_EFFECT';
 
 const initialState = {
-  greetingMessage: 'c est parti pour l aventure !'
+  menuOff: true
 };
 
 const defaultAction = {};
 
 const reducer = (state = initialState, action = defaultAction) => {
   switch (action.type) {
-    case UPDATE_INPUT_VALUE: {
+    case 'MENU_OFF': {
       return {
         ...state,
-        greetingMessage: action.value
+        menuOff: false
       }
     }
     default: {
