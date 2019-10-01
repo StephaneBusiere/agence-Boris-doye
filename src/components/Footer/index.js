@@ -6,9 +6,9 @@ const Footer = () => {
   const now = new Date();
   const year = now.getFullYear();
 
-  return <footer className="blog-footer">
+  return (<footer className="blog-footer">
    BorisDoye - © {year}
-  </footer>;
+  </footer>);
 };
 
 export default Footer;
