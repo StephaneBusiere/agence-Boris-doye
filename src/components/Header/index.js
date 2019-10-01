@@ -8,6 +8,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import { connect } from 'react-redux';
 
 import logo from 'src/assets/images/borisdoyelogo_mini_white.png'
+
 import './header.sass';
 
 const BurgerElement = <FontAwesomeIcon className="burgerIcon" icon={faBars}/>
@@ -27,11 +28,11 @@ const Header = ({ onClick,onClick2,burgerOn }) => {
     
     <header className="header">
      <img className="logoWhite" src={logo} alt="Logo"/>
-     <h1 className="AgencyName">Agence</h1>
-     <h2 className="ownerName" >Boris Doye</h2>
+     
+  <Nav  className="navMenu" />
      {menu}
      
-     <Nav  className="navMenu" />
+     
     </header>
   );
 };

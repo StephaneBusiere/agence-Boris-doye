@@ -3,13 +3,16 @@ import React from 'react';
 import videoHome from 'src/assets/images/captureHomeBoris.png'
 import './home.sass';
 import borisPhoto from 'src/assets/images/boris-doye.png'
+import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
+
+
 import './home.sass';
 const Home= () => {
 
     return <div className="main">
  
-  <img className="videoHome" src={videoHome} alt="videoHome"/>
-  <div className="separationLine"> </div>
+ 
+  <img className="bigPictureReal" src={bigPictureReal} alt="BorisDoyePhoto"/>
   <h2 className="presentationAgenceTitle" >Production Audiovisuelle</h2>
   <h2 className="hautesAlpesTitle">Hautes-Alpes</h2>
   

@@ -7,7 +7,7 @@ import { getURL } from 'src/utils/url';
 import './nav.sass';
 
 const Nav = () => (
-    <nav className="nav">
+    <nav className="navMenu">
       
       {/* Home */}
       
