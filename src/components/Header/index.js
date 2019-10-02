@@ -32,8 +32,8 @@ const Header = ({ onClick,onClick2,burgerOn }) => {
   <Nav  className="navMenu" />
      {menu}
      
-     <div className="presentationAgenceTitle" >Production Audiovisuelle</div>
-     <h2 className="hautesAlpesTitle">Hautes-Alpes</h2>
+     
+     
     </header>
   );
 };
