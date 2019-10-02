@@ -13,12 +13,18 @@ const testSchema = new mongoose.Schema ({
 const Test = mongoose.model('Test', testSchema);
 async function createTest () {
     const test = new Test ({
-        name: 'Test numéro 1',
+        name: 'Test numéro 3',
         tags: ['Test'],
     });
 
     const testresult = await test.save();
     console.log (testresult);
 }
-createTest();
+
+async function getTests(){
+    const tests = await Test
+        .find();
+    console.log (tests);
+};
+getTests();
 
