@@ -104,6 +104,18 @@ const Nav = () => (
          Contact
          </NavLink>
 
+      {/* Mentions Légales */}
+
+{/*               <NavLink
+         exact
+         to={getURL('/mentionslegales', name)}
+         key={name}
+         className="nav-link"
+         activeClassName="nav-link--active"
+         >
+         Mention Légales 
+</NavLink>*/}
+
       
 
       

@@ -26,6 +26,7 @@ import News from 'src/components/News';
 import Contact from 'src/components/Contact';
 import AdminLogin from 'src/components/AdminLogin';
 import AdminPage from 'src/components/AdminPage';
+import Mentionslegales from 'src/components/Mentionslegales'
 
 // Styles et assets
 import './app.sass';
@@ -53,6 +54,7 @@ const App = () => (
         <Route path="/contact/" component={Contact} />
         <Route path="/adminlogin/" component={AdminLogin} />
         <Route path="/adminpage/" component={AdminPage} />
+        <Route path="/mentionslegales/" component={Mentionslegales} />
         {/* Fallback global (match sans condition si rien n'a matché avant) */}
          <Route component={NotFound} /> 
       </Switch>
