@@ -5,22 +5,25 @@ import './home.sass';
 import borisPhoto from 'src/assets/images/boris-doye.png'
 import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
 
-
 import './home.sass';
+
 const Home= () => {
 
-    return <div className="main">
+  let sectionStyle={
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${bigPictureReal})`
+    
+  }
+    return <div className="main"   >
  
  
-  <img className="bigPictureReal" src={bigPictureReal} alt="BorisDoyePhoto"/>
-  <h2 className="presentationAgenceTitle" >Production Audiovisuelle</h2>
-  <h2 className="hautesAlpesTitle">Hautes-Alpes</h2>
+    <img className="bigPictureReal" src={bigPictureReal} alt="BorisDoyePhoto"/>
+  <div className="presentationAgenceTitle" >Production Audiovisuelle</div>
   
-  <h2 className="presentationAgenceServices1"> Clips Promotionnels – Vues Aériennes </h2>
-  <h2 className="presentationAgenceServices2">Drone – Reportages – Documentaires TV </h2>
-  <h2 className="presentationAgenceServices3">Vidéos d’évènements</h2>
-  <img className="borisDoye" src={borisPhoto} alt="BorisDoyePhoto"/>
-  </div>;
+  </div>
+ 
+  
 
 };
 

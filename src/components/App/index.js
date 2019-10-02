@@ -66,9 +66,7 @@ const App = ({burgerOn,onClick}) => {
   return (
   <div id="app">
   <HeaderContainer  />
-  <div className="app-navBurger">
   
-    </div>
     {menuSlide}
   <Footer  />
     
