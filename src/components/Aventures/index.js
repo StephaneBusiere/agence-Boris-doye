@@ -2,7 +2,7 @@ import React from 'react';
 
 import showreel from 'src/assets/images/Showreel.jpg'
 import outdoormix from 'src/assets/images/Outdoormix.jpg'
-import queyras from 'src/assets/images/Queyras.jpg'
+import queyras from 'src/assets/images/Queyras.png'
 import ski from 'src/assets/images/ski-1.jpg'
 import './aventures.sass';
 
