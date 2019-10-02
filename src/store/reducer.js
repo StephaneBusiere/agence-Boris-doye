@@ -2,7 +2,8 @@ export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE';
 export const SIDE_EFFECT = 'SIDE_EFFECT';
 
 const initialState = {
-  burgerOn: true
+  burgerOn: true,
+  response: []
 };
 
 const defaultAction = {};
@@ -22,6 +23,13 @@ const reducer = (state = initialState, action = defaultAction) => {
         burgerOn: true
       }
     }
+    case 'RESPONSE_ON': {
+      return {
+        ...state,
+        response: action.value[0]
+      }
+    }
+
     default: {
       // return state;
       // Dans le cas où on ne comprend pas quelle est l'action à

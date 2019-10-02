@@ -18,7 +18,7 @@ import Footer from 'src/components/Footer';
 import Home from 'src/components/Home';
 import Work from 'src/components/Work';
 import NavBurger from 'src/containers/NavBurger';
-import Team from 'src/components/Team';
+import TeamContainer from 'src/components/Team';
 import Clients from 'src/components/Clients';
 import Equipements from 'src/components/Equipements';
 import Aventures from 'src/components/Aventures';
@@ -42,7 +42,7 @@ const App = ({burgerOn,onClick}) => {
       <Route exact path="/" component={Home} />
       {/* Work */}
       <Route path="/work/" component={Work} />
-      <Route path="/team/" component={Team} />
+      <Route path="/team/" component={TeamContainer} />
       <Route path="/clients/" component={Clients} />
       <Route path="/equipements/" component={Equipements} />
       <Route path="/aventures/" component={Aventures} />
