@@ -11,11 +11,14 @@ import iconCamera from 'src/assets/images/iconCamera.png'
 import borisPhotoCarre from 'src/assets/images/photoBorisCarre.jpg'
 import borisBateau from 'src/assets/images/BorisBateau.jpg'
 import borisDrone from 'src/assets/images/photoBorisDrone.jpg'
+import photoCadrage from 'src/assets/images/photoCadrage.jpg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faVideo } from '@fortawesome/free-solid-svg-icons'
+import { faFighterJet } from '@fortawesome/free-solid-svg-icons'
 
 import './home.sass';
 
@@ -24,6 +27,8 @@ const Home= () => {
   const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
   const iconCalendar = <FontAwesomeIcon className="iconClendar" icon={faCalendarAlt}/>
   const iconMan = <FontAwesomeIcon className="iconMan" icon={faUser}/>
+  const iconVideo = <FontAwesomeIcon className="iconVideo" icon={faVideo}/>
+  const iconDrone = <FontAwesomeIcon className="iconDrone" icon={faFighterJet}/>
 
 
 
@@ -87,18 +92,21 @@ const Home= () => {
 
 
 </div>
-    <div className="compétences">
+    <div className="competences">
+    
       <h2 className="competencesTitle">Compétences</h2>
       <img className="iconCamera" src={iconCamera} alt="iconCamera"/>
       <div className="separationLigne"></div>
       
-      <div className="compétencesGauche">
+      <div className="competencesGauche">
       
-    
+      <div className="compétencesGauche1">
+      
       <h2 className="scenarisation-title">Scénarisation - Story-telling</h2>
       <div className="scenarisation">
       <p className="scenarisation-text">Nos idées sont au service d’histoires et de projets uniques : les vôtres.</p>
       <image >{iconPen}</image>
+     
       </div>
       </div>
       <div className="compétencesGauche2">
@@ -120,16 +128,26 @@ const Home= () => {
       <image >{iconMan}</image>
       </div>
       </div>
+      
       <div className="compétencesGauche4">
       
-    
       <h2 className="scenarisation-title">Cadrage</h2>
       <div className="scenarisation">
       <p className="scenarisation-text">Captation 4K jusqu’à 100im/s sur tous les terrains : découvrir notre matériel.</p>
-      <image >{iconPen}</image>
+      <image >{iconVideo}</image>
       </div>
       </div>
 
+      <div className="compétencesGauche5">
+      
+      <h2 className="scenarisation-title">Drone</h2>
+      <div className="scenarisation">
+      <p className="scenarisation-text">Nous sommes agréés par la DGAC et assurés pour réaliser les prises de vues aériennes les plus complexes.</p>
+      <image >{iconDrone}</image>
+      </div>
+      </div>
+      </div>
+      <img className="photoCadrage" src={photoCadrage} alt="borisDrone"/>
 
     </div>
   </div>
