@@ -42,8 +42,6 @@ const Home= () => {
   const iconPhoto = <FontAwesomeIcon className="iconPhoto" icon={faCameraRetro}/>
 
  
-  
-
 
   let sectionStyle={
     width: "100%",
