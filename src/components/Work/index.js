@@ -31,10 +31,22 @@ const Work= () => {
     backgroundSize: "",
     display:"inline-block"
 
-    
-    
-    
   }
+
+  let sectionStyle3={
+   
+    
+    width: "1000px", 
+    height: "600px",
+    margin: "0% 8% 0% 5%",
+   
+    backgroundImage: `url(${showreel})`,
+    backgroundSize: "",
+    display:"inline-block"
+
+  }
+
+
     return <div>
     <div className="mainPicture" style={sectionStyle1}  >
     <div className="presentationVideos" >NOS VIDEOS</div>
