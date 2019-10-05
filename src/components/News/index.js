@@ -5,7 +5,7 @@ import './news.sass';
 
 const News= () => {
 
-    return <div className="work">
+    return <div className="news">
   Nos nouveautées !
   
   </div>;

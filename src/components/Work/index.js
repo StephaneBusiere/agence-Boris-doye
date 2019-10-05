@@ -37,7 +37,8 @@ const Work= () => {
    
     backgroundImage: `url(${showreel})`,
     backgroundSize: "cover",
-    display:"inline-block"
+    display:"inline-block",
+    
 
   }
 
@@ -114,10 +115,11 @@ const Work= () => {
   <div className="falseMargin"></div>
   
   <div className="videoPresentContainer1">
-  
+ 
   <div className="showReelContainer">
   <div className="showReel" style={sectionStyle2}  >
   <div className="showReelContent"><p>Show reel</p>
+  
   <p>Best-off</p>
   <image >{iconPlay1}</image>
   </div>
