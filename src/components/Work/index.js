@@ -3,9 +3,11 @@ import React from 'react';
 import showreel from 'src/assets/images/Showreel.png'
 import outdoormix from 'src/assets/images/Outdoormix.jpg'
 import queyras from 'src/assets/images/Queyras.png'
-
 import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
 import vietnam from 'src/assets/images/Vietnam.png'
+import fasboa from 'src/assets/images/Fasboa.png'
+import inde from 'src/assets/images/Inde.png'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 
@@ -56,11 +58,11 @@ const Work= () => {
     
     width: "900px", 
     height: "600px",
-    margin: "1% 0% 80% 5%",
+    margin: "0% 0% 0% 5%",
    
     backgroundImage: `url(${vietnam})`,
     backgroundSize: "cover",
-    display:"inline-block"
+    display:"inline-bloc"
 
   }
 
@@ -69,13 +71,41 @@ const Work= () => {
     
     width: "900px", 
     height: "600px",
-    margin: "1% 0% 80% 7%",
+    margin: "0% 0% 0% 7%",
    
     backgroundImage: `url(${outdoormix})`,
+    backgroundSize: "cover",
+    display:"inline-bloc"
+
+  }
+
+  let sectionStyle6={
+   
+    
+    width: "900px", 
+    height: "600px",
+    margin: "0% 0% 0% 5%",
+   
+    backgroundImage: `url(${fasboa})`,
+    backgroundSize: "cover",
+    
+
+  }
+
+  let sectionStyle7={
+   
+    
+    width: "900px", 
+    height: "600px",
+    margin: "0% 0% 0% 7%",
+   
+    backgroundImage: `url(${inde})`,
     backgroundSize: "cover",
     display:"inline-block"
 
   }
+
+
     return <div>
     <div className="mainPicture" style={sectionStyle1}  >
     <div className="presentationVideos" >NOS VIDEOS</div>
@@ -83,7 +113,7 @@ const Work= () => {
   </div>
   <div className="falseMargin"></div>
   
-  <div className="videoPresentContainer">
+  <div className="videoPresentContainer1">
   
   <div className="showReelContainer">
   <div className="showReel" style={sectionStyle2}  >
@@ -102,10 +132,14 @@ const Work= () => {
   </div>
   </div>
   </div>
-
+  </div>
+  
+  <div className="videoPresentContainer2">
+  
+  
   <div className="vietnamContainer">
   <div className="vietnam" style={sectionStyle4} >
-  <div className="vietnamContent"><p>Fasboa</p>
+  <div className="vietnamContent"><p>Vietnam</p>
   <p>Marque de vêtement</p>
   <image className="iconPlay2">{iconPlay2}</image>
   </div>
@@ -122,7 +156,30 @@ const Work= () => {
   </div>
   </div>
   
+  </div>
   
+
+  <div className="videoPresentContainer3">
+  
+  
+  <div className="fasboaContainer">
+  <div className="fasboa" style={sectionStyle6} >
+  <div className="fasboaContent"><p>Fasboa</p>
+  <p>Sports Extrêmes</p>
+  <image className="iconPlay2">{iconPlay2}</image>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div className="indeContainer">
+  <div className="inde" style={sectionStyle7} >
+  <div className="indeContent"><p>Inde</p>
+  <p>Kayak Extrême</p>
+  <image className="iconPlay2">{iconPlay1}</image>
+  </div>
+  </div>
+  </div>
   
   </div>
   
