@@ -12,13 +12,18 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import AppContainer from 'src/components/App';
 import kastore from 'src/store';
 import { sideEffect } from 'src/store/reducer';
+import ScrollToTop  from 'src/components/scroll';
 
 /**
  * Code
  */
 
 const reactRootElement = <Provider store={kastore}>
-<Router><AppContainer  /></Router>
+<Router>
+<ScrollToTop>
+<AppContainer  />
+</ScrollToTop>
+</Router>
 </Provider>;
 
 const renderingArea = document.querySelector('#root');

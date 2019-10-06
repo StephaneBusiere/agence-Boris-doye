@@ -43,7 +43,40 @@ const Nav = () => (
         >
          Team
         </NavLink>
+ {/* aventures */}
 
+ <NavLink
+ exact
+ to={getURL('/aventures', name)}
+ key={name}
+ className="nav-link"
+ activeClassName="nav-link--active"
+ >
+ Aventures
+ </NavLink>
+ 
+ {/* equipements */}
+
+ <NavLink
+ exact
+ to={getURL('/equipements', name)}
+ key={name}
+ className="nav-link"
+ activeClassName="nav-link--active"
+ >
+ Equipements
+ </NavLink>
+{/* News */}
+
+  <NavLink
+  exact
+  to={getURL('/news', name)}
+  key={name}
+  className="nav-link"
+  activeClassName="nav-link--active"
+  >
+  News
+  </NavLink>
       {/* Clients */}
 
          <NavLink
@@ -56,41 +89,9 @@ const Nav = () => (
         Clients
        </NavLink>
         
-      {/* equipements */}
+     
 
-        <NavLink
-        exact
-        to={getURL('/equipements', name)}
-        key={name}
-        className="nav-link"
-        activeClassName="nav-link--active"
-        >
-        Equipements
-        </NavLink>
-
-      {/* aventures */}
-
-        <NavLink
-        exact
-        to={getURL('/aventures', name)}
-        key={name}
-        className="nav-link"
-        activeClassName="nav-link--active"
-        >
-        Aventures
-        </NavLink>
-
-      {/* News */}
-
-         <NavLink
-         exact
-         to={getURL('/news', name)}
-         key={name}
-         className="nav-link"
-         activeClassName="nav-link--active"
-         >
-         News
-         </NavLink>
+     
 
       {/* Contact */}
 

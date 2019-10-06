@@ -26,6 +26,7 @@ const Work= () => {
     backgroundImage: `url(${bigPictureReal})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
+    
   }
 
   let sectionStyle2={
@@ -38,7 +39,7 @@ const Work= () => {
     backgroundImage: `url(${showreel})`,
     backgroundSize: "cover",
     display:"inline-block",
-    
+    position: "static"
 
   }
 
@@ -109,7 +110,7 @@ const Work= () => {
 
     return <div>
     <div className="mainPicture" style={sectionStyle1}  >
-    <div className="presentationVideos" >NOS VIDEOS</div>
+    <div className="presentationVideos" >NOS PRODUCTIONS </div>
   
   </div>
   <div className="falseMargin"></div>

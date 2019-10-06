@@ -43,9 +43,10 @@ const App = ({burgerOn,onClick}) => {
       {/* Work */}
       <Route path="/work/" component={Work} />
       <Route path="/team/" component={Team} />
+      <Route path="/aventures/" component={Aventures} />
       <Route path="/clients/" component={Clients} />
       <Route path="/equipements/" component={Equipements} />
-      <Route path="/aventures/" component={Aventures} />
+     
       <Route path="/news/" component={News} />
       <Route path="/contact/" component={Contact} />
       <Route path="/adminlogin/" component={AdminLogin} />
