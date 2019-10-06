@@ -1,14 +1,12 @@
 import React from 'react';
-
+import ThreeContainer from 'src/components/ThreeContainer';
 
 import './contact.sass';
 
 const Contact= () => {
 
-    return <div className="contact">
-  Nous contacter
- >
-  </div>;
+    return  <ThreeContainer />
+  
   
 };
 
