@@ -1,5 +1,5 @@
 import React from 'react';
-
+import logoBorisBlanc from 'src/assets/images/BorisLogoBlanc.png'
 import './styles.sass';
 
 const Footer = () => {
@@ -7,7 +7,8 @@ const Footer = () => {
   const year = now.getFullYear();
 
   return (<footer className="blog-footer">
-   BorisDoye - © {year}
+  <img className="borisLogoBlanc" src={logoBorisBlanc} />
+  <p className="footerText">BorisDoye - © {year}</p>
   </footer>);
 };
 
