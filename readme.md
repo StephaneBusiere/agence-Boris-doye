@@ -1,1 +1,1 @@
-Projet We Are Hungry, site vitrine de pros du multimédia, basé sur des images / vidéo de rafting
+Agence Boris Doye, site vitrine d'une agence de production de contenus audiovisuels.
