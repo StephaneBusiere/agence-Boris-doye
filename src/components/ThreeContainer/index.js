@@ -8,24 +8,26 @@ class ThreeContainer extends Component {
   
   
   componentDidMount() {
-  
+    const width = this.mount.clientWidth
+    const height = this.mount.clientHeight
+
     let scene,camera, renderer, cloudParticles = [], flash, rain, rainGeo, rainCount = 15000;
-    scene = new THREE.Scene();
-   camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight, 1, 1000);
+    this.scene = new THREE.Scene();
+   this.camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight, 1, 1000);
     camera.position.z = 1;
     camera.rotation.x = 1.16;
     camera.rotation.y = -0.12;
     camera.rotation.z = 0.27;
-   var ambient = new THREE.AmbientLight(0x555555);
+   this.ambient = new THREE.AmbientLight(0x555555);
     scene.add(ambient);
-   var directionalLight = new THREE.DirectionalLight(0xffeedd);
+   this.directionalLight = new THREE.DirectionalLight(0xffeedd);
     directionalLight.position.set(0,0,1);
     scene.add(directionalLight);
-    flash = new THREE.PointLight(0x062d89, 30, 500 ,1.7);
+    this.flash = new THREE.PointLight(0x062d89, 30, 500 ,1.7);
     flash.position.set(200,300,100);
     scene.add(flash);
-    renderer = new THREE.WebGLRenderer();
-    scene.fog = new THREE.FogExp2(0x11111f, 0.002);
+    this.renderer = new THREE.WebGLRenderer();
+    this.scene.fog = new THREE.FogExp2(0x11111f, 0.002);
     renderer.setClearColor(scene.fog.color);
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
@@ -46,7 +48,7 @@ class ThreeContainer extends Component {
       size: 0.1,
       transparent: true
     });
-    rain = new THREE.Points(rainGeo,rainMaterial);
+    this.rain = new THREE.Points(rainGeo,rainMaterial);
     scene.add(rain);
     let loader = new THREE.TextureLoader();
     loader.load("smoke.png", function(texture){
@@ -56,7 +58,7 @@ class ThreeContainer extends Component {
         transparent: true
       });
       for(let p=0; p<25; p++) {
-        let cloud = new THREE.Mesh(cloudGeo,cloudMaterial);
+        cloud = new THREE.Mesh(cloudGeo,cloudMaterial);
         cloud.position.set(
           Math.random()*800 -400,
           500,
@@ -105,11 +107,13 @@ class ThreeContainer extends Component {
   
   render() {
     return (
-      <div className="animation" ref={ref => (this.mount = ref)}  />
+      <div
+        style={{ width: '400px', height: '400px' }}
+        ref={(mount) => { this.mount = mount }}
+      />
     )
   }
 }
-const rootElement = document.getElementById("root");
-ReactDOM.render(<ThreeContainer />, rootElement);
+
 
 export default ThreeContainer;
