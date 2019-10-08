@@ -9,7 +9,7 @@ const Aventures= () => {
   
   let sectionStyle1={
     width: "100%",
-    height: "600px",
+    height: "550px",
    
     backgroundImage: `url(${caphorn})`,
     backgroundSize: 'cover',
