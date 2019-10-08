@@ -1,8 +1,8 @@
 import React from 'react';
 
-import showreel from 'src/assets/images/Showreel.png'
+import showreel from 'src/assets/images/Showreel.jpg'
 import outdoormix from 'src/assets/images/Outdoormix.jpg'
-import queyras from 'src/assets/images/Queyras.png'
+import queyras from 'src/assets/images/Queyras.jpg'
 import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
 import vietnam from 'src/assets/images/Vietnam.png'
 import fasboa from 'src/assets/images/Fasboa.png'
