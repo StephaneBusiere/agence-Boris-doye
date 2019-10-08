@@ -12,7 +12,7 @@ import borisPhotoCarre from 'src/assets/images/photoBorisCarre.jpg'
 import borisBateau from 'src/assets/images/BorisBateau.jpg'
 import borisDrone from 'src/assets/images/photoBorisDrone.jpg'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
-
+import slider from 'src/components/Slider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
@@ -52,14 +52,9 @@ const Home= () => {
     overflow: 'hidden',
   }
     return <div>
-    <div className="main" style={sectionStyle}  >
+    <div>  {slider}  
  
-    <div className="presentationAgenceTitle" >AGENCE DE TEST PRODUCTION DIGITALE</div>
-    <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>
-    <h2 className="presentationAgenceServices1"> Clips Promotionnels – Vues Aériennes </h2>
-    <h2 className="presentationAgenceServices2">Drone – Reportages – Documentaires TV </h2>
-    <h2 className="presentationAgenceServices3">Vidéos d’évènements</h2>
-
+    
 
   
   </div>
@@ -215,6 +210,7 @@ const Home= () => {
       </div>
       </div>
       </div>
+      {slider}
     </div>
   </div>
  
