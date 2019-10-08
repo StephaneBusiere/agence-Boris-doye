@@ -9,6 +9,8 @@ import filtres from 'src/assets/images/filtres.jpg'
 import slider from 'src/assets/images/slider.jpg'
 import micro from 'src/assets/images/micros.jpg'
 import goPro from 'src/assets/images/Go-pro.jpg'
+import equipementVideo from 'src/assets/images/StuffVideo.jpg'
+
 
 
 
@@ -20,18 +22,16 @@ const Equipements= () => {
 
   let sectionStyle1={
     width: "100%",
-    height: "700px",
+    height: "480px",
    
-    backgroundImage: `url(${avion})`,
+    backgroundImage: `url(${equipementVideo})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
 
   }
     return <div>
     <div className="teamPicture" style={sectionStyle1}  >
-    <div className="presentationTeam" ><div className="teamtitle">Notre équipement</div>
-    
-    </div>
+  
      </div>
 
      <div className="stuffTitleContainer">
