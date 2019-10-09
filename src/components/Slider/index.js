@@ -21,9 +21,11 @@ const Slider = (
       <div data-src={bigPictureReal2}>
       <p></p> </div>
      
-      <div ><iframe className="sliderContainer" src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <div ><iframe  src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       </div>
     </AwesomeSlider>
   );
 
   export default Slider;
+
+ 
