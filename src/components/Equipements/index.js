@@ -7,7 +7,7 @@ const Equipements= () => {
 
     return <div className="equipement">
   Notre équipement !
-
+  
   </div>;
   
 };
