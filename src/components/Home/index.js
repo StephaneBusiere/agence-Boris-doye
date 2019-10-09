@@ -13,6 +13,8 @@ import borisBateau from 'src/assets/images/BorisBateau.jpg'
 import borisDrone from 'src/assets/images/photoBorisDrone.jpg'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
 
+import slider from 'src/components/Slider'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
@@ -52,53 +54,68 @@ const Home= () => {
     overflow: 'hidden',
   }
     return <div>
-    <div className="main" style={sectionStyle}  >
+    <div>  {slider}  
  
-    <div className="presentationAgenceTitle" >AGENCE DE TEST PRODUCTION DIGITALE</div>
-    <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>
-    <h2 className="presentationAgenceServices1"> Clips Promotionnels – Vues Aériennes </h2>
-    <h2 className="presentationAgenceServices2">Drone – Reportages – Documentaires TV </h2>
-    <h2 className="presentationAgenceServices3">Vidéos d’évènements</h2>
-
+    
 
   
   </div>
- <div class="quisommesnous">
+ <div className="quisommesnous">
 
     <img className="iconeMontagne" src={iconMontagne} alt="iconeMontagne"/>
     
     <div className="photosPresentations">
     
-   
+    <div className="textPresentation1">
     <img className="borisPhotocarre" src={borisPhotoCarre} alt="borisPhotocarre"/>
-    <img className="borisBateau" src={borisBateau} alt="borisBateau"/>
-    <img className="borisDrone" src={borisDrone} alt="borisDrone"/>
-    
-    <div className="titrepresentation">
     <h2 className="quitexte"> QUI</h2>
-    <h2 className="sommestexte"> SOMMES</h2>
-    <h2 className="noustexte">NOUS</h2>
-    </div>
-    
-    <div className="smallTitrePresentation">
-    
-    <h3 className="videoTitle" >Vidéo</h3>
-    <h3 className="conseilsTitle">Conseils</h3>
-    <h3 className="dronesTitle">Drones</h3>
-    </div>
 
-    <div className="textPresentation">
+    <div className="smallTitrePresentation1">
     
+    <h3 className="videoTitle" >Vidéo</h3></div>
     <p className="videoTitleText" >Avec une touche artistique et créative, Boris Doye Films vous offre un service global professionnel de conception et de réalisation de films au coeur des Hautes-Alpes.
 
     Réalisateur, mais aussi concepteur du scénario de votre vidéo, une idée, une envie ? Nous vous aiderons à réaliser votre projet, du scénario au montage de votre film. Nous maîtrisons l’image et nous savons la rendre esthétique. À l’aide de nombreuses caméras, drones, stabilisateurs, nous avons la capacité de filmer partout et de monter vos images sur une station de montage professionnel 4K.</p>
-    <p className="conseilsTitleText">Envie d’originalité ? L’agence vous propose de l’animation 3D, des time-laps, du slow-motion, de stop-motion, de la prise de vue aérienne en drone… Avec le grand réseau professionnel qui nous entoure, nous réalisons tout support audiovisuel.Nous amorçons ensemble une réflexion cohérente pour une production réalisable et conforme à vos attentes.
+    </div>
+    
+    
+    <div className="textPresentation2">
+    <img className="borisBateau" src={borisBateau} alt="borisBateau"/>
+    <h2 className="sommestexte"> SOMMES</h2>
 
+    <div className="smallTitrePresentation2">
+    
+    
+    <h3 className="conseilsTitle">Conseils</h3></div>
+    <p className="conseilsTitleText">Envie d’originalité ? L’agence vous propose de l’animation 3D, des time-laps, du slow-motion, de stop-motion, de la prise de vue aérienne en drone… Avec le grand réseau professionnel qui nous entoure, nous réalisons tout support audiovisuel.Nous amorçons ensemble une réflexion cohérente pour une production réalisable et conforme à vos attentes.
     </p>
+    </div>
+    
+    <div className="textPresentation3">
+    <img className="borisDrone" src={borisDrone} alt="borisDrone"/>
+    <h2 className="noustexte">NOUS</h2>
+    <div className="smallTitrePresentation3">
+    
+   
+    <h3 className="conseilsTitle">Drones</h3> </div>
     <p className="dronesTitleText">Envie d’originalité ? L’agence vous propose de l’animation 3D, des time-laps, du slow-motion, de stop-motion, de la prise de vue aérienne en drone… Avec le grand réseau professionnel qui nous entoure, nous réalisons tout support audiovisuel.Tous les formats sont réalisables. De la promotion institutionnelle, format court corporate pour les réseaux sociaux, au films d’entreprise, prise de vues en drone reportages TV mais l’agence sait aussi créer de fabuleux documentaires télévisés.</p>
     </div>
     
- </div>
+    
+   
+    
+    </div>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+ 
 
 
 
@@ -215,6 +232,7 @@ const Home= () => {
       </div>
       </div>
       </div>
+     
     </div>
   </div>
  

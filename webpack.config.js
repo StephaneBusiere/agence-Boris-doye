@@ -111,8 +111,20 @@ module.exports = {
               outputPath: 'assets/',
             },
           },
+          
         ],
       },
+      {
+        test: /\.(mov|mp4)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }  
+          }
+        ]
+      }
     ],
   },
   devServer: {

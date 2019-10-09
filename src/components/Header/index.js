@@ -11,8 +11,8 @@ import logo from 'src/assets/images/borisdoyelogo_mini_white.png'
 
 import './header.sass';
 
-const BurgerElement = <FontAwesomeIcon className="burgerIcon" icon={faBars}/>
-const windowCloseElement = <FontAwesomeIcon className="burgerIcon" icon={faWindowClose} />
+const BurgerElement = <FontAwesomeIcon  className="burgerIcon" icon={faBars}/>
+const windowCloseElement = <FontAwesomeIcon className="burgerCross" icon={faWindowClose} />
 
 
 const Header = ({ onClick,onClick2,burgerOn }) => {
