@@ -58,7 +58,7 @@ const Home= () => {
 
   
   </div>
- <div class="quisommesnous">
+ <div className="quisommesnous">
 
     <img className="iconeMontagne" src={iconMontagne} alt="iconeMontagne"/>
     
