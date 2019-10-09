@@ -95,6 +95,7 @@ module.exports = {
             options: {
               plugins: () => [require('autoprefixer')],
               sourceMap: true,
+              modules: true,
             },
           },
           // SASS

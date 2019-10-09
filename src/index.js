@@ -27,7 +27,7 @@ const reactRootElement = <Provider store={kastore}>
 </Provider>;
 
 const renderingArea = document.querySelector('#root');
-render(reactRootElement, renderingArea);
+render(reactRootElement, renderingArea,);
 
 // Exemple d'action interceptée par un middleware.
 kastore.dispatch(sideEffect());

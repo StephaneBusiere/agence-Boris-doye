@@ -12,7 +12,9 @@ import borisPhotoCarre from 'src/assets/images/photoBorisCarre.jpg'
 import borisBateau from 'src/assets/images/BorisBateau.jpg'
 import borisDrone from 'src/assets/images/photoBorisDrone.jpg'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
-import slider from 'src/components/Slider'
+import SimpleSlider from 'src/components/Slider'
+import Slider from 'src/components/Slider'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
@@ -25,6 +27,7 @@ import { faMusic} from '@fortawesome/free-solid-svg-icons'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
 import { faCameraRetro} from '@fortawesome/free-solid-svg-icons'
 
+import { render } from "react-dom";
 
 import './home.sass';
 
@@ -44,7 +47,7 @@ const Home= () => {
  
 
   let sectionStyle={
-    width: "100%",
+    width: "500px",
     height: "1000px",
     
     backgroundImage: `url(${bigPictureReal2})`,
@@ -52,9 +55,9 @@ const Home= () => {
     overflow: 'hidden',
   }
     return <div>
-    <div>  {slider}  
+    <div>    
  
-    
+    <SimpleSlider />
 
   
   </div>
@@ -210,14 +213,13 @@ const Home= () => {
       </div>
       </div>
       </div>
-      {slider}
+      
     </div>
   </div>
  
   
 
 };
-
 
 
 export default Home;

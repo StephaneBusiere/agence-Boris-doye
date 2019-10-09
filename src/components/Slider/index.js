@@ -1,27 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-import AwesomeSlider from 'react-awesome-slider';
-import bigPictureReal2 from 'src/assets/images/montagne.jpg'
-import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
+
+import showReelVideo from 'src/assets/images/showReelVideo.mp4'
 import showreel from 'src/assets/images/Showreel.jpg'
-import video from 'src/assets/images/fasboaVideo.mp4'
-//import video2 from 'https://www.youtube.com/watch?v=PEwa4Eehfpk'
-import { Player } from 'video-react';
-import AwsSliderStyles from './slider.scss';
-import './slider.scss';
-let video2= <Player>
-<source src={video} />
-</Player>
-const Slider = (
-    <AwesomeSlider  cssModule={AwsSliderStyles}>
-      <div data-src={bigPictureReal2}>
-      <p></p> </div>
-      <div data-src={showreel}>
-      <p>Sometimes science is more art than science.</p>
-      </div>
-      <div data-src={video} />
-      
-    </AwesomeSlider>
-  );
+import bigPictureReal2 from 'src/assets/images/montagne.jpg'
+import Slider from "react-slick";
 
-  export default Slider;
+class SimpleSlider extends React.Component {
+  
+  render() {
+    
+    let sectionStyle={
+      width: "100%",
+      height: "1000px",
+      
+      backgroundImage: `url(${bigPictureReal2})`,
+      backgroundSize: 'cover',
+      
+    }
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      accessibility: true,
+      arrows: true
+    
+    };
+    return (
+      <Slider {...settings}>
+        <div>
+          <img src={bigPictureReal2} ></img>
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+      </Slider>
+    );
+  }
+}
+        
+export default SimpleSlider
+    
+
+
+ 
+
