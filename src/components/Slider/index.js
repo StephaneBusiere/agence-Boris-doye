@@ -9,6 +9,7 @@ import video from 'src/assets/images/fasboaVideo.mp4'
 import { Player } from 'video-react';
 import AwesomeSliderStyles from './slider.scss';
 import './slider.scss';
+import './slider.sass';
 
 
 const Slider = (
@@ -20,7 +21,7 @@ const Slider = (
       <div data-src={bigPictureReal2}>
       <p></p> </div>
      
-      <div>  <iframe src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <div className="sliderContainer"><iframe src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       </div>
     </AwesomeSlider>
   );

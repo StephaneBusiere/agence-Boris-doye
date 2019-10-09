@@ -14,15 +14,14 @@
  
   
 .separationLine
-
-  height: 4em
-  width: 30%
-  margin-left: 35%
   border-bottom: 2px solid  #D5A6BD 
-  
-
-
-   
+  @media only screen and (max-width : 640px) 
+   height: 1em
+   width: 2em
+  @media only screen and (min-width : 640px) 
+   height: 4em
+   width: 30%
+   margin-left: 35%
   
 .backgroungImage
   height: 100px
@@ -174,10 +173,22 @@
   overflow: hidden
 
 .iconeMontagne
-  margin: 5% 0% 3% 26%
+  @media only screen and (max-width : 640px) 
+  
+   width: 70%
+   margin: 10% 0% 3% 15%
+  @media only screen and (min-width : 640px)
+    width: 60em
+    margin: 5% 0% 3% 24%
 
 .quisommesnous
-  width: 100%
+  @media only screen and (max-width : 640px) 
+   width: 100%
+   height: 2200px
+   background-color: #282828
+
+  @media only screen and (min-width : 640px)
+   width: 100%
   height: 950px
   background-color: #282828
 
@@ -240,23 +251,64 @@
    font-size: 0.8em
 
 
-
+.photosPresentations
+  @media only screen and (max-width : 640px) 
+   display: block
+  @media only screen and (min-width : 640px)
+   display: flex
+   margin: 0% 0% 0% 5%
 .borisBateau
-  width: 25em
-  height: 20em
-  margin: 0% 2% 0% 0%
-  float: left
-.borisPhotocarre
-  width: 25em
-  height: 20em
-  margin: 0% 2% 0% 15%
-  float: left
-
-.borisDrone
+  
+  @media only screen and (max-width : 640px) 
+   
    width: 25em
    height: 20em
-   float: left
+   margin: 10% 2% 0% 10%
+   
+  @media only screen and (min-width : 640px) 
+    width: 25em
+    height: 20em
+    margin: 0% 2% 0% 22%
+    float: left
 
+  .textPresentation1
+    margin: 0% 0% 0% 10%
+
+  
+.borisPhotocarre
+  
+  @media only screen and (max-width : 640px) 
+   
+   width: 25em
+   height: 20em
+   margin: 0% 2% 0% 10%
+   
+  @media only screen and (min-width : 640px)
+    width: 25em
+    height: 20em
+    margin: 0% 8em 0% 42%
+    
+
+.BorisBateau
+  @media only screen and (max-width : 640px)
+    width: 25em
+    height: 20em
+    
+  @media only screen and (min-width : 640px)
+   width: 25em
+   height: 20em
+   margin: 0% 0em 0% 0%
+
+.borisDrone
+  @media only screen and (max-width : 640px)
+    width: 25em
+    height: 20em
+    margin: 0% 0% 0% 10%
+    
+  @media only screen and (min-width : 640px)
+    width: 25em
+    height: 20em
+    margin: 0% 21em 0% 0%
 .titrepresentation
    
    font-family: 'TeXGyreAdventorRegular'
@@ -274,18 +326,122 @@
    
    position: relative
    margin-bottom: 10px
+
 .quitexte
-  margin: 94% 100% 5% -1280px
+  @media only screen and (max-width : 640px) 
+   
+   margin: 0px 0% 5% 40px
+   font-family: 'TeXGyreAdventorRegular'
+   font-weight: normal 
+   font-style: normal
+   font-size: 55px
+   font-weight: 600
+   text-transform: none
+   letter-spacing: 0px
+   height: 30px
+   line-height: 1px
+   color: #dd9933 
+   font-weight: bold
+   margin-bottom: 10px
+   //display: flex
+   position: relative
+
+  @media only screen and (min-width : 640px) 
+   margin: 0% 0% 5% 220px
+   font-family: 'TeXGyreAdventorRegular'
+   font-weight: normal 
+   font-style: normal
+   font-size: 55px
+   font-weight: 600
+   text-transform: none
+   letter-spacing: 0px
+   height: 30px
+   line-height: 1px
+   color: #dd9933 
+   font-weight: bold
+   display: flex
+   
+   position: relative
+   margin-bottom: 10px
 
 .sommestexte
-  margin: 94% 60% 0% 0%
+  @media only screen and (max-width : 640px) 
+   margin: 0px 0% 0% 9%
+   font-family: 'TeXGyreAdventorRegular'
+   font-weight: normal 
+   font-style: normal
+   font-size: 55px
+   font-weight: 600
+   text-transform: none
+   letter-spacing: 0px
+   height: 30px
+   line-height: 1px
+   color: #dd9933 
+   font-weight: bold
+   margin-bottom: 10px
+   //display: flex
+   position: relative
+
+  
+  @media only screen and (min-width : 640px) 
+  
+   
+   
+   margin: 320px 0px 5% 110px
+   font-family: 'TeXGyreAdventorRegular'
+   font-weight: normal 
+   font-style: normal
+   font-size: 55px
+   font-weight: 600
+   text-transform: none
+   letter-spacing: 0px
+   height: 30px
+   line-height: 1px
+   color: #dd9933 
+   font-weight: bold
+   margin-bottom: 10px
+   display: flex
+   position: relative
 
 .noustexte
-  margin: 94% 0% 0% 0%
+  @media only screen and (max-width : 640px)
+   margin: 10% 0% 5% 9%
+   font-family: 'TeXGyreAdventorRegular'
+   font-weight: normal 
+   font-style: normal
+   font-size: 55px
+   font-weight: 600
+   text-transform: none
+   letter-spacing: 0px
+   height: 30px
+   line-height: 1px
+   color: #dd9933 
+   font-weight: bold
+   margin-bottom: 10px
+   //display: flex
 
-.smallTitrePresentation
-  display: flex
-  margin: 18% 0% 0% 15% 
+  @media only screen and (min-width : 640px) 
+   
+   margin: 0% 0% 0% 0px
+   font-family: 'TeXGyreAdventorRegular'
+   font-weight: normal 
+   font-style: normal
+   font-size: 55px
+   font-weight: 600
+   text-transform: none
+   letter-spacing: 0px
+   height: 30px
+   line-height: 1px
+   color: #dd9933 
+   font-weight: bold
+   margin-bottom: 10px
+   display: flex
+
+.smallTitrePresentation1
+  
+  @media only screen and (max-width : 640px) 
+   
+   margin: 0% 0% 0% 9% 
  
   font-family: 'TeXGyreAdventorRegular'
   font-weight: normal 
@@ -298,64 +454,224 @@
   line-height: 40px
   color: #dd9933 
   font-weight: bold
-  display: flex
+  //display: flex
+   
+  
+  @media only screen and (min-width : 640px) 
+  
+   display: flex
+  margin: 0% 0% 0% 42% 
+ 
+  font-family: 'TeXGyreAdventorRegular'
+  font-weight: normal 
+  font-style: normal
+  font-size: 15px
+  font-weight: 600
+  text-transform: none
+  letter-spacing: 0px
+  height: 30px
+  line-height: 40px
+  color: #dd9933 
+  font-weight: bold
+ 
    
   
   margin-bottom: 10px
 
+.smallTitrePresentation2
+  
+  @media only screen and (max-width : 640px) 
+   
+   margin: 0% 0% 0% 0% 
+ 
+  font-family: 'TeXGyreAdventorRegular'
+  font-weight: normal 
+  font-style: normal
+  font-size: 15px
+  font-weight: 600
+  text-transform: none
+  letter-spacing: 0px
+  height: 30px
+  line-height: 40px
+  color: #dd9933 
+  font-weight: bold
+  //display: flex
+   
+  
+  @media only screen and (min-width : 640px) 
+  
+   display: flex
+  margin: 0% 0% 0% 20% 
+ 
+  font-family: 'TeXGyreAdventorRegular'
+  font-weight: normal 
+  font-style: normal
+  font-size: 15px
+  font-weight: 600
+  text-transform: none
+  letter-spacing: 0px
+  height: 30px
+  line-height: 40px
+  color: #dd9933 
+  font-weight: bold
+ 
+.smallTitrePresentation3
+  
+  @media only screen and (max-width : 640px) 
+   
+   margin: 0% 0% 0% 0% 
+ 
+  font-family: 'TeXGyreAdventorRegular'
+  font-weight: normal 
+  font-style: normal
+  font-size: 15px
+  font-weight: 600
+  text-transform: none
+  letter-spacing: 0px
+  height: 30px
+  line-height: 40px
+  color: #dd9933 
+  font-weight: bold
+  //display: flex
+   
+  
+  @media only screen and (min-width : 640px) 
+  
+   display: flex
+  margin: 0% 0% 0% 0% 
+ 
+  font-family: 'TeXGyreAdventorRegular'
+  font-weight: normal 
+  font-style: normal
+  font-size: 15px
+  font-weight: 600
+  text-transform: none
+  letter-spacing: 0px
+  height: 30px
+  line-height: 40px
+  color: #dd9933 
+  font-weight: bold
+    
+  
+  margin-bottom: 10px
+
 .videoTitle
-  margin: 0% 24.2% 0% 0%
+  @media only screen and (max-width : 640px)
+   margin: 0% 0% 0% 0%
+  
+  @media only screen and (min-width : 640px) 
+
+   margin: 0% 0% 20em 0%
   
 
 .conseilsTitle 
-  margin: 0% 24% 0% 0%
+  @media only screen and (max-width : 640px)
+   margin: 0% 0% 0% 10%
+  
+  @media only screen and (min-width : 640px) 
 
-.textPresentation
-  display: flex
+   margin: 0px 0em 0% 0%
+   
+  
+  
+//.textPresentation1
+  @media only screen and (max-width : 640px) 
+   display: flex
+   margin: 0% 0px 0% 0%
+  @media only screen and (min-width : 640px) 
+   display: block
 
 .videoTitleText
-  width: 400px
-  color: #E5E5E5
-  font-style: normal
-  font-weight: 400
-  font-size: 16px
-  font-family: "Raleway"
-  line-height: 24.99px
-  text-transform: none
-  letter-spacing: 0px
-  text-align: left
-  margin: 0% 0% 0% 15%
+  @media only screen and (max-width : 640px) 
+   width: 400px
+   color: #E5E5E5
+   font-style: normal
+   font-weight: 400
+   font-size: 16px
+   font-family: "Raleway"
+   line-height: 24.99px
+   text-transform: none
+   letter-spacing: 0px
+   text-align: left
+   margin: 5% 0% 0% 9%
+  @media only screen and (min-width : 640px) 
+   
+   width: 400px
+   color: #E5E5E5
+   font-style: normal
+   font-weight: 400
+   font-size: 16px
+   font-family: "Raleway"
+   line-height: 24.99px
+   text-transform: none
+   letter-spacing: 0px
+   text-align: left
+   margin: 0% 0% 0% 42%
 
 .conseilsTitleText
-  width: 400px
-  color: #E5E5E5
-  font-style: normal
-  font-weight: 400
-  font-size: 16px
-  font-family: "Raleway"
-  line-height: 24.99px
-  text-transform: none
-  letter-spacing: 0px
-  text-align: left
-  margin: 0% 0% 0% 1.8%
+  @media only screen and (max-width : 640px)
+   
+   color: #E5E5E5
+   font-style: normal
+   font-weight: 400
+   font-size: 16px
+   font-family: "Raleway"
+   line-height: 24.99px
+   text-transform: none
+   letter-spacing: 0px
+   text-align: left
+   margin: 5% 0% 10% 10%
+  @media only screen and (min-width : 640px) 
+   width: 400px
+   color: #E5E5E5
+   font-style: normal
+   font-weight: 400
+   font-size: 16px
+   font-family: "Raleway"
+   line-height: 24.99px
+   text-transform: none
+   letter-spacing: 0px
+   text-align: left
+   margin: 1em 0% 0% 109px
+   
+   
 
 .dronesTitleText
-  width: 470px
-  color: #E5E5E5
-  font-style: normal
-  font-weight: 400
-  font-size: 16px
-  font-family: "Raleway"
-  line-height: 24.99px
-  text-transform: none
-  letter-spacing: 0px
-  text-align: left
-  margin: 0% 0% 0% 2.5%
+  @media only screen and (max-width : 640px)
+   width: 400px
+   color: #E5E5E5
+   font-style: normal
+   font-weight: 400
+   font-size: 16px
+   font-family: "Raleway"
+   line-height: 24.99px
+   text-transform: none
+   letter-spacing: 0px
+   text-align: left
+   margin: 0% 0% 0% 10%
+  @media only screen and (min-width : 640px) 
+   width: 470px
+   color: #E5E5E5
+   font-style: normal
+   font-weight: 400
+   font-size: 16px
+   font-family: "Raleway"
+   line-height: 24.99px
+   text-transform: none
+   letter-spacing: 0px
+   text-align: left
+   margin: 0% 0% 0% 0%
 
 .compétences
-  width: 100% 
-  height: 800px
-  background-color: white
+  @media only screen and (max-width : 640px)
+   width: 100% 
+   height: 3000px
+   background-color: white
+  
+  @media only screen and (min-width : 640px) 
+   width: 100% 
+   height: 800px
+   background-color: white
   
 
 
@@ -374,14 +690,25 @@
   margin-top: 1em
 
 .iconCamera
-  width: 4em
-  margin: 0% 0% 0% 49%
+  @media only screen and (max-width : 640px)
+   width: 4em
+   margin: 0% 0% 0% 44%
+  @media only screen and (min-width : 640px)
+   width: 4em
+   margin: 0% 0% 0% 49%
 
 .separationLigne
-  border-bottom: thick double #32a1ce 
-  width: 40em
-  margin-top: 2% 
-  margin-left: 35%
+  @media only screen and (max-width : 640px)
+   border-bottom: thick double #32a1ce 
+   width: 12em
+   margin-top: 2% 
+   margin-left: 32%
+ 
+  @media only screen and (min-width : 640px) 
+   border-bottom: thick double #32a1ce 
+   width: 40em
+   margin-top: 2% 
+   margin-left: 35%
  
   
 .competencesGauche
@@ -485,19 +812,30 @@
   background-color: #6b787911
 
 .photoCadrage
-  
-  margin: 5% 0% 77px 80px
-  
+  @media only screen and (max-width : 640px)
    
-  bottom: 70px
-  left: 800px
+   height: 40em
+   margin: 5% 0% 40px 80px
+   bottom: 70px
+   left: 800px
+  @media only screen and (min-width : 640px) 
+   margin: 5% 0% 77px 80px
+   bottom: 70px
+   left: 800px
 
 
 .competencesDroite
-  float: right
-  margin: 3.5% 20% 0% 0%
-  height: auto
-  width: 18em
+  
+  @media only screen and (max-width : 640px)
+   
+   margin: 3.5% 20% 10% 10%
+   height: auto
+   width: 18em
+  @media only screen and (min-width : 640px)
+   float: right
+   margin: 3.5% 20% 0% 0%
+   height: auto
+   width: 18em
 
 
 .title-droite1
