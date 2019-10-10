@@ -31,7 +31,7 @@ const Header = ({ onClick,onClick2,burgerOn }) => {
       <NavLink
         exact
         to="/"
-        className="nav-link"
+        //className="nav-link"
         activeClassName="nav-link--active"
       >
      <img className="logoWhite" src={logo} alt="Logo"/>

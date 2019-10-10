@@ -54,9 +54,9 @@ const Home= () => {
     overflow: 'hidden',
   }
     return <div>
-    <div>  {slider}  
+    <div> 
  
-    
+    {slider}
 
   
   </div>
