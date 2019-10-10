@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from 'src/containers/Nav';
+import { NavLink } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -27,7 +28,14 @@ const Header = ({ onClick,onClick2,burgerOn }) => {
   return (
     
     <header className="header">
+      <NavLink
+        exact
+        to="/"
+        className="nav-link"
+        activeClassName="nav-link--active"
+      >
      <img className="logoWhite" src={logo} alt="Logo"/>
+     </NavLink>
      
   <Nav  className="navMenu" />
      {menu}
