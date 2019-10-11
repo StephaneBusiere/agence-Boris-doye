@@ -2,12 +2,15 @@ export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE';
 export const SIDE_EFFECT = 'SIDE_EFFECT';
 
 const initialState = {
-  burgerOn: true
+  burgerOn: true,
+  response: [],
+  videoOn: true
 };
 
 const defaultAction = {};
 
 const reducer = (state = initialState, action = defaultAction) => {
+  console.log(action.value)
   switch (action.type) {
     case 'BURGER_ON': {
       return {
@@ -20,6 +23,24 @@ const reducer = (state = initialState, action = defaultAction) => {
       return {
         ...state,
         burgerOn: true
+      }
+    }
+    case 'RESPONSE_ON': {
+      return {
+        ...state,
+        response: action.value[0]
+      }
+    }
+    case 'VIDEO_ON': {
+      return {
+        ...state,
+        videoOn: false
+      }
+    }
+    case 'VIDEO_OFF': {
+      return {
+        ...state,
+        videoOn: true
       }
     }
     default: {

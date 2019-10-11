@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import showreel from 'src/assets/images/Showreel.jpg'
 import outdoormix from 'src/assets/images/Outdoormix.jpg'
@@ -10,15 +11,17 @@ import inde from 'src/assets/images/Inde.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
+import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 
 import './styles.sass';
 
-const Work= () => {
+const Work= ({onClick,videoOn,onClick2}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
-  
+  const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
+
   let sectionStyle1={
     width: "100%",
     height: "550px",
@@ -103,10 +106,29 @@ const Work= () => {
    
     backgroundImage: `url(${inde})`,
     backgroundSize: "cover",
-    display:"inline-block"
+    display:"inline-block",
+    
 
   }
-
+  let showReellShow;
+  if (videoOn) {
+    showReellShow = <div className="showReelContainer">
+    <div className="showReel" style={sectionStyle2}  >
+    <div className="showReelContent">
+    <p>Show reel</p>
+  
+  <p>Best-off</p>
+  <image onClick={onClick}>{iconPlay1}</image>
+    
+    </div>
+    </div>
+    </div>
+  
+  } else {
+    showReellShow=<div className="showReelIframe"><iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="900"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <image onClick={onClick2}>  {cross} </image>
+    </div>
+  }
 
     return <div>
     <div className="mainPicture" style={sectionStyle1}  >
@@ -116,16 +138,8 @@ const Work= () => {
   <div className="falseMargin"></div>
   
   <div className="videoPresentContainer1">
- 
-  <div className="showReelContainer">
-  <div className="showReel" style={sectionStyle2}  >
-  <div className="showReelContent"><p>Show reel</p>
+ {showReellShow}
   
-  <p>Best-off</p>
-  <image >{iconPlay1}</image>
-  </div>
-  </div>
-  </div>
   
   <div className="queyrasContainer">
   <div className="queyras" style={sectionStyle3}  >
@@ -188,7 +202,43 @@ const Work= () => {
   
   </div>
 };
+const connectionStrategies = connect(
+  // 1er argument : stratégie de lecture (dans le state privé global)
+  (state, ownProps) => {
+    return {
+      videoOn: state.videoOn
+    
+    };
+  },
+
+  // 2d argument : stratégie d'écriture (dans le state privé global)
+  (dispatch, ownProps) => {
+    return {
+
+    onClick2:(event) => {
+     
+      const action = {
+        type: 'VIDEO_OFF'
+      };
+      dispatch(action);
+    },
+      onClick: (event) => {
+        console.log('ok')
+        const action = {
+          type: 'VIDEO_ON'
+        };
+        dispatch(action);
+      }
+    };
+  },
+);
+
+// Étape 2 : on applique ces stratégies à un composant spécifique.
+const WorkContainer = connectionStrategies(Work);
+
+// Étape 3 : on exporte le composant connecté qui a été généré
+//export default AppContainer;
 
 
 
-export default Work;
+export default WorkContainer;
