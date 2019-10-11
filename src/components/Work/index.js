@@ -16,7 +16,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.sass';
 
-const Work= ({onClick,videoShowreellOn,onClick2,onClick3,videoQueyrasOn}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,videoQueyrasOn}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
@@ -111,8 +111,9 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,videoQueyrasOn}) => {
 
   }
   let showReellShow;
+  
   if (videoShowreellOn) {
-    showReellShow = <div className="showReelContainer">
+    showReellShow = <div className="videoPresentContainer1"><div className="showReelContainer">
     <div className="showReel" style={sectionStyle2}  >
     <div className="showReelContent">
     <p>Show reel</p>
@@ -123,15 +124,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,videoQueyrasOn}) => {
     </div>
     </div>
     </div>
-  
-  } else {
-    showReellShow=<div className="showReelIframe"><iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="900"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    <image onClick={onClick2}>  {cross} </image>
-    </div>
-  }
-  let queyrasShow;
-  if (videoQueyrasOn) {
-    queyrasShow=<div className="queyrasContainer">
+    <div className="queyrasContainer">
     <div className="queyras" style={sectionStyle3}  >
     <div className="queyrasContent"><p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
@@ -139,13 +132,24 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,videoQueyrasOn}) => {
     </div>
     </div>
     </div>
-   
-  
-  } else {
-    queyrasShow=<div className="queyrasIframe"><iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    
+    </div>
+  }  else   {
+    showReellShow=<div className="showReelIframe"><iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="900"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     <image onClick={onClick2}>  {cross} </image>
     </div>
+    
+  } 
+  if (videoQueyrasOn){
+    showReellShow=<div className="queyrasIframe"><iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <image onClick={onClick4}>  {cross} </image>
+    </div>
+    
+    
+  } else {
+    
   }
+  
     return <div>
     <div className="mainPicture" style={sectionStyle1}  >
     <div className="presentationVideos" >NOS PRODUCTIONS </div>
@@ -155,8 +159,8 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,videoQueyrasOn}) => {
   
   <div className="videoPresentContainer1">
  {showReellShow}
+ 
   
-  {queyrasShow}
   
   </div>
   
@@ -243,6 +247,13 @@ const connectionStrategies = connect(
      
       const action = {
         type: 'VIDEO2_ON'
+      };
+      dispatch(action);
+    },
+    onClick4:(event) => {
+     
+      const action = {
+        type: 'VIDEO2_OFF'
       };
       dispatch(action);
     },

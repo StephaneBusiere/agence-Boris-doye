@@ -5,7 +5,7 @@ const initialState = {
   burgerOn: true,
   response: [],
   videoShowreellOn: true,
-  videoQueyrasOn: true
+  videoQueyrasOn: false
 };
 
 const defaultAction = {};
@@ -47,13 +47,13 @@ const reducer = (state = initialState, action = defaultAction) => {
     case 'VIDEO2_ON': {
       return {
         ...state,
-        videoQueyrasOn: false
+        videoQueyrasOn: true
       }
     }
     case 'VIDEO2_OFF': {
       return {
         ...state,
-        videoQueyrasOn: true
+        videoQueyrasOn: false
       }
     }
     default: {
