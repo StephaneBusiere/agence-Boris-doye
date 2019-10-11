@@ -86,7 +86,7 @@ const connectionStrategies = connect(
       onClick3: (event) => {
         console.log('huhu')
         const action = {
-          type: 'BURGER_ON'
+          type: 'USER_ACCOUNT'
         };
         dispatch(action);
       }

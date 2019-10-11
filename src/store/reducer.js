@@ -22,6 +22,13 @@ const reducer = (state = initialState, action = defaultAction) => {
         burgerOn: true
       }
     }
+    // case 'USER_ACCOUNT': {
+    //   console.log("userAccount");
+    //   return {
+    //     ...state,
+        
+    //   }
+    // }
     default: {
       // return state;
       // Dans le cas où on ne comprend pas quelle est l'action à

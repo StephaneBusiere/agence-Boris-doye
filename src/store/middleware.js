@@ -8,7 +8,7 @@ import { SIDE_EFFECT } from 'src/store/reducer';
 // Il est possible de déclencher à la fois un effet de bord & une màj.
 
 const middleware = (store) => (next) => (action) => {
-  console.log('middleware:', action);
+  // console.log('middleware:', action);
 
   // La douane examine nos papiers d'identité.
   switch(action.type) {
@@ -16,13 +16,13 @@ const middleware = (store) => (next) => (action) => {
     // 'SIDE_EFFECT'. Ces actions ne doivent pas aller au reducer,
     // mais déclencher des effets de bord.
     case SIDE_EFFECT: {
-      console.log('middleware/SIDE_EFFECT');
+      // console.log('middleware/SIDE_EFFECT');
       // Ici, on peut faire du logging, lancer des requêtes AJAX, etc.
       break;
     }
 
     default: {
-      console.log('middleware/default');
+      // console.log('middleware/default');
       next(action);
     }
   }
