@@ -194,6 +194,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   return <div>
     <div className="mainPicture" style={sectionStyle1}  >
     <div className="presentationVideos" >NOS PRODUCTIONS </div>
+    <div className="presentationVideos2" >Filmées avec passion </div>
   
   </div>
   <div className="falseMargin"></div>

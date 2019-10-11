@@ -39,8 +39,9 @@ const Aventures= () => {
  Venez craquer avec nous lorsque nous aurons du vent de face, de l’eau plein la figure et juste une envie : retrouver nos familles et se mettre au chaud.
  
  Venez frissonner avec nous lorsque nous verrons se dessiner à l’horizon le Cap Horn et exploser de joie lorsque nous le franchirons.</p>
- <p><button className="voirFilmButton">Voir le film à partir de 4.99€</button></p>
+ <a className="voirFilm" href="https://vimeo.com/ondemand/projetcaphorn">Voir le film à partir de 4.99€</a>
  </div>
+ <iframe className="iframeCap" src="https://player.vimeo.com/video/211654779?autoplay=1&loop=1&title=0&background=1" width="400" height="700" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
  
  <div className="caphornPosterContainer">
  
