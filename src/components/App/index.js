@@ -25,14 +25,14 @@ import Aventures from 'src/components/Aventures';
 import NotFound from 'src/components/NotFound';
 import News from 'src/components/News';
 import Contact from 'src/components/Contact';
-import AdminLogin from 'src/components/AdminLogin';
+import LoginPage from 'src/components/LoginPage';
 import AdminPage from 'src/components/AdminPage';
+import ConnexionModal from 'src/components/ConnexionModal';
 
 // Styles et assets
 import './app.sass';
 
 const App = ({burgerOn,onClick}) => {
-  
   let menuSlide;
   if (burgerOn) {
     menuSlide = <main className="app-main">
@@ -46,10 +46,10 @@ const App = ({burgerOn,onClick}) => {
       <Route path="/aventures/" component={Aventures} />
       <Route path="/clients/" component={Clients} />
       <Route path="/equipements/" component={Equipements} />
-     
+      <Route path="/modal/" component={ConnexionModal} />
       <Route path="/news/" component={News} />
       <Route path="/contact/" component={Contact} />
-      <Route path="/adminlogin/" component={AdminLogin} />
+      <Route path="/loginPage/" component={LoginPage} />
       <Route path="/adminpage/" component={AdminPage} />
       {/* Fallback global (match sans condition si rien n'a matché avant) */}
        <Route component={NotFound} /> 
@@ -57,20 +57,16 @@ const App = ({burgerOn,onClick}) => {
   </main>
   } else {
     menuSlide = <div>
-    
-    <NavBurgerContainer 
-    
-    
-    /></div>
+    <NavBurgerContainer />
+    </div>
   }
+ 
 
   return (
   <div id="app">
-  <HeaderContainer  />
-  
-    {menuSlide}
-  <Footer  />
-    
+  <HeaderContainer />
+  {menuSlide}
+  <Footer  /> 
     
     
     
@@ -80,7 +76,7 @@ const App = ({burgerOn,onClick}) => {
 
 App.propTypes = {
   /** Titre de l'application React */
-  title: PropTypes.string.isRequired
+  title: PropTypes.string
 };
 
 /**
@@ -93,7 +89,6 @@ const connectionStrategies = connect(
   (state, ownProps) => {
     return {
       burgerOn: state.burgerOn
-    
     };
   },
 

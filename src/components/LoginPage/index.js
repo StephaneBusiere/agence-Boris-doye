@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-import './adminLogin.sass';
+import './loginPage.sass';
 
-const AdminLogin= () => {
+const LoginPage = () => {
 
     return <div className="work">
   Se connecter !
@@ -14,4 +14,4 @@ const AdminLogin= () => {
 
 
 
-export default AdminLogin;
+export default LoginPage;

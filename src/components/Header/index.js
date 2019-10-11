@@ -22,7 +22,7 @@ const BurgerElement = <FontAwesomeIcon icon="bars" className="burgerIcon"/>
 const windowCloseElement = <FontAwesomeIcon icon="window-close" className="burgerCross" />
 
 // Header component
-const Header = ({ onClick,onClick2,burgerOn, onClick3 }) => {
+const Header = ({ onClick,onClick2,burgerOn,openModal }) => {
   
   // conditionnal header menu
   let menu;
@@ -31,6 +31,7 @@ const Header = ({ onClick,onClick2,burgerOn, onClick3 }) => {
   } else {
     menu = <image onClick={onClick2} >{windowCloseElement}</image>
   }
+
 
   return (
     
@@ -49,8 +50,16 @@ const Header = ({ onClick,onClick2,burgerOn, onClick3 }) => {
         {menu}
       </Nav>
 
-     <div className="fa-user-circle userAccount" onClick={onClick3}>
-     <FontAwesomeIcon icon="user-circle" className="userIcon" />
+     <div className="fa-user-circle userAccount">
+     <NavLink
+         onClick={openModal}
+         exact
+         to='/modal'
+         key={name}
+         className="userAccount"
+         >
+         <FontAwesomeIcon icon="user-circle" className="userIcon" />
+         </NavLink>
      </div>
      
     </header>
@@ -62,7 +71,6 @@ const connectionStrategies = connect(
   (state, ownProps) => {
     return {
       burgerOn: state.burgerOn
-    
     };
   },
 
@@ -83,10 +91,10 @@ const connectionStrategies = connect(
         };
         dispatch(action);
       },
-      onClick3: (event) => {
+      openModal: (event) => {
         console.log('huhu')
         const action = {
-          type: 'USER_ACCOUNT'
+          type: 'OPEN_USER_ACCOUNT'
         };
         dispatch(action);
       }

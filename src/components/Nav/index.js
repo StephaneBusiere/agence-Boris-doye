@@ -66,6 +66,7 @@ const Nav = () => (
  >
  Equipements
  </NavLink>
+
 {/* News */}
 
   <NavLink
@@ -115,7 +116,7 @@ const Nav = () => (
   );
   
   Nav.propTypes = {
-    recipes: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+    recipes: PropTypes.arrayOf(PropTypes.object.isRequired),
   };
   
   export default Nav;
