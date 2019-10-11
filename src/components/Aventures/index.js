@@ -61,7 +61,8 @@ const Aventures= () => {
  <p className="caphornPresentationTexte">Des sources les plus lointaines de l’Amazone jusqu’aux eaux calmes de la jungle péruvienne, 6 kayakistes français s’élancent pour une descente de 17 jours en autonomie sur le Rio Apurimac.
  Guidés par leur passion pour la rivière et leur désir d’aventure, les 6 amis vont s’enfoncer progressivement dans les profondeurs de la cordillère des Andes. Un parcours à travers les eaux tourmentées de la rivière sacrée des Incas. Ce voyage interrogent la possibilité de vivre avec peu, ensemble, dans un environnement resté intact, inexploité par l’Homme.
  Des montagnes péruviennes jusqu’aux prémices de la forêt Amazonienne, ce film retrace un long et difficile parcours à travers les entrailles des Andes, là où seul les kayakistes peuvent aller.</p>
- <p><button className="voirFilmButton">Voir le film à partir de 4.99€</button></p>
+ <a className="voirFilm2" href="https://vimeo.com/ondemand/apurimac">Voir le film à partir de 2.69€</a>
+ <iframe src="https://player.vimeo.com/video/314961890?autoplay=1&loop=1&title=0" width="500" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
  </div>
  
  <div className="caphornPosterContainer">
