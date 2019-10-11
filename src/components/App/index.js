@@ -28,6 +28,7 @@ import Contact from 'src/components/Contact';
 import LoginPage from 'src/components/LoginPage';
 import AdminPage from 'src/components/AdminPage';
 import ConnexionModal from 'src/components/ConnexionModal';
+import LegalMentions from 'src/components/LegalMentions';
 
 // Styles et assets
 import './app.sass';
@@ -51,6 +52,7 @@ const App = ({burgerOn,onClick}) => {
       <Route path="/contact/" component={Contact} />
       <Route path="/loginPage/" component={LoginPage} />
       <Route path="/adminpage/" component={AdminPage} />
+      <Route path="/mentionslegales/" component={LegalMentions} />
       {/* Fallback global (match sans condition si rien n'a matché avant) */}
        <Route component={NotFound} /> 
     </Switch>
