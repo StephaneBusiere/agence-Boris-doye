@@ -18,11 +18,11 @@ import logo from 'src/assets/images/borisdoyelogo_mini_white.png';
 
 import './header.sass';
 
-const BurgerElement = <FontAwesomeIcon  className="burgerIcon" icon={faBars}/>
-const windowCloseElement = <FontAwesomeIcon className="burgerCross" icon={faWindowClose} />
+const BurgerElement = <FontAwesomeIcon icon="bars" className="burgerIcon"/>
+const windowCloseElement = <FontAwesomeIcon icon="window-close" className="burgerCross" />
 
 // Header component
-const Header = ({ onClick,onClick2,burgerOn }) => {
+const Header = ({ onClick,onClick2,burgerOn, onClick3 }) => {
   
   // conditionnal header menu
   let menu;
@@ -49,7 +49,7 @@ const Header = ({ onClick,onClick2,burgerOn }) => {
         {menu}
       </Nav>
 
-     <div className="fa-user-circle userAccount">
+     <div className="fa-user-circle userAccount" onClick={onClick3}>
      <FontAwesomeIcon icon="user-circle" className="userIcon" />
      </div>
      
@@ -69,16 +69,22 @@ const connectionStrategies = connect(
   // 2d argument : stratégie d'écriture (dans le state privé global)
   (dispatch, ownProps) => {
     return {
-
-    onClick2:(event) => {
-      console.log('yea')
-      const action = {
-        type: 'BURGER_OFF'
-      };
-      dispatch(action);
-    },
       onClick: (event) => {
         console.log('ok')
+        const action = {
+          type: 'BURGER_ON'
+        };
+        dispatch(action);
+      },
+      onClick2:(event) => {
+        // console.log('yea')
+        const action = {
+          type: 'BURGER_OFF'
+        };
+        dispatch(action);
+      },
+      onClick3: (event) => {
+        console.log('huhu')
         const action = {
           type: 'BURGER_ON'
         };
