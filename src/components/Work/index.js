@@ -16,10 +16,11 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.sass';
 
-const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,videoQueyrasOn}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
+  
   const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
 
   let sectionStyle1={
@@ -149,8 +150,48 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,videoQueyrasOn
   } else {
     
   }
+  let vietnamShow;
   
-    return <div>
+  if (videoVietnamOn) {
+    vietnamShow = <div className="videoPresentContainer2">
+  
+  
+    <div className="vietnamContainer">
+    <div className="vietnam" style={sectionStyle4} >
+    <div className="vietnamContent"><p>Vietnam</p>
+    <p>Marque de vêtement</p>
+    <image onClick={onClick5}className="iconPlay2">{iconPlay2}</image>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div className="outdoormixContainer">
+    <div className="outdoormix" style={sectionStyle5} >
+    <div className="outdoormixContent"><p>Outdoormix</p>
+    <p>Festival</p>
+    <image onClick={onClick7} className="iconPlay2">{iconPlay1}</image>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+  }  else   {
+    showReellShow=<div className="vietnamIframe"><iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <image onClick={onClick6}>  {cross} </image>
+    </div>
+    
+  } 
+  if (videoOutdoormixOn){
+    showReellShow=<div className="outdoormixIframe"><iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <image onClick={onClick8}>  {cross} </image>
+    </div>
+    
+    
+  } else {
+    
+  }
+  return <div>
     <div className="mainPicture" style={sectionStyle1}  >
     <div className="presentationVideos" >NOS PRODUCTIONS </div>
   
@@ -158,35 +199,12 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,videoQueyrasOn
   <div className="falseMargin"></div>
   
   <div className="videoPresentContainer1">
- {showReellShow}
- 
-  
-  
-  </div>
+ {showReellShow}</div>
   
   <div className="videoPresentContainer2">
   
+  {vietnamShow}</div>
   
-  <div className="vietnamContainer">
-  <div className="vietnam" style={sectionStyle4} >
-  <div className="vietnamContent"><p>Vietnam</p>
-  <p>Marque de vêtement</p>
-  <image className="iconPlay2">{iconPlay2}</image>
-  </div>
-  </div>
-  </div>
-  
-  
-  <div className="outdoormixContainer">
-  <div className="outdoormix" style={sectionStyle5} >
-  <div className="outdoormixContent"><p>Outdoormix</p>
-  <p>Festival</p>
-  <image className="iconPlay2">{iconPlay1}</image>
-  </div>
-  </div>
-  </div>
-  
-  </div>
   
 
   <div className="videoPresentContainer3">
@@ -220,7 +238,9 @@ const connectionStrategies = connect(
   (state, ownProps) => {
     return {
       videoShowreellOn: state.videoShowreellOn,
-      videoQueyrasOn: state.videoQueyrasOn
+      videoQueyrasOn: state.videoQueyrasOn,
+      videoVietnamOn: state.videoVietnamOn,
+      videoOutdoormixOn: state.videoOutdoormixOn,
     
     };
   },
@@ -254,6 +274,34 @@ const connectionStrategies = connect(
      
       const action = {
         type: 'VIDEO2_OFF'
+      };
+      dispatch(action);
+    },
+    onClick5:(event) => {
+     
+      const action = {
+        type: 'VIDEO3_ON'
+      };
+      dispatch(action);
+    },
+    onClick6:(event) => {
+     
+      const action = {
+        type: 'VIDEO3_OFF'
+      };
+      dispatch(action);
+    },
+    onClick7:(event) => {
+     
+      const action = {
+        type: 'VIDEO4_ON'
+      };
+      dispatch(action);
+    },
+    onClick8:(event) => {
+     
+      const action = {
+        type: 'VIDEO4_OFF'
       };
       dispatch(action);
     },
