@@ -12,7 +12,7 @@ import borisPhotoCarre from 'src/assets/images/photoBorisCarre.jpg'
 import borisBateau from 'src/assets/images/BorisBateau.jpg'
 import borisDrone from 'src/assets/images/photoBorisDrone.jpg'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
-
+import { NavLink } from 'react-router-dom';
 import slider from 'src/components/Slider'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -107,17 +107,7 @@ const Home= () => {
     </div>
     
     
-    
-
-    
-    
-    
-    
-    
-    
- 
-
-
+  
 
 </div>
     <div className="competences">
@@ -234,6 +224,65 @@ const Home= () => {
       </div>
      
     </div>
+  
+  <div className="latestVideosContainer">
+  <div className="teaserTitleContainer">
+  <h2 className="teaserTitle">Nos dernières vidéos</h2>
+  </div>
+  <div className="TeaserContainer">
+  
+  
+  <div className="iframe">
+  
+  <iframe src="https://player.vimeo.com/video/198345088?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  
+  <NavLink
+  exact
+  to="/work"
+  
+  activeClassName="nav-link--active"
+>
+ <div className="video-Link">
+  <h3 className="videoLink-Regarder">regarder</h3>
+ 
+  <h3 className="videoLink-Une">une</h3>   
+  <h3 className="videoLink-Video">video</h3> 
+  </div>
+  </NavLink>
+  
+  <iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <NavLink
+  exact
+  to="/work"
+  
+  activeClassName="nav-link--active"
+>
+ <div className="video-Link">
+  <h3 className="videoLink-Regarder">regarder</h3>
+ 
+  <h3 className="videoLink-Une">une</h3>   
+  <h3 className="videoLink-Video">video</h3> 
+  </div>
+  </NavLink>
+  <iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <NavLink
+  exact
+  to="/work"
+  
+  activeClassName="nav-link--active"
+>
+ <div className="video-Link">
+  <h3 className="videoLink-Regarder">regarder</h3>
+ 
+  <h3 className="videoLink-Une">une</h3>   
+  <h3 className="videoLink-Video">video</h3> 
+  </div>
+  </NavLink>
+  <iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+ 
+  </div>
+  </div>
   </div>
  
   
