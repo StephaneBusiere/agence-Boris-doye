@@ -4,7 +4,8 @@ export const SIDE_EFFECT = 'SIDE_EFFECT';
 const initialState = {
   burgerOn: true,
   response: [],
-  videoOn: true
+  videoShowreellOn: true,
+  videoQueyrasOn: true
 };
 
 const defaultAction = {};
@@ -31,16 +32,28 @@ const reducer = (state = initialState, action = defaultAction) => {
         response: action.value[0]
       }
     }
-    case 'VIDEO_ON': {
+    case 'VIDEO1_ON': {
       return {
         ...state,
-        videoOn: false
+        videoShowreellOn: false
       }
     }
-    case 'VIDEO_OFF': {
+    case 'VIDEO1_OFF': {
       return {
         ...state,
-        videoOn: true
+        videoShowreellOn: true
+      }
+    }
+    case 'VIDEO2_ON': {
+      return {
+        ...state,
+        videoQueyrasOn: false
+      }
+    }
+    case 'VIDEO2_OFF': {
+      return {
+        ...state,
+        videoQueyrasOn: true
       }
     }
     default: {

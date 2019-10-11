@@ -16,7 +16,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.sass';
 
-const Work= ({onClick,videoOn,onClick2}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,videoQueyrasOn}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
@@ -111,7 +111,7 @@ const Work= ({onClick,videoOn,onClick2}) => {
 
   }
   let showReellShow;
-  if (videoOn) {
+  if (videoShowreellOn) {
     showReellShow = <div className="showReelContainer">
     <div className="showReel" style={sectionStyle2}  >
     <div className="showReelContent">
@@ -129,7 +129,23 @@ const Work= ({onClick,videoOn,onClick2}) => {
     <image onClick={onClick2}>  {cross} </image>
     </div>
   }
-
+  let queyrasShow;
+  if (videoQueyrasOn) {
+    queyrasShow=<div className="queyrasContainer">
+    <div className="queyras" style={sectionStyle3}  >
+    <div className="queyrasContent"><p>Queyras-été</p>
+    <p>Office du tourisme du Queyras</p>
+    <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
+    </div>
+    </div>
+    </div>
+   
+  
+  } else {
+    queyrasShow=<div className="queyrasIframe"><iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <image onClick={onClick2}>  {cross} </image>
+    </div>
+  }
     return <div>
     <div className="mainPicture" style={sectionStyle1}  >
     <div className="presentationVideos" >NOS PRODUCTIONS </div>
@@ -140,15 +156,8 @@ const Work= ({onClick,videoOn,onClick2}) => {
   <div className="videoPresentContainer1">
  {showReellShow}
   
+  {queyrasShow}
   
-  <div className="queyrasContainer">
-  <div className="queyras" style={sectionStyle3}  >
-  <div className="queyrasContent"><p>Queyras-été</p>
-  <p>Office du tourisme du Queyras</p>
-  <image className="iconPlay2">{iconPlay2}</image>
-  </div>
-  </div>
-  </div>
   </div>
   
   <div className="videoPresentContainer2">
@@ -206,7 +215,8 @@ const connectionStrategies = connect(
   // 1er argument : stratégie de lecture (dans le state privé global)
   (state, ownProps) => {
     return {
-      videoOn: state.videoOn
+      videoShowreellOn: state.videoShowreellOn,
+      videoQueyrasOn: state.videoQueyrasOn
     
     };
   },
@@ -214,21 +224,28 @@ const connectionStrategies = connect(
   // 2d argument : stratégie d'écriture (dans le state privé global)
   (dispatch, ownProps) => {
     return {
-
+    
+    onClick: (event) => {
+        console.log('ok')
+        const action = {
+          type: 'VIDEO1_ON'
+        };
+        dispatch(action);
+      },
     onClick2:(event) => {
      
       const action = {
-        type: 'VIDEO_OFF'
+        type: 'VIDEO1_OFF'
       };
       dispatch(action);
     },
-      onClick: (event) => {
-        console.log('ok')
-        const action = {
-          type: 'VIDEO_ON'
-        };
-        dispatch(action);
-      }
+    onClick3:(event) => {
+     
+      const action = {
+        type: 'VIDEO2_ON'
+      };
+      dispatch(action);
+    },
     };
   },
 );
