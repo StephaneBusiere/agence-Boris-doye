@@ -660,7 +660,7 @@
 .compétences
   @media only screen and (max-width : 640px)
    width: 100% 
-   height: 3000px
+   height: auto
    background-color: white
   
   @media only screen and (min-width : 640px) 
@@ -797,14 +797,23 @@
   margin: 5% 0% 0% 0%
 
 .svg-inline--fa
-  font-size: 50px
   
-  margin: 0% 0% 0% 35%
-  color: #32A1CE
-  padding: 0.2em
-  border: thin solid  #6b787911
-  border-radius: 100px
-  background-color: #6b787911
+  @media only screen and (max-width : 640px)
+   margin: 0% 0% 0% 55%
+   color: #32A1CE
+   padding: 0.2em
+   border: thin solid  #6b787911
+   border-radius: 100px
+   background-color: #6b787911
+   font-size: 30px
+  @media only screen and (min-width : 640px)
+   margin: 0% 0% 0% 35%
+   color: #32A1CE
+   padding: 0.2em
+   border: thin solid  #6b787911
+   border-radius: 100px
+   background-color: #6b787911
+   font-size: 50px
 
 .photoCadrage
   @media only screen and (max-width : 640px)
@@ -915,8 +924,13 @@
   text-transform: none
   letter-spacing: 0px
   color: #565656
-  margin: 4% 0% 0% 8%
-  width: 40em
+  @media only screen and (max-width : 640px)
+   margin: 4% 0% 0% 0%
+   width: 10em
+  @media only screen and (min-width : 640px) 
+  
+   margin: 4% 0% 0% 8%
+   width: 40em
 
 .iconPenRight
   margin-right: 60px
@@ -973,13 +987,22 @@
   margin: 0% 30% 0% 0%
 
 .scenarisationDroite
-  width: 150%
-  display: flex
-  text-align: left
+  @media only screen and (max-width : 640px)
+   width: 100%
+  @media only screen and (min-width : 640px)
+   width: 150%
+   display: flex
+   text-align: left
 
 .latestVideosContainer
-  width: 100% 
-  height: 500px
+  
+  @media only screen and (max-width : 640px)
+   width: 100% 
+   height: 1400px
+  @media only screen and (min-width : 640px)
+
+   width: 100% 
+   height: 500px
 .teaserTitleContainer
   width: 100% 
   height: 60px
@@ -988,36 +1011,75 @@
 .teaserTitle
   font-style: normal
   font-weight: 600
-  font-size: 40px
+  
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   text-transform: none
   letter-spacing: 0px
   
-  text-align: center
-  color: black
-  margin: 0% 0% 7% 0%
-  padding-top: 1%
+  @media only screen and (max-width : 640px)
+   text-align: center
+   color: black
+   margin: 0% 0% 7% 0%
+   padding-top: 7%
+   font-size: 20px
+   line-height: 2px
+  @media only screen and (min-width : 640px)
+   
+   text-align: center
+   color: black
+   margin: 0% 0% 7% 0%
+   padding-top: 1%
+   font-size: 40px
 .TeaserContainer
-  width: 100% 
-  height: 300px
-  background-color:  #bdb7d3e0
-  //display: flex
-.iframe
-  display: flex
-  padding-top: 3%
 
+  background-color:  #bdb7d3e0
+  
+  @media only screen and (max-width : 640px)
+   width: 100% 
+   height: 1400px
+   display: flex
+  @media only screen and (min-width : 640px)
+   width: 100% 
+   height: 300px
+   display: 
+.iframe
+   
+  
+  @media only screen and (max-width : 640px)
+   width: 50px 
+   height: 30px
+   display: 
+  @media only screen and (min-width : 640px)
+   
+   display: flex
+   padding-top: 3%
+
+.iframeShowreelTeaser
+  @media only screen and (max-width : 640px)
+   width: 350px 
+   height: 300px
+   margin-left: 10px
+  @media only screen and (min-width : 640px)
+   width: 100% 
+   height: auto
+   
   
 .video-Link
-  color: white
-  font-style: normal
-  font-weight: 600
   
-  font-family: "texgyreadventorregular"
-  line-height: 25.65px
-  text-transform: none
-  letter-spacing: 0px
-  display: block
+  @media only screen and (max-width : 640px)
+   line-height: 5px
+   display: flex
+  @media only screen and (min-width : 640px)
+   color: white
+   font-style: normal
+   font-weight: 600
+  
+   font-family: "texgyreadventorregular"
+   line-height: 25.65px
+   text-transform: none
+   letter-spacing: 0px
+   display: block
 
 
 .video-Link:hover
@@ -1025,21 +1087,36 @@
   transform: scale(1.4)
 
 .videoLink-Regarder
-  
-  margin: 50px 0% 0% 0px
-  font-size: 12px
+  @media only screen and (max-width : 640px)
+   margin: 5px 0% 0% 0px
+   font-size: 10px
+   line-height: 5px
+  @media only screen and (min-width : 640px)
+   margin: 50px 0% 0% 0px
+   font-size: 12px
   
 
 .videoLink-Une
   
-  display: block
-  margin: 5px 0% 0% 15px
-  font-size: 12px
+  @media only screen and (max-width : 640px)
+   margin: 5px 0% 0% 0px
+   font-size: 10px
+   line-height: 5px
+  @media only screen and (min-width : 640px)
+   margin: 5px 0% 0% 15px
+   font-size: 12px
+   display: block
 
 .videoLink-Video
+  @media only screen and (max-width : 640px)
+   margin: 5px 0% 0% 0px
+   font-size: 10px
+   line-height: 5px
+  @media only screen and (min-width : 640px)
+   margin: 4px 0% 0% 3px
+   font-size: 18px
+   display: block
   
-  display: block
-  margin: 4px 0% 0% 3px
-  font-size: 18px
+  
 
   

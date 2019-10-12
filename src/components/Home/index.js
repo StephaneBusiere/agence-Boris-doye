@@ -234,7 +234,7 @@ const Home= () => {
   
   <div className="iframe">
   
-  <iframe src="https://player.vimeo.com/video/198345088?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/198345088?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   
   <NavLink
   exact
@@ -250,7 +250,7 @@ const Home= () => {
   </div>
   </NavLink>
   
-  <iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   <NavLink
   exact
   to="/work"
@@ -264,7 +264,7 @@ const Home= () => {
   <h3 className="videoLink-Video">video</h3> 
   </div>
   </NavLink>
-  <iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   <NavLink
   exact
   to="/work"
@@ -278,7 +278,7 @@ const Home= () => {
   <h3 className="videoLink-Video">video</h3> 
   </div>
   </NavLink>
-  <iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   </div>
  
   </div>
