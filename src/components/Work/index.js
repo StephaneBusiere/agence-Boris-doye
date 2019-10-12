@@ -22,6 +22,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
   
   const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
+  
 
   let sectionStyle1={
     width: "100%",
@@ -36,22 +37,22 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   let sectionStyle2={
    
     
-    width: "900px", 
-    height: "600px",
-    margin: "0% 8% 0% 5%",
+    width: "100%", 
+    height: "100%",
+    margin: "0% 8% 5% 5%",
    
     backgroundImage: `url(${showreel})`,
     backgroundSize: "cover",
     display:"inline-block",
-    position: "static"
+    
 
   }
 
   let sectionStyle3={
    
     
-    width: "900px", 
-    height: "600px",
+    width: "100%", 
+    height: "100%",
     margin: "0% 0% 0% 7%",
    
     backgroundImage: `url(${queyras})`,
@@ -62,8 +63,8 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   let sectionStyle4={
    
     
-    width: "900px", 
-    height: "600px",
+    width: "100%", 
+    height: "100%",
     margin: "0% 0% 0% 5%",
    
     backgroundImage: `url(${vietnam})`,
@@ -75,8 +76,8 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   let sectionStyle5={
    
     
-    width: "900px", 
-    height: "600px",
+    width: "100%", 
+    height: "100%",
     margin: "0% 0% 0% 7%",
    
     backgroundImage: `url(${outdoormix})`,

@@ -3,7 +3,10 @@
 
 
 
-
+.mainPicture
+   //background-image: url('src/assets/images/Showreel.jpg')
+   width: 100%
+   height: 300px
 .presentationVideos
   font-family: 'TeXGyreAdventorRegular'
   font-weight: normal 
@@ -72,52 +75,112 @@
   
 
 .videoPresentContainer1
-  background-color: #282828
-  width: 100% 
-  height: 620px 
+  @media only screen and (max-width : 640px) 
+   background-color: #282828
+   width: 100% 
+   height: 100% 
   
-  display: flex
+   display: 
+ 
+  @media only screen and (min-width : 640px)
+   background-color: #282828
+   width: 100% 
+   height: 620px 
+  
+   display: flex
  
   
   
 
 .videoPresentContainer2
-  background-color: #282828
-  width: 100% 
-  height: 620px 
-  display: flex
+  @media only screen and (max-width : 640px) 
+   background-color: #282828
+   width: 100% 
+   height: 100% 
+  
+   display: 
  
+  @media only screen and (min-width : 640px)
+   background-color: #282828
+   width: 100% 
+   height: 620px 
+  
+   display: flex
 .videoPresentContainer3
-  background-color: #282828
-  width: 100% 
-  height: 620px 
-  display: flex
+  @media only screen and (max-width : 640px) 
+   background-color: #282828
+   width: 100% 
+   height: 100% 
+  
+   display: 
+ 
+  @media only screen and (min-width : 640px)
+   background-color: #282828
+   width: 100% 
+   height: 620px 
+  
+   display: flex
 
 .showReelContent
-  opacity: 0
-  font-family: 'TeXGyreAdventorRegular'
-  font-size: 100px
-  font-weight: 600
-  height: 30px
-  line-height: 70px
-  color: #dd9933
+  @media only screen and (max-width : 640px)
+   width: 300px
+  
+   opacity: 1
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 60px
+   font-weight: 600
+   height: 10px
+   line-height: 70px
+   color: #dd9933
+   margin: 5% 0% 0% 15%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+  
+   opacity: 0
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 100px
+   font-weight: 600
+   height: 30px
+   line-height: 70px
+   color: #dd9933
   
 .showReelContainer
-  width: 900px
-  height: 600px
+  @media only screen and (max-width : 640px) 
+   width: 400px
+   height: 300px
+   margin: 0% 0% 10% 10%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+   height: 600px
 .showReelContainer:hover
   
 
 .showReelContainer:hover .showReelContent 
-  opacity: 1
-  margin: 10% 0% 0% 26%
-  transition: all 0.35s 0.1s linear
+  @media only screen and (max-width : 640px)
+   opacity: 1
+   margin: 10% 0% 0% 20%
+   transition: all 0.35s 0.1s linear
+
+  @media only screen and (min-width : 640px) 
+   opacity: 1
+   margin: 10% 0% 0% 26%
+   transition: all 0.35s 0.1s linear
 
 .showReel
-  width: 100% 
-  height: 100%
+  @media only screen and (max-width : 640px)
+   width: 400px
+   height: 200px
+  @media only screen and (min-width : 640px) 
+   margin: 0% 0% 0% 0%
+   width: 100% 
+   height: 100%
+ 
 .showReelIframe
-  margin: 0% 0% 0% 0%
+  @media only screen and (max-width : 640px)
+   width: 100%
+   height: auto
+  @media only screen and (min-width : 640px) 
+   margin: 0% 0% 0% 0%
    
   z-index: 900
 .queyrasIframe
@@ -144,18 +207,43 @@
   transition: all .5s 
  
 .queyrasContainer
-  width: 900px
-  height: 600px
+  @media only screen and (max-width : 640px) 
+   width: 400px
+   height: 300px
+   margin: 0% 0% 15% 10%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+   height: 600px
+   
   
-  top: 0
+   top: 0
 .queyrasContent
-  opacity: 0
-  font-family: 'TeXGyreAdventorRegular'
-  font-size: 100px
-  font-weight: 600
-  height: 30px
-  line-height: 70px
-  color:  #32a1ce
+  @media only screen and (max-width : 640px)
+   width: 300px
+  
+   opacity: 1
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 40px
+   font-weight: 600
+   height: 20px
+   line-height: 35px
+   color: #32a1ce
+   margin: 5% 0% 0% 15%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+  
+   opacity: 0
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 100px
+   font-weight: 600
+   height: 30px
+   line-height: 70px
+   color: #dd9933
+  
+  
+  
+  
+
 
 .queyrasContainer:hover .queyrasContent
   opacity: 1
@@ -163,9 +251,14 @@
  
   transition: all 0.35s 0.1s linear
 .queyras
-  width: 100% 
-  height: 100%
-  
+  @media only screen and (max-width : 640px)
+   width: 400px
+   height: 100px
+  @media only screen and (min-width : 640px) 
+   margin: 0% 0% 0% 0%
+   width: 100% 
+   height: 100%
+ 
 
 
 .queyrasContainer:hover .queyras
@@ -176,17 +269,41 @@
   
   
 .vietnamContent
-  opacity: 0
-  font-family: 'TeXGyreAdventorRegular'
-  font-size: 100px
-  font-weight: 600
-  height: 30px
-  line-height: 70px
-  color:  #32a1ce
-  padding-top: 5%
+  @media only screen and (max-width : 640px)
+   width: 300px
+  
+   opacity: 1
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 40px
+   font-weight: 600
+   height: 10px
+   line-height: 40px
+   color: #dd9933
+   margin: 0% 0% 0% 25%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+  
+   opacity: 0
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 100px
+   font-weight: 600
+   height: 30px
+   line-height: 70px
+   color: #dd9933
+   padding-top: 5%
+  
+  
+  
+ 
 
 .vietnamContainer
-  
+  @media only screen and (max-width : 640px) 
+   width: 400px
+   height: 300px
+   margin: 0% 0% 15% 12%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+   height: 600px
 .vietnamContainer:hover .vietnamContent
   opacity: 1
   margin: 0% 0% 0% 26.5%
@@ -194,32 +311,77 @@
 
  
 .outdoormixContent
-  opacity: 0
-  font-family: 'TeXGyreAdventorRegular'
-  font-size: 100px
-  font-weight: 600
-  height: 30px
-  line-height: 70px
-  color: #dd9933
-  padding-top: 33%
+  @media only screen and (max-width : 640px)
+   width: 300px
+  
+   opacity: 1
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 40px
+   font-weight: 600
+   height: 10px
+   line-height: 40px
+   color:  #32a1ce
+   margin: 0% 0% 0% 25%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+  
+   opacity: 0
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 100px
+   font-weight: 600
+   height: 30px
+   line-height: 70px
+   color: #dd9933
+   padding-top: 33%
+   
+  
   
 .outdoormixContainer:hover .outdoormixContent
   opacity: 1
   margin: 0% 0% 0% 26.5%
   transition:  0.35s 0.1s 
 
- 
+.outdoormixContainer
+  @media only screen and (max-width : 640px) 
+   width: 400px
+   height: 300px
+  @media only screen and (min-width : 640px) 
+   width: 900px
+   height: 600px
 .fasboaContent
-  opacity: 0
-  font-family: 'TeXGyreAdventorRegular'
-  font-size: 100px
-  font-weight: 600
-  height: 30px
-  line-height: 70px
-  color: #32a1ce
-  padding-top: 20%
-  margin-left: 18%
+  @media only screen and (max-width : 640px)
+   width: 300px
+  
+   opacity: 1
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 40px
+   font-weight: 600
+   height: 10px
+   line-height: 40px
+   color:  #32a1ce
+   margin: 0% 0% 0% 25%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+  
+   opacity: 0
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 100px
+   font-weight: 600
+   height: 30px
+   line-height: 70px
+   color: #32a1ce
+   padding-top: 33%
+   padding-top: 20%
+   margin-left: 18%
  
+ 
+.fasboaContainer
+  @media only screen and (max-width : 640px) 
+   width: 400px
+   height: 300px
+  @media only screen and (min-width : 640px) 
+   width: 900px
+   height: 600px
 .fasboaContainer:hover .fasboaContent
   opacity: 1
   
@@ -227,16 +389,40 @@
   
 
 .indeContent
-  opacity: 0
-  font-family: 'TeXGyreAdventorRegular'
-  font-size: 100px
-  font-weight: 600
-  height: 30px
-  line-height: 70px
-  color: #dd9933 
-  padding-top: 2%
-  margin-left: 18%
-
+  @media only screen and (max-width : 640px)
+   width: 300px
+  
+   opacity: 1
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 20px
+   font-weight: 600
+   height: 20px
+   line-height: 15px
+   color: #32a1ce
+   margin: 5% 0% 0% 15%
+  @media only screen and (min-width : 640px) 
+   width: 900px
+  
+   opacity: 0
+   font-family: 'TeXGyreAdventorRegular'
+   font-size: 100px
+   font-weight: 600
+   height: 30px
+   line-height: 70px
+   color: #dd9933
+   padding-top: 2%
+   margin-left: 18%
+ 
+ 
+   
+  
+.indeContainer
+  @media only screen and (max-width : 640px) 
+   width: 400px
+   height: 300px
+  @media only screen and (min-width : 640px) 
+   width: 900px
+   height: 600px
 .indeContainer:hover .indeContent
   opacity: 1
   
