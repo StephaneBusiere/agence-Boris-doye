@@ -46,9 +46,9 @@ const Header = ({ onClick,onClick2,burgerOn }) => {
       </NavLink>
      
       <Nav  className="navMenu">
-        {menu}
+       
       </Nav>
-
+      {menu}
      <div className="fa-user-circle userAccount">
      <FontAwesomeIcon icon="user-circle" className="userIcon" />
      </div>
