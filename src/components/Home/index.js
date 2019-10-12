@@ -186,7 +186,7 @@ const Home= () => {
       <h2 className="title-droite2">Motion design</h2>
       <div className="scenarisation">
       <image >{iconMotion }</image>
-      <p className="text-droite1">Ajout d’éléments graphiques animés dans nos réalisations (titrages, dessins animés).</p>
+      <p className="text-droite2">Ajout d’éléments graphiques animés dans nos réalisations (titrages, dessins animés).</p>
       
       </div>
       </div>
@@ -197,7 +197,7 @@ const Home= () => {
       <h2 className="title-droite3">Sound Design</h2>
       <div className="scenarisation">
       <image >{iconMusic}</image>
-      <p className="text-droite1">Création d’une ambiance sonore immersive pour plonger le spectateur dans votre univers.</p>
+      <p className="text-droite2">Création d’une ambiance sonore immersive pour plonger le spectateur dans votre univers.</p>
       
       </div>
       </div>
@@ -207,7 +207,7 @@ const Home= () => {
       <h2 className="title-droite4">Réseaux sociaux</h2>
       <div className="scenarisation">
       <image >{iconSocial }</image>
-      <p className="text-droite1">Production de contenu optimisé pour les réseaux sociaux et adapté aux attentes de votre communauté.</p>
+      <p className="text-droite2">Production de contenu optimisé pour les réseaux sociaux et adapté aux attentes de votre communauté.</p>
       
       </div>
       </div>
@@ -217,7 +217,7 @@ const Home= () => {
       <h2 className="title-droite5">Photographie</h2>
       <div className="scenarisation">
       <image >{iconPhoto}</image>
-      <p className="text-droite1">Des sommets aux open-spaces, nous captons les émotions et les instants les plus intenses.</p>
+      <p className="text-droite2">Des sommets aux open-spaces, nous captons les émotions et les instants les plus intenses.</p>
       
       </div>
       </div>
