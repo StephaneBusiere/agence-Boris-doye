@@ -4,12 +4,12 @@ import AwesomeSlider from 'react-awesome-slider';
 import bigPictureReal2 from 'src/assets/images/montagne.jpg'
 import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
 import showreel from 'src/assets/images/Showreel.jpg'
-import video from 'src/assets/images/fasboaVideo.mp4'
+
 
 import { Player } from 'video-react';
-import AwesomeSliderStyles from './slider.scss';
-import './slider.scss';
-import './slider.sass';
+import AwesomeSliderStyles from './slider.css';
+
+
 
 
 const Slider = (
