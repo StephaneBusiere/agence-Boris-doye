@@ -1,6 +1,6 @@
-// Node import
 const path = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 // Plugins de traitement pour dist/
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -39,25 +39,33 @@ module.exports = {
     filename: 'app.js',
     // Nom du bundle vendors si l'option d'optimisation / splitChunks est activée
     chunkFilename: 'vendors.js',
+    libraryTarget: 'umd',
+    library: 'react-awesome-button',
+    globalObject: 'this',
     // Cible des bundles
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
+  
   // Optimisation pour le build
   optimization: {
     // Code spliting
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
     splitChunks: {
       chunks: 'all',
     },
     // Minification
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: false // passer à true pour JS source maps
-      }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
+   
   },
   // Modules
   module: {
@@ -76,7 +84,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: true,
+              cacheDirectory: true, 
             },
           },
         ],
@@ -101,7 +109,7 @@ module.exports = {
           'sass-loader',
         ],
       },
-      // Images
+      // Inages
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
@@ -142,6 +150,10 @@ module.exports = {
     new webpack.ProvidePlugin({
       css: ['@emotion/core', 'css']
     }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      }, }),
     // Permet de prendre le index.html de src comme base pour le fichier de dist/
     new HtmlWebPackPlugin({
       template: './src/index.html',
