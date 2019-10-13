@@ -18,12 +18,13 @@ const Team= () => {
     
   }
     return <div>
+    <div className="teamPictureContainer">
     <div className="teamPicture" style={sectionStyle1}  >
     <div className="presentationTeam" ><div className="teamtitle">Notre équipe</div>
     
     </div>
      </div>
-     
+     </div>
      <div className="teamContainer1">
      
      <div className="caphornPosterContainer">

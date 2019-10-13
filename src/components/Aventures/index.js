@@ -19,10 +19,12 @@ const Aventures= () => {
 
   
     return <div>
+    <div className="aventurePictureContainer">
     <div className="aventurePicture" style={sectionStyle1}  >
     <div className="presentationVideos" ><h2 ClassName="aventureTitle">NOS AVENTURES</h2>
     <h3 className="documentaireTitle">Films documentaires</h3>
     </div>
+     </div>
      </div>
  <div className="documentaireContainer1">
  <div className="caphornText">
@@ -41,7 +43,7 @@ const Aventures= () => {
  Venez frissonner avec nous lorsque nous verrons se dessiner à l’horizon le Cap Horn et exploser de joie lorsque nous le franchirons.</p>
  <a className="voirFilm" href="https://vimeo.com/ondemand/projetcaphorn">Voir le film à partir de 4.99€</a>
  </div>
- <iframe className="iframeCap" src="https://player.vimeo.com/video/211654779?autoplay=1&loop=1&title=0&background=1" width="400" height="700" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+ <iframe className="iframeCap" src="https://player.vimeo.com/video/211654779?autoplay=1&loop=1&title=0&background=1" width="372" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
  
  <div className="caphornPosterContainer">
  
@@ -53,7 +55,7 @@ const Aventures= () => {
  <div className="documentaireContainer2">
  <div className="caphornText">
  
- <h2 className="caphornTitle">Appurimac-l'appel de la rivière</h2>
+ <h2 className="AppurimacTitle">Appurimac-l'appel de la rivière</h2>
  <p className="caphornAutor">de Hugo Clouzeau, Stéphane Pion, Boris Doye, Mathieu Coldebella, Guillaume Fievez, le 25 avril 2019</p>
  <p className="caphornGender">Genre: Action et Aventure, documentaire </p>
  <p className="caphornDuration">Durée : 54 minutes</p>
@@ -62,7 +64,7 @@ const Aventures= () => {
  Guidés par leur passion pour la rivière et leur désir d’aventure, les 6 amis vont s’enfoncer progressivement dans les profondeurs de la cordillère des Andes. Un parcours à travers les eaux tourmentées de la rivière sacrée des Incas. Ce voyage interrogent la possibilité de vivre avec peu, ensemble, dans un environnement resté intact, inexploité par l’Homme.
  Des montagnes péruviennes jusqu’aux prémices de la forêt Amazonienne, ce film retrace un long et difficile parcours à travers les entrailles des Andes, là où seul les kayakistes peuvent aller.</p>
  <a className="voirFilm2" href="https://vimeo.com/ondemand/apurimac">Voir le film à partir de 2.69€</a>
- <iframe src="https://player.vimeo.com/video/314961890?autoplay=1&loop=1&title=0" width="500" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+ <iframe src="https://player.vimeo.com/video/314961890?autoplay=1&loop=1&title=0&background=1" width="350" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
  </div>
  
  <div className="caphornPosterContainer">

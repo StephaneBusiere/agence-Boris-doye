@@ -51,7 +51,7 @@
 }
 @media (max-width: 500px) {
   .aws-sld__container {
-    padding-bottom: calc(var(--slider-height-percentage) * 1.25);
+    padding-bottom: calc(var(--slider-height-percentage) * 1.4);
   }
 }
 .aws-sld__startUp {

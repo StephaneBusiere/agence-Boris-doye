@@ -8,6 +8,8 @@ const initialState = {
   videoQueyrasOn: false,
   videoVietnamOn: true,
   videoOutdoormixOn: false,
+  videoFasboaOn: true,
+  videoIndeOn: false,
 };
 
 const defaultAction = {};
@@ -81,6 +83,31 @@ const reducer = (state = initialState, action = defaultAction) => {
       return {
         ...state,
         videoOutdoormixOn: false
+      }
+    
+    }
+    case 'VIDEO5_ON': {
+      return {
+        ...state,
+        videoFasboaOn: false
+      }
+    }
+    case 'VIDEO5_OFF': {
+      return {
+        ...state,
+        videoFasboaOn: true
+      }
+    }
+    case 'VIDEO6_ON': {
+      return {
+        ...state,
+        videoIndeOn: true
+      }
+    }
+    case 'VIDEO6_OFF': {
+      return {
+        ...state,
+        videoIndeOn: false
       }
     
     }

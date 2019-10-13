@@ -16,7 +16,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.sass';
 
-const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
@@ -89,8 +89,8 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   let sectionStyle6={
    
     
-    width: "900px", 
-    height: "600px",
+    width: "100%", 
+    height: "100%",
     margin: "0% 0% 0% 5%",
    
     backgroundImage: `url(${fasboa})`,
@@ -102,8 +102,8 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   let sectionStyle7={
    
     
-    width: "900px", 
-    height: "600px",
+    width: "100%", 
+    height: "100%",
     margin: "0% 0% 0% 7%",
    
     backgroundImage: `url(${inde})`,
@@ -112,11 +112,16 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
 
   }
-  let showReellShow;
+  
+//affichage conditionnel des blocs d'image
+  
+//bloc 1:showReellShow
+
+let showReellShow;
   
   if (videoShowreellOn) {
     showReellShow = <div className="videoPresentContainer1"><div className="showReelContainer">
-    <div className="showReel" style={sectionStyle2}  >
+    <div  style={sectionStyle2}  >
     <div className="showReelContent">
     <p>Show reel</p>
   
@@ -137,10 +142,11 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     </div>
   }  else   {
-    showReellShow=<div className="showReelIframe"><iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="900"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    showReellShow=<div className="showReelIframeContainer">
+    <div className="showReelIframe"><iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="900"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     <image onClick={onClick2}>  {cross} </image>
     </div>
-    
+    </div>
   } 
   if (videoQueyrasOn){
     showReellShow=<div className="queyrasIframe"><iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -148,9 +154,10 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     </div>
     
     
-  } else {
-    
-  }
+  } else {}
+  
+// bloc 2 : vietnamShow................ 
+  
   let vietnamShow;
   
   if (videoVietnamOn) {
@@ -161,7 +168,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     <div className="vietnam" style={sectionStyle4} >
     <div className="vietnamContent"><p>Vietnam</p>
     <p>Marque de vêtement</p>
-    <image onClick={onClick5}className="iconPlay2">{iconPlay2}</image>
+    <image onClick={onClick5}className="iconPlay1">{iconPlay1}</image>
     </div>
     </div>
     </div>
@@ -171,70 +178,104 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     <div className="outdoormix" style={sectionStyle5} >
     <div className="outdoormixContent"><p>Outdoormix</p>
     <p>Festival</p>
-    <image onClick={onClick7} className="iconPlay2">{iconPlay1}</image>
+    <image onClick={onClick7} className="iconPlay2">{iconPlay2}</image>
     </div>
     </div>
     </div>
     
     </div>
   }  else   {
-    showReellShow=<div className="vietnamIframe"><iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    vietnamShow=<div className="vietnamIframe"><iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     <image onClick={onClick6}>  {cross} </image>
     </div>
     
   } 
   if (videoOutdoormixOn){
-    showReellShow=<div className="outdoormixIframe"><iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    vietnamShow=<div className="outdoormixIframe"><iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     <image onClick={onClick8}>  {cross} </image>
     </div>
     
     
-  } else {
+  } else {}
+/////// Bloc 3: fasboaShow  
+  let fasboaShow;
+  
+  if (videoFasboaOn) {
+    fasboaShow =  <div className="videoPresentContainer3">
+  
+  
+    <div className="fasboaContainer">
+    <div className="fasboa" style={sectionStyle6} >
+    <div className="fasboaContent"><p>Fasboa</p>
+    <p>Sports Extrêmes</p>
+    <image onClick={onClick9} className="iconPlay2">{iconPlay2}</image>
+    </div>
+    </div>
+    </div>
     
-  }
+    
+    <div className="indeContainer">
+    <div className="inde" style={sectionStyle7} >
+    <div className="indeContent"><p>Inde</p>
+    <p>Kayak Extrême</p>
+    <image onClick={onClick11} className="iconPlay2">{iconPlay1}</image>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+
+  }  else   {
+    fasboaShow=<div className="fasboaIframe"><image onClick={onClick10}>  {cross} </image>
+    <iframe src="https://player.vimeo.com/video/273483414?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    
+    </div>
+    
+  } 
+  if (videoIndeOn){
+    fasboaShow=<div className="indeIframe"><image onClick={onClick12}>  {cross} </image>
+    <iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    
+    </div>
+    
+    
+  } else {}
+  
+  
+/////// RETURN /////////
+  
   return <div>
+  
+  <div className="mainpictureContainer">
+    
     <div className="mainPicture" style={sectionStyle1}  >
     <div className="presentationVideos" >NOS PRODUCTIONS </div>
     <div className="presentationVideos2" >Filmées avec passion </div>
-  
   </div>
+  </div>
+  
   <div className="falseMargin"></div>
   
   <div className="videoPresentContainer1">
- {showReellShow}</div>
+  
+  {showReellShow}</div>
   
   <div className="videoPresentContainer2">
   
   {vietnamShow}</div>
   
-  
-
   <div className="videoPresentContainer3">
   
+  {fasboaShow}
   
-  <div className="fasboaContainer">
-  <div className="fasboa" style={sectionStyle6} >
-  <div className="fasboaContent"><p>Fasboa</p>
-  <p>Sports Extrêmes</p>
-  <image className="iconPlay2">{iconPlay2}</image>
-  </div>
-  </div>
-  </div>
-  
-  
-  <div className="indeContainer">
-  <div className="inde" style={sectionStyle7} >
-  <div className="indeContent"><p>Inde</p>
-  <p>Kayak Extrême</p>
-  <image className="iconPlay2">{iconPlay1}</image>
-  </div>
-  </div>
-  </div>
   
   </div>
   
   </div>
 };
+
+/////// Connexion stratégies .................
+
 const connectionStrategies = connect(
   // 1er argument : stratégie de lecture (dans le state privé global)
   (state, ownProps) => {
@@ -243,6 +284,8 @@ const connectionStrategies = connect(
       videoQueyrasOn: state.videoQueyrasOn,
       videoVietnamOn: state.videoVietnamOn,
       videoOutdoormixOn: state.videoOutdoormixOn,
+      videoFasboaOn: state.videoFasboaOn,
+      videoIndeOn: state.videoIndeOn,
     
     };
   },
@@ -250,6 +293,7 @@ const connectionStrategies = connect(
   // 2d argument : stratégie d'écriture (dans le state privé global)
   (dispatch, ownProps) => {
     return {
+// bloc 1: ////////////    
     
     onClick: (event) => {
         console.log('ok')
@@ -279,7 +323,9 @@ const connectionStrategies = connect(
       };
       dispatch(action);
     },
-    onClick5:(event) => {
+///// bloc 2 : ///////    
+    
+      onClick5:(event) => {
      
       const action = {
         type: 'VIDEO3_ON'
@@ -305,6 +351,38 @@ const connectionStrategies = connect(
       const action = {
         type: 'VIDEO4_OFF'
       };
+    
+      dispatch(action);
+    },
+/////// Bloc 3 : ///////
+    
+    onClick9:(event) => {
+     
+      const action = {
+        type: 'VIDEO5_ON'
+      };
+      dispatch(action);
+    },
+    onClick10:(event) => {
+     
+      const action = {
+        type: 'VIDEO5_OFF'
+      };
+      dispatch(action);
+    },
+    onClick11:(event) => {
+     
+      const action = {
+        type: 'VIDEO6_ON'
+      };
+      dispatch(action);
+    },
+    onClick12:(event) => {
+     
+      const action = {
+        type: 'VIDEO6_OFF'
+      };
+    
       dispatch(action);
     },
     };

@@ -30,10 +30,11 @@ const Equipements= () => {
 
   }
     return <div>
-    <div className="teamPicture" style={sectionStyle1}  >
+    <div className="stuffPictureContainer">
+    <div className="stuffPicture" style={sectionStyle1}  >
   
      </div>
-
+     </div>
      <div className="stuffTitleContainer">
      <h2 className="stuffTitle">Equipement de pro pour vidéos de pro</h2>
      <div className="separationLigne2"></div>
@@ -153,7 +154,7 @@ const Equipements= () => {
      <div className="stuffText">
      
      
-     <h3 className="phantomTitle">Gopro 7 Black edition</h3>
+     <h3 className="goproTitle">Gopro 7 Black edition</h3>
      <p className="phantomTexte">
      Plusieurs GOpro 7 black dispos, nous consulter pour les accessoires…
      fixations, karma, batteries… </p>
