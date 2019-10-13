@@ -18,37 +18,35 @@ const Contact= () => {
 
   return <div className="contact" style={sectionStyle}  >
 
-<div className="presentationAgenceTitle1" >AGENCE DE PRODUCTION DIGITALE</div>
-  <div class='logoBorisNoir3'><img src={logoBorisNoirPetit} alt="logoBorisNoir"/></div>
 
-  <div class='coordonnées'>
-  <p>BORIS DOYE FILM<br />
-  Impasse Saint-Guillaume<br />
-  05600 Eygliers<br />
-  <a class='mail' href="boris.doye.films@gmail.com">boris.doye.films@gmail.com</a><br />
-  <a class='tel' href="tel:+33609614477">+33609614477</a></p>
-  </div>
-  <div class='form'>
-  <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-    <div class="row">
-      <label class="required" for="name"><strong>Votre nom:</strong></label><br />
-      <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-      <span id="name_validation" class="error_message"></span>
-    </div>
-    <div class="row">
-      <label class="required" for="email"><strong>Votre email:</strong></label><br />
-      <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-      <span id="email_validation" class="error_message"></span>
-    </div>
-    <div class="row">
-      <label class="required" for="message"><strong>Votre message:</strong></label><br />
-      <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-      <span id="message_validation" class="error_message"></span>
+<body class="contactBody">   
+        <div class="wrapper">
+        <div class="title">
+        <p>BORIS DOYE FILM<br />
+         Impasse Saint-Guillaume<br />
+         05600 Eygliers<br />
+        <a class='mail' href="boris.doye.films@gmail.com">boris.doye.films@gmail.com</a><br />
+        <a class='tel' href="tel:+33609614477">+33609614477</a></p>
+      
+        </div>
+      
+
+        <form class="form">
+          <input type="text" class="name entry " placeholder="Your Name"/>
+          
+          <input type="text" class="email entry" placeholder="Email"/>
+          
+          <textarea class="message entry" placeholder="Message"></textarea> 
+          
+          <button class="submit entry" onclick="thanks()">Envoyer</button>
+        </form>  
+        
+        <div class="shadow"></div>
       </div>
       
-      <input id="submit_button" type="submit" value="Envoyer" />
-  </form>
-  </div>
+    <script src="app.js"></script>
+</body>
+
   </div>
 };
 

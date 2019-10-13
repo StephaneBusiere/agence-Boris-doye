@@ -1,77 +1,151 @@
 @import src/styles/vars
 
-.contact
-  height: 100%
-  width: 100% 
+.contactBody
+  //background-color: 
+   background-size: cover
+  background-attachment: fixed
+  height: 700px
+
+
+.title
+  margin: 0 auto
+  width: 50%
+  text-align: center
+  padding-bottom: 10px
+  font-size: 2em
+  color: rgb(255, 255, 255)
+  padding-top: 1em
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-wrap: wrap
-  padding-bottom: 60%
-  
-  
-strong
-  
-  font-size: 1em
+  text-shadow: 0 0 10px #000000f8
 
-
-.form
-  height: 21em
-  width: 18.5em
-  padding: 1em
-  box-shadow: 0px 0px 150px 30px #113666 
-  margin: 5em
-  text-shadow: 0 1px 0 #eee,0 2px 0 #e5e5e5,-1px 3px 0 #C8C8C8,-1px 4px 0 #C1C1C1,-2px 3px 0 #B9B9B9,-2px 3px 0 #B2B2B2,-2px 3px 2px rgba(0,0,0, 0.6),-2px 3px 3px rgba(0,0,0, 0.2),-2px 3px 3px rgba(0,0,0, 0.4)
-  
-  
 .tel
   text-shadow: 0 0 10px #7ff37bf8
 .mail 
   text-shadow: 0 0 10px #59e7f1f8
 
-.row
-  color: white
-  font-weight: bold
-  font-size: 2em
-
-.backgroungImage
-  height: 100em
-
-.coordonnées
-  color: white
-  font-weight: bold
-  font-size: 2em
-  box-shadow: 0px 0px 150px 30px #113666 
-  padding: 0.5em
-  width: 15em
-  height: 6em
-  text-shadow: 0 0 10px #000000f8
-
-#name
-  color: white
-
-.logoBorisNoir3
-  display: flex
-  height: auto
-  width: 100%
-  overflow: visible
-  justify-content: center
-  padding-top: 2em
-
-.presentationAgenceTitle1
-  letter-spacing: .2rem
-  text-transform: uppercase
-  margin-top: 3%
-  padding-top: 1.5em
-  font-family: 'News Cycle', sans-serif
-  font-size: 56px
-  font-size: 3em
-  line-height: 21px
-  color: #ffffff
-  font-weight: 700
-  display: flex
+#title-Tag-Line
+  font-size: 20px
   
-  justify-content: center
+
+.wrapper 
+  width: 80%
+  height: 50%
+  margin: 5% auto 0 auto
+  
+
+
+.form
+  background: #ffffff 
+  text-align: center  
+  box-shadow: 0px 0px 20px 5px #AAA  
+  border-radius: 10px  
+  width: 45%  
+  height: 400px 
+  margin: 30px auto 0 auto  
+  padding: 10px 10px  
+  animation: bounce 1.5s infinite
+  
+
+.name 
+  background-color: #cd9a59
+  border-bottom: 5px solid #B2175F
+  color: white
+  width: 300px
+  
+
+::-webkit-input-placeholder
+  color: white
+  font-size: 20px
+  
+.name:hover
+  background-color: #df1b7754
+  border-bottom: 5px solid #b2175f34
+  height: 30px
+  width: 400px
+  
+
+.email 
+  background-color: #cd9a59
+  border-bottom: 5px solid #502789
+  height: 50px
+  width: 300px
+    
+  
+.email:hover
+  background-color: #df1b7754
+  border-bottom: 5px solid #b2175f34
+  height: 30px
+  width: 380px
+   
+  
+.message   
+  background-color: #b8915f
+  border-bottom: 5px solid rgb(195, 35, 17)
+  overflow: hidden
+  height: 100px 
+  width: 300px
+  
+.message:hover
+  background-color: #df1b7754
+  border-bottom: 5px solid #2BB09A
+  height: 100px
+  width: 370px
+  
+.submit
+  border-radius: 5px
+  padding: 10px
+  background-color: #2DD7BB 
+  border: none
+  border-bottom: 5px solid #CB64B2 
+  transform: translateY(-120px)
+
+  
+
+.submit:hover
+  border-bottom: 5px solid #CB64B2 
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219)
+  
+
+.entry
   display: block
-  box-sizing: inherit
+  margin: 30px auto
+  padding: 10px
+  border-radius: 5px
+  border: none
+  transition: all 0.5s ease 0s
+  box-shadow: 0px 0px 25px 2px #AAA  
+  
+
+.shadow
+  box-shadow: 0px 0px 60px 5px #AAA
+  opacity: 0.5
+  border-radius: 100px
+  width: 50% 
+  margin: 50px auto 0 auto
+  padding: 0 20px  
+  animation: shadow 1.5s infinite
+  
+.submit
+  border-radius: 5px
+  padding: 10px
+  width: 150px
+  color: white
+  background-color: #EE78D1 
+  border: none
+  border-bottom: 5px solid #CB64B2
+  margin-top: 150px 
+
+
+
+
+@keyframes bounce
+  0%
+  50%
+  transform: translate(0, 8px)
+
+  
+@keyframes shadow
+  0%
+  50%
+  opacity: 0.8
+  width: 50%
