@@ -10,6 +10,7 @@ import slider from 'src/assets/images/slider.jpg'
 import micro from 'src/assets/images/micros.jpg'
 import goPro from 'src/assets/images/Go-pro.jpg'
 import equipementVideo from 'src/assets/images/StuffVideo.jpg'
+import equipementVideoMobile from 'src/assets/images/StuffVideoMobile.jpg'
 
 
 
@@ -19,21 +20,28 @@ import equipementVideo from 'src/assets/images/StuffVideo.jpg'
 import './equipements.sass';
 
 const Equipements= () => {
-
-  let sectionStyle1={
+ let equipementVideoPicture 
+   if (window.innerWidth<475) {
+  
+  equipementVideoPicture=equipementVideoMobile
+  } else {
+  equipementVideoPicture=equipementVideo
+  } 
+  let sectionStyle1={ 
     width: "100%",
     height: "480px",
    
-    backgroundImage: `url(${equipementVideo})`,
+    backgroundImage: `url(${equipementVideoPicture})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
 
   }
     return <div>
-    <div className="teamPicture" style={sectionStyle1}  >
+    <div className="stuffPictureContainer">
+    <div className="stuffPicture" style={sectionStyle1}  >
   
      </div>
-
+     </div>
      <div className="stuffTitleContainer">
      <h2 className="stuffTitle">Equipement de pro pour vidéos de pro</h2>
      <div className="separationLigne2"></div>
@@ -153,7 +161,7 @@ const Equipements= () => {
      <div className="stuffText">
      
      
-     <h3 className="phantomTitle">Gopro 7 Black edition</h3>
+     <h3 className="goproTitle">Gopro 7 Black edition</h3>
      <p className="phantomTexte">
      Plusieurs GOpro 7 black dispos, nous consulter pour les accessoires…
      fixations, karma, batteries… </p>

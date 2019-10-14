@@ -12,7 +12,7 @@ import borisPhotoCarre from 'src/assets/images/photoBorisCarre.jpg'
 import borisBateau from 'src/assets/images/BorisBateau.jpg'
 import borisDrone from 'src/assets/images/photoBorisDrone.jpg'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
-
+import { NavLink } from 'react-router-dom';
 import slider from 'src/components/Slider'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -26,6 +26,7 @@ import { faPhotoVideo} from '@fortawesome/free-solid-svg-icons'
 import { faMusic} from '@fortawesome/free-solid-svg-icons'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
 import { faCameraRetro} from '@fortawesome/free-solid-svg-icons'
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 import './home.sass';
@@ -33,7 +34,7 @@ import './home.sass';
 const Home= () => {
 
   const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
-  const iconCalendar = <FontAwesomeIcon className="iconClendar" icon={faCalendarAlt}/>
+  const iconCalendar = <FontAwesomeIcon className="iconCalendar" icon={faCalendarAlt}/>
   const iconMan = <FontAwesomeIcon className="iconMan" icon={faUser}/>
   const iconVideo = <FontAwesomeIcon className="iconVideo" icon={faVideo}/>
   const iconDrone = <FontAwesomeIcon className="iconDrone" icon={faFighterJet}/>
@@ -44,7 +45,6 @@ const Home= () => {
   const iconPhoto = <FontAwesomeIcon className="iconPhoto" icon={faCameraRetro}/>
 
  
-
   let sectionStyle={
     width: "100%",
     height: "1000px",
@@ -55,12 +55,13 @@ const Home= () => {
   }
     return <div>
     <div> 
- 
-    {slider}
-
-  
+    <Link to="#quisommesnous"> <div className="ensavoirplus">En savoir plus</div></Link>
+      {slider}
   </div>
- <div className="quisommesnous">
+  <div className="presentationAgenceTitle" >AGENCE DE PRODUCTION DIGITALE</div>
+  <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>	    <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>
+ 
+<div id="quisommesnous">
 
     <img className="iconeMontagne" src={iconMontagne} alt="iconeMontagne"/>
     
@@ -107,17 +108,7 @@ const Home= () => {
     </div>
     
     
-    
-
-    
-    
-    
-    
-    
-    
- 
-
-
+  
 
 </div>
     <div className="competences">
@@ -196,7 +187,7 @@ const Home= () => {
       <h2 className="title-droite2">Motion design</h2>
       <div className="scenarisation">
       <image >{iconMotion }</image>
-      <p className="text-droite1">Ajout d’éléments graphiques animés dans nos réalisations (titrages, dessins animés).</p>
+      <p className="text-droite2">Ajout d’éléments graphiques animés dans nos réalisations (titrages, dessins animés).</p>
       
       </div>
       </div>
@@ -207,7 +198,7 @@ const Home= () => {
       <h2 className="title-droite3">Sound Design</h2>
       <div className="scenarisation">
       <image >{iconMusic}</image>
-      <p className="text-droite1">Création d’une ambiance sonore immersive pour plonger le spectateur dans votre univers.</p>
+      <p className="text-droite2">Création d’une ambiance sonore immersive pour plonger le spectateur dans votre univers.</p>
       
       </div>
       </div>
@@ -217,7 +208,7 @@ const Home= () => {
       <h2 className="title-droite4">Réseaux sociaux</h2>
       <div className="scenarisation">
       <image >{iconSocial }</image>
-      <p className="text-droite1">Production de contenu optimisé pour les réseaux sociaux et adapté aux attentes de votre communauté.</p>
+      <p className="text-droite2">Production de contenu optimisé pour les réseaux sociaux et adapté aux attentes de votre communauté.</p>
       
       </div>
       </div>
@@ -227,13 +218,72 @@ const Home= () => {
       <h2 className="title-droite5">Photographie</h2>
       <div className="scenarisation">
       <image >{iconPhoto}</image>
-      <p className="text-droite1">Des sommets aux open-spaces, nous captons les émotions et les instants les plus intenses.</p>
+      <p className="text-droite2">Des sommets aux open-spaces, nous captons les émotions et les instants les plus intenses.</p>
       
       </div>
       </div>
       </div>
      
     </div>
+  
+  <div className="latestVideosContainer">
+  <div className="teaserTitleContainer">
+  <h2 className="teaserTitle">Nos dernières vidéos</h2>
+  </div>
+  <div className="TeaserContainer">
+  
+  
+  <div className="iframe">
+  
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/198345088?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  
+  <NavLink
+  exact
+  to="/work"
+  
+  activeClassName="nav-link--active"
+>
+ <div className="video-Link">
+  <h3 className="videoLink-Regarder">regarder</h3>
+ 
+  <h3 className="videoLink-Une">une</h3>   
+  <h3 className="videoLink-Video">video</h3> 
+  </div>
+  </NavLink>
+  
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <NavLink
+  exact
+  to="/work"
+  
+  activeClassName="nav-link--active"
+>
+ <div className="video-Link">
+  <h3 className="videoLink-Regarder">regarder</h3>
+ 
+  <h3 className="videoLink-Une">une</h3>   
+  <h3 className="videoLink-Video">video</h3> 
+  </div>
+  </NavLink>
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <NavLink
+  exact
+  to="/work"
+  
+  activeClassName="nav-link--active"
+>
+ <div className="video-Link">
+  <h3 className="videoLink-Regarder">regarder</h3>
+ 
+  <h3 className="videoLink-Une">une</h3>   
+  <h3 className="videoLink-Video">video</h3> 
+  </div>
+  </NavLink>
+  <iframe className="iframeShowreelTeaser" src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&background=1" width="1920" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+ 
+  </div>
+  </div>
   </div>
  
   

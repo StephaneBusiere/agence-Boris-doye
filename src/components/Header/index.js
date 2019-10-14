@@ -40,16 +40,17 @@ const Header = ({ onClick,onClick2,burgerOn,openModal }) => {
       <NavLink
         exact
         to="/"
-        //className="nav-link"
+        
         activeClassName="nav-link--active"
       >
         <img className="logoWhite" src={logo} alt="Logo"/>
       </NavLink>
      
       <Nav  className="navMenu">
-        {menu}
+       
       </Nav>
 
+      {menu}
       <div className="fa-user-circle userAccount box">
       <FontAwesomeIcon icon="user-circle" className="userIcon button" onClick={openModal}/>
       </div>

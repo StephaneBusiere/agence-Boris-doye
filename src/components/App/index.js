@@ -16,7 +16,7 @@ import HeaderContainer from 'src/components/Header';
 import NavBurgerContainer from 'src/components/NavBurger';
 import Footer from 'src/components/Footer';
 import Home from 'src/components/Home';
-import Work from 'src/components/Work';
+import WorkContainer from 'src/components/Work';
 import NavBurger from 'src/containers/NavBurger';
 import Team from 'src/components/Team';
 import Clients from 'src/components/Clients';
@@ -48,7 +48,7 @@ const App = ({burgerOn, popup}) => {
       {/* Homepage */}
       <Route exact path="/" component={Home} />
       {/* Work */}
-      <Route path="/work/" component={Work} />
+      <Route path="/work/" component={WorkContainer} />
       <Route path="/team/" component={Team} />
       <Route path="/aventures/" component={Aventures} />
       <Route path="/clients/" component={Clients} />
