@@ -85,7 +85,7 @@ const connectionStrategies = connect(
         dispatch(action);
       },
       openModal: (event) => {
-        // console.log('huhu')
+        console.log('huhu');
         const action = {
           type: 'OPEN_USER_ACCOUNT'
         };

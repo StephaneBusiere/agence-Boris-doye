@@ -3,7 +3,7 @@ export const SIDE_EFFECT = 'SIDE_EFFECT';
 
 const initialState = {
   burgerOn: true,
-
+  popup: false,
   response: [],
   videoShowreellOn: true,
   videoQueyrasOn: false,
@@ -111,7 +111,13 @@ const reducer = (state = initialState, action = defaultAction) => {
         ...state,
         videoIndeOn: false
       }
-    
+    }
+    case 'OPEN_USER_ACCOUNT': {
+      console.log('in reducer');
+        return {
+          ...state,
+          popup: true
+        }
     }
 
     default: {

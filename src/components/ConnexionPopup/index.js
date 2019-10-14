@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { connect } from 'react-redux';
-import "./connexionPopup.sass";
+import "./connexionPopup.scss";
 
 class ConnexionPopup extends Component {
 	onClickAdd = () => {
@@ -21,7 +21,7 @@ class ConnexionPopup extends Component {
 			      <input type="text" placeholder="Identifiant" />
 			      <input type="email" placeholder="Email" />
 			      <input type="password" placeholder="Mot de passe" />
-			    <button>Créer mon compte</button>
+			    <button className="create">Créer mon compte</button>
 		    </form>
 	    </div>
 	    <div className="form-container sign-in-container">
@@ -29,8 +29,8 @@ class ConnexionPopup extends Component {
 			    <h1>Connectez-vous</h1>
 			      <input type="email" placeholder="Email" />
 			      <input type="password" placeholder="Mot de passe" />
-			      <a href="#">Retrouver mon mot de passe</a>
-			    <button>Connexion</button>
+			      <a href="#">Mot de passe perdu ?</a>
+			    <button className="connect">Connexion</button>
 		    </form>
 	    </div>
 	    <div className="overlay-container">
@@ -42,7 +42,7 @@ class ConnexionPopup extends Component {
 			</div>
 			<div className="overlay-panel overlay-right">
 				<h1>Bienvenu·e !</h1>
-				<p>Enter your personal details and enjoy with us</p>
+				<p>Enregistrez-vous...</p>
 				<button className="ghost" id="signUp" onClick={this.onClickAdd}>Créer mon compte</button>
 			</div>
 		</div>
