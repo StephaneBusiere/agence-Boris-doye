@@ -26,6 +26,7 @@ import { faPhotoVideo} from '@fortawesome/free-solid-svg-icons'
 import { faMusic} from '@fortawesome/free-solid-svg-icons'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
 import { faCameraRetro} from '@fortawesome/free-solid-svg-icons'
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 import './home.sass';
@@ -44,7 +45,6 @@ const Home= () => {
   const iconPhoto = <FontAwesomeIcon className="iconPhoto" icon={faCameraRetro}/>
 
  
-
   let sectionStyle={
     width: "100%",
     height: "1000px",
@@ -55,12 +55,13 @@ const Home= () => {
   }
     return <div>
     <div> 
- 
-    {slider}
-
-  
+    <Link to="#quisommesnous"> <div className="ensavoirplus">En savoir plus</div></Link>
+      {slider}
   </div>
- <div className="quisommesnous">
+  <div className="presentationAgenceTitle" >AGENCE DE PRODUCTION DIGITALE</div>
+  <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>	    <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>
+ 
+<div id="quisommesnous">
 
     <img className="iconeMontagne" src={iconMontagne} alt="iconeMontagne"/>
     
