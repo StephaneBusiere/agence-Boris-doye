@@ -50,17 +50,9 @@ const Header = ({ onClick,onClick2,burgerOn,openModal }) => {
         {menu}
       </Nav>
 
-     <div className="fa-user-circle userAccount">
-     <NavLink
-         onClick={openModal}
-         exact
-         to='/modal'
-         key={name}
-         className="userAccount"
-         >
-         <FontAwesomeIcon icon="user-circle" className="userIcon" />
-         </NavLink>
-     </div>
+      <div className="fa-user-circle userAccount box">
+      <FontAwesomeIcon icon="user-circle" className="userIcon button" onClick={openModal}/>
+      </div>
      
     </header>
   );
@@ -92,7 +84,7 @@ const connectionStrategies = connect(
         dispatch(action);
       },
       openModal: (event) => {
-        console.log('huhu')
+        // console.log('huhu')
         const action = {
           type: 'OPEN_USER_ACCOUNT'
         };

@@ -2,7 +2,8 @@ export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE';
 export const SIDE_EFFECT = 'SIDE_EFFECT';
 
 const initialState = {
-  burgerOn: true
+  burgerOn: true,
+  popup: false
 };
 
 const defaultAction = {};
@@ -20,6 +21,14 @@ const reducer = (state = initialState, action = defaultAction) => {
       return {
         ...state,
         burgerOn: true
+      }
+    }
+
+    case 'OPEN_USER_ACCOUNT': {
+      // console.log('popup true in reducer');
+      return {
+        ...state,
+        popup: true
       }
     }
   

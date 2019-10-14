@@ -27,16 +27,22 @@ import News from 'src/components/News';
 import Contact from 'src/components/Contact';
 import LoginPage from 'src/components/LoginPage';
 import AdminPage from 'src/components/AdminPage';
-import ConnexionModal from 'src/components/ConnexionModal';
 import LegalMentions from 'src/components/LegalMentions';
+import PopupContainer from 'src/components/ConnexionPopup';
 
 // Styles et assets
 import './app.sass';
 
-const App = ({burgerOn,onClick}) => {
+const App = ({burgerOn, popup}) => {
+  let connexion;
+  if (popup) {
+    connexion = <PopupContainer />
+  }
+
   let menuSlide;
   if (burgerOn) {
     menuSlide = <main className="app-main">
+    {connexion}
     {/* Switch : une seule route à la fois peut matcher. */}
     <Switch>
       {/* Homepage */}
@@ -47,7 +53,6 @@ const App = ({burgerOn,onClick}) => {
       <Route path="/aventures/" component={Aventures} />
       <Route path="/clients/" component={Clients} />
       <Route path="/equipements/" component={Equipements} />
-      <Route path="/modal/" component={ConnexionModal} />
       <Route path="/news/" component={News} />
       <Route path="/contact/" component={Contact} />
       <Route path="/loginPage/" component={LoginPage} />
@@ -90,7 +95,8 @@ const connectionStrategies = connect(
   // 1er argument : stratégie de lecture (dans le state privé global)
   (state, ownProps) => {
     return {
-      burgerOn: state.burgerOn
+      burgerOn: state.burgerOn,
+      popup: state.popup
     };
   },
 
