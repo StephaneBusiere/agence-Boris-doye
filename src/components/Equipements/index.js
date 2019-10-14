@@ -10,6 +10,7 @@ import slider from 'src/assets/images/slider.jpg'
 import micro from 'src/assets/images/micros.jpg'
 import goPro from 'src/assets/images/Go-pro.jpg'
 import equipementVideo from 'src/assets/images/StuffVideo.jpg'
+import equipementVideoMobile from 'src/assets/images/StuffVideoMobile.jpg'
 
 
 
@@ -19,12 +20,18 @@ import equipementVideo from 'src/assets/images/StuffVideo.jpg'
 import './equipements.sass';
 
 const Equipements= () => {
-
-  let sectionStyle1={
+ let equipementVideoPicture 
+   if (window.innerWidth<475) {
+  
+  equipementVideoPicture=equipementVideoMobile
+  } else {
+  equipementVideoPicture=equipementVideo
+  } 
+  let sectionStyle1={ 
     width: "100%",
     height: "480px",
    
-    backgroundImage: `url(${equipementVideo})`,
+    backgroundImage: `url(${equipementVideoPicture})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
 

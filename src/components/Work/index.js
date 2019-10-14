@@ -44,6 +44,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     backgroundImage: `url(${showreel})`,
     backgroundSize: "cover",
     display:"inline-block",
+    overflow: 'hidden',
     
 
   }
@@ -118,8 +119,56 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
 //bloc 1:showReellShow
 
 let showReellShow;
+let iFrameShowRellRes
+let iFrameQueyrasRes
+let iFrameVietnamRes
+let iFrameOutdoormixRes
+let iFrameFasboaRes
+let iFrameIndeRes
+
+  if (window.innerWidth<475) {
+
+iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="380" height="300"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+
+  } else {
+    iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="1080"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+}
+
+if (window.innerWidth<475) {
+
+  iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   
-  if (videoShowreellOn) {
+    } else {
+      iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  } 
+if (window.innerWidth<475) {
+
+    iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    
+      } else {
+        iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    } 
+
+    if (window.innerWidth<475) {
+
+      iFrameOutdoormixRes=<iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        } else {
+          iFrameOutdoormixRes=<iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      } 
+if (window.innerWidth<475) {
+
+        iFrameFasboaRes=<iframe src="https://player.vimeo.com/video/273483414?autoplay=1&loop=1" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          } else {
+            iFrameFasboaRes=<iframe src="https://player.vimeo.com/video/273483414?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        } 
+if (window.innerWidth<475) {
+
+          iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            } else {
+              iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          } 
+if (videoShowreellOn) {
     showReellShow = <div className="videoPresentContainer1"><div className="showReelContainer">
     <div  style={sectionStyle2}  >
     <div className="showReelContent">
@@ -143,13 +192,13 @@ let showReellShow;
     </div>
   }  else   {
     showReellShow=<div className="showReelIframeContainer">
-    <div className="showReelIframe"><iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="900"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div className="showReelIframe">{iFrameShowRellRes}
     <image onClick={onClick2}>  {cross} </image>
     </div>
     </div>
   } 
   if (videoQueyrasOn){
-    showReellShow=<div className="queyrasIframe"><iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    showReellShow=<div className="queyrasIframe">{iFrameQueyrasRes}
     <image onClick={onClick4}>  {cross} </image>
     </div>
     
@@ -185,13 +234,13 @@ let showReellShow;
     
     </div>
   }  else   {
-    vietnamShow=<div className="vietnamIframe"><iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    vietnamShow=<div className="vietnamIframe">{iFrameVietnamRes}
     <image onClick={onClick6}>  {cross} </image>
     </div>
     
   } 
   if (videoOutdoormixOn){
-    vietnamShow=<div className="outdoormixIframe"><iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    vietnamShow=<div className="outdoormixIframe">{iFrameOutdoormixRes}
     <image onClick={onClick8}>  {cross} </image>
     </div>
     
@@ -227,14 +276,13 @@ let showReellShow;
 
   }  else   {
     fasboaShow=<div className="fasboaIframe"><image onClick={onClick10}>  {cross} </image>
-    <iframe src="https://player.vimeo.com/video/273483414?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    
+    {iFrameFasboaRes}
     </div>
     
   } 
   if (videoIndeOn){
     fasboaShow=<div className="indeIframe"><image onClick={onClick12}>  {cross} </image>
-    <iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    {iFrameIndeRes}
     
     </div>
     

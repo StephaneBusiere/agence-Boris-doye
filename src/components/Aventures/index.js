@@ -1,17 +1,28 @@
 import React from 'react';
 import caphorn from 'src/assets/images/caphorn.jpg'
+import caphornMobile from 'src/assets/images/caphornMobile.jpg'
+
 import caphornPoster from 'src/assets/images/AfficheCaphorn.jpg'
+
 import appurimacPoster from 'src/assets/images/afficheAppurimac.jpg'
 
 import './aventures.sass';
 
 const Aventures= () => {
   
-  let sectionStyle1={
+let caphornPicture 
+if (window.innerWidth<475) {
+
+caphornPicture=caphornMobile
+} else {
+caphornPicture=caphorn
+}
+
+let sectionStyle1={
     width: "100%",
     height: "550px",
    
-    backgroundImage: `url(${caphorn})`,
+    backgroundImage: `url(${caphornPicture})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
     
@@ -64,7 +75,9 @@ const Aventures= () => {
  Guidés par leur passion pour la rivière et leur désir d’aventure, les 6 amis vont s’enfoncer progressivement dans les profondeurs de la cordillère des Andes. Un parcours à travers les eaux tourmentées de la rivière sacrée des Incas. Ce voyage interrogent la possibilité de vivre avec peu, ensemble, dans un environnement resté intact, inexploité par l’Homme.
  Des montagnes péruviennes jusqu’aux prémices de la forêt Amazonienne, ce film retrace un long et difficile parcours à travers les entrailles des Andes, là où seul les kayakistes peuvent aller.</p>
  <a className="voirFilm2" href="https://vimeo.com/ondemand/apurimac">Voir le film à partir de 2.69€</a>
- <iframe src="https://player.vimeo.com/video/314961890?autoplay=1&loop=1&title=0&background=1" width="350" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+ <div classNamme="appurimacVideoContainer">
+ <iframe className="appuIframe" src="https://player.vimeo.com/video/314961890?autoplay=1&loop=1&title=0&background=1" width="350" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+ </div>
  </div>
  
  <div className="caphornPosterContainer">

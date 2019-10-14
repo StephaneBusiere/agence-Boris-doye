@@ -33,7 +33,7 @@ import './home.sass';
 const Home= () => {
 
   const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
-  const iconCalendar = <FontAwesomeIcon className="iconClendar" icon={faCalendarAlt}/>
+  const iconCalendar = <FontAwesomeIcon className="iconCalendar" icon={faCalendarAlt}/>
   const iconMan = <FontAwesomeIcon className="iconMan" icon={faUser}/>
   const iconVideo = <FontAwesomeIcon className="iconVideo" icon={faVideo}/>
   const iconDrone = <FontAwesomeIcon className="iconDrone" icon={faFighterJet}/>
