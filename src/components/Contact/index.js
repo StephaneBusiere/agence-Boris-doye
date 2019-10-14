@@ -1,14 +1,18 @@
 import React from 'react';
 
 
-import './contact.sass';
+import './contact.scss';
 
 const Contact= () => {
 
-    return <div className="contact">
-  Nous contacter
- >
-  </div>;
+    return <div class="wrapper">
+    <div class="snow layer1 a"></div>
+    <div class="snow layer1"></div> 
+    <div class="snow layer2 a"></div>
+    <div class="snow layer2"></div>
+    <div class="snow layer3 a"></div>
+    <div class="snow layer3"></div>
+</div>
   
 };
 
