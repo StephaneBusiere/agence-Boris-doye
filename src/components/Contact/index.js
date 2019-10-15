@@ -16,7 +16,7 @@ const Contact= () => {
     overflow: 'hidden', 
   }
 
-{/*  return <div className="contact" style={sectionStyle}  >
+return <div className="contact" style={sectionStyle}  >
 
 
  <body class="contactBody">   
@@ -48,9 +48,9 @@ const Contact= () => {
 </body>
 
   </div>
-}; */}
+}; 
 
-var ContactForm = React.createClass({
+{/*var ContactForm = React.createClass({
   propTypes: {
     value: React.PropTypes.object.isRequired,
     onChange: React.PropTypes.func.isRequired,
@@ -152,18 +152,14 @@ var ContactView = React.createClass({
 });
 
 
-/*
- * Constants
- */
+
 
 
 var CONTACT_TEMPLATE = {name: "", email: "", description: "", errors: null};
 
 
 
-/*
- * Actions
- */
+
 
 
 function updateNewContact(contact) {
@@ -191,9 +187,6 @@ function submitNewContact() {
 }
 
 
-/*
- * Model
- */
 
 
 // The app's complete current state
@@ -219,7 +212,7 @@ setState({
     {key: 2, name: "Jim", email: "jim@example.com"},
   ],
   newContact: Object.assign({}, CONTACT_TEMPLATE),
-});
+}); */}
 
 
-export default ContactForm;
+export default Contact; 
