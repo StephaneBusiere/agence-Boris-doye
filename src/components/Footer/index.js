@@ -7,14 +7,16 @@ const Footer = () => {
   const now = new Date();
   const year = now.getFullYear();
 
-  return (<footer className="blog-footer">
-    <p className="footerText">BorisDoye - © {year}</p>
+  return (<footer className="main-footer">
     <NavLink
-        exact
-        to="/mentionslegales"
-      > Mentions Légales 
+      className="footer-link"
+      exact
+      to="/mentionslegales"
+      > 
+        Mentions Légales
       </NavLink>
-    <img src={logoBorisBlanc} className="borisLogoBlanc"/>
+    <p className="footer-text">BorisDoye - © {year}</p>
+    <img className="footer-logo" src={logoBorisBlanc}/>
   </footer>);
 };
 
