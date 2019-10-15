@@ -1,21 +1,30 @@
 
 @import src/styles/vars
 
-html 
+body 
   position: relative
 
-.blog-footer
+.main-footer
   position: absolute
-  padding: 2%
+  top: 100%
+  height: 6em
+  position: relative
+  padding: 2em
   background: $footer-bg
   color: invert($footer-bg)
-  width: 100% 
-  height: 5em
-  bottom: -3%
+  display: flex
 
+.footer-logo
+  position: absolute
+  top: 1em
+  right: calc(50% - 2.5em)
+  width: 5em
 
-.borisLogoBlanc
-  width: 2% 
-  height: auto
-  margin-left: 95%
-  margin-top: -100%
+.footer-link,
+.footer-text
+  padding: 0.5em
+
+.footer-text
+  position: absolute
+  right: 2em
+  
