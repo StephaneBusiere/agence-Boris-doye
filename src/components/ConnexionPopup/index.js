@@ -82,12 +82,17 @@ formErrors = [];
 						className="form__input"
 						type="email" 
 						placeholder="Email" 
-						name="emailConnexion"/>
+						name="emailConnexion"
+						value={this.state.email}
+						onChange={this.updateField("email")}/>
 						<input 
 						className="form__input"
 						type="password" 
 						placeholder="Mot de passe" 
-						name="pwdConnexion"/>
+						name="pwdConnexion"
+						value={this.state.password}
+						onChange={this.updateField("password")} 
+						/>
 			      <a className="lost" href="#">Mot de passe perdu ?</a>
 			    <button className="form__button connect" type="submit">Connexion</button>
 		    </form>
