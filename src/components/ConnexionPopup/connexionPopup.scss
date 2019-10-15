@@ -29,7 +29,7 @@
 	text-align: center;
 }
 
-.input {
+.form__input {
 	background-color: #eee;
 	padding: 0.2em;
 	margin: 0.5em;
@@ -61,7 +61,7 @@
 	bottom: 2.5em;
 }
 
-.container {
+.form-div-container {
 	background-color: #fff;
 	border-radius: 10px;
 	position: relative;
@@ -154,7 +154,7 @@
 	background-color: #486892;
 }
 
-.input {
+.form__input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -162,7 +162,7 @@
 	width: 100%;
 }
 
-.container {
+.form-div-container {
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -185,7 +185,7 @@
 	z-index: 2;
 }
 
-.container.right-panel-active .sign-in-container {
+.form-div-container.right-panel-active .sign-in-container {
 	transform: translateX(100%);
 }
 
@@ -196,7 +196,7 @@
 	z-index: 1;
 }
 
-.container.right-panel-active .sign-up-container {
+.form-div-container.right-panel-active .sign-up-container {
 	transform: translateX(100%);
 	opacity: 1;
 	z-index: 5;
@@ -226,7 +226,7 @@
 	z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
+.form-div-container.right-panel-active .overlay-container {
 	transform: translateX(-100%);
 }
 
@@ -246,7 +246,7 @@
 	transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay {
+.form-div-container.right-panel-active .overlay {
   	transform: translateX(50%)
 }
 
@@ -269,7 +269,7 @@
 	transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.form-div-container.right-panel-active .overlay-left {
 	transform: translateX(0);
 }
 
@@ -278,7 +278,7 @@
 	transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.form-div-container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
 }
