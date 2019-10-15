@@ -128,11 +128,11 @@ let iFrameIndeRes
 
   if (window.innerWidth<475) {
 
-iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="380" height="300"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="370" height="300"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 
   } else {
-    iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1&title=0&byline=0&portrait=0" width="1920" height="1080"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="1920" height="600"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 }
 
 if (window.innerWidth<475) {
@@ -191,11 +191,13 @@ if (videoShowreellOn) {
     
     </div>
   }  else   {
-    showReellShow=<div className="showReelIframeContainer">
+    showReellShow=
+    
     <div className="showReelIframe">{iFrameShowRellRes}
     <image onClick={onClick2}>  {cross} </image>
     </div>
-    </div>
+    
+    
   } 
   if (videoQueyrasOn){
     showReellShow=<div className="queyrasIframe">{iFrameQueyrasRes}
