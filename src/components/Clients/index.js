@@ -2,37 +2,62 @@ import React from 'react';
 import clients from 'src/assets/images/clientsPicture.jpg'
 import clientsPictureMobile from 'src/assets/images/clientsPictureMobile.jpg'
 import caphorn from 'src/assets/images/caphorn.jpg'
-
+import skoda from 'src/assets/images/skoda.png'
+import tulipes from 'src/assets/images/tulipes.png'
+import redbull from 'src/assets/images/regbull.png'
+import audi from 'src/assets/images/audi.png'
+import addidas from 'src/assets/images/addidas.png'
+import faction from 'src/assets/images/Faction.png'
+import seat from 'src/assets/images/seat.png'
+import betc from 'src/assets/images/betc.png'
 import './clients.sass';
 
 const Clients= () => {
-  let clientsPicture 
-if (window.innerWidth<475) {
+  
 
-clientsPicture=caphorn
-} else {
-clientsPicture=clients
-}
-  
-  
-  
-  let sectionStyle1={ 
+let sectionStyle1
+if (window.innerWidth<475) {
+  sectionStyle1={ 
     width: "100%",
-    height: "620px",
+    height: "210px",
    
-    backgroundImage: `url(${clientsPicture})`,
+    backgroundImage: `url(${clients})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
   }
+ 
+  } else {
+    sectionStyle1={ 
+      width: "100%",
+      height: "540px",
+     
+      backgroundImage: `url(${clients})`,
+      backgroundSize: 'cover',
+      overflow: 'hidden',
+    }
+  }
+  
+  
     return <div> 
     <div className="clientsPictureContainer">
     <div className="clientsPicture" style={sectionStyle1}  >
-    <div className="presentationVideos5" ><div ClassName="clientsTitle">Ils nous ont fait confiance</div>
+    <div className="presentationVideos5" >Ils nous ont fait confiance
     
     </div>
     </div>
      </div>
-  
+     <div className="clientsContainer1">
+     <img  className="clientsLogos" src={addidas} />
+     <img className="clientsLogos" src={audi} />
+     <img className="clientsLogos" src={redbull} />
+     <img className="clientsLogos" src={skoda} />
+     </div>
+     <div className="clientsContainer1">
+     <img className="clientsLogos" src={tulipes} />
+     <img className="clientsLogos" src={seat} />
+     <img className="clientsLogos" src={faction} />
+     <img  className="clientsLogos"src={betc} />
+     </div>
   </div>
   
 };

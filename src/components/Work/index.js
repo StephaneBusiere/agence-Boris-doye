@@ -5,6 +5,7 @@ import showreel from 'src/assets/images/Showreel.jpg'
 import outdoormix from 'src/assets/images/Outdoormix.jpg'
 import queyras from 'src/assets/images/Queyras.jpg'
 import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
+import bigPictureRealmobile from 'src/assets/images/alpesRealisateurMobile.jpg'
 import vietnam from 'src/assets/images/Vietnam.jpg'
 import fasboa from 'src/assets/images/Fasboa.jpg'
 import inde from 'src/assets/images/Inde.png'
@@ -23,16 +24,28 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   
   const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
   
-
-  let sectionStyle1={
-    width: "100%",
-    height: "550px",
+  let sectionStyle1
+  if (window.innerWidth<475) {
+    sectionStyle1={ 
+      width: "100%",
+      height: "210px",
+     
+      backgroundImage: `url(${bigPictureRealmobile})`,
+      backgroundSize: 'cover',
+      overflow: 'hidden',
+    }
    
-    backgroundImage: `url(${bigPictureReal})`,
-    backgroundSize: 'cover',
-    overflow: 'hidden',
-    
-  }
+    } else {
+      sectionStyle1={ 
+        width: "100%",
+        height: "600px",
+       
+        backgroundImage: `url(${bigPictureReal})`,
+        backgroundSize: 'cover',
+        overflow: 'hidden',
+      }
+    }
+  
 
   let sectionStyle2={
    
