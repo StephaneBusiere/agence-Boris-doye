@@ -13,8 +13,8 @@ class ConnexionPopup extends Component {
 		console.log('we\'re in connexionpopup');
   return (
 		<div className="overAll">
-		<div className="overlay"
-		className="container" id="container">
+			<a class="close" href="/">X</a>
+		<div className="container" id="container">
 	    <div className="form-container sign-up-container">
 		    <form action="#">
 			    <h1>Créez votre compte</h1>

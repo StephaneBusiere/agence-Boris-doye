@@ -5,7 +5,7 @@
 	background-color: transparent;
 	width: 100%;
 	position: fixed;
-	top: 10%;
+	top: 20%;
 	left: 20%;
 	z-index: 99;
 }
@@ -54,7 +54,7 @@ button {
 }
 
 .create {
-	top: 11em;
+	top: 11.5em;
 }
 
 .connect {
@@ -69,6 +69,21 @@ button {
 	width: 60%;
 	height: 18em;
 }
+}
+
+.close {
+	margin: 0 2% 2% 60%;
+	padding: 2% 3%;
+	font-size: 1.2em;
+	color: white;
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: #486892;
+}
+
+.close:hover {
+	border: 2px solid #b571c4;
+	border-radius: 10px;
 }
 
 @media (min-width: 476px) {
@@ -115,9 +130,8 @@ button {
 	border: 1px solid #486892;
 	background-color: #486892;
 	color: #FFFFFF;
-	font-size: 12px;
 	font-weight: bold;
-	padding: 12px 45px;
+	padding: 1em 3em;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
@@ -145,6 +159,16 @@ form {
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
+}
+
+.close {
+	margin: 0 2% 2% 35%;
+	padding: 0.2% 0.5%;
+	font-size: 1.6em;
+	color: white;
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: #486892;
 }
 
 input {
