@@ -31,7 +31,7 @@ return <div className="contact" style={sectionStyle}  >
         </div>
       
 
-        <form class="snow layer1">
+        <form class="contact">
           <input type="text" class="name entry " placeholder="Your Name"/>
           
           <input type="text" class="email entry" placeholder="Email"/>
