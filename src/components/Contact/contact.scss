@@ -1,6 +1,10 @@
+html {
+  position: relative;
+}
+
 .wrapper {
   width:100vw;
-  height:100vh;
+  height:90.5vh;
   background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
 }
 $s1:"";
@@ -57,4 +61,19 @@ $s3:"";
 }
 @keyframes fall {
   100% {transform: translateY(200vh); }
+}
+
+.form_contact {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  padding: 2em;
+  z-index: 1000;
+}
+
+.contact-input {
+  display: block;
 }
