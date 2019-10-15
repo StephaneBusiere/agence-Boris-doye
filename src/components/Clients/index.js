@@ -18,7 +18,7 @@ clientsPicture=clients
   
   let sectionStyle1={ 
     width: "100%",
-    height: "620px",
+    height: "58em",
    
     backgroundImage: `url(${clientsPicture})`,
     backgroundSize: 'cover',
