@@ -25,7 +25,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
   const cross2 = <FontAwesomeIcon className="iconCross2" icon={faWindowClose}/>
   const cross3 = <FontAwesomeIcon className="iconCross3" icon={faWindowClose}/>
-  const arrow = <FontAwesomeIcon className="iconArrow" icon={faSortDown}/>
+  const arrow1 = <FontAwesomeIcon className="iconArrow1" icon={faSortDown}/>
   const arrow2 = <FontAwesomeIcon className="iconArrow2" icon={faSortDown}/>
   let videoShowreelSource=(response.video_source)
   let sectionStyle1
@@ -195,7 +195,7 @@ if (videoShowreellOn) {
   <p>Best-off</p>
   
   <image onClick={onClick}>{iconPlay1}</image>
-  <div className="ensavoirplus2" onClick={onClick13}>En savoir plus{arrow}</div>
+  <div className="ensavoirPlus2"onClick={onClick13}>En savoir plus{arrow1}</div>
     
     </div>
     </div>
@@ -205,7 +205,7 @@ if (videoShowreellOn) {
     <div className="queyrasContent"><p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
-    <div className="ensavoirplus3" onClick={onClick15}>En savoir plus{arrow2}</div>
+    <div className="ensavoirPlus3" onClick={onClick15}>En savoir plus{arrow2}</div>
     </div>
     </div>
     </div>
@@ -331,7 +331,7 @@ if (videoShowreellOn) {
   <p>Best-off</p>
   
   <image onClick={onClick}>{iconPlay1}</image>
-  <div className="ensavoirplus2" onClick={onClick13}>En savoir plus {arrow}</div>
+  <div  className="ensavoirPlus2" onClick={onClick13}>En savoir plus {arrow1}</div>
     
     </div>
     </div>
@@ -382,7 +382,7 @@ if (info2On){
     <div className="queyrasContent"><p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
-    <div className="ensavoirplus3" onClick={onClick15}>En savoir plus{arrow2}
+    <div className="ensavoirPlus2" onClick={onClick15}>En savoir plus{arrow2}
     </div>
     </div>
     </div>
