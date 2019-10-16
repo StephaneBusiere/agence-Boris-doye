@@ -15,10 +15,12 @@ updateField = fieldName => event => {
 	}
 
 // répertorisation des erreurs:
-formErrors = [];
+// formErrors = [];
 
 
-	// sendRequest = (event) => {
+	sendRequest = (event) => {
+		event.preventDefault();
+		console.log("formulaire de création de compte envoyé");
 	// 	event.preventDefault();
 	// 	const promise = axios.post("../../data/users.js", {
 	// 		name: this.state.name,
@@ -32,7 +34,12 @@ formErrors = [];
 	// 		this.setState({
 	// 		message: 'Identifiants invalides'
 	// 	})
-	// }
+	}
+
+	sendRequestConnexion = (event) => {
+		event.preventDefault();
+		console.log("formulaire de connexion envoyé");
+	}	
 
 	onClickAdd = () => {
 		container.classList.add("right-panel-active");
@@ -76,7 +83,7 @@ formErrors = [];
 		    </form>
 	    </div>
 	    <div className="form-container sign-in-container">
-		    <form className="connexionForm" method="post">
+		    <form className="connexionForm" onSubmit={this.sendRequestConnexion} method="post">
 			    <h1 className="form__h1">Connectez-vous</h1>
 						<input 
 						className="form__input"
