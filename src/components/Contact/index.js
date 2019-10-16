@@ -7,20 +7,35 @@ import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 
 
 const Contact= () => {
-  let sectionStyle={//
+  let sectionStyle
+  if (window.innerWidth<475) {
+    contactStyle={
+      width: "80%",
+    }
+    sectionStyle={ 
+      width: "100%",
+      height: "1000px",
+      backgroundImage: `url(${bigPictureReal2})`,
+      backgroundSize: 'cover',
+      overflow: 'hidden', 
+    }
+} else {
+
+  sectionStyle={
     width: "100%",
     height: "1000px",
-    
     backgroundImage: `url(${bigPictureReal2})`,
     backgroundSize: 'cover',
     overflow: 'hidden', 
   }
+}
 
 return <div className="contact" style={sectionStyle}  >
 
 
  <body class="contactBody">   
         <div class="wrapper">
+        <form class="contact">
         <div class="title">
         <p>BORIS DOYE FILM<br />
          Impasse Saint-Guillaume<br />
@@ -29,9 +44,6 @@ return <div className="contact" style={sectionStyle}  >
         <a class='tel' href="tel:+33609614477">+33609614477</a></p>
       
         </div>
-      
-
-        <form class="contact">
           <input type="text" class="name entry " placeholder="Your Name"/>
           
           <input type="text" class="email entry" placeholder="Email"/>
