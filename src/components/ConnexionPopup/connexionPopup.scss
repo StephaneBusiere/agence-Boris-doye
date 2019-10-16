@@ -1,4 +1,9 @@
 // soucis d'affichage à 475px...
+.errorMessage {
+	font-size: small;
+	color: red;
+	font-style: italic;
+}
 
 @media (max-width: 475px) {
 	.overAll {
@@ -84,6 +89,14 @@
 .close:hover {
 	border: 2px solid #b571c4;
 	border-radius: 10px;
+}
+
+.errorBorder {
+	border: 1px solid red;
+}
+
+.validBorder {
+	border: 1px solid green;
 }
 
 @media (min-width: 476px) {
@@ -281,4 +294,17 @@
 .form-div-container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
+
+.create {
+	margin-top: 1em;
+}
+
+.errorBorder {
+	border: 1px solid red;
+}
+
+.validBorder {
+	border: 1px solid green;
+}
+
 }
