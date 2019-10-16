@@ -1,20 +1,40 @@
 import React from 'react';
 import skipicture from 'src/assets/images/Ski.jpg'
+import skipictureMobile from 'src/assets/images/SkiMobile.jpg'
 import pilotageDrone from 'src/assets/images/pilotageDrone.jpg'
 import appurimacPhoto from 'src/assets/images/AppurimacGrand.jpg'
 
 import './news.sass';
 
 const News= () => {
-  let sectionStyle1={ 
+  
+  let sectionStyle1
+if (window.innerWidth<475) {
+  sectionStyle1={ 
     width: "100%",
-    height: "620px",
+    height: "230px",
    
-    backgroundImage: `url(${skipicture})`,
+    backgroundImage: `url(${skipictureMobile})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
-
   }
+ 
+  } else {
+    sectionStyle1={ 
+      width: "100%",
+      height: "620px",
+     
+      backgroundImage: `url(${skipicture})`,
+      backgroundSize: 'cover',
+      overflow: 'hidden',
+    }
+  }
+  
+  
+  
+  
+
+  
     return <div> 
     <div className="skiPictureContainer">
     <div className="skiPicture" style={sectionStyle1}  >

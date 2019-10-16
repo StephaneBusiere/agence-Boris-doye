@@ -6,7 +6,7 @@ import axios from 'axios';
 // certaines actions doivent être traitées autrement que par une
 // mise-à-jour du state.
 // Il est possible de déclencher à la fois un effet de bord & une màj.
-const url = 'http://localhost:27017/api/posts'
+const url = 'http://localhost:27017/api/videos'
 
 
 const middleware = (store) => (next) => (action) => {
@@ -23,6 +23,7 @@ const middleware = (store) => (next) => (action) => {
       axios
       .get(url)
       .then((response) => {
+        console.log(response.data)
         const action = {
           type: 'RESPONSE_ON',
           value: (response.data)

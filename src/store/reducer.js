@@ -11,6 +11,9 @@ const initialState = {
   videoOutdoormixOn: false,
   videoFasboaOn: true,
   videoIndeOn: false,
+  info1On: false,
+  info2On: false,
+  
 };
 
 const defaultAction = {};
@@ -41,19 +44,22 @@ const reducer = (state = initialState, action = defaultAction) => {
     case 'VIDEO1_ON': {
       return {
         ...state,
-        videoShowreellOn: false
+        videoShowreellOn: false,
+        info1On: false
       }
     }
     case 'VIDEO1_OFF': {
       return {
         ...state,
-        videoShowreellOn: true
+        videoShowreellOn: true,
+        
       }
     }
     case 'VIDEO2_ON': {
       return {
         ...state,
-        videoQueyrasOn: true
+        videoQueyrasOn: true,
+        info2On: false
       }
     }
     case 'VIDEO2_OFF': {
@@ -110,6 +116,30 @@ const reducer = (state = initialState, action = defaultAction) => {
       return {
         ...state,
         videoIndeOn: false
+      }
+    }
+    case 'INFO1_0N': {
+      return {
+        ...state,
+        info1On: true
+      }
+    }
+    case 'INFO1_0FF': {
+      return {
+        ...state,
+        info1On: false
+      }
+    }
+    case 'INFO2_0N': {
+      return {
+        ...state,
+        info2On: true
+      }
+    }
+    case 'INFO2_0FF': {
+      return {
+        ...state,
+        info2On: false
       }
     }
     case 'OPEN_USER_ACCOUNT': {
