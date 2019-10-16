@@ -22,7 +22,7 @@ if (window.innerWidth<475) {
   } else {
     sectionStyle1={ 
       width: "100%",
-      height: "600px",
+      height: "620px",
      
       backgroundImage: `url(${skipicture})`,
       backgroundSize: 'cover',

@@ -11,6 +11,8 @@ const initialState = {
   videoOutdoormixOn: false,
   videoFasboaOn: true,
   videoIndeOn: false,
+  info1On: false,
+  
 };
 
 const defaultAction = {};
@@ -35,19 +37,21 @@ const reducer = (state = initialState, action = defaultAction) => {
     case 'RESPONSE_ON': {
       return {
         ...state,
-        response: action.value[0]
+        response: action.value[1]
       }
     }
     case 'VIDEO1_ON': {
       return {
         ...state,
-        videoShowreellOn: false
+        videoShowreellOn: false,
+        info1On: false
       }
     }
     case 'VIDEO1_OFF': {
       return {
         ...state,
-        videoShowreellOn: true
+        videoShowreellOn: true,
+        
       }
     }
     case 'VIDEO2_ON': {
@@ -112,6 +116,19 @@ const reducer = (state = initialState, action = defaultAction) => {
         videoIndeOn: false
       }
     }
+    case 'INFO1_0N': {
+      return {
+        ...state,
+        info1On: true
+      }
+    }
+    case 'INFO1_0FF': {
+      return {
+        ...state,
+        info1On: false
+      }
+    }
+
     case 'OPEN_USER_ACCOUNT': {
       console.log('in reducer');
         return {

@@ -13,17 +13,18 @@ import inde from 'src/assets/images/Inde.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
+import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 
 import './styles.sass';
 
-const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
-  
   const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
-  
+  const arrow = <FontAwesomeIcon className="iconArrow" icon={faSortDown}/>
+  console.log(response.picture_source)
   let sectionStyle1
   if (window.innerWidth<475) {
     sectionStyle1={ 
@@ -188,7 +189,9 @@ if (videoShowreellOn) {
     <p>Show reel</p>
   
   <p>Best-off</p>
+  
   <image onClick={onClick}>{iconPlay1}</image>
+  <div className="ensavoirplus2" onClick={onClick13}>En savoir plus{arrow}</div>
     
     </div>
     </div>
@@ -300,10 +303,46 @@ if (videoShowreellOn) {
     {iFrameIndeRes}
     
     </div>
-    
-    
-  } else {}
+    } else {}
+/////// BlOC INFOS 1 ////////  
   
+    if (info1On){
+    showReellShow =
+    <div className="videoPresentContainer1">
+    <div className="showReelContainer">
+    <div  style={sectionStyle2}  >
+    <div className="showReelContent">
+    <p>Show reel</p>
+  
+  <p>Best-off</p>
+  
+  <image onClick={onClick}>{iconPlay1}</image>
+  <div className="ensavoirplus2" onClick={onClick13}>En savoir plus{arrow}</div>
+    
+    </div>
+    </div>
+    </div>
+    <div className="infosContainer">
+    <image className="infoCross" onClick={onClick14}>  {cross} </image>
+    <div className="infoShowreelContent"><p className="infoTitle">Show Reel 2016</p>
+    <p className="infoDescription">Vidéo best-off de promotion de notre travail de l'année</p>
+    <div className="infodescriptionContainer">
+    <p className="infoBloc">genre : généraliste</p>
+    <p className="infoBloc">durée : 01:51</p>
+    <p className="infoBloc">Lieux de tournages : Queyras, Briançon, Embrum, Lac de serre Ponçon, </p>
+    <p className="infoBloc">Matériel utilisé : Caméra Sony FS7, drone phamtom 4, Movi M10 </p>
+    </div>
+    <p className="infoTexte">Si exhaustive que soit ma production de vidéos, je ne cesse jamais d’apprendre et de m’enrichir de nouvelles expériences dans l’audiovisuel. Chaque projet, chaque personne rencontrée est une source d’inspiration et de progrès dont je ne me lasse pas. J’attends avec impatience de vous rencontrer afin de mettre en commun nos connaissances et construire ensemble une vidéo ou un film qui surpassera tous les autres.</p>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+  } else { 
+    
+
+  }
   
 /////// RETURN /////////
   
@@ -349,6 +388,8 @@ const connectionStrategies = connect(
       videoOutdoormixOn: state.videoOutdoormixOn,
       videoFasboaOn: state.videoFasboaOn,
       videoIndeOn: state.videoIndeOn,
+      response: state.response,
+      info1On: state.info1On
     
     };
   },
@@ -361,14 +402,19 @@ const connectionStrategies = connect(
     onClick: (event) => {
         console.log('ok')
         const action = {
-          type: 'VIDEO1_ON'
-        };
+          type: 'VIDEO1_ON'};
+        const action2 ={
+          type: 'INFO1_0FF'
+        }  
         dispatch(action);
       },
+
+      
     onClick2:(event) => {
      
       const action = {
-        type: 'VIDEO1_OFF'
+        type: 'VIDEO1_OFF',
+     
       };
       dispatch(action);
     },
@@ -444,6 +490,23 @@ const connectionStrategies = connect(
      
       const action = {
         type: 'VIDEO6_OFF'
+      };
+    
+      dispatch(action);
+    },
+    onClick13:(event) => {
+     
+      const action = {
+        type: 'INFO1_0N',
+        
+      };
+    
+      dispatch(action);
+    },
+    onClick14:(event) => {
+     
+      const action = {
+        type: 'INFO1_0FF'
       };
     
       dispatch(action);
