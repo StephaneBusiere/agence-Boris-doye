@@ -3,20 +3,13 @@ import { connect } from 'react-redux';
 import "./connexionPopup.scss";
 import axios from 'axios';
 
-const emailRegex = RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[A-Za-z]+$/);
-
-const formValidation = formErrors => {
-	let valid = true;
-	Object.values(formErrors).forEach(val => 
-		val.length > 0 && (valid = false));
-		return valid;
-};
+const emailRegex = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
 class ConnexionPopup extends Component {
 	state = {
-		name: null,
-		email: null,
-		password: null,
+		name: "",
+		email: "",
+		password: "",
 		formErrors: {
 			name: '',
 			email: '',
@@ -56,23 +49,39 @@ handleChange = event => {
 
 }
 
-	sendRequest = (event) => {
+// valide que le formulaire est bien rempli
+validate = () => {
+
+}
+
+formValidation = () => {
+	let valid = true;
+	console.log(`dans formValidation : ${this.state.formErrors}`);
+	 let errors = this.state.formErrors;
+	// valide l'absence d'erreur
+	errors.forEach(val => 
+		{ val.length > 0 && (valid = false);
+	});
+
+	return valid;
+};
+
+sendRequest = (event) => {
 		event.preventDefault();
 		// console.log("formulaire de création de compte envoyé");
-
-		if (formValidation(this.state.formErrors)) {
+	console.log(`dans sendRequest : ${this.state.formErrors}`)
+		if (this.formValidation()) {
+			// axios
+  		// 	.get("http://localhost:27017/api/users")
+  		// 	.then((response) => {
+    	// 		console.log(response)})
 			console.log(`email : ${this.state.email}, name : ${this.state.name}, pwd : ${this.state.password}`);
 		} else {
 			console.error("Formulaire invalide.");
 		}
 	}
-	
-	// axios
-  // .get("/Users/gillettiphaine/Documents/Dev/Titan/Dossier_partage_VB/projet-BorisDoye/src/data/users.js")
-  // .then((response) => {
-  //   console.log(response.data)})
-	// const promise = axios.post("../../data/users.js", {
-	// 	axios.post("http://localhost:27017/api/users", {	
+
+	// const promise = axios.post("http://localhost:27017/api/users", {	
 	// 		name: this.state.name,
 	// 		email: this.state.email,
 	// 		password: this.state.password
@@ -100,10 +109,25 @@ handleChange = event => {
 		container.classList.remove("right-panel-active");
 	}
 
+	// borderColor = ({formErrors}) => {
+	// 	let borderClass;
+	 
+	// 	if (formValidation(this.state.formErrors)) {
+	// 		borderClass = "form__input errorBorder";
+	// 	} else if (!formErrors && this.state.name != null ) {
+	// 		borderClass = "form__input validBorder";
+	// 	} else {
+	// 		borderClass = "form__input";
+	// 	}
+		
+	// 	return borderClass;
+	// }
+	
+
 	render() {
 		// console.log('we\'re in connexionpopup');
 		const {formErrors} = this.state;
-		
+		console.log(`dans render : ${formErrors}`);
   return (
 		<div className="overAll">
 		<a className="close" href="/">X</a>
@@ -112,7 +136,8 @@ handleChange = event => {
 		    <form className="connexionForm" onSubmit={this.sendRequest} method="">
 			    <h1 className="form__h1">Créez votre compte</h1>
 						<input 
-						className={formErrors.name.length > 0 ? "form__input errorBorder" : "form__input"}
+						className="form__input"
+						// className={this.borderColor(formErrors)}
 						type="text" 
 						name="name" 
 						placeholder="Identifiant" 
