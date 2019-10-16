@@ -18,13 +18,16 @@ import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.sass';
 
-const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,onClick15,onClick16,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On,info2On}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
   const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
+  const cross2 = <FontAwesomeIcon className="iconCross2" icon={faWindowClose}/>
+  const cross3 = <FontAwesomeIcon className="iconCross3" icon={faWindowClose}/>
   const arrow = <FontAwesomeIcon className="iconArrow" icon={faSortDown}/>
-  console.log(response.picture_source)
+  const arrow2 = <FontAwesomeIcon className="iconArrow2" icon={faSortDown}/>
+  let videoShowreelSource=(response.video_source)
   let sectionStyle1
   if (window.innerWidth<475) {
     sectionStyle1={ 
@@ -130,7 +133,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   
 //affichage conditionnel des blocs d'image
   
-//bloc 1:showReellShow
+
 
 let showReellShow;
 let iFrameShowRellRes
@@ -146,9 +149,8 @@ iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&
 
 
   } else {
-    iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="1920" height="600"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-}
-
+    iFrameShowRellRes=<iframe src= {videoShowreelSource} width="1920" height="1080"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  }
 if (window.innerWidth<475) {
 
   iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -182,6 +184,8 @@ if (window.innerWidth<475) {
             } else {
               iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           } 
+//////bloc 1:showReellShow///////
+
 if (videoShowreellOn) {
     showReellShow = <div className="videoPresentContainer1"><div className="showReelContainer">
     <div  style={sectionStyle2}  >
@@ -201,6 +205,7 @@ if (videoShowreellOn) {
     <div className="queyrasContent"><p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
+    <div className="ensavoirplus3" onClick={onClick15}>En savoir plus{arrow2}</div>
     </div>
     </div>
     </div>
@@ -305,8 +310,17 @@ if (videoShowreellOn) {
     </div>
     } else {}
 /////// BlOC INFOS 1 ////////  
+/*   let iconeInfo;
+  if (info1On){ 
+    iconeInfo={cross}
   
-    if (info1On){
+  } else {
+    iconeInfo={arrow}
+  } */
+  
+  if (info1On){
+    
+    
     showReellShow =
     <div className="videoPresentContainer1">
     <div className="showReelContainer">
@@ -317,13 +331,13 @@ if (videoShowreellOn) {
   <p>Best-off</p>
   
   <image onClick={onClick}>{iconPlay1}</image>
-  <div className="ensavoirplus2" onClick={onClick13}>En savoir plus{arrow}</div>
+  <div className="ensavoirplus2" onClick={onClick13}>En savoir plus {arrow}</div>
     
     </div>
     </div>
     </div>
     <div className="infosContainer">
-    <image className="infoCross" onClick={onClick14}>  {cross} </image>
+    <image className="infoCross2" onClick={onClick14}>  {cross2} </image>
     <div className="infoShowreelContent"><p className="infoTitle">Show Reel 2016</p>
     <p className="infoDescription">Vidéo best-off de promotion de notre travail de l'année</p>
     <div className="infodescriptionContainer">
@@ -343,7 +357,45 @@ if (videoShowreellOn) {
     
 
   }
+/////BLOC 2 INFO/////
+if (info2On){
+    
+    
+  showReellShow =
+  <div className="videoPresentContainer1">
   
+  <div className="infosContainer2">
+  <image className="infoCross2" onClick={onClick16}>  {cross3} </image>
+  <div className="infoShowreelContent"><p className="infoTitle">Queyras été</p>
+  <p className="infoDescription">Vidéo promotionnelle pour l'oofice de tourisme du queyras</p>
+  <div className="infodescriptionContainer">
+  <p className="infoBloc">genre : promotion</p>
+  <p className="infoBloc">durée : 02:19</p>
+  <p className="infoBloc">Lieux de tournages : parc national du queyras, Abries, Moline en Queyras; Arvieux</p>
+  <p className="infoBloc">Matériel utilisé : Caméra Sony FS7, drone phamtom 4, Movi M10 </p>
+  </div>
+  <p className="infoTexte">Si exhaustive que soit ma production de vidéos, je ne cesse jamais d’apprendre et de m’enrichir de nouvelles expériences dans l’audiovisuel. Chaque projet, chaque personne rencontrée est une source d’inspiration et de progrès dont je ne me lasse pas. J’attends avec impatience de vous rencontrer afin de mettre en commun nos connaissances et construire ensemble une vidéo ou un film qui surpassera tous les autres.</p>
+  </div>
+  </div>
+  <div className="queyrasContainer">
+    <div className="queyras" style={sectionStyle3}  >
+    <div className="queyrasContent"><p>Queyras-été</p>
+    <p>Office du tourisme du Queyras</p>
+    <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
+    <div className="ensavoirplus3" onClick={onClick15}>En savoir plus{arrow2}
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  
+  
+  
+} else { 
+  
+
+}
+
 /////// RETURN /////////
   
   return <div>
@@ -389,7 +441,8 @@ const connectionStrategies = connect(
       videoFasboaOn: state.videoFasboaOn,
       videoIndeOn: state.videoIndeOn,
       response: state.response,
-      info1On: state.info1On
+      info1On: state.info1On,
+      info2On: state.info2On
     
     };
   },
@@ -507,6 +560,23 @@ const connectionStrategies = connect(
      
       const action = {
         type: 'INFO1_0FF'
+      };
+    
+      dispatch(action);
+    },
+    onClick15:(event) => {
+     
+      const action = {
+        type: 'INFO2_0N',
+        
+      };
+    
+      dispatch(action);
+    },
+    onClick16:(event) => {
+     
+      const action = {
+        type: 'INFO2_0FF'
       };
     
       dispatch(action);
