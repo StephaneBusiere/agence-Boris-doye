@@ -7,9 +7,12 @@ const emailRegex = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)
 
 class ConnexionPopup extends Component {
 	state = {
-		name: "",
-		email: "",
-		password: "",
+		name: null,
+		email: null,
+		password: null,
+		borderColorName: "form__input",
+		borderColorEmail: "form__input",
+		borderColorPassword: "form__input",
 		formErrors: {
 			name: '',
 			email: '',
@@ -21,6 +24,9 @@ handleChange = event => {
 	event.preventDefault();
 	const {name, value} = event.target;
 	let formErrors = this.state.formErrors;
+	let borderColorName = this.state.borderColorName;
+	let borderColorEmail = this.state.borderColorEmail;
+	let borderColorPassword = this.state.borderColorPassword;
 
 	// console.log("name : ", name);
 	// console.log("value : ", value);
@@ -30,22 +36,25 @@ handleChange = event => {
 			formErrors.name =
 				value.length < 3 ?
 				"3 caractères minimum." : "";
+			borderColorName = value.length > 0 && value.length < 3 ? "form__input errorBorder" : "form__input validBorder";
 		break;
 		case "email" :
 			formErrors.email =
 			emailRegex.test(value) ?
 			"" : "Merci de remplir une adresse email valide.";
+			borderColorEmail = value.length > 0 && !emailRegex.test(value) ? "form__input errorBorder" : "form__input validBorder";
 		break;
 		case "password" :
 			formErrors.password =
 			value.length < 6 ? 
 				"6 caractères minimum." : "";
+			borderColorPassword = value.length > 0 && value.length < 6 ? "form__input errorBorder" : "form__input validBorder";
 		break;
 		default:
 		break;
 		}
 	
-	this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+	this.setState({ formErrors, [name]: value, borderColorName, borderColorEmail, borderColorPassword }, () => console.log(this.state));
 
 }
 
@@ -57,12 +66,13 @@ validate = () => {
 formValidation = () => {
 	let valid = true;
 	console.log(`dans formValidation : ${this.state.formErrors}`);
-	 let errors = this.state.formErrors;
-	// valide l'absence d'erreur
-	errors.forEach(val => 
-		{ val.length > 0 && (valid = false);
-	});
+	let errors = this.state.formErrors;
 
+	// valide l'absence d'erreur
+	for (var property in errors) {
+		if(errors[property].length > 0) {valid = false};
+	}
+	// console.log(valid);
 	return valid;
 };
 
@@ -108,22 +118,7 @@ sendRequest = (event) => {
 	onClickRemove = () => {
 		container.classList.remove("right-panel-active");
 	}
-
-	// borderColor = ({formErrors}) => {
-	// 	let borderClass;
-	 
-	// 	if (formValidation(this.state.formErrors)) {
-	// 		borderClass = "form__input errorBorder";
-	// 	} else if (!formErrors && this.state.name != null ) {
-	// 		borderClass = "form__input validBorder";
-	// 	} else {
-	// 		borderClass = "form__input";
-	// 	}
-		
-	// 	return borderClass;
-	// }
 	
-
 	render() {
 		// console.log('we\'re in connexionpopup');
 		const {formErrors} = this.state;
@@ -136,8 +131,7 @@ sendRequest = (event) => {
 		    <form className="connexionForm" onSubmit={this.sendRequest} method="">
 			    <h1 className="form__h1">Créez votre compte</h1>
 						<input 
-						className="form__input"
-						// className={this.borderColor(formErrors)}
+						className={this.state.borderColorName}
 						type="text" 
 						name="name" 
 						placeholder="Identifiant" 
@@ -146,7 +140,7 @@ sendRequest = (event) => {
 							<span className="errorMessage">{formErrors.name}</span>
 						)}
 						<input 
-						className={formErrors.email.length > 0 ? "form__input errorBorder" : "form__input"} 
+						className={this.state.borderColorEmail}
 						type="email" 
 						name="email" 
 						placeholder="Email" 
@@ -155,7 +149,7 @@ sendRequest = (event) => {
 							<span className="errorMessage">{formErrors.email}</span>
 						)}
 						<input 
-						className={formErrors.password.length > 0 ? "form__input errorBorder" : "form__input"} 
+						className={this.state.borderColorPassword} 
 						type="password" 
 						name="password" 
 						placeholder="Mot de passe"
