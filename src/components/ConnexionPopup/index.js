@@ -3,36 +3,94 @@ import { connect } from 'react-redux';
 import "./connexionPopup.scss";
 import axios from 'axios';
 
+const emailRegex = RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[A-Za-z]+$/);
+
+const formValidation = formErrors => {
+	let valid = true;
+	Object.values(formErrors).forEach(val => 
+		val.length > 0 && (valid = false));
+		return valid;
+};
+
 class ConnexionPopup extends Component {
 	state = {
-		name: '',
-		email: '',
-		password: ''
+		name: null,
+		email: null,
+		password: null,
+		formErrors: {
+			name: '',
+			email: '',
+			password: ''
 		}
-
-updateField = fieldName => event => {
-		this.setState({ [fieldName]: event.target.value });
 	}
 
-// répertorisation des erreurs:
-formErrors = [];
+handleChange = event => {
+	event.preventDefault();
+	const {name, value} = event.target;
+	let formErrors = this.state.formErrors;
 
+	// console.log("name : ", name);
+	// console.log("value : ", value);
 
-	// sendRequest = (event) => {
-	// 	event.preventDefault();
-	// 	const promise = axios.post("../../data/users.js", {
+	switch (name) {
+		case "name" :
+			formErrors.name =
+				value.length < 3 ?
+				"3 caractères minimum." : "";
+		break;
+		case "email" :
+			formErrors.email =
+			emailRegex.test(value) ?
+			"" : "Merci de remplir une adresse email valide.";
+		break;
+		case "password" :
+			formErrors.password =
+			value.length < 6 ? 
+				"6 caractères minimum." : "";
+		break;
+		default:
+		break;
+		}
+	
+	this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+
+}
+
+	sendRequest = (event) => {
+		event.preventDefault();
+		// console.log("formulaire de création de compte envoyé");
+
+		if (formValidation(this.state.formErrors)) {
+			console.log(`email : ${this.state.email}, name : ${this.state.name}, pwd : ${this.state.password}`);
+		} else {
+			console.error("Formulaire invalide.");
+		}
+	}
+	
+	// axios
+  // .get("/Users/gillettiphaine/Documents/Dev/Titan/Dossier_partage_VB/projet-BorisDoye/src/data/users.js")
+  // .then((response) => {
+  //   console.log(response.data)})
+	// const promise = axios.post("../../data/users.js", {
+	// 	axios.post("http://localhost:27017/api/users", {	
 	// 		name: this.state.name,
 	// 		email: this.state.email,
 	// 		password: this.state.password
-	// 	});
-	// 	promise.then(this.handleResponse);
-	// 	}
+	// });
+	// promise.then(this.handleResponse);
+
 
 	// handleResponse = (response) => {
 	// 		this.setState({
 	// 		message: 'Identifiants invalides'
 	// 	})
 	// }
+
+	sendRequestConnexion = (event) => {
+		event.preventDefault();
+		// console.log("formulaire de connexion envoyé");
+		console.log(this.state.email + ' ' + this.state.password);
+	}	
 
 	onClickAdd = () => {
 		container.classList.add("right-panel-active");
@@ -43,51 +101,62 @@ formErrors = [];
 	}
 
 	render() {
-		console.log('we\'re in connexionpopup');
+		// console.log('we\'re in connexionpopup');
+		const {formErrors} = this.state;
+		
   return (
 		<div className="overAll">
 		<a className="close" href="/">X</a>
 		<div className="form-div-container" id="container">
 	    <div className="form-container sign-up-container">
-		    <form className="connexionForm" onSubmit={this.sendRequest} method="post">
+		    <form className="connexionForm" onSubmit={this.sendRequest} method="">
 			    <h1 className="form__h1">Créez votre compte</h1>
 						<input 
-						className="form__input"
+						className={formErrors.name.length > 0 ? "form__input errorBorder" : "form__input"}
 						type="text" 
 						name="name" 
 						placeholder="Identifiant" 
-						value={this.state.name}
-						onChange={this.updateField("name")}/>
+						onChange={this.handleChange}/>
+						{formErrors.name.length > 0 && (
+							<span className="errorMessage">{formErrors.name}</span>
+						)}
 						<input 
-						className="form__input"
+						className={formErrors.email.length > 0 ? "form__input errorBorder" : "form__input"} 
 						type="email" 
 						name="email" 
 						placeholder="Email" 
-						value={this.state.email}
-						onChange={this.updateField("email")}/>
+						onChange={this.handleChange}/>
+						{formErrors.email.length > 0 && (
+							<span className="errorMessage">{formErrors.email}</span>
+						)}
 						<input 
-						className="form__input"
+						className={formErrors.password.length > 0 ? "form__input errorBorder" : "form__input"} 
 						type="password" 
 						name="password" 
 						placeholder="Mot de passe"
-						value={this.state.password}
-						onChange={this.updateField("password")} />
+						onChange={this.handleChange} />
+						{formErrors.password.length > 0 && (
+							<span className="errorMessage">{formErrors.password}</span>
+						)}
 			    <button className="form__button create" type="submit">Créer mon compte</button>
 		    </form>
 	    </div>
 	    <div className="form-container sign-in-container">
-		    <form className="connexionForm" method="post">
+		    <form className="connexionForm" onSubmit={this.sendRequestConnexion} method="post">
 			    <h1 className="form__h1">Connectez-vous</h1>
 						<input 
 						className="form__input"
 						type="email" 
 						placeholder="Email" 
-						name="emailConnexion"/>
+						name="emailConnexion"
+						onChange={this.handleChange2}/>
 						<input 
-						className="form__input"
+						className="form__input" 
 						type="password" 
 						placeholder="Mot de passe" 
-						name="pwdConnexion"/>
+						name="pwdConnexion"
+						onChange={this.handleChange2} 
+						/>
 			      <a className="lost" href="#">Mot de passe perdu ?</a>
 			    <button className="form__button connect" type="submit">Connexion</button>
 		    </form>
