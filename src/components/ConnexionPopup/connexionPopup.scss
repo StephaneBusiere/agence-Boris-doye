@@ -1,4 +1,5 @@
 // soucis d'affichage à 475px...
+
 .errorMessage {
 	font-size: small;
 	color: red;
@@ -6,11 +7,11 @@
 }
 
 @media (max-width: 475px) {
-	.overAll {
+.overAll {
 	background-color: transparent;
 	width: 100%;
 	position: fixed;
-	top: 20%;
+	top: 15%;
 	left: 20%;
 	z-index: 2000;
 }
@@ -42,37 +43,30 @@
 }
 
 .form-container {
-	margin: 0.5em 0.5em 2em 0.5em;
+	margin: 0.5em 0.5em 1em 0.5em;
+	overflow: scroll;
 }
 
 .form__button {
-	position: absolute;
-	right: 2em;
 	border-radius: 10px;
 	border: 1px solid #486892;
 	background-color: #486892;
 	color: #FFFFFF;
 	padding: 0.2em;
+	margin: 1em 0.5em 1em 50%;
 	letter-spacing: 1px;
 	font-size: 0.7em;
 	text-transform: uppercase;
-}
-
-.create {
-	top: 11.5em;
-}
-
-.connect {
-	bottom: 2.5em;
+	display: block;
 }
 
 .form-div-container {
 	background-color: #fff;
 	border-radius: 10px;
-	position: relative;
-	overflow: hidden;
+	overflow: scroll;
 	width: 60%;
-	height: 18em;
+	height: 50%;
+
 }
 }
 
@@ -89,6 +83,7 @@
 .close:hover {
 	border: 2px solid #b571c4;
 	border-radius: 10px;
+	cursor: pointer;
 }
 
 .errorBorder {
@@ -100,13 +95,14 @@
 }
 
 @media (min-width: 476px) {
+
 .overAll {
 	background-color: transparent;
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	top: 28%;
-	left: 30%;
+	top: 15%;
+	left: 35%;
 	z-index: 2000;
 }
 
@@ -121,6 +117,7 @@
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
+	color: white;
 }
 
 .lost {
@@ -165,6 +162,7 @@
 	border: 1px solid white;
 	border-radius: 50%;
 	background-color: #486892;
+	cursor: pointer;
 }
 
 .form__input {
@@ -305,10 +303,6 @@
 
 .validBorder {
 	border: 1px solid green;
-}
-
-.hidden {
-	visibility: hidden;
 }
 
 }
