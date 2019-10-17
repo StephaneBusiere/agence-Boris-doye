@@ -7,28 +7,14 @@ import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 
 
 const Contact= () => {
-  let sectionStyle
-  if (window.innerWidth<475) {
-    contactStyle={
-      width: "80%",
-    }
-    sectionStyle={ 
-      width: "100%",
-      height: "1000px",
-      backgroundImage: `url(${bigPictureReal2})`,
-      backgroundSize: 'cover',
-      overflow: 'hidden', 
-    }
-} else {
-
-  sectionStyle={
+  let sectionStyle={//
     width: "100%",
     height: "1000px",
+    
     backgroundImage: `url(${bigPictureReal2})`,
     backgroundSize: 'cover',
     overflow: 'hidden', 
   }
-}
 
 return <div className="contact" style={sectionStyle}  >
 
