@@ -6,27 +6,40 @@ import axios from 'axios';
 const emailRegex = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
 class ConnexionPopup extends Component {
+	
 	state = {
 		name: null,
 		email: null,
 		password: null,
+		passwordConfirmation: null,
+		emailConnexion: null,
+		pwdConnexion: null,
 		borderColorName: "form__input",
 		borderColorEmail: "form__input",
 		borderColorPassword: "form__input",
+		borderColorEmailConnexion: "form__input",
+		borderColorPwdConnexion: "form__input",
+		borderColorPasswordConfirmation: "form__input",
 		formErrors: {
 			name: '',
 			email: '',
-			password: ''
+			password: '',
+			passwordConfirmation: '',
+			emailConnexion: '',
+			pwdConnexion: ''
 		}
 	}
 
 handleChange = event => {
 	event.preventDefault();
 	const {name, value} = event.target;
+	const {password, passwordConfirmation} = this.state;
+
 	let formErrors = this.state.formErrors;
 	let borderColorName = this.state.borderColorName;
 	let borderColorEmail = this.state.borderColorEmail;
 	let borderColorPassword = this.state.borderColorPassword;
+	let borderColorPasswordConfirmation = this.state.borderColorPasswordConfirmation;
 
 	// console.log("name : ", name);
 	// console.log("value : ", value);
@@ -46,21 +59,57 @@ handleChange = event => {
 		break;
 		case "password" :
 			formErrors.password =
-			value.length < 6 ? 
-				"6 caractères minimum." : "";
+			value.length < 6 ? "6 caractères minimum." : "";
 			borderColorPassword = value.length > 0 && value.length < 6 ? "form__input errorBorder" : "form__input validBorder";
+		break;
+		case "passwordConfirmation" :
+			formErrors.passwordConfirmation = 
+				value.length < 6 ? "6 caractères minimum." : "";
+			borderColorPasswordConfirmation = value.length > 0 && value.length < 6 ? "form__input errorBorder" : "form__input validBorder";
 		break;
 		default:
 		break;
 		}
 	
-	this.setState({ formErrors, [name]: value, borderColorName, borderColorEmail, borderColorPassword }, () => console.log(this.state));
+	this.setState({ formErrors, [name]: value, borderColorName, borderColorEmail, borderColorPassword, borderColorPasswordConfirmation }, () => console.log(this.state));
+
+}
+
+handleChange2 = event => {
+	event.preventDefault();
+	const {name, value} = event.target;
+	let formErrors = this.state.formErrors;
+	let borderColorEmailConnexion = this.state.borderColorEmailConnexion;
+	let borderColorPwdConnexion = this.state.borderColorPwdConnexion;
+
+	switch (name) {
+		case "emailConnexion" :
+			formErrors.emailConnexion =
+			emailRegex.test(value) ?
+			"" : "Merci de remplir une adresse email valide.";
+			borderColorEmailConnexion = value.length > 0 && !emailRegex.test(value) ? "form__input errorBorder" : "form__input validBorder";
+		break;
+		case "pwdConnexion" :
+			formErrors.pwdConnexion =
+			value.length < 6 ? 
+				"6 caractères minimum requis." : "";
+			borderColorPwdConnexion = value.length > 0 && value.length < 6 ? "form__input errorBorder" : "form__input validBorder";
+		break;
+		default:
+		break;
+		}
+	
+	this.setState({ formErrors, [name]: value, borderColorEmailConnexion, borderColorPwdConnexion }, () => console.log(this.state));
 
 }
 
 // valide que le formulaire est bien rempli
 validate = () => {
-
+	let valid = false;
+	const {password, passwordConfirmation} = this.state;
+	valid = this.formValidation() && (password === passwordConfirmation) ? true : false;
+	console.log(valid);
+	return valid;
 }
 
 formValidation = () => {
@@ -70,26 +119,27 @@ formValidation = () => {
 
 	// valide l'absence d'erreur
 	for (var property in errors) {
-		if(errors[property].length > 0) {valid = false};
+		if((errors[property].length > 0) || (property == null)) {valid = false};
 	}
 	// console.log(valid);
 	return valid;
 };
 
 sendRequest = (event) => {
-		event.preventDefault();
-		// console.log("formulaire de création de compte envoyé");
-	console.log(`dans sendRequest : ${this.state.formErrors}`)
-		if (this.formValidation()) {
+	event.preventDefault();
+	// console.log("formulaire de création de compte envoyé");
+	//console.log(`dans sendRequest : ${this.state.formErrors}`)
+	if (this.validate()) {
 			// axios
   		// 	.get("http://localhost:27017/api/users")
   		// 	.then((response) => {
     	// 		console.log(response)})
-			console.log(`email : ${this.state.email}, name : ${this.state.name}, pwd : ${this.state.password}`);
-		} else {
-			console.error("Formulaire invalide.");
-		}
+		console.log("nouvelles données envoyées");
+			// this.close();
+	} else {
+		"";
 	}
+}
 
 	// const promise = axios.post("http://localhost:27017/api/users", {	
 	// 		name: this.state.name,
@@ -118,14 +168,18 @@ sendRequest = (event) => {
 	onClickRemove = () => {
 		container.classList.remove("right-panel-active");
 	}
+
+	close = () => {
+		// popup.classList.add("hidden");
+	}
 	
 	render() {
 		// console.log('we\'re in connexionpopup');
 		const {formErrors} = this.state;
-		console.log(`dans render : ${formErrors}`);
+		// console.log(`dans render : ${formErrors}`);
   return (
-		<div className="overAll">
-		<a className="close" href="/">X</a>
+		<div className="overAll" id="popup">
+		<a className="close" onClick={this.close}>X</a>
 		<div className="form-div-container" id="container">
 	    <div className="form-container sign-up-container">
 		    <form className="connexionForm" onSubmit={this.sendRequest} method="">
@@ -157,6 +211,15 @@ sendRequest = (event) => {
 						{formErrors.password.length > 0 && (
 							<span className="errorMessage">{formErrors.password}</span>
 						)}
+						<input 
+						className={this.state.borderColorPasswordConfirmation} 
+						type="password" 
+						name="passwordConfirmation" 
+						placeholder="Confirmation"
+						onChange={this.handleChange} />
+						{formErrors.passwordConfirmation.length > 0 && (
+							<span className="errorMessage">{formErrors.passwordConfirmation}</span>
+						)}
 			    <button className="form__button create" type="submit">Créer mon compte</button>
 		    </form>
 	    </div>
@@ -164,18 +227,24 @@ sendRequest = (event) => {
 		    <form className="connexionForm" onSubmit={this.sendRequestConnexion} method="post">
 			    <h1 className="form__h1">Connectez-vous</h1>
 						<input 
-						className="form__input"
+						className={this.state.borderColorEmailConnexion}
 						type="email" 
 						placeholder="Email" 
 						name="emailConnexion"
 						onChange={this.handleChange2}/>
+						{formErrors.emailConnexion.length > 0 && (
+							<span className="errorMessage">{formErrors.emailConnexion}</span>
+						)}
 						<input 
-						className="form__input" 
+						className={this.state.borderColorPwdConnexion}
 						type="password" 
 						placeholder="Mot de passe" 
 						name="pwdConnexion"
 						onChange={this.handleChange2} 
 						/>
+						{formErrors.pwdConnexion.length > 0 && (
+							<span className="errorMessage">{formErrors.pwdConnexion}</span>
+						)}
 			      <a className="lost" href="#">Mot de passe perdu ?</a>
 			    <button className="form__button connect" type="submit">Connexion</button>
 		    </form>
