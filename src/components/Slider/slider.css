@@ -49,10 +49,23 @@
   height: 0;
   padding-bottom: var(--slider-height-percentage);
 }
-@media (max-width: 500px) {
+@media (max-width: 475px) {
   .aws-sld__container {
     padding-bottom: calc(var(--slider-height-percentage) * 1.4);
   }
+
+}
+@media (min-width: 475px) {
+  .aws-sld__container {
+    padding-bottom: calc(var(--slider-height-percentage) * 3);
+  }
+
+}
+@media (min-width: 760px) {
+  .aws-sld__container {
+    padding-bottom: calc(var(--slider-height-percentage) * 1);
+  }
+
 }
 .aws-sld__startUp {
   background-color: red;
