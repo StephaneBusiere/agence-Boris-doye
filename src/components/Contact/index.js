@@ -14,24 +14,24 @@ const Contact= () => {
 					</span>
 
 					<div className="wrap-input2 validate-input" data-validate="Name is required">
-						<input class="input2" type="text" name="name"/>
-						<span class="focus-input2" data-placeholder="NOM/PRENOM"></span>
+						<input className="input2" type="text" name="name"/>
+						<span className="focus-input2" data-placeholder="NOM/PRENOM"></span>
 					</div>
 
-					<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input2" type="text" name="email"/>
-						<span class="focus-input2" data-placeholder="EMAIL"></span>
+					<div className="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input className="input2" type="text" name="email"/>
+						<span className="focus-input2" data-placeholder="EMAIL"></span>
 					</div>
 
-					<div class="wrap-input2 validate-input" data-validate = "Message is required">
-						<textarea class="input2" name="message"></textarea>
-						<span class="focus-input2" data-placeholder="MESSAGE"></span>
+					<div className="wrap-input2 validate-input" data-validate = "Message is required">
+						<textarea className="input2" name="message"></textarea>
+						<span className="focus-input2" data-placeholder="MESSAGE"></span>
 					</div>
 
-					<div class="container-contact2-form-btn">
-						<div class="wrap-contact2-form-btn">
-							<div class="contact2-form-bgbtn"></div>
-							<button class="contact2-form-btn">
+					<div className="container-contact2-form-btn">
+						<div className="wrap-contact2-form-btn">
+							<div className="contact2-form-bgbtn"></div>
+							<button className="contact2-form-btn">
 								Envoyez votre message
 							</button>
 						</div>
