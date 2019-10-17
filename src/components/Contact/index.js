@@ -21,7 +21,7 @@ return <div className="contact" style={sectionStyle}  >
 
  <body class="contactBody">   
         <div class="wrapper">
-        <form class="contact">
+        <form class="contact" action="#" method="POST" enctype="multipart/form-data">
         <div class="title">
         <p>BORIS DOYE FILM<br />
          Impasse Saint-Guillaume<br />
@@ -30,13 +30,13 @@ return <div className="contact" style={sectionStyle}  >
         <a class='tel' href="tel:+33609614477">+33609614477</a></p>
       
         </div>
-          <input type="text" class="name entry " placeholder="Your Name"/>
+          <input type="text" class="name entry " placeholder="Votre Nom"/>
           
           <input type="text" class="email entry" placeholder="Email"/>
           
           <textarea class="message entry" placeholder="Message"></textarea> 
           
-          <button class="submit entry" onclick="thanks()">Envoyer</button>
+          <button class="submit entry" type="submit" onclick="Merci">Envoyer</button>
         </form>  
         
         <div class="shadow"></div>
