@@ -1,4 +1,9 @@
 // soucis d'affichage à 475px...
+.errorMessage {
+	font-size: small;
+	color: red;
+	font-style: italic;
+}
 
 @media (max-width: 475px) {
 	.overAll {
@@ -7,7 +12,7 @@
 	position: fixed;
 	top: 20%;
 	left: 20%;
-	z-index: 99;
+	z-index: 2000;
 }
 
 .form__h1,
@@ -86,6 +91,14 @@
 	border-radius: 10px;
 }
 
+.errorBorder {
+	border: 1px solid red;
+}
+
+.validBorder {
+	border: 1px solid green;
+}
+
 @media (min-width: 476px) {
 .overAll {
 	background-color: transparent;
@@ -94,7 +107,7 @@
 	position: fixed;
 	top: 28%;
 	left: 30%;
-	z-index: 99;
+	z-index: 2000;
 }
 
 .form__h1 {
@@ -281,4 +294,17 @@
 .form-div-container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
+
+.create {
+	margin-top: 1em;
+}
+
+.errorBorder {
+	border: 1px solid red;
+}
+
+.validBorder {
+	border: 1px solid green;
+}
+
 }
