@@ -13,7 +13,8 @@ const initialState = {
   videoIndeOn: false,
   info1On: false,
   info2On: false,
-  
+  info3On: false,
+  info4On: false,
 };
 
 const defaultAction = {};
@@ -72,7 +73,9 @@ const reducer = (state = initialState, action = defaultAction) => {
     case 'VIDEO3_ON': {
       return {
         ...state,
-        videoVietnamOn: false
+        videoVietnamOn: false,
+        info3On: false
+
       }
     }
     case 'VIDEO3_OFF': {
@@ -142,6 +145,32 @@ const reducer = (state = initialState, action = defaultAction) => {
         info2On: false
       }
     }
+  
+  case 'INFO3_0N': {
+    return {
+      ...state,
+      info3On: true
+    }
+  }
+  case 'INFO3_0FF': {
+    return {
+      ...state,
+      info3On: false
+    }
+  }
+  case 'INFO4_0N': {
+    return {
+      ...state,
+      info4On: true
+    }
+  }
+  case 'INFO4_0FF': {
+    return {
+      ...state,
+      info4On: false
+    }
+  }
+
     case 'OPEN_USER_ACCOUNT': {
       console.log('in reducer');
         return {

@@ -18,7 +18,7 @@ import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.sass';
 
-const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,onClick15,onClick16,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On,info2On}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,onClick15,onClick16,onClick17,onClick18,onClick19,onClick20,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On,info2On,info3On,info4On}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
@@ -27,6 +27,11 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
   const cross3 = <FontAwesomeIcon className="iconCross3" icon={faWindowClose}/>
   const arrow1 = <FontAwesomeIcon className="iconArrow1" icon={faSortDown}/>
   const arrow2 = <FontAwesomeIcon className="iconArrow2" icon={faSortDown}/>
+  const arrow3 = <FontAwesomeIcon className="iconArrow3" icon={faSortDown}/>
+  const arrow4 = <FontAwesomeIcon className="iconArrow4" icon={faSortDown}/>
+
+
+
   let videoShowreelSource=(response.video_source)
   let sectionStyle1
   if (window.innerWidth<475) {
@@ -241,6 +246,7 @@ if (videoShowreellOn) {
     <div className="vietnamContent"><p>Vietnam</p>
     <p>Marque de vêtement</p>
     <image onClick={onClick5}className="iconPlay1">{iconPlay1}</image>
+    <div className="ensavoirPlus4"onClick={onClick17}>En savoir plus{arrow3}</div>
     </div>
     </div>
     </div>
@@ -251,6 +257,7 @@ if (videoShowreellOn) {
     <div className="outdoormixContent"><p>Outdoormix</p>
     <p>Festival</p>
     <image onClick={onClick7} className="iconPlay2">{iconPlay2}</image>
+    <div className="ensavoirPlus5" onClick={onClick19}>En savoir plus{arrow4}</div>
     </div>
     </div>
     </div>
@@ -353,10 +360,7 @@ if (videoShowreellOn) {
     
     
     
-  } else { 
-    
-
-  }
+  } else { };
 /////BLOC 2 INFO/////
 if (info2On){
     
@@ -367,7 +371,7 @@ if (info2On){
   <div className="infosContainer2">
   <image className="infoCross2" onClick={onClick16}>  {cross3} </image>
   <div className="infoShowreelContent"><p className="infoTitle">Queyras été</p>
-  <p className="infoDescription">Vidéo promotionnelle pour l'oofice de tourisme du queyras</p>
+  <p className="infoDescription">Vidéo promotion office de tourisme du queyras</p>
   <div className="infodescriptionContainer">
   <p className="infoBloc">genre : promotion</p>
   <p className="infoBloc">durée : 02:19</p>
@@ -391,11 +395,83 @@ if (info2On){
   
   
   
+} else { }
+ 
+///// BLOC 3 4 //////
+
+if (info3On){
+    
+    
+  vietnamShow =
+  <div className="videoPresentContainer2">
+  <div className="vietnamContainer">
+    <div className="vietnam" style={sectionStyle4} >
+    <div className="vietnamContent"><p>Vietnam</p>
+    <p>Marque de vêtement</p>
+    <image onClick={onClick5}className="iconPlay1">{iconPlay1}</image>
+    <div className="ensavoirPlus2"onClick={onClick17}>En savoir plus{arrow3}</div>
+    </div>
+    </div>
+    </div>
+    
+  <div className="infosContainer3">
+  <image className="infoCross2" onClick={onClick18}>  {cross2} </image>
+  <div className="infoShowreelContent"><p className="infoTitle">Vietnam 2017</p>
+  <p className="infoDescription">Reportage sur la fabrication des vétements Fasboa</p>
+  <div className="infodescriptionContainer">
+  <p className="infoBloc">genre : voyage</p>
+  <p className="infoBloc">durée : 02:53</p>
+  <p className="infoBloc">Lieux de tournages : Vietnam </p>
+  <p className="infoBloc">Matériel utilisé : Caméra Sony FS7, drone phamtom 4, Movi M10 </p>
+  </div>
+  <p className="infoTexte">Si exhaustive que soit ma production de vidéos, je ne cesse jamais d’apprendre et de m’enrichir de nouvelles expériences dans l’audiovisuel. Chaque projet, chaque personne rencontrée est une source d’inspiration et de progrès dont je ne me lasse pas. J’attends avec impatience de vous rencontrer afin de mettre en commun nos connaissances et construire ensemble une vidéo ou un film qui surpassera tous les autres.</p>
+  </div>
+  </div>
+  </div>
+  
+  
+  
 } else { 
   
 
-}
+};
+/////BLOC 2 INFO/////
+if (info4On){
+  
+  
+vietnamShow =
+<div className="videoPresentContainer2">
 
+<div className="infosContainer2">
+<image className="infoCross2" onClick={onClick20}>  {cross3} </image>
+<div className="infoShowreelContent"><p className="infoTitle">OUTDOORMIX FESTIVAL</p>
+<p className="infoDescription">Vidéo teaser de l'outdoormix festival</p>
+<div className="infodescriptionContainer">
+<p className="infoBloc">genre : promotion</p>
+<p className="infoBloc">durée : 01:12</p>
+<p className="infoBloc">Lieux de tournages : Embrum, Chateau-ville-veille, lac de serre-ponçon</p>
+<p className="infoBloc">Matériel utilisé : Caméra Sony FS7, drone djI Mavic, Movi M10 </p>
+</div>
+<p className="infoTexte">Si exhaustive que soit ma production de vidéos, je ne cesse jamais d’apprendre et de m’enrichir de nouvelles expériences dans l’audiovisuel. Chaque projet, chaque personne rencontrée est une source d’inspiration et de progrès dont je ne me lasse pas. J’attends avec impatience de vous rencontrer afin de mettre en commun nos connaissances et construire ensemble une vidéo ou un film qui surpassera tous les autres.</p>
+</div>
+</div>
+<div className="outdoormixContainer">
+    <div className="outdoormix" style={sectionStyle5} >
+    <div className="outdoormixContent"><p>Outdoormix</p>
+    <p>Festival</p>
+    <image onClick={onClick7} className="iconPlay2">{iconPlay2}</image>
+    <div className="ensavoirPlus3" onClick={onClick19}>En savoir plus{arrow4}</div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+} else { 
+
+
+}
 /////// RETURN /////////
   
   return <div>
@@ -442,7 +518,9 @@ const connectionStrategies = connect(
       videoIndeOn: state.videoIndeOn,
       response: state.response,
       info1On: state.info1On,
-      info2On: state.info2On
+      info2On: state.info2On,
+      info3On: state.info3On,
+      info4On: state.info4On
     
     };
   },
@@ -577,6 +655,40 @@ const connectionStrategies = connect(
      
       const action = {
         type: 'INFO2_0FF'
+      };
+    
+      dispatch(action);
+    },
+    onClick17:(event) => {
+     
+      const action = {
+        type: 'INFO3_0N',
+        
+      };
+    
+      dispatch(action);
+    },
+    onClick18:(event) => {
+     
+      const action = {
+        type: 'INFO3_0FF'
+      };
+    
+      dispatch(action);
+    },
+    onClick19:(event) => {
+     
+      const action = {
+        type: 'INFO4_0N',
+        
+      };
+    
+      dispatch(action);
+    },
+    onClick20:(event) => {
+     
+      const action = {
+        type: 'INFO4_0FF'
       };
     
       dispatch(action);
