@@ -1,0 +1,157 @@
+@import src/styles/vars
+
+.contactBody
+  //background-color:
+   background-size: cover
+  background-attachment: fixed
+  height: 700px
+  padding-top: 60px
+
+.title
+  margin: 0 auto
+  width: 70%
+  padding-bottom: 10px
+  font-size: 200%
+  color: rgb(255, 255, 255)
+  padding-top: 1em
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  text-shadow: 0 0 10px #000000f8
+
+  @media only screen and (max-width : 900px)
+   font-size: 150%
+
+.tel
+  text-shadow: 0 0 10px #7ff37bf8
+
+.mail 
+  text-shadow: 0 0 10px #59e7f1f8
+
+#title-Tag-Line
+  font-size: 20px
+
+.wrapper 
+  width: 80%
+  height: 50%
+  margin: 5% auto 0 auto
+
+.contact
+  background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%)
+  box-shadow: 0px 0px 20px 5px #AAA
+  border-radius: 10px
+  width: 50%
+  height: 180%
+  margin: 0 auto
+  padding: 10px 10px
+  animation: bounce 1.5s infinite
+
+  @media only screen and (max-width : 1500px)
+   background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%)
+   box-shadow: 0px 0px 20px 5px #AAA
+   border-radius: 10px
+   width: 80%
+   height: 190%
+   margin: 0 auto
+   padding: 20px 10px
+   animation: bounce 1.5s infinite
+
+  @media only screen and (max-width : 900px)
+   background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%)
+   box-shadow: 0px 0px 20px 5px #AAA
+   border-radius: 10px
+   width: 100%
+   height: 200%
+   margin: 0 auto
+   padding: 10px 10px
+   animation: bounce 1.5s infinite
+
+.name
+  background-color: #cd9a59
+  border-bottom: 5px solid #B2175F
+  color: white
+  width: 75%
+
+::-webkit-input-placeholder
+  color: white
+  font-size: 20px
+
+.name:hover
+  background-color: #df1b7754
+  border-bottom: 5px solid #b2175f34
+  height: 30px
+  width: 75%
+
+.email 
+  background-color: #cd9a59
+  border-bottom: 5px solid #502789
+  height: 50px
+  width: 75%
+
+.email:hover
+  background-color: #df1b7754
+  border-bottom: 5px solid #b2175f34
+  height: 30px
+  width: 75%
+
+.message
+  background-color: #b8915f
+  border-bottom: 5px solid rgb(195, 35, 17)
+  overflow: hidden
+  height: 100px
+  width: 75%
+
+.message:hover
+  background-color: #df1b7754
+  border-bottom: 5px solid #2BB09A
+  height: 100px
+  width: 75%
+
+.submit
+  border-radius: 5px
+  padding: 10px
+  background-color: #2DD7BB
+  border: none
+  border-bottom: 5px solid #CB64B2
+  transform: translateY(-120px)
+
+.submit:hover
+  border-bottom: 5px solid #CB64B2
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219)
+
+.entry
+  display: block
+  margin: 30px auto
+  padding: 10px
+  border-radius: 5px
+  border: none
+  transition: all 0.5s ease 0s
+  box-shadow: 0px 0px 25px 2px #AAA
+
+.shadow
+  box-shadow: 0px 0px 60px 5px #AAA
+  opacity: 0.5
+  border-radius: 100px
+  width: 50%
+  margin: 50px auto 0 auto
+  padding: 0 20px
+  animation: shadow 1.5s infinite
+
+.submit
+  border-radius: 5px
+  padding: 10px
+  width: 150px
+  color: white
+  background-color: #EE78D1 
+  border: none
+  border-bottom: 5px solid #CB64B2
+  margin-top: 150px 
+
+@keyframes bounce
+  0%
+  50%
+  transform: translate(0, 8px)
+
+@keyframes shadow
+  0%
+  50%
+  opacity: 0.8
+  width: 50%

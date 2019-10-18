@@ -1,60 +1,43 @@
 import React from 'react';
-
-
-import './contact.scss';
+import './contact.sass';
+import bigPictureReal2 from 'src/assets/images/montagne.jpg'
+import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
+import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 
 const Contact= () => {
+  let sectionStyle={//
+    width: "100%",
+    height: "1000px",
+    
+    backgroundImage: `url(${bigPictureReal2})`,
+    backgroundSize: 'cover',
+    overflow: 'hidden', 
+  }
 
-    return <div>
-        <div className="form_contact">
-        <form
-        className="contact2-form validate-form">
-					<span className="contact2-form-title">
-						Contactez nous
-					</span>
-
-					<div className="wrap-input2 validate-input" data-validate="Name is required">
-						<input className="input2" type="text" name="name"/>
-						<span className="focus-input2" data-placeholder="NOM/PRENOM"></span>
-					</div>
-
-					<div className="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input className="input2" type="text" name="email"/>
-						<span className="focus-input2" data-placeholder="EMAIL"></span>
-					</div>
-
-					<div className="wrap-input2 validate-input" data-validate = "Message is required">
-						<textarea className="input2" name="message"></textarea>
-						<span className="focus-input2" data-placeholder="MESSAGE"></span>
-					</div>
-
-					<div className="container-contact2-form-btn">
-						<div className="wrap-contact2-form-btn">
-							<div className="contact2-form-bgbtn"></div>
-							<button className="contact2-form-btn">
-								Envoyez votre message
-							</button>
-						</div>
-					</div>
-        </form>
-        <div className="emailsContainer">
+return <div className="contact" style={sectionStyle}  >
+ <body className="contactBody">   
+        <div className="wrapper">
+        <form className="contact" action="#" method="POST" enctype="multipart/form-data">
+        <div className="title">
+        <p>BORIS DOYE FILM<br />
+         Impasse Saint-Guillaume<br />
+         05600 Eygliers<br />
         <a className='mail' href="boris.doye.films@gmail.com">boris.doye.films@gmail.com</a><br />
-        <a className='tel' href="tel:+33609614477">+33609614477</a>
+        <a className='tel' href="tel:+33609614477">+33609614477</a></p>
         </div>
+          <input type="text" className="name entry " placeholder="Nom Prénom" required/>
+          
+          <input type="text" className="email entry" placeholder="Email" required/>
+          
+          <textarea className="message entry" placeholder="Message" required></textarea> 
+          
+          <button className="submit entry" type="submit" onclick="Merci">Envoyer</button>
+        </form>  
         
-        </div>
-        
-        <div class="wrapper">
-            <div class="snow layer1 a"></div>
-            <div class="snow layer1"></div> 
-            <div class="snow layer2 a"></div>
-            <div class="snow layer2"></div>
-            <div class="snow layer3 a"></div>
-            <div class="snow layer3"></div>
-        </div>
-    </div>
-};
-
-
-
+        <div className="shadow"></div>
+      </div>
+    <script src="app.js"></script>
+</body>
+</div>
+}; 
 export default Contact;
