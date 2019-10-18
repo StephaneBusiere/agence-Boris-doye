@@ -29,7 +29,8 @@ class ConnexionPopup extends Component {
 		formErrors2: {
 			emailConnexion: '',
 			pwdConnexion: ''
-		}
+		},
+		redirection: false 
 	}
 
 handleChange = event => {
@@ -142,8 +143,9 @@ sendRequest = (event) => {
 	}
 }
 
-handleResponse = (response) => {
-		console.log(response);
+handleResponse = () => {
+	this.setState({ redirection: true });
+	console.log(this.state.redirection);
 }
 
 // ################################################## CONNEXION AU COMPTE #########################################################
@@ -215,7 +217,10 @@ sendRequestConnexion = (event) => {
 	render() {
 		// console.log('we\'re in connexionpopup');
 		const {formErrors, formErrors2} = this.state;
-
+		const { redirection } = this.state;
+  	if (redirection) {
+   	return <Redirect to='/loginPage/'/>;
+}
   return (
 		<div className="overAll" id="popup">
 		<a className="close" href='' target="_self">X</a>
