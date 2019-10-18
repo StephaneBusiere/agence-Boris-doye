@@ -63,7 +63,7 @@
 }
 @media (min-width: 760px) {
   .aws-sld__container {
-    padding-bottom: calc(var(--slider-height-percentage) * 1);
+    padding-bottom: calc(var(--slider-height-percentage) * 1.15);
   }
 
 }
