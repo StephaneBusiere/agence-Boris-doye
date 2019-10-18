@@ -344,7 +344,7 @@ if (videoShowreellOn) {
     </div>
     </div>
     <div className="infosContainer">
-    <image className="infoCross2" onClick={onClick14}>  {cross2} </image>
+    <image  onClick={onClick14}>  {cross2} </image>
     <div className="infoShowreelContent"><p className="infoTitle">Show Reel 2016</p>
     <p className="infoDescription">Vidéo best-off de promotion de notre travail de l'année</p>
     <div className="infodescriptionContainer">
@@ -415,7 +415,7 @@ if (info3On){
     </div>
     
   <div className="infosContainer3">
-  <image className="infoCross2" onClick={onClick18}>  {cross2} </image>
+  <image  onClick={onClick18}>  {cross2} </image>
   <div className="infoShowreelContent"><p className="infoTitle">Vietnam 2017</p>
   <p className="infoDescription">Reportage sur la fabrication des vétements Fasboa</p>
   <div className="infodescriptionContainer">
@@ -443,7 +443,7 @@ vietnamShow =
 <div className="videoPresentContainer2">
 
 <div className="infosContainer2">
-<image className="infoCross2" onClick={onClick20}>  {cross3} </image>
+<image  onClick={onClick20}>  {cross3} </image>
 <div className="infoShowreelContent"><p className="infoTitle">OUTDOORMIX FESTIVAL</p>
 <p className="infoDescription">Vidéo teaser de l'outdoormix festival</p>
 <div className="infodescriptionContainer">
