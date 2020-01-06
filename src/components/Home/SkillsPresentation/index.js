@@ -14,6 +14,9 @@ import { faPhotoVideo} from '@fortawesome/free-solid-svg-icons'
 import { faMusic} from '@fortawesome/free-solid-svg-icons'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
 import { faCameraRetro} from '@fortawesome/free-solid-svg-icons'
+
+import './skillsPresentation.sass'
+
 const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     const iconCalendar = <FontAwesomeIcon className="iconCalendar" icon={faCalendarAlt}/>
     const iconMan = <FontAwesomeIcon className="iconMan" icon={faUser}/>
