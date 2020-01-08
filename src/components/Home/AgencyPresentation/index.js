@@ -1,6 +1,7 @@
 import React from 'react';
 
-import iconMontagne from 'src/assets/images/iconeMontagne.png'
+import iconDrone from 'src/assets/images/iconDrone.svg'
+import iconDroneNew from 'src/assets/images/iconDroneFinal.svg'
 import borisPhotoCarre from 'src/assets/images/photoBorisCarre.jpg'
 import borisBateau from 'src/assets/images/BorisBateau.jpg'
 import borisDrone from 'src/assets/images/photoBorisDrone.jpg'
@@ -10,13 +11,13 @@ import './agencyPresentation.sass';
 const AgencyPresentation = (
     <div id="quisommesnous">
 
-    <img className="iconeMontagne" src={iconMontagne} alt="iconeMontagne"/>
+    <img className="iconDrone" src={iconDroneNew} alt="iconeMontagne"/>
     
     <div className="photosPresentations">
     
     <div className="textPresentation1">
     <img className="borisPhotocarre" src={borisPhotoCarre} alt="borisPhotocarre"/>
-    <h2 className="quitexte"> QUI</h2>
+    <h2 className="quitexte"> Agence</h2>
 
     <div className="smallTitrePresentation1">
     
@@ -29,7 +30,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation2">
     <img className="borisBateau" src={borisBateau} alt="borisBateau"/>
-    <h2 className="sommestexte"> SOMMES</h2>
+    <h2 className="sommestexte"> De production</h2>
 
     <div className="smallTitrePresentation2">
     
@@ -41,7 +42,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation3">
     <img className="borisDrone" src={borisDrone} alt="borisDrone"/>
-    <h2 className="noustexte">NOUS</h2>
+    <h2 className="noustexte">Audiovisuelle</h2>
     <div className="smallTitrePresentation3">
     
    

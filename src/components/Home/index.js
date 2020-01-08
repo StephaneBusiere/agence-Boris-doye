@@ -7,6 +7,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 
 
+
 //sub-components
 
 import slider from 'src/components/Home/Slider'
@@ -18,20 +19,24 @@ import Teaser from 'src/components/Home/TeaserContainer'
 
 import './home.sass';
 
+let iFrame
+if (window.innerWidth<475) {
+iFrame=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0&background=1" width="400" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+} else {
+iFrame=<iframe  className="iframeSlider" src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0&background=1" width="1900" height="1070" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+}
+
 const Home= () => {
 
  
-
- 
-  
-    return <div>
+  return <div>
     <div> 
     <Link to="#quisommesnous"> <div className="ensavoirplus">En savoir plus</div></Link>
-     {slider}
+    <div className="iframeHome">{iFrame}</div>
     </div>
   
-    <div className="presentationAgenceTitle" >AGENCE DE PRODUCTION DIGITALE</div>
-  <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>	    <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>
+    <div className="presentationAgenceTitle" >REALISATEUR AUDIO-VISUEL</div>
+  <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>	   
  
     {AgencyPresentation}
     {Skills}
