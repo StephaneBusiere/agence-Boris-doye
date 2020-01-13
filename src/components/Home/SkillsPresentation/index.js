@@ -1,5 +1,6 @@
 import { Parallax, Background } from 'react-parallax'
 
+
 import iconCamera from 'src/assets/images/iconCamera.png'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
 import photoDrone from 'src/assets/images/pilotageDrone.jpg'

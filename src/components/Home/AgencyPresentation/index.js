@@ -1,6 +1,6 @@
 import React from 'react';
-
-
+import LazyLoad from 'react-lazy-load';
+import FadeIn from "react-lazyload-fadein";
 import iconDroneNew from 'src/assets/images/iconDroneFinal.svg'
 import borisPhotoCarre from 'src/assets/images/photoBorisCarre.jpg'
 import borisBateau from 'src/assets/images/BorisBateau.jpg'
@@ -16,7 +16,15 @@ const AgencyPresentation = (
     <div className="photosPresentations">
     
     <div className="textPresentation1">
-    <img className="borisPhotocarre" src={borisPhotoCarre} alt="borisPhotocarre"/>
+    <FadeIn height={600} duration={600} easing={'ease-out'}>
+            {onload => (
+    <img className="borisPhotocarre" src={borisPhotoCarre} alt="borisPhotocarre"
+    onLoad={onload}
+                    
+                />
+            )}
+        </FadeIn>
+   
     <h2 className="quitexte"> Vidéos</h2>
 
     <div className="smallTitrePresentation1">
@@ -29,7 +37,15 @@ const AgencyPresentation = (
     
     
     <div className="textPresentation2">
-    <img className="borisBateau" src={borisBateau} alt="borisBateau"/>
+    
+    <FadeIn height={600} duration={1500} easing={'ease-out'}>
+    {onload => (
+    <img className="borisBateau" src={borisBateau} alt="borisBateau" onLoad={onload}
+                    
+    />
+)}
+</FadeIn>
+    
     <h2 className="sommestexte"> Conseils</h2>
 
     <div className="smallTitrePresentation2">
@@ -41,7 +57,15 @@ const AgencyPresentation = (
     </div>
     
     <div className="textPresentation3">
-    <img className="borisDrone" src={borisDrone} alt="borisDrone"/>
+    
+    <FadeIn height={600} duration={1000} easing={'ease-out'} >
+    {onload => (
+    <img className="borisDrone" src={borisDrone} alt="borisDrone" onLoad={onload}
+                    
+    />
+)}
+</FadeIn>
+   
     <h2 className="noustexte">Drones</h2>
     <div className="smallTitrePresentation3">
     
