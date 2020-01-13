@@ -2,7 +2,12 @@ import { Parallax, Background } from 'react-parallax'
 
 import iconCamera from 'src/assets/images/iconCamera.png'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
-import photoPluie from 'src/assets/images/borisPluie.jpg'
+import photoDrone from 'src/assets/images/pilotageDrone.jpg'
+import BorisBureau from 'src/assets/images/borisBureau.jpg'
+import Micros from 'src/assets/images/micros.jpg'
+import BorisCarre from 'src/assets/images/photoBorisCarre.jpg'
+import BorisDrone from 'src/assets/images/photoBorisDrone.jpg'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
@@ -93,7 +98,27 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
     </div>
+    <div className="photoPresentationContainer">
+    <div className="photoPresentationTop">
+    
     <img className="photoCadrage" src={photoCadrage} alt="borisDrone"/>
+    <img className="borisBureau" src={BorisBureau} alt="borisDrone"/>
+    <img className="pilotageDrone" src={photoDrone} alt="borisDrone"/>
+    </div>
+    <div className="photoPresentationCenter">
+    
+    <img className="borisFilm" src={BorisCarre} alt="borisDrone"/>
+    <img className="micros" src={Micros} alt="borisDrone"/>
+    <img className="borisDrone2" src={BorisDrone} alt="borisDrone"/>
+    </div>
+    
+    <div className="photoPresentationBottom">
+    
+    <img className="photoCadrage" src={photoCadrage} alt="borisDrone"/>
+    <img className="borisBureau" src={BorisBureau} alt="borisDrone"/>
+    <img className="pilotageDrone" src={photoDrone} alt="borisDrone"/>
+    </div>
+    </div>
     
     <div className="competencesDroite">
     
