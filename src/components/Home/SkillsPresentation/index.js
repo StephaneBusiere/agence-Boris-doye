@@ -1,8 +1,8 @@
-import React from 'react';
+import { Parallax, Background } from 'react-parallax'
 
 import iconCamera from 'src/assets/images/iconCamera.png'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
-
+import photoPluie from 'src/assets/images/borisPluie.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
@@ -27,15 +27,23 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     const iconMusic = <FontAwesomeIcon className="iconMusic" icon={faMusic}/>
     const iconSocial = <FontAwesomeIcon className="iconSocial" icon={ faThumbsUp}/>
     const iconPhoto = <FontAwesomeIcon className="iconPhoto" icon={faCameraRetro}/>
-const Skills = (
+  
+  
+  const Skills = (
     
   
  <div className="competences">
     
     <h2 className="competencesTitle">Compétences</h2>
     <img className="iconCamera" src={iconCamera} alt="iconCamera"/>
-    <div className="separationLigne"></div>
-    
+   
+   <Parallax 
+   
+   bgImage={require('src/assets/images/borisPluie.jpg')}
+   bgImageAlt="the cat"
+   strength={1200}>
+   <div style={{ height: '400px' }} />
+   </Parallax>
     <div className="competencesGauche">
     
     <div className="compétencesGauche1">
