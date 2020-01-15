@@ -23,7 +23,7 @@ let iFrame
 if (window.innerWidth<475) {
 iFrame=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0&background=1" width="400" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 } else {
-iFrame=<iframe  className="iframeSlider" src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0&background=1" width="1900" height="1070" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+iFrame=<iframe width="1905" height="1000" src="https://www.youtube.com/embed/PEwa4Eehfpk?autoplay=1&loop=1&controls=0&showinfo=0&playlist=PEwa4Eehfpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 }
 
 const Home= () => {
@@ -36,7 +36,7 @@ const Home= () => {
     </div>
   
     <div className="presentationAgenceTitle" >REALISATEUR AUDIO-VISUEL</div>
-  <img className="logoBorisNoir" src={logoBorisNoirPetit} alt="logoBorisNoir"/>	   
+     
  
     {AgencyPresentation}
     {Skills}
