@@ -37,8 +37,9 @@ const Home= () => {
   
     <div className="presentationAgenceTitle" >REALISATEUR AUDIO-VISUEL</div>
      
- 
+  
     {AgencyPresentation}
+    
     {Skills}
     {Teaser}
   

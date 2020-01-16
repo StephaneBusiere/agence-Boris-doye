@@ -37,7 +37,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
   
   const Skills = (
     
-  
+    
  <div className="competences">
     
     <h2 className="competencesTitle">Compétences</h2>
@@ -50,6 +50,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
    strength={1200}>
    <div style={{ height: '400px' }} />
    </Parallax>
+   
     <div className="competencesGauche">
     
     <div className="compétencesGauche1">
