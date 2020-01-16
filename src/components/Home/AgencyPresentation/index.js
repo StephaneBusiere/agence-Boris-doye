@@ -16,7 +16,7 @@ const AgencyPresentation = (
     <div className="photosPresentations">
     
     <div className="textPresentation1">
-    <FadeIn height={600} duration={600} easing={'ease-out'}>
+    <FadeIn height={600} duration={400} easing={'ease-in'} offset={-300}>
             {onload => (
     <img className="borisPhotocarre" src={borisPhotoCarre} alt="borisPhotocarre"
     onLoad={onload}
@@ -38,7 +38,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation2">
     
-    <FadeIn height={600} duration={1500} easing={'ease-out'}>
+    <FadeIn height={600} duration={600} easing={'ease-in'} offset={-300} >
     {onload => (
     <img className="borisBateau" src={borisBateau} alt="borisBateau" onLoad={onload}
                     
@@ -58,7 +58,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation3">
     
-    <FadeIn height={600} duration={1000} easing={'ease-out'} >
+    <FadeIn height={600} duration={800} easing={'ease-in'} offset={-300}>
     {onload => (
     <img className="borisDrone" src={borisDrone} alt="borisDrone" onLoad={onload}
                     

@@ -46,18 +46,72 @@
   @media only screen and (min-width : 475px)
    width: 100% 
    height: 300px
-   display: 
-.iframe
    
+.overlayShowReelContainer
+   width: 500px
+   height: 250px
+   position: relative
+
+.showReellMini
+  @media only screen and (min-width : 475px)
+   width: 500px
+   height: 250px
+
+.overlayShowReelContent
+  opacity: 0 
   
+.overlayShowReelContainer:hover .overlayShowReelContent 
+  opacity: 1
+  transition: all 0.35s 0.1s linear
+
+.video-LinkShowreel:hover 
+  color: rgb(118, 7, 245)
+  transform: scale(1.4)
+.video-LinkQueyras:hover
+  color: rgb(118, 7, 245)
+  transform: scale(1.4)
+.video-LinkVietnam:hover
+  color: rgb(118, 7, 245)
+  transform: scale(1.4)
+
+.video-LinkOutdoor:hover
+  color: rgb(118, 7, 245)
+  transform: scale(1.4)
+ 
+
+.video-LinkShowreel:hover .overlayShowReelContent
+  opacity: 1
+  margin: 10% 0% 0% 32%
+  transition: all 0.35s 0.1s linear
+
+.overlayQueyrasContainer
+   width: 500px
+   height: 250px
+   position: relative
+
+.queyrasPicture
+  @media only screen and (min-width : 475px)
+   width: 450px
+   height: 250px
+
+.vietnamPicture
+  @media only screen and (min-width : 475px)
+   width: 475px
+   height: 250px
+
+.outdoorPicture
+  @media only screen and (min-width : 475px)
+   width: 480px
+   height: 250px
+
+.teaserPicture
   @media only screen and (max-width : 475px)
    width: 50px 
-   height: 30px
-   display: 
+   height: 30px 
   @media only screen and (min-width : 475px)
    
    display: flex
-   padding-top: 3%
+   padding-top: 1.5%
 
 .iframeShowreelTeaser
   @media only screen and (max-width : 475px)
@@ -68,12 +122,34 @@
    width: 100% 
    height: auto
    
-  
-.video-Link
-  
+.video-LinkShowreel
   @media only screen and (max-width : 475px)
    
    
+   color: white
+   font-style: normal
+   font-weight: 600
+  
+   font-family: "texgyreadventorregular"
+   
+   text-transform: none
+   letter-spacing: 0px
+   display: flex
+  @media only screen and (min-width : 475px)
+   color: white
+   font-weight: 600
+   font-family: "texgyreadventorregular"
+   line-height: 25.65px
+   text-transform: none
+   display: block
+   position: absolute
+   left: 180px
+   top: 0px
+   
+
+.video-LinkQueyras
+  
+  @media only screen and (max-width : 475px)
    color: white
    font-style: normal
    font-weight: 600
@@ -93,20 +169,94 @@
    text-transform: none
    letter-spacing: 0px
    display: block
+   position: absolute
+   left: 150px
+   top: 0px
+.overlayQueyrasContent
+  opacity: 0  
+.overlayQueyrasContainer:hover .overlayQueyrasContent
+  opacity: 1
+  margin: 10% 0% 0% 32%
+  transition: all 0.35s 0.1s linear
+.overlayVietnamContainer
+  width: 500px
+  height: 250px
+  position: relative
+.overlayVietnamContent
+  opacity: 0  
 
-
-.video-Link:hover
-  color: rgb(118, 7, 245)
-  transform: scale(1.4)
-
+.overlayVietnamContainer:hover .overlayVietnamContent
+  opacity: 1
+  margin: 10% 0% 0% 32%
+  transition: all 0.35s 0.1s linear
+.video-LinkVietnam
+  
+  @media only screen and (max-width : 475px)
+   color: white
+   font-style: normal
+   font-weight: 600
+  
+   font-family: "texgyreadventorregular"
+   
+   text-transform: none
+   letter-spacing: 0px
+   display: flex
+  @media only screen and (min-width : 475px)
+   color: white
+   font-style: normal
+   font-weight: 600
+  
+   font-family: "texgyreadventorregular"
+   line-height: 25.65px
+   text-transform: none
+   letter-spacing: 0px
+   display: block
+   position: absolute
+   left: 150px
+   top: 0px
+.video-LinkOutdoor
+  
+  @media only screen and (max-width : 475px)
+   color: white
+   font-style: normal
+   font-weight: 600
+  
+   font-family: "texgyreadventorregular"
+   
+   text-transform: none
+   letter-spacing: 0px
+   display: flex
+  @media only screen and (min-width : 475px)
+   color: white
+   font-style: normal
+   font-weight: 600
+  
+   font-family: "texgyreadventorregular"
+   line-height: 25.65px
+   text-transform: none
+   letter-spacing: 0px
+   display: block
+   position: absolute
+   left: 150px
+   top: 0px
+.overlayOutdoorContainer
+  width: 500px
+  height: 250px
+  position: relative
+.overlayOutdoorContent
+  opacity: 0  
+.overlayOutdoorContainer:hover .overlayOutdoorContent
+  opacity: 1
+  margin: 10% 0% 0% 32%
+  transition: all 0.35s 0.1s linear 
 .videoLink-Regarder
   @media only screen and (max-width : 475px)
-   margin: 0px 0% 0% 90px
+   margin: 0px 0% 0% 0px
    font-size: 20px
    line-height: 5px
   @media only screen and (min-width : 475px)
    margin: 50px 0% 0% 0px
-   font-size: 12px
+   font-size: 30px
   
 
 .videoLink-Une
@@ -116,8 +266,8 @@
    font-size: 15px
    line-height: 5px
   @media only screen and (min-width : 475px)
-   margin: 5px 0% 0% 15px
-   font-size: 12px
+   margin: 5px 0% 0% 40px
+   font-size: 30px
    display: block
 
 .videoLink-Video
@@ -126,8 +276,8 @@
    font-size: 20px
    line-height: 5px
   @media only screen and (min-width : 475px)
-   margin: 4px 0% 0% 3px
-   font-size: 18px
+   margin: 15px 0% 0% 0px
+   font-size: 60px
    display: block
   
   
