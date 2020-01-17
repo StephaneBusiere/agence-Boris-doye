@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import SimpleSlider from 'src/components/Slider2';
+
 
 import showreel from 'src/assets/images/Showreel.jpg'
 import outdoormix from 'src/assets/images/Outdoormix.jpg'
@@ -158,17 +160,17 @@ iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&
   }
 if (window.innerWidth<475) {
 
-  iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   
     } else {
-      iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="1920" height="1250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   } 
 if (window.innerWidth<475) {
 
     iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     
       } else {
-        iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0&transparent=false" width="1920" height="1250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     } 
 
     if (window.innerWidth<475) {
@@ -190,7 +192,7 @@ if (window.innerWidth<475) {
               iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           } 
 //////bloc 1:showReellShow///////
-
+let vietnamShow;
 if (videoShowreellOn) {
     showReellShow = <div className="videoPresentContainer1"><div className="showReelContainer">
     <div  style={sectionStyle2}  >
@@ -217,12 +219,12 @@ if (videoShowreellOn) {
     
     </div>
   }  else   {
-    showReellShow=
+   showReellShow=
     
     <div className="showReelIframe">{iFrameShowRellRes}
     <image onClick={onClick2}>  {cross} </image>
-    </div>
-    
+    </div> 
+    vietnamShow=(<div></div>)
     
   } 
   if (videoQueyrasOn){
@@ -235,7 +237,7 @@ if (videoShowreellOn) {
   
 // bloc 2 : vietnamShow................ 
   
-  let vietnamShow;
+  //let vietnamShow;
   
   if (videoVietnamOn) {
     vietnamShow = <div className="videoPresentContainer2">
@@ -266,10 +268,9 @@ if (videoShowreellOn) {
   }  else   {
     vietnamShow=<div className="vietnamIframe">{iFrameVietnamRes}
     <image onClick={onClick6}>  {cross} </image>
-    </div>
-    
-  } 
-  if (videoOutdoormixOn){
+    </div>} 
+  
+    if (videoOutdoormixOn){
     vietnamShow=<div className="outdoormixIframe">{iFrameOutdoormixRes}
     <image onClick={onClick8}>  {cross} </image>
     </div>
@@ -500,7 +501,7 @@ vietnamShow =
   
   
   </div>
-  
+  <SimpleSlider />
   </div>
 };
 
