@@ -74,7 +74,8 @@ const reducer = (state = initialState, action = defaultAction) => {
       return {
         ...state,
         videoVietnamOn: false,
-        info3On: false
+        info3On: false,
+        videoQueyrasOn: false
 
       }
     }

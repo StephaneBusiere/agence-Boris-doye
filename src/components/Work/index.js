@@ -20,7 +20,7 @@ import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.sass';
 
-const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,onClick15,onClick16,onClick17,onClick18,onClick19,onClick20,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On,info2On,info3On,info4On}) => {
+const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,onClick15,onClick16,onClick17,onClick18,onClick19,onClick20,onClick21,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On,info2On,info3On,info4On}) => {
   
   const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
   const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
@@ -134,10 +134,19 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     backgroundImage: `url(${inde})`,
     backgroundSize: "cover",
     display:"inline-block",
+    }
+    let sectionStyle8={
+   
     
-
-  }
+      width: "100%", 
+      height: "100%",
+      margin: "0% 0% 0% 2%",
+     
+      backgroundImage: `url(${queyras})`,
+      backgroundSize: "cover",
+      display:"inline-block"
   
+    }
 //affichage conditionnel des blocs d'image
   
 
@@ -156,14 +165,16 @@ iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&
 
 
   } else {
-    iFrameShowRellRes=<iframe src= {videoShowreelSource} width="1920" height="1080"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  }
+    iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="1920" height="800"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+}
+
+  
 if (window.innerWidth<475) {
 
   iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   
     } else {
-      iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="1920" height="1250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="1920" height="800" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   } 
 if (window.innerWidth<475) {
 
@@ -191,6 +202,24 @@ if (window.innerWidth<475) {
             } else {
               iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           } 
+
+//////conditional className//////
+let videoPresentContainer2Class
+let queyrasIframeClass
+
+
+
+if (videoQueyrasOn) {
+  videoPresentContainer2Class='videoPresentContainer2Overlay'
+  queyrasIframeClass='playerQueyrasNormal'
+} 
+
+
+else if (videoShowreellOn) {
+  videoPresentContainer2Class='videoPresentContainer2'
+} else {
+  videoPresentContainer2Class='videoPresentContainer2Overlay'
+}
 //////bloc 1:showReellShow///////
 let vietnamShow;
 if (videoShowreellOn) {
@@ -202,7 +231,7 @@ if (videoShowreellOn) {
   <p>Best-off</p>
   
   <image onClick={onClick}>{iconPlay1}</image>
-  <div className="ensavoirPlus2"onClick={onClick13}>En savoir plus{arrow1}</div>
+  <div className="ensavoirPlus2"onClick={onClick13}>En savoir plus</div>
     
     </div>
     </div>
@@ -212,7 +241,7 @@ if (videoShowreellOn) {
     <div className="queyrasContent"><p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
-    <div className="ensavoirPlus3" onClick={onClick15}>En savoir plus{arrow2}</div>
+    <div className="ensavoirPlus3" onClick={onClick15}>En savoir plus</div>
     </div>
     </div>
     </div>
@@ -228,7 +257,7 @@ if (videoShowreellOn) {
     
   } 
   if (videoQueyrasOn){
-    showReellShow=<div className="queyrasIframe">{iFrameQueyrasRes}
+    showReellShow=<div className={queyrasIframeClass}>{iFrameQueyrasRes}
     <image onClick={onClick4}>  {cross} </image>
     </div>
     
@@ -318,13 +347,7 @@ if (videoShowreellOn) {
     </div>
     } else {}
 /////// BlOC INFOS 1 ////////  
-/*   let iconeInfo;
-  if (info1On){ 
-    iconeInfo={cross}
-  
-  } else {
-    iconeInfo={arrow}
-  } */
+
   
   if (info1On){
     
@@ -339,15 +362,15 @@ if (videoShowreellOn) {
   <p>Best-off</p>
   
   <image onClick={onClick}>{iconPlay1}</image>
-  <div  className="ensavoirPlus2" onClick={onClick13}>En savoir plus {arrow1}</div>
+  <div  className="ensavoirPlus2" onClick={onClick13}>En savoir plus </div>
     
     </div>
     </div>
     </div>
     <div className="infosContainer">
     <image  onClick={onClick14}>  {cross2} </image>
-    <div className="infoShowreelContent"><p className="infoTitle">Show Reel 2016</p>
-    <p className="infoDescription">Vidéo best-off de promotion de notre travail de l'année</p>
+    <div className="infoShowreelContent"><p className="infoTitleShowReel">Show Reel 2016</p>
+    <p className="infoDescriptionShowReel">Vidéo best-off de promotion de notre travail de l'année</p>
     <div className="infodescriptionContainer">
     <p className="infoBloc">genre : généraliste</p>
     <p className="infoBloc">durée : 01:51</p>
@@ -371,8 +394,8 @@ if (info2On){
   
   <div className="infosContainer2">
   <image className="infoCross2" onClick={onClick16}>  {cross3} </image>
-  <div className="infoShowreelContent"><p className="infoTitle">Queyras été</p>
-  <p className="infoDescription">Vidéo promotion office de tourisme du queyras</p>
+  <div className="infoShowreelContent"><p className="infoTitleQueyras">Queyras été</p>
+  <p className="infoDescriptionQueyras">Vidéo promotion office de tourisme du queyras</p>
   <div className="infodescriptionContainer">
   <p className="infoBloc">genre : promotion</p>
   <p className="infoBloc">durée : 02:19</p>
@@ -383,11 +406,11 @@ if (info2On){
   </div>
   </div>
   <div className="queyrasContainer">
-    <div className="queyras" style={sectionStyle3}  >
+    <div className="queyrasInfos" style={sectionStyle8}  >
     <div className="queyrasContent"><p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
-    <div className="ensavoirPlus2" onClick={onClick15}>En savoir plus{arrow2}
+    <div className="ensavoirPlus6" onClick={onClick15}>En savoir plus
     </div>
     </div>
     </div>
@@ -409,8 +432,8 @@ if (info3On){
     <div className="vietnam" style={sectionStyle4} >
     <div className="vietnamContent"><p>Vietnam</p>
     <p>Marque de vêtement</p>
-    <image onClick={onClick5}className="iconPlay1">{iconPlay1}</image>
-    <div className="ensavoirPlus2"onClick={onClick17}>En savoir plus{arrow3}</div>
+    <image onClick={onClick5} className="iconPlay1">{iconPlay1}</image>
+    <div className="ensavoirPlus2"onClick={onClick17}>En savoir plus</div>
     </div>
     </div>
     </div>
@@ -486,23 +509,23 @@ vietnamShow =
   </div>
   
   <div className="falseMargin"></div>
-  
+  <div className="videoPresentContainer">
   <div className="videoPresentContainer1">
   
   {showReellShow}</div>
   
-  <div className="videoPresentContainer2">
+  <div className={videoPresentContainer2Class}>
   
   {vietnamShow}</div>
   
   <div className="videoPresentContainer3">
   
   {fasboaShow}
-  
-  
+  </div>
   </div>
   <SimpleSlider />
   </div>
+  
 };
 
 /////// Connexion stratégies .................
@@ -569,10 +592,16 @@ const connectionStrategies = connect(
       onClick5:(event) => {
      
       const action = {
-        type: 'VIDEO3_ON'
+        type: 'VIDEO3_ON',
       };
+      
       dispatch(action);
+     
     },
+  
+     
+    
+
     onClick6:(event) => {
      
       const action = {
@@ -694,6 +723,7 @@ const connectionStrategies = connect(
     
       dispatch(action);
     },
+    
     };
   },
 );
