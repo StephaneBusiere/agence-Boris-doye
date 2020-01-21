@@ -10,7 +10,7 @@ class YouTubeVideo extends React.PureComponent {
 
   componentDidMount = () => {
     // On mount, check to see if the API script is already loaded
-
+  
     if (!window.YT) { // If not, load the script asynchronously
       const tag = document.createElement('script');
       tag.src = 'https://www.youtube.com/iframe_api';
@@ -23,17 +23,18 @@ class YouTubeVideo extends React.PureComponent {
 
     } else { // If script is already there, load the video directly
       this.loadVideo();
+    
     }
   };
 
   loadVideo = () => {
     const { id } = this.props;
-
+  
     // the Player object is created uniquely based on the id in props
     this.player = new window.YT.Player(`youtube-player-${id}`, {
         videoId: 'PEwa4Eehfpk',
-        height: '390',
-        width: '640',
+        height: '600',
+        width: '1920',
         
         playerVars:{
         mute:1,
@@ -46,6 +47,7 @@ class YouTubeVideo extends React.PureComponent {
         branding: 0,
         rel: 0,
         modestbranding:0,
+        
         origin: window.location.origin,
 
         playlist: 'PEwa4Eehfpk',
@@ -56,16 +58,18 @@ class YouTubeVideo extends React.PureComponent {
       },
     });
   };
-
+ 
   onPlayerReady = event => {
     event.target.playVideo();
   };
   onPlayerStateChange=event =>{
     var YTP=event.target;
+    var background=this.refs.Ref1
    
       
     if (event.data===1) {
         var remains=YTP.getDuration() - YTP.getCurrentTime();
+        background.style.opacity=1;
         
         if(this.rewindTO)
                     clearTimeout(this.rewindTO);
@@ -74,6 +78,8 @@ class YouTubeVideo extends React.PureComponent {
                  },(remains-0.1)*1000);
     }
   }
+
+
   render = () => {
     const { id } = this.props;
     
@@ -84,7 +90,7 @@ class YouTubeVideo extends React.PureComponent {
         }
     
     var backgroundStyle= {
-    opacity: '1',
+    opacity: '0',
     backgroundSize: 'cover'
       }
    
@@ -92,9 +98,9 @@ class YouTubeVideo extends React.PureComponent {
     
     return (
         <section class="full-size-page">
-      <div id="video-overlay" style={divStyle}>
+      <div id="video-overlay" style={divStyle}  >
       
-      <div class="foreground-video" style={backgroundStyle}>
+      <div class="foreground-video" style={backgroundStyle} ref='Ref1'>
         <div id={`youtube-player-${id}`} >
       </div>
       </div>
