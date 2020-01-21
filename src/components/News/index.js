@@ -3,7 +3,7 @@ import skipicture from 'src/assets/images/Ski.jpg'
 import skipictureMobile from 'src/assets/images/SkiMobile.jpg'
 import pilotageDrone from 'src/assets/images/pilotageDrone.jpg'
 import appurimacPhoto from 'src/assets/images/AppurimacGrand.jpg'
-
+import YouTubeVideo from 'src/components/YoutubeVideo'
 import './news.sass';
 
 const News= () => {
@@ -36,8 +36,12 @@ if (window.innerWidth<475) {
 
   
     return <div> 
+    
+    
+    <div><YouTubeVideo/></div>
     <div className="skiPictureContainer">
-    <div className="skiPicture" style={sectionStyle1}  >
+    <div className="skiPicture"
+     style={sectionStyle1}  >
     <div className="presentationVideos3" ><div ClassName="newsTitle">NEWS</div>
     
     </div>

@@ -399,7 +399,7 @@ if (info2On){
   <div className="infodescriptionContainer">
   <p className="infoBloc">genre : promotion</p>
   <p className="infoBloc">durée : 02:19</p>
-  <p className="infoBloc">Lieux de tournages : parc national du queyras, Abries, Moline en Queyras; Arvieux</p>
+  <p className="infoBloc">Lieux de tournages : parc national du queyras, Abries, Moline en Queyras;</p>
   <p className="infoBloc">Matériel utilisé : Caméra Sony FS7, drone phamtom 4, Movi M10 </p>
   </div>
   <p className="infoTexte">Si exhaustive que soit ma production de vidéos, je ne cesse jamais d’apprendre et de m’enrichir de nouvelles expériences dans l’audiovisuel. Chaque projet, chaque personne rencontrée est une source d’inspiration et de progrès dont je ne me lasse pas. J’attends avec impatience de vous rencontrer afin de mettre en commun nos connaissances et construire ensemble une vidéo ou un film qui surpassera tous les autres.</p>
