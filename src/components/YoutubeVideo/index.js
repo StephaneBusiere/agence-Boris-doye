@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
-
+import annecyPhoto from 'src/assets/images/Kinaphoto-Photo-gallerie-accueil.jpg'
+import paysagePhoto from 'src/assets/images/Kinaphoto-Photo-Outdoor-Sport-Extreme-Paysage-6.jpg'
+import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 
 class YouTubeVideo extends React.PureComponent {
   static propTypes = {
@@ -33,7 +35,7 @@ class YouTubeVideo extends React.PureComponent {
     // the Player object is created uniquely based on the id in props
     this.player = new window.YT.Player(`youtube-player-${id}`, {
         videoId: 'PEwa4Eehfpk',
-        height: '600',
+        height: '800',
         width: '1920',
         
         playerVars:{
@@ -65,12 +67,15 @@ class YouTubeVideo extends React.PureComponent {
   onPlayerStateChange=event =>{
     var YTP=event.target;
     var background=this.refs.Ref1
+    var title=this.refs.Ref2
+    var logo=this.refs.Ref3
    
       
     if (event.data===1) {
         var remains=YTP.getDuration() - YTP.getCurrentTime();
         background.style.opacity=1;
-        
+        title.style.opacity=0;
+        logo.style.opacity=0;
         if(this.rewindTO)
                     clearTimeout(this.rewindTO);
                 this.rewindTO=setTimeout(function(){
@@ -84,14 +89,17 @@ class YouTubeVideo extends React.PureComponent {
     const { id } = this.props;
     
     var divStyle={
-    backgroundImage: `url(${bigPictureReal})`,
+    backgroundImage: `url(${paysagePhoto})`,
+    height: '800px',
     backgroundSize: 'cover',
     opacity: '1'
         }
     
     var backgroundStyle= {
     opacity: '0',
-    backgroundSize: 'cover'
+    transition: 'opacity 2s',
+    backgroundSize: 'cover',
+    
       }
    
 
@@ -99,7 +107,8 @@ class YouTubeVideo extends React.PureComponent {
     return (
         <section class="full-size-page">
       <div id="video-overlay" style={divStyle}  >
-      
+      <div className="presentationAgenceTitle" ref='Ref2' >REALISATEUR AUDIO-VISUEL</div>
+      <img className="logoBorisNoir" ref='Ref3' src={logoBorisNoirPetit} alt="logoBorisNoir"/>
       <div class="foreground-video" style={backgroundStyle} ref='Ref1'>
         <div id={`youtube-player-${id}`} >
       </div>

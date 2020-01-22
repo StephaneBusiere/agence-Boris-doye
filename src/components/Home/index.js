@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
 import FadeIn from "react-lazyload-fadein";
 import { Player } from 'video-react';
+import YouTubeVideo from 'src/components/YoutubeVideo'
 //assets
 
 import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
-
+import annecyPhoto from 'src/assets/images/Kinaphoto-Photo-gallerie-accueil.jpg'
 
 
 //sub-components
@@ -42,10 +43,10 @@ const Home= () => {
     
     <div className="iframeHome">
     
-    {iFrame}</div>
+    <YouTubeVideo/></div>
     </div>
   
-    <div className="presentationAgenceTitle" >REALISATEUR AUDIO-VISUEL</div>
+    
      
   
     {AgencyPresentation}
