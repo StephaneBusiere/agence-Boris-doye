@@ -31,35 +31,37 @@ class YouTubeVideo extends React.PureComponent {
 
   loadVideo = () => {
     const { id } = this.props;
-  
-    // the Player object is created uniquely based on the id in props
+    
     this.player = new window.YT.Player(`youtube-player-${id}`, {
-        videoId: 'PEwa4Eehfpk',
-        height: '800',
-        width: '1920',
-        
-        playerVars:{
-        mute:1,
-        autoplay:1,
-        loop:1,
-        controls:0,
-        showinfo:0,
-        wmode: 'transparent',
-        autohide:0,
-        branding: 0,
-        rel: 0,
-        modestbranding:0,
-        
-        origin: window.location.origin,
+      videoId: 'PEwa4Eehfpk',
+      
+      
+      height: '1010',
+      width: '1900',
+      
+      playerVars:{
+      mute:1,
+      autoplay:1,
+      loop:1,
+      controls:0,
+      showinfo:0,
+      wmode: 'transparent',
+      autohide:0,
+      branding: 0,
+      rel: 0,
+      modestbranding:0,
+      
+      origin: window.location.origin,
 
-        playlist: 'PEwa4Eehfpk',
+      playlist: 'PEwa4Eehfpk',
+  },
+      events: {
+      onReady: this.onPlayerReady,
+      onStateChange:this.onPlayerStateChange
     },
-        events: {
-        onReady: this.onPlayerReady,
-        onStateChange:this.onPlayerStateChange
-      },
-    });
-  };
+  });
+  
+}
  
   onPlayerReady = event => {
     event.target.playVideo();
@@ -90,7 +92,7 @@ class YouTubeVideo extends React.PureComponent {
     
     var divStyle={
     backgroundImage: `url(${paysagePhoto})`,
-    height: '800px',
+    height: '1010px',
     backgroundSize: 'cover',
     opacity: '1'
         }

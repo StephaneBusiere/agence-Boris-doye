@@ -498,7 +498,7 @@ vietnamShow =
 }
 /////// RETURN /////////
   
-  return <div>
+  return <div className="mainContainer">
   
   <div className="mainpictureContainer">
     
@@ -521,11 +521,14 @@ vietnamShow =
   <div className="videoPresentContainer3">
   
   {fasboaShow}
+  
   </div>
-  </div>
+  <div className="sliderContainer">
   <SimpleSlider />
   </div>
+  </div>
   
+  </div>
 };
 
 /////// Connexion stratégies .................
