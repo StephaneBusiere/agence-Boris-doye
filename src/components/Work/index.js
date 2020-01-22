@@ -181,14 +181,14 @@ if (window.innerWidth<475) {
     iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     
       } else {
-        iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0&transparent=false" width="1920" height="1250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        iFrameVietnamRes=<iframe src="https://player.vimeo.com/video/176137978?autoplay=1&loop=1&title=0&byline=0&portrait=0&transparent=false" width="1920" height="800" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     } 
 
     if (window.innerWidth<475) {
 
       iFrameOutdoormixRes=<iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         } else {
-          iFrameOutdoormixRes=<iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          iFrameOutdoormixRes=<iframe src="https://player.vimeo.com/video/62984978?autoplay=1&loop=1&title=0&byline=0&portrait=0&transparent=false" width="1920" height="800" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       } 
 if (window.innerWidth<475) {
 
@@ -200,14 +200,14 @@ if (window.innerWidth<475) {
 
           iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             } else {
-              iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              iFrameIndeRes=<iframe src="https://player.vimeo.com/video/282989783?autoplay=1&loop=1&transparent=false" width="1920" height="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           } 
 
 //////conditional className//////
 let videoPresentContainer2Class
 let queyrasIframeClass
-
-
+let videoPresentContainer3Class
+let videoSliderContainerClass
 
 if (videoQueyrasOn) {
   videoPresentContainer2Class='videoPresentContainer2Overlay'
@@ -219,6 +219,30 @@ else if (videoShowreellOn) {
   videoPresentContainer2Class='videoPresentContainer2'
 } else {
   videoPresentContainer2Class='videoPresentContainer2Overlay'
+}
+
+if (videoOutdoormixOn) {
+  videoPresentContainer3Class='videoPresentContainer2Overlay'
+  
+} 
+
+
+else if (videoVietnamOn) {
+  videoPresentContainer3Class='videoPresentContainer3'
+} else {
+  videoPresentContainer3Class='videoPresentContainer2Overlay'
+}
+
+if (videoIndeOn) {
+  videoSliderContainerClass='SliderContainerOverlay'
+  
+} 
+
+
+else if (videoFasboaOn) {
+  videoSliderContainerClass='SliderContainer'
+} else {
+  videoSliderContainerClass='SliderContainerOverlay'
 }
 //////bloc 1:showReellShow///////
 let vietnamShow;
@@ -277,7 +301,7 @@ if (videoShowreellOn) {
     <div className="vietnamContent"><p>Vietnam</p>
     <p>Marque de vêtement</p>
     <image onClick={onClick5}className="iconPlay1">{iconPlay1}</image>
-    <div className="ensavoirPlus4"onClick={onClick17}>En savoir plus{arrow3}</div>
+    <div className="ensavoirPlus4"onClick={onClick17}>En savoir plus</div>
     </div>
     </div>
     </div>
@@ -288,7 +312,7 @@ if (videoShowreellOn) {
     <div className="outdoormixContent"><p>Outdoormix</p>
     <p>Festival</p>
     <image onClick={onClick7} className="iconPlay2">{iconPlay2}</image>
-    <div className="ensavoirPlus5" onClick={onClick19}>En savoir plus{arrow4}</div>
+    <div className="ensavoirPlus5" onClick={onClick19}>En savoir plus</div>
     </div>
     </div>
     </div>
@@ -362,7 +386,7 @@ if (videoShowreellOn) {
   <p>Best-off</p>
   
   <image onClick={onClick}>{iconPlay1}</image>
-  <div  className="ensavoirPlus2" onClick={onClick13}>En savoir plus </div>
+  
     
     </div>
     </div>
@@ -410,8 +434,7 @@ if (info2On){
     <div className="queyrasContent"><p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
-    <div className="ensavoirPlus6" onClick={onClick15}>En savoir plus
-    </div>
+    
     </div>
     </div>
     </div>
@@ -433,15 +456,15 @@ if (info3On){
     <div className="vietnamContent"><p>Vietnam</p>
     <p>Marque de vêtement</p>
     <image onClick={onClick5} className="iconPlay1">{iconPlay1}</image>
-    <div className="ensavoirPlus2"onClick={onClick17}>En savoir plus</div>
+    
     </div>
     </div>
     </div>
     
   <div className="infosContainer3">
   <image  onClick={onClick18}>  {cross2} </image>
-  <div className="infoShowreelContent"><p className="infoTitle">Vietnam 2017</p>
-  <p className="infoDescription">Reportage sur la fabrication des vétements Fasboa</p>
+  <div className="infoShowreelContent"><p className="infoTitleVietnam">Vietnam 2017</p>
+  <p className="infoDescriptionVietnam">Reportage sur la fabrication des vétements Fasboa</p>
   <div className="infodescriptionContainer">
   <p className="infoBloc">genre : voyage</p>
   <p className="infoBloc">durée : 02:53</p>
@@ -468,8 +491,8 @@ vietnamShow =
 
 <div className="infosContainer2">
 <image  onClick={onClick20}>  {cross3} </image>
-<div className="infoShowreelContent"><p className="infoTitle">OUTDOORMIX FESTIVAL</p>
-<p className="infoDescription">Vidéo teaser de l'outdoormix festival</p>
+<div className="infoShowreelContent"><p className="infoTitleOutdoormix">OUTDOORMIX FESTIVAL</p>
+<p className="infoDescriptionOutdoormix">Vidéo teaser de l'outdoormix festival</p>
 <div className="infodescriptionContainer">
 <p className="infoBloc">genre : promotion</p>
 <p className="infoBloc">durée : 01:12</p>
@@ -484,7 +507,7 @@ vietnamShow =
     <div className="outdoormixContent"><p>Outdoormix</p>
     <p>Festival</p>
     <image onClick={onClick7} className="iconPlay2">{iconPlay2}</image>
-    <div className="ensavoirPlus3" onClick={onClick19}>En savoir plus{arrow4}</div>
+    
     </div>
     </div>
     </div>
@@ -518,12 +541,12 @@ vietnamShow =
   
   {vietnamShow}</div>
   
-  <div className="videoPresentContainer3">
+  <div className={videoPresentContainer3Class}>
   
   {fasboaShow}
   
   </div>
-  <div className="sliderContainer">
+  <div className={videoSliderContainerClass}>
   <SimpleSlider />
   </div>
   </div>
