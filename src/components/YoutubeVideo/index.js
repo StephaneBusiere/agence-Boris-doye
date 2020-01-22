@@ -37,7 +37,7 @@ class YouTubeVideo extends React.PureComponent {
       
       
       height: '1010',
-      width: '1900',
+      width: '1910',
       
       playerVars:{
       mute:1,
