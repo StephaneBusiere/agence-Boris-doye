@@ -47,7 +47,10 @@ const reducer = (state = initialState, action = defaultAction) => {
         ...state,
         videoShowreellOn: false,
         info1On: false,
-        videoVietnamOn: true
+        videoVietnamOn: true,
+        videoOutdoormixOn: false,
+        videoFasboaOn: true,
+        videoIndeOn: false
       }
     }
     case 'VIDEO1_OFF': {
@@ -61,7 +64,11 @@ const reducer = (state = initialState, action = defaultAction) => {
       return {
         ...state,
         videoQueyrasOn: true,
-        info2On: false
+        info2On: false,
+        videoVietnamOn: true,
+        videoOutdoormixOn: false,
+        videoFasboaOn: true,
+        videoIndeOn: false
       }
     }
     case 'VIDEO2_OFF': {
@@ -77,7 +84,9 @@ const reducer = (state = initialState, action = defaultAction) => {
         videoVietnamOn: false,
         info3On: false,
         videoQueyrasOn: false,
-        
+        videoShowreellOn: true,
+        videoFasboaOn: true,
+        videoIndeOn: false
 
       }
     }
@@ -90,7 +99,11 @@ const reducer = (state = initialState, action = defaultAction) => {
     case 'VIDEO4_ON': {
       return {
         ...state,
-        videoOutdoormixOn: true
+        videoOutdoormixOn: true,
+        videoQueyrasOn: false,
+        videoShowreellOn: true,
+        videoFasboaOn: true,
+        videoIndeOn: false
 
       }
     }
@@ -104,7 +117,11 @@ const reducer = (state = initialState, action = defaultAction) => {
     case 'VIDEO5_ON': {
       return {
         ...state,
-        videoFasboaOn: false
+        videoFasboaOn: false,
+        videoQueyrasOn: false,
+        videoShowreellOn: true,
+        videoOutdoormixOn: false,
+        videoVietnamOn: true
       }
     }
     case 'VIDEO5_OFF': {
@@ -116,7 +133,11 @@ const reducer = (state = initialState, action = defaultAction) => {
     case 'VIDEO6_ON': {
       return {
         ...state,
-        videoIndeOn: true
+        videoIndeOn: true,
+        videoQueyrasOn: false,
+        videoShowreellOn: true,
+        videoOutdoormixOn: false,
+        videoVietnamOn: true
       }
     }
     case 'VIDEO6_OFF': {
