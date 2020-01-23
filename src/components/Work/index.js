@@ -546,7 +546,9 @@ vietnamShow =
   {fasboaShow}
   
   </div>
+  
   <div className={videoSliderContainerClass}>
+  <p className="moreVideo">Plus de vidéos</p>
   <SimpleSlider />
   </div>
   </div>

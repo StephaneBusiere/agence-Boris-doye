@@ -8,6 +8,11 @@
   @media only screen and (min-width : 475px) 
    width: 100%
    height: 550px
+.teamContainer
+  height: 1400px
+  display: flex
+  flex-wrap: wrap
+  background-color: #282828
 
 .teamtitle
   @media only screen and (max-width : 475px)
@@ -32,22 +37,11 @@
    font-size: 4em
    padding-top: 2.5em
 
-
-  
- 
-
-.teamContainer1
-  @media only screen and (max-width : 475px)
-   background-color: #282828
-   width: 100% 
-   height: auto 
-  
-  @media only screen and (min-width : 475px) 
-  
-   background-color: #282828
-   width: 100% 
-   height: auto 
-   display: flex
+.borisContainer
+  width: 40em
+  height: 40em
+  margin-left: 285px
+  margin-top: 48px
 
 .borisPhoto
   @media only screen and (max-width : 475px)
@@ -57,9 +51,74 @@
    border: 5px solid white
   @media only screen and (min-width : 475px) 
    width: 40em
-   height: auto
-   margin: 6% 0% 2% 10%
+   height: 35em
+   margin: 4% 0% 0% 0%
    border: 5px solid white
+ 
+.borisSmallTexteTitle
+  color: white
+  font-weight: 600
+  font-size: 45px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 500px
+  top: 680px
+  opacity: 0
+.borisContainer:hover .borisSmallTexteTitle 
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
+.borisContainer:hover .borisPhoto
+  opacity: 0.2
+  filter: blur(3px)
+  transition-duration: 0.3s
+  transition-property: all
+  transition-timing-function: ease-in-out
+
+.borisContainer:hover .borisSmallTexteDescription
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
+.borisContainer:hover .BorisTexteDescrition
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out  
+  
+.borisSmallTexteDescription
+  color: white
+  font-weight: 600
+  font-size: 25px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 450px
+  top: 740px
+  opacity: 0
+
+.BorisTexteDescrition
+  color: white
+  font-weight: 600
+  font-size: 15px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  width: 450px
+  position: absolute
+  left: 385px
+  top: 800px
+  border: 2px solid white
+  padding: 15px
+  opacity: 0
+
+
+.hugoContainer
+  width: 40em
+  margin-left: 25px
+  margin-top: 48px 
+  
 .hugoPhoto
   @media only screen and (max-width : 475px)
    width: 20em
@@ -68,10 +127,73 @@
    border: 5px solid white
   @media only screen and (min-width : 475px) 
    width: 40em
-   height: 30em
-   margin: 6% 0% 2% 10%
+   height: 35em
+   margin: 4% 0% 0% 2%
    border: 5px solid white
+
+.hugoSmallTexteTitle
+  color: white
+  font-weight: 600
+  font-size: 45px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 1100px
+  top: 680px
+  opacity: 0
+.hugoContainer:hover .hugoSmallTexteTitle 
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
+.hugoContainer:hover .hugoPhoto
+  opacity: 0.2
+  filter: blur(3px)
+  transition-duration: 0.3s
+  transition-property: all
+  transition-timing-function: ease-in-out
+
+.hugoContainer:hover .hugoSmallTexteDescription
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
+.hugoContainer:hover .hugoTexteDescrition
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out  
   
+.hugoSmallTexteDescription
+  color: white
+  font-weight: 600
+  font-size: 25px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 1130px
+  top: 740px
+  opacity: 0
+
+.hugoTexteDescrition
+  color: white
+  font-weight: 600
+  font-size: 15px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  width: 450px
+  position: absolute
+  left: 1055px
+  top: 800px
+  border: 2px solid white
+  padding: 15px
+  opacity: 0
+
+.cleoContainer
+  width: 40em
+  margin-left: 190px
+  margin-top: -205px
+
 .cleoPhoto
   @media only screen and (max-width : 475px)
    width: 20em
@@ -80,65 +202,142 @@
    border: 5px solid white
   @media only screen and (min-width : 475px) 
    width: 40em
-   height: 30em
-   margin: 6% 0% 2% 10%
+   height: 35em
+   margin: 2% 0% 0% 15%
    border: 5px solid white
- 
+.cleoSmallTexteTitle
+  color: white
+  font-weight: 600
+  font-size: 45px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 500px
+  top: 1270px
+  opacity: 0
+.cleoContainer:hover .cleoSmallTexteTitle 
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
+.cleoContainer:hover .cleoPhoto
+  opacity: 0.2
+  filter: blur(3px)
+  transition-duration: 0.3s
+  transition-property: all
+  transition-timing-function: ease-in-out
 
-.borisText
+.cleoContainer:hover .cleoSmallTexteDescription
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
+.cleoContainer:hover .cleoTexteDescrition
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out  
+  
+.cleoSmallTexteDescription
+  color: white
+  font-weight: 600
+  font-size: 25px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 520px
+  top: 1320px
+  opacity: 0
+
+.cleoTexteDescrition
+  color: white
+  font-weight: 600
+  font-size: 15px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  width: 450px
+  position: absolute
+  left: 385px
+  top: 1380px
+  border: 2px solid white
+  padding: 15px
+  opacity: 0
+
+.cleo2Container
+  width: 40em
+  margin-left: 123px
+  margin-top: -205px 
+ 
+.cleo2Photo
   @media only screen and (max-width : 475px)
    width: 20em
-   color: white
-   margin: 2.5% 0% 0% 6%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-  @media only screen and (min-width : 475px)
-   width: 60em
-   color: white
-   margin: 2.5% 0% 0% 6%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-.borisPresentationTexte
-  @media only screen and (max-width : 475px)
-   width: 22em 
-   heigth: auto
-   margin: 1em 0em 0em 0em
-   padding-bottom: 1em
+   height: auto
+   margin: 6% 0% 2% 10%
+   border: 5px solid white
+  @media only screen and (min-width : 475px) 
+   width: 40em
+   height: 35em
+   margin: 2% 0% 0% 2%
+   border: 5px solid white
 
-  @media only screen and (min-width : 475px)
-   width: 100% 
-   heigth: auto
-   margin: 4em 0em 0em 0em
+.cleo2SmallTexteTitle
+  color: white
+  font-weight: 600
+  font-size: 45px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 1200px
+  top: 1270px
+  opacity: 0
 
-.borisTitle
-  @media only screen and (max-width : 475px)
-   font-style: normal
-   font-weight: 600
-   font-size: 40px
-   font-family: "texgyreadventorregular"
-   line-height: 35px
-   text-transform: none
-   letter-spacing: 0px
-   margin-bottom: 10%
+.cleo2Container:hover .cleo2SmallTexteTitle 
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
 
-  @media only screen and (min-width : 475px)
+.cleo2Container:hover .cleo2Photo
+  opacity: 0.2
+  filter: blur(3px)
+  transition-duration: 0.3s
+  transition-property: all
+  transition-timing-function: ease-in-out
+
+.cleo2Container:hover .cleo2SmallTexteDescription
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out
+.cleo2Container:hover .cleo2TexteDescrition
+  opacity: 1
+  transition-duration: 0.5s
+  transition-property: all
+  transition-timing-function: ease-in-out  
   
-   font-style: normal
-   font-weight: 600
-   font-size: 40px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-   margin-bottom: 3%
+.cleo2SmallTexteDescription
+  color: white
+  font-weight: 600
+  font-size: 25px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  position: absolute
+  left: 1200px
+  top: 1320px
+  opacity: 0
+
+.cleo2TexteDescrition
+  color: white
+  font-weight: 600
+  font-size: 15px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  width: 450px
+  position: absolute
+  left: 1055px
+  top: 1380px
+  border: 2px solid white
+  padding: 15px
+  opacity: 0
+
   
