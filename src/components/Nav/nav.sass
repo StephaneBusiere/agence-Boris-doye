@@ -5,7 +5,8 @@
  */
 
 
-
+.navMenu
+  width: 100%
 .nav
   @media only screen and (max-width : 475px) 
   
@@ -15,7 +16,7 @@
    margin-left: 0em
    margin-right: 5em
   @media only screen and (min-width : 780px) 
-   margin-left: 10em
+   margin-left: 0em
 
 .nav-link
   
@@ -37,7 +38,7 @@
    color: white
    font-weight: bold
    margin-left: 0%
-   margin-right: 4%
+   margin-right: 0%
   @media only screen and (min-width : 780px) 
    
    font-size: 1em
@@ -52,11 +53,63 @@
    line-height: 30px
    color: white
    font-weight: bold
-   margin-left: 6.5%
+   margin-left: 3%
+   padding: 10px
+   ///test draw ///
    
-   
+   position: relative
+   &::before,
+   &::after 
+    box-sizing: inherit
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
   
-   
+   .draw 
+    transition: color 0.25s
+
+  &::before,
+  &::after 
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent
+    width: 0
+    height: 0
+  
+
+  // This covers the top & right borders (expands right, then down)
+  &::before 
+    top: 0
+    left: 0
+  
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after 
+    bottom: 0
+    right: 0
+  
+  
+  &:hover 
+    color: #ee82ee
+  
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after 
+    width: 100%
+    height: 100%
+  
+
+  &:hover::before 
+    border-top-color: #ee82ee // Make borders visible
+    border-right-color: #ee82ee
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s // And then height
+  
+
+  &:hover::after 
+    border-bottom-color: #ee82ee // Make borders visible
+    border-left-color: #ee82ee
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s // And finally height
 
 .nav-link:hover
   color: #D5A6BD

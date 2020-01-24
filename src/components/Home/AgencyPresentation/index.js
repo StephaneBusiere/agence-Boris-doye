@@ -16,7 +16,7 @@ const AgencyPresentation = (
     <div className="photosPresentations">
     
     <div className="textPresentation1">
-    <FadeIn height={600} duration={200} easing={'ease-in'} offset={-200}>
+    <FadeIn height={400} duration={200} easing={'ease-in'} offset={-200}>
             {onload => (
     <img className="borisPhotocarre" src={borisPhotoCarre} alt="borisPhotocarre"
     onLoad={onload}
@@ -38,7 +38,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation2">
     
-    <FadeIn height={600} duration={400} easing={'ease-in'} offset={-200} >
+    <FadeIn height={400} duration={400} easing={'ease-in'} offset={-200} >
     {onload => (
     <img className="borisBateau" src={borisBateau} alt="borisBateau" onLoad={onload}
                     
@@ -58,7 +58,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation3">
     
-    <FadeIn height={600} duration={600} easing={'ease-in'} offset={-200}>
+    <FadeIn height={400} duration={600} easing={'ease-in'} offset={-200}>
     {onload => (
     <img className="borisDrone" src={borisDrone} alt="borisDrone" onLoad={onload}
                     
@@ -70,7 +70,7 @@ const AgencyPresentation = (
     <div className="smallTitrePresentation3">
     
    
-    <h3 className="conseilsTitle">Spectaculaires</h3> </div>
+    <h3 className="droneTitle">Spectaculaires</h3> </div>
     <p className="dronesTitleText">Envie d’originalité ? L’agence vous propose de l’animation 3D, des time-laps, du slow-motion, de stop-motion, de la prise de vue aérienne en drone… Avec le grand réseau professionnel qui nous entoure, nous réalisons tout support audiovisuel.Tous les formats sont réalisables. De la promotion institutionnelle, format court corporate pour les réseaux sociaux, au films d’entreprise, prise de vues en drone reportages TV mais l’agence sait aussi créer de fabuleux documentaires télévisés.</p>
     </div>
       </div>

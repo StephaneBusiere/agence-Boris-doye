@@ -40,7 +40,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     
  <div className="competences">
     
-    <h2 className="competencesTitle">Compétences</h2>
+    <h2 className="competencesTitle">Savoir faire</h2>
     <img className="iconCamera" src={iconCamera} alt="iconCamera"/>
    
    <Parallax 

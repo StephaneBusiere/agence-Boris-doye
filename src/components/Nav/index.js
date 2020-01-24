@@ -23,6 +23,7 @@ const Nav = () => (
       {/* Work */}
    
         <NavLink
+          className='draw'
           exact
           to={getURL('/work', name)}
           key={name}
