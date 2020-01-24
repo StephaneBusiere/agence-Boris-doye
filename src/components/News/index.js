@@ -38,7 +38,7 @@ if (window.innerWidth<475) {
     return <div> 
     
     
-    <div><YouTubeVideo/></div>
+    
     <div className="skiPictureContainer">
     <div className="skiPicture"
      style={sectionStyle1}  >

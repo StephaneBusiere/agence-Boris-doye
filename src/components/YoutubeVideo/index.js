@@ -4,7 +4,7 @@ import bigPictureReal from 'src/assets/images/alpesRealisateur.jpg'
 import annecyPhoto from 'src/assets/images/Kinaphoto-Photo-gallerie-accueil.jpg'
 import paysagePhoto from 'src/assets/images/Kinaphoto-Photo-Outdoor-Sport-Extreme-Paysage-6.jpg'
 import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
-
+import logoBorisSVG from 'src/assets/images/logoborisNew.svg'
 class YouTubeVideo extends React.PureComponent {
   static propTypes = {
     id: PropTypes.string.isRequired,
@@ -110,7 +110,7 @@ class YouTubeVideo extends React.PureComponent {
         <section class="full-size-page">
       <div id="video-overlay" style={divStyle}  >
       <div className="presentationAgenceTitle" ref='Ref2' >REALISATEUR AUDIO-VISUEL</div>
-      <img className="logoBorisNoir" ref='Ref3' src={logoBorisNoirPetit} alt="logoBorisNoir"/>
+      <object className="logoBorisNoir" ref='Ref3' data={logoBorisSVG}>svg-animation</object>
       <div class="foreground-video" style={backgroundStyle} ref='Ref1'>
         <div id={`youtube-player-${id}`} >
       </div>
