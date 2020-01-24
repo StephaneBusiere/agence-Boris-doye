@@ -1,7 +1,7 @@
 import React from 'react';
 import clients from 'src/assets/images/clientsPicture.jpg'
 import clientsPictureMobile from 'src/assets/images/clientsPictureMobile.jpg'
-import caphorn from 'src/assets/images/caphorn.jpg'
+import annecy from 'src/assets/images/Kinaphoto-Photo-gallerie-accueil.jpg'
 import skoda from 'src/assets/images/skoda.png'
 import tulipes from 'src/assets/images/tulipes.png'
 import redbull from 'src/assets/images/regbull.png'
@@ -31,8 +31,9 @@ if (window.innerWidth<475) {
       width: "100%",
       height: "540px",
      
-      backgroundImage: `url(${clients})`,
+      backgroundImage: `url(${annecy})`,
       backgroundSize: 'cover',
+      backgroundPosition: '25%',
       overflow: 'hidden',
     }
   }
