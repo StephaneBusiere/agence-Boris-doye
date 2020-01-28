@@ -50,7 +50,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
    strength={1200}>
    <div style={{ height: '400px' }} />
    </Parallax>
-   
+   <div className="competencesPresentContainer">
     <div className="competencesGauche">
     
     <div className="compétencesGauche1">
@@ -100,26 +100,9 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
     </div>
-    <div className="photoPresentationContainer">
-    <div className="photoPresentationTop">
-    
-    <img className="photoCadrage" src={photoCadrage} alt="borisDrone"/>
-    <img className="borisBureau" src={BorisBureau} alt="borisDrone"/>
-    <img className="pilotageDrone" src={photoDrone} alt="borisDrone"/>
-    </div>
-    <div className="photoPresentationCenter">
-    
-    <img className="borisFilm" src={BorisCarre} alt="borisDrone"/>
-    <img className="micros" src={Micros} alt="borisDrone"/>
-    <img className="borisDrone2" src={BorisDrone} alt="borisDrone"/>
-    </div>
-    
-    <div className="photoPresentationBottom">
-    
-    <img className="photoCadrage" src={photoCadrage} alt="borisDrone"/>
-    <img className="borisBureau" src={BorisBureau} alt="borisDrone"/>
-    <img className="pilotageDrone" src={photoDrone} alt="borisDrone"/>
-    </div>
+    <div className="videoSkillsContainer">
+    <iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="370" height="600"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
     </div>
     
     <div className="competencesDroite">
@@ -177,7 +160,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
     </div>
-    
+    </div>
   </div>
   
 

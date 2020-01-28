@@ -16,7 +16,7 @@ const AgencyPresentation = (
     <div className="photosPresentations">
     
     <div className="textPresentation1">
-    <FadeIn height={400} duration={200} easing={'ease-in'} offset={-200}>
+    <FadeIn height={400} width={400} duration={200} easing={'ease-in'} offset={-200}>
             {onload => (
     <img className="borisPhotocarre" src={borisPhotoCarre} alt="borisPhotocarre"
     onLoad={onload}
@@ -29,7 +29,7 @@ const AgencyPresentation = (
 
     <div className="smallTitrePresentation1">
     
-    <h3 className="videoTitle" >Proféssionnelles</h3></div>
+    <h3>Proféssionnelles</h3></div>
     <p className="videoTitleText" >Avec une touche artistique et créative, Boris Doye Films vous offre un service global professionnel de conception et de réalisation de films au coeur des Hautes-Alpes.
 
     Réalisateur, mais aussi concepteur du scénario de votre vidéo, une idée, une envie ? Nous vous aiderons à réaliser votre projet, du scénario au montage de votre film. Nous maîtrisons l’image et nous savons la rendre esthétique. À l’aide de nombreuses caméras, drones, stabilisateurs, nous avons la capacité de filmer partout et de monter vos images sur une station de montage professionnel 4K.</p>
@@ -58,7 +58,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation3">
     
-    <FadeIn height={400} duration={600} easing={'ease-in'} offset={-200}>
+    <FadeIn className="divPhotoContainer"  duration={600} easing={'ease-in'} offset={-200}>
     {onload => (
     <img className="borisDrone" src={borisDrone} alt="borisDrone" onLoad={onload}
                     

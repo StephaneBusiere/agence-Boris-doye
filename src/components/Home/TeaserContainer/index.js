@@ -2,9 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import showreelMini from 'src/assets/images/Showreel.jpg'
-import vietnam from 'src/assets/images/Vietnam.jpg'
-import outdoormix from 'src/assets/images/Outdoormix.jpg'
+import vietnamMini from 'src/assets/images/vietnamMini.jpg'
+import outdoormix from 'src/assets/images/OutdoormixMini.jpg'
 import queyras from 'src/assets/images/Queyras.jpg'
+import skiMini from 'src/assets/images/ski-1Mini.jpg'
+import indeMini from 'src/assets/images/IndeMini.jpg'
 import './teaserContainer.sass'
 
 const Teaser = (
@@ -39,7 +41,7 @@ const Teaser = (
     </div>
     </div>
     <div className="overlayQueyrasContainer">
-    <img className="queyrasPicture" src={queyras} alt="queyras"/>
+    <img className="queyrasPicture" src={skiMini} alt="queyras"/>
     <div className="overlayQueyrasContent">
     <NavLink
     exact
@@ -57,7 +59,7 @@ const Teaser = (
     </div>
     </div>
     <div className="overlayVietnamContainer">
-    <img className="vietnamPicture" src={vietnam} alt="vietnam"/>
+    <img className="vietnamPicture" src={vietnamMini} alt="vietnam"/>
     <div className="overlayVietnamContent">
     <NavLink
     exact
@@ -91,6 +93,26 @@ const Teaser = (
     </div>
     </NavLink>
     </div>
+    
+    </div>
+    <div className="overlayOutdoorContainer">
+    <img className="outdoorPicture" src={indeMini} alt="outdoormix"/>
+    <div className="overlayOutdoorContent">
+    <NavLink
+    exact
+    to="/work"
+    
+    activeClassName="nav-link--active"
+  >
+   <div className="video-LinkOutdoor">
+    <h3 className="videoLink-Regarder">regarder</h3>
+   
+    <h3 className="videoLink-Une">une</h3>   
+    <h3 className="videoLink-Video">video</h3> 
+    </div>
+    </NavLink>
+    </div>
+    
     </div>
     
     </div>

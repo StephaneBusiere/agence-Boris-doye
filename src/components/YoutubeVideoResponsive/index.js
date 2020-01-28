@@ -5,9 +5,7 @@ import annecyPhoto from 'src/assets/images/Kinaphoto-Photo-gallerie-accueil.jpg'
 import paysagePhoto from 'src/assets/images/Kinaphoto-Photo-Outdoor-Sport-Extreme-Paysage-6.jpg'
 import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 import logoBorisSVG from 'src/assets/images/logoborisNew.svg'
-
-import './youtubevideo.sass';
-class YouTubeVideo extends React.PureComponent {
+class YouTubeVideoResponsive extends React.PureComponent {
   static propTypes = {
     id: PropTypes.string.isRequired,
   };
@@ -38,8 +36,8 @@ class YouTubeVideo extends React.PureComponent {
       videoId: 'PEwa4Eehfpk',
       
       
-      height: '100%',
-      width: '100%',
+      height: '400',
+      width: '375',
       
       playerVars:{
       mute:1,
@@ -94,7 +92,8 @@ class YouTubeVideo extends React.PureComponent {
     
     var divStyle={
     backgroundImage: `url(${paysagePhoto})`,
-    height: '1010px',
+    width: '375px',
+    height: '400px',
     backgroundSize: 'cover',
     opacity: '1'
         }
@@ -114,7 +113,7 @@ class YouTubeVideo extends React.PureComponent {
       <div className="presentationAgenceTitle" ref='Ref2' >REALISATEUR AUDIO-VISUEL</div>
       <object className="logoBorisNoir" ref='Ref3' data={logoBorisSVG}>svg-animation</object>
       <div class="foreground-video" style={backgroundStyle} ref='Ref1'>
-        <div id={`youtube-player-${id}`} className="ytplayer">
+        <div id={`youtube-player-${id}`} >
       </div>
       </div>
       </div>
@@ -123,5 +122,5 @@ class YouTubeVideo extends React.PureComponent {
   };
 }
 
-export default YouTubeVideo;
+export default YouTubeVideoResponsive;
 

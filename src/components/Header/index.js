@@ -51,9 +51,7 @@ const Header = ({ onClick,onClick2,burgerOn,openModal }) => {
       </Nav>
 
       {menu}
-      <div className="fa-user-circle userAccount box">
-      <FontAwesomeIcon icon="user-circle" className="userIcon button" onClick={openModal}/>
-      </div>
+     
      
     </header>
   );

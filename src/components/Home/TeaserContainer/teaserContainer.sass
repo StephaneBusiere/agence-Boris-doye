@@ -5,7 +5,7 @@
    height: 1400px
   @media only screen and (min-width : 475px)
 
-   width: 100% 
+   max-width: 100% 
    height: 380px
 .teaserTitleContainer
   width: 100% 
@@ -32,7 +32,7 @@
    
    text-align: center
    color: black
-   margin: 0% 0% 7% 0%
+   margin: 0% 0% 10% 0%
    padding-top: 1%
    font-size: 40px
 .TeaserContainer
@@ -44,18 +44,25 @@
    height: 1400px
    display: flex
   @media only screen and (min-width : 475px)
-   width: 100% 
+   max-width: 100% 
    height: 300px
    
 .overlayShowReelContainer
-   width: 500px
+  @media only screen and (max-width : 475px)
+   display: none
+  
+  @media only screen and (min-width : 475px)
+   width: 420px
    height: 250px
    position: relative
 
 .showReellMini
-  @media only screen and (min-width : 475px)
-   width: 500px
+  @media only screen and (max-width : 475px)
+   width: 375px
    height: 250px
+  @media only screen and (min-width : 475px)
+    width: 100%
+    height: 15em
 
 .overlayShowReelContent
   opacity: 0 
@@ -85,31 +92,54 @@
   transition: all 0.35s 0.1s linear
 
 .overlayQueyrasContainer
-   width: 500px
-   height: 250px
+  @media only screen and (max-width : 475px)
+   display: none
+  @media only screen and (min-width : 475px) 
+   max-width: 31.25rem
+   height: 15rem
    position: relative
 
 .queyrasPicture
-  @media only screen and (min-width : 475px)
-   width: 450px
+  @media only screen and (max-width : 475px)
+   max-width: 375px
    height: 250px
+  
+  @media only screen and (min-width : 475px)
+   max-width: 100%
+   height: 15em
 
 .vietnamPicture
+  @media only screen and (max-width : 475px)
+   max-width: 40em
+   height: 15em
+  
   @media only screen and (min-width : 475px)
-   width: 475px
-   height: 250px
-
+    max-width: 100%
+    height: 15em
+.skiMini
+  @media only screen and (max-width : 475px)
+   max-width: 40em
+   height: 15em
+  
+  @media only screen and (min-width : 475px)
+    max-width: 100%
+    height: 15em
 .outdoorPicture
-  @media only screen and (min-width : 475px)
-   width: 480px
+  @media only screen and (max-width : 475px)
+   max-width: 375px
    height: 250px
+  
+  @media only screen and (min-width : 475px)
+   max-width: 100%
+   height: 15em
+   
 
 .teaserPicture
   @media only screen and (max-width : 475px)
    width: 50px 
    height: 30px 
   @media only screen and (min-width : 475px)
-   
+   max-width: 100%
    display: flex
    padding-top: 1.5%
 
@@ -143,7 +173,7 @@
    text-transform: none
    display: block
    position: absolute
-   left: 180px
+   left: 125px
    top: 0px
    
 
@@ -170,7 +200,7 @@
    letter-spacing: 0px
    display: block
    position: absolute
-   left: 150px
+   left: 125px
    top: 0px
 .overlayQueyrasContent
   opacity: 0  
@@ -179,9 +209,13 @@
   margin: 10% 0% 0% 32%
   transition: all 0.35s 0.1s linear
 .overlayVietnamContainer
-  width: 500px
-  height: 250px
-  position: relative
+  @media only screen and (max-width : 475px)
+   display: none
+  
+  @media only screen and (min-width : 475px)
+   max-width: 31.25rem
+   height: 15rem
+   position: relative
 .overlayVietnamContent
   opacity: 0  
 
@@ -212,7 +246,7 @@
    letter-spacing: 0px
    display: block
    position: absolute
-   left: 150px
+   left: 125px
    top: 0px
 .video-LinkOutdoor
   
@@ -237,12 +271,16 @@
    letter-spacing: 0px
    display: block
    position: absolute
-   left: 150px
+   left: 125px
    top: 0px
 .overlayOutdoorContainer
-  width: 500px
-  height: 250px
-  position: relative
+  @media only screen and (max-width : 475px)
+   display: none
+  
+  @media only screen and (min-width : 475px)
+   max-width: 100%
+   height: 15em
+   position: relative
 .overlayOutdoorContent
   opacity: 0  
 .overlayOutdoorContainer:hover .overlayOutdoorContent

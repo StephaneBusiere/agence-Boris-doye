@@ -4,6 +4,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 import FadeIn from "react-lazyload-fadein";
 import { Player } from 'video-react';
 import YouTubeVideo from 'src/components/YoutubeVideo'
+import YouTubeVideoResponsive from 'src/components/YoutubeVideoResponsive'
 //assets
 
 import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
@@ -23,16 +24,11 @@ import './home.sass';
 
 let iFrame
 if (window.innerWidth<475) {
-iFrame=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&title=0&byline=0&portrait=0&background=1" width="400" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+iFrame=<YouTubeVideoResponsive/>
 } else {
-iFrame=
-<FadeIn height={600} duration={600} easing={'ease-in'} offset={0} >
-    {onload => (
-<iframe width="1905" height="1000" src="https://www.youtube.com/embed/PEwa4Eehfpk?autoplay=1&loop=1&controls=0&showinfo=0&playlist=PEwa4Eehfpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onLoad={onload}>
-</iframe>
-)}
-</FadeIn>
+iFrame=<YouTubeVideo/>
 }
+
 
 const Home= () => {
 
@@ -43,7 +39,7 @@ const Home= () => {
     
     <div className="iframeHome">
     
-    <YouTubeVideo/></div>
+    {iFrame}
     </div>
   
     
@@ -55,7 +51,7 @@ const Home= () => {
     {Teaser}
   
   </div>
- 
+  </div>
   
 
 };
