@@ -34,14 +34,15 @@ const Home= () => {
 
  
   return <div>
-    <div> 
+    <div className="mainVideoContainer">
+    <p className="NomBoris">Boris Doye</p>
     <Link to="#quisommesnous"> <div className="ensavoirplus">En savoir plus</div></Link>
     
     <div className="iframeHome">
     
     {iFrame}
     </div>
-  
+    </div>
     
      
   
@@ -50,7 +51,7 @@ const Home= () => {
     {Skills}
     {Teaser}
   
-  </div>
+  
   </div>
   
 

@@ -1,6 +1,10 @@
 @import src/styles/vars
 
-
+.mainVideoContainer
+  @media only screen and (max-width : 475px)
+   position: relative
+  @media only screen and (min-width : 475px)
+   position: relative 
 .presentationAgenceTitle
   
   @media only screen and (max-width : 475px) 
@@ -25,7 +29,7 @@
   @media only screen and (min-width : 475px) 
    letter-spacing: 0.2rem
    text-transform: uppercase
-   margin: 5% 2% 2% 32%
+   
    font-size: 5em
    padding-top: 2.5em
    display: inline
@@ -37,8 +41,9 @@
    text-shadow: black 0.1em 0.1em 0.1em
   
    position: absolute
-   top: 0px
-   left: 0px
+   top: 15% 
+   left: 50% 
+   transform: translate(-50%, -50%)
    z-index: 3
 
      
@@ -56,28 +61,54 @@
    overflow: hidden
   @media only screen and (min-width : 475px) 
    width: 28rem
+   display: inline-block
+   
    position: absolute
-   top: 235px
-   left: 4.5rem
+   top: 40% 
+   left: 50% 
+   transform: translate(-50%, -50%)
    z-index: 3
-
    height: auto
-  
-   margin: 1.8% 0% 0% 35%
+   margin: 0 auto 
    overflow: hidden
+.NomBoris
+  @media only screen and (max-width : 475px)
+   text-transform: uppercase
+   position: absolute
+   font-family: "Roboto",sans-serif
+   letter-spacing: 15px
+
+   font-size: 3rem
+   z-index: 3
+   top: 560px
+   left: 40%
+  @media only screen and (min-width : 475px)
+   text-transform: uppercase
+   position: absolute
+   top: 55% 
+   left: 50% 
+   transform: translate(-50%, -50%)
+   font-family: "Roboto",sans-serif
+   letter-spacing: 15px
+   line-height: 3px 
+   font-size: 3rem
+   z-index: 3
+   
 
 .ensavoirplus
   @media only screen and (max-width : 475px) 
    display: none
   
+
   @media only screen and (min-width : 475px)
    width: 12.5rem
    height: 50px
-   display: block
-  
+   display: inline-block
+   
    position: absolute
-   top: 670px
-   left: 45%
+   top: 80% 
+   left: 50% 
+   transform: translate(-50%, -50%)
    z-index: 3
    white-space: nowrap
    font-size: 15px

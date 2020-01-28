@@ -101,7 +101,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
     <div className="videoSkillsContainer">
-    <iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="370" height="600"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=0" width="100%" height="100%"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
     </div>
     

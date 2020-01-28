@@ -35,7 +35,7 @@ class YouTubeVideo extends React.PureComponent {
     const { id } = this.props;
     
     this.player = new window.YT.Player(`youtube-player-${id}`, {
-      videoId: 'PEwa4Eehfpk',
+      videoId: 'S5bWQnTUHv8',
       
       
       height: '100%',
@@ -55,7 +55,7 @@ class YouTubeVideo extends React.PureComponent {
       
       origin: window.location.origin,
 
-      playlist: 'PEwa4Eehfpk',
+      playlist: 'S5bWQnTUHv8',
   },
       events: {
       onReady: this.onPlayerReady,
@@ -79,7 +79,7 @@ class YouTubeVideo extends React.PureComponent {
         var remains=YTP.getDuration() - YTP.getCurrentTime();
         background.style.opacity=1;
         title.style.opacity=0;
-        logo.style.opacity=0;
+        logo.style.opacity=1;
         if(this.rewindTO)
                     clearTimeout(this.rewindTO);
                 this.rewindTO=setTimeout(function(){
