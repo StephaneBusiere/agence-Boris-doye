@@ -53,7 +53,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
    <div className="competencesPresentContainer">
     <div className="competencesGauche">
     
-    <div className="compétencesGauche1">
+    <div className="competencesGauche1">
     
     <h2 className="scenarisation-title">Scénarisation - Story-telling</h2>
     <div className="scenarisation">
@@ -62,7 +62,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
    
     </div>
     </div>
-    <div className="compétencesGauche2">
+    <div className="competencesGauche2">
     
   
     <h2 className="scenarisation-title2">Gestion de projet</h2>
@@ -72,7 +72,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
 
-    <div className="compétencesGauche3">
+    <div className="competencesGauche3">
     
   
     <h2 className="scenarisation-title3">Expertise</h2>
@@ -82,7 +82,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
     
-    <div className="compétencesGauche4">
+    <div className="competencesGauche4">
     
     <h2 className="scenarisation-title4">Cadrage</h2>
     <div className="scenarisation">
@@ -91,7 +91,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
 
-    <div className="compétencesGauche5">
+    <div className="competencesGauche5">
     
     <h2 className="scenarisation-title5">Drone</h2>
     <div className="scenarisation">

@@ -58,7 +58,7 @@ const AgencyPresentation = (
     
     <div className="textPresentation3">
     
-    <FadeIn className="divPhotoContainer"  duration={600} easing={'ease-in'} offset={-200}>
+    <FadeIn className="divPhotoContainer" height={400} duration={600} easing={'ease-in'} offset={-200}>
     {onload => (
     <img className="borisDrone" src={borisDrone} alt="borisDrone" onLoad={onload}
                     

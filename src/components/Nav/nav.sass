@@ -3,34 +3,41 @@
 /**
  * Styles
  */
+.nav-link::before, .nav-link::after
+  @media only screen and (max-width : 475px) 
+   display: none
+
+  @media only screen and (max-width : 800px) 
+   
+   opacity: 1
+   
+  @media only screen and (min-width : 1050px) 
+   opacity: 1
 
 
-.navMenu
-  width: 100%
+
 .nav
   @media only screen and (max-width : 475px) 
-  
-    display: none
-
-  @media only screen and (min-width : 760px) 
-   margin-left: 0em
-   margin-right: 5em
-  @media only screen and (min-width : 780px) 
    margin-left: 0em
    max-width: 100%
 
-.nav-link
+  @media only screen and (max-width : 800px) 
+   
+   margin-left: 0em
+   max-width: 100%
+  @media only screen and (min-width : 1050px) 
+   margin-left: 0em
+   max-width: 100%
+
+.nav-link 
   
   @media only screen and (max-width : 475px) 
-  
-    display: none
-
-  @media only screen and (min-width : 760px) 
-   font-size: 0.5em
+   width: 100%
+   font-size: 1em
    font-family: 'TeXGyreAdventorRegular'
    font-weight: normal 
    font-style: normal
-   font-size: 8px
+   font-size: 16px
    font-weight: 600
    text-transform: uppercase
    letter-spacing: 2px
@@ -38,9 +45,15 @@
    line-height: 30px
    color: white
    font-weight: bold
-   margin-left: 0%
-   margin-right: 0%
-  @media only screen and (min-width : 780px) 
+   margin-left: 3%
+   padding: 10px
+
+  @media only screen and (min-width : 800px) 
+   opacity: 0
+  
+   
+  @media only screen and (min-width : 1050px) 
+   opacity: 1
    width: 100%
    font-size: 1em
    font-family: 'TeXGyreAdventorRegular'
@@ -115,3 +128,4 @@
 .nav-link:hover
   color: #D5A6BD
   
+ 

@@ -10,7 +10,19 @@ import './navburger.sass';
 const NavBurger = ({onClick2}) => (
     <nav className="navburger">
       
-      {/* Home */}
+    <NavLink
+    onClick={onClick2}
+    exact
+    to="/"
+    className="navburgerlink"
+    activeClassName="nav-link--active"
+  >
+    
+  </NavLink>
+
+    
+    
+    {/* Home */}
       
       <NavLink
         onClick={onClick2}
