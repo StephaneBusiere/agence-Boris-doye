@@ -1,7 +1,12 @@
 .competences
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 100% 
-   height: 2800px
+   height: 2500px
+  
+  
+  @media only screen and (min-width : 550px)
+   width: 100% 
+   height: 2300px
   
   @media only screen and (min-width : 800px)
    width: 100% 
@@ -14,10 +19,12 @@
   
 
 .competencesPresentContainer
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 100% 
-   height: auto
+   height: 1800px
    background-color: white
+   position: relative
+   
   
   @media only screen and (min-width : 800px)
    width: 100% 
@@ -48,64 +55,66 @@
   margin-top: 1em
 
 .iconCamera
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 4em
    margin: 0% 0% 0% 44%
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 500px)
    width: 4em
    margin: 0% 0% 3% 49%
    color: #ada30a
 
 .separationLigne
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    border-bottom: thick double #32a1ce 
    width: 12em
    margin-top: 2% 
    margin-left: 28%
  
-  @media only screen and (min-width : 475px) 
+  @media only screen and (min-width : 200px) 
    border-bottom: thick double #32a1ce 
    width: 40em
    margin-top: 2% 
    margin-left: 35%
  
 .photoPluie
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    width: 400px
    height: 400px
    margin: 20px 0px 0px 100px
   
   
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 100%
    height: 400px
    margin: 20px 0px 0px 100px
 
 .competencesGauche
-  @media only screen and (max-width : 475px)
-   float: left
-   margin: 3% 0% 0% 10%
-   height: auto
-
-  @media only screen and (min-width : 800px)
+  @media only screen and (min-width : 200px)
    margin: 37px 0% 0% 0%
    height: auto
-   width: 15em
-   
-   flex-wrap: wrap
+   width: 20em
+  @media only screen and (min-width : 450px)
+   margin: 37px 0% 0% 2%
    height: auto
-   width: 100%
+   width: 30em
    
+  @media only screen and (min-width : 550px)
+   margin: 37px 0% 0% 12%
+   height: auto
+   width: 30em
    
 
+  @media only screen and (min-width : 800px)
+   margin: 37px 0% 0% 12%
+   height: auto
+   width: 40em
+   display: block
+  
   @media only screen and (min-width : 1050px)
    margin: 37px 0% 0% 5%
    height: auto
    width: 15em
    display: block
-   
-   
-   
   @media only screen and (min-width : 1200px) 
    margin: 37px 0% 0% 5%
    height: auto
@@ -114,37 +123,43 @@
 
   
 .competencesGauche1
-  @media only screen and (max-width : 475px)
+  
+  @media only screen and (min-width : 200px)
    height: 120px
    margin-left: 30%
    margin-top: 15px
    display: bloc
-   width: 300px
+   max-width: 250px
    position: relative
    
-   
-
+  
+  @media only screen and (min-width : 450px)
+   height: 120px
+   margin-left: 30%
+   margin-top: 15px
+   display: bloc
+   max-width: 250px
+   position: relative
+  
   @media only screen and (min-width : 800px)
    height: 120px
    margin-left: 30%
    margin-top: 15px
    display: bloc
-   width: 300px
+   max-width: 250px
    position: relative
-   
-   
+  
   @media only screen and (min-width : 1050px) 
    margin-left: 0px
    margin-top: 0px
    height: 150px
 .competencesGauche2
-  @media only screen and (max-width : 475px)
-   
+  @media only screen and (min-width : 200px)
    margin-left: 30%
    margin-top: 0px
    display: bloc
-   width: 250px
-   height: 200px
+   max-width: 250px
+   height: 120px
    position: relative
 
   @media only screen and (min-width : 800px)
@@ -153,21 +168,19 @@
    margin-top: 0px
    display: bloc
    width: 250px
-   height: 150px
+   height: 120px
    position: relative
-   
-   
    
   @media only screen and (min-width : 1050px) 
    margin-left: 0px
    height: auto   
 
 .competencesGauche3
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    height: 120px
    margin-left: 30%
    display: bloc
-   width: 300px
+   max-width: 250px
    position: relative
   @media only screen and (min-width : 800px)
    height: 120px
@@ -179,11 +192,11 @@
    margin-left: 0px
    height: auto   
 .competencesGauche4
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    height: 120px
    margin-left: 30%
    display: bloc
-   width: 300px
+   max-width: 250px
    margin-top: 4%
    position: relative
    
@@ -199,11 +212,11 @@
    margin-left: 0px
    height: auto   
 .competencesGauche5
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    height: 120px
    margin-left: 30%
    display: bloc
-   width: 300px
+   max-width: 250px
    position: relative
    margin-top: 4%
   @media only screen and (min-width : 800px)
@@ -220,37 +233,29 @@
 .scenarisation-title
   
   
-  @media only screen and (min-width : 800px)
+  @media only screen and (min-width : 300px)
    margin: 8% 0% 0% 0%
-   font-style: normal
+   
    font-weight: 600
    font-size: 15px
    font-family: "texgyreadventorregular"
    line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
    color: #28262b
    display: inline-block
    text-align: right
   @media only screen and (min-width : 1050px)
    margin: 8% 0% 0% 4%
-   font-style: normal
    font-weight: 600
    font-size: 15px
    font-family: "texgyreadventorregular"
    line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
    color: #28262b
    display: inline-block
    text-align: right
 
 .scenarisation-title2
-  
-  
-  @media only screen and (min-width : 800px)
+  @media only screen and (min-width : 300px)
    margin: 15% 0% 0% 0%
-   font-style: normal
    font-weight: 600
    font-size: 15px
    font-family: "texgyreadventorregular"
@@ -262,7 +267,6 @@
    text-align: right
   @media only screen and (min-width : 1050px)
    margin: 15% 0% 0% 28%
-   font-style: normal
    font-weight: 600
    font-size: 15px
    font-family: "texgyreadventorregular"
@@ -274,59 +278,43 @@
    text-align: right
 
 .scenarisation-title3
-  @media only screen and (min-width : 800px)
+  font-style: normal
+  font-weight: 600
+  font-size: 15px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  color: #28262b
+  display: inline-block
+  text-align: right
+  @media only screen and (min-width : 300px)
+   margin: 25% 0% 0% 0%
+  @media only screen and (min-width : 550px)
    margin: 15% 0% 0% 0%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-   color: #28262b
-   display: inline-block
-   text-align: right
   @media only screen and (min-width : 1050px)
    margin: 15% 0% 0% 28%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-   color: #28262b
-   display: inline-block
-   text-align: right
+   
 
 .scenarisation-title4
-  @media only screen and (min-width : 800px)
+  font-style: normal
+  font-weight: 600
+  font-size: 15px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  text-transform: none
+  letter-spacing: 0px
+  color: #28262b
+  display: inline-block
+  text-align: right
+  @media only screen and (min-width : 300px)
+   margin: 25% 0% 0% 0%
+  @media only screen and (min-width : 550px)
    margin: 15% 0% 0% 0%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-   color: #28262b
-   display: inline-block
-   text-align: right
   @media only screen and (min-width : 1050px)
    margin: 15% 0% 0% 28%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-   color: #28262b
-   display: inline-block
-   text-align: right
+   
 
 .scenarisation-title5
-  @media only screen and (min-width : 800px)
+  @media only screen and (min-width : 300px)
    margin: 15% 0% 0% 0%
    font-style: normal
    font-weight: 600
@@ -352,25 +340,30 @@
    text-align: right
 
 .scenarisation
-  @media only screen and (max-width : 475px)
-   margin: 0% 0% 0% 0%
-   width: 100%
+  
+  @media only screen and (min-width : 200px)
+   margin: 0% 1% 0% 0%
+   width: 12em
+   display: flex
+  @media only screen and (min-width : 550px)
+   margin: 0% 1% 0% 0%
+   width: 20em
    display: flex
   @media only screen and (min-width : 800px)
-   margin: 0% 0% 0% 0%
-   width: 40em
+   margin: 0% 1% 0% 0%
+   width: 30em
    display: flex
   @media only screen and (min-width : 1050px) 
-   margin: 0% 0% 0% 0%
+   margin: 0% 1% 0% 0%
    width: 100%
    display: flex
   
   
 
 .scenarisation-text
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 15em
-   text-align: right
+   text-align: left
    font-style: normal
    font-weight: 400
    font-size: 14px
@@ -407,37 +400,32 @@
    margin: 5% 0% 0% 0%
 
 .svg-inline--fa.fa-pencil-alt.fa-w-16.fa-null.fa-rotate-null.fa-pull-null.iconPen
-
-  
-  @media only screen and (max-width : 475px)
-   margin: 0% 0% 0% 55%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
-   font-size: 40px
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911
+  color: #32A1CE
+  position: absolute
+  @media only screen and (min-width : 200px)
+   margin: 0% 0% 0% 45%
+   font-size: 30px
+   left: 30%
+   top: 40%
+  @media only screen and (min-width : 450px)
+   margin: 0% 0% 0% 25%
+   font-size: 50px
+   left: 60%
+   top: 2.5%
   @media only screen and (min-width : 800px)
    margin: 0% 0% 0% 15%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    font-size: 50px
-   position: absolute
-   left: 60%
+   left: 70%
    top: 2%
   @media only screen and (min-width : 1050px)
-   margin: 0% 0% 0% 35%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
+   margin: 0% 0% 0% 27%
    font-size: 50px
 .svg-inline--fa:hover
-   margin: 0% 0% 0% 35%
+   margin: 0% 0% 0% 30%
    color: rgba(89, 23, 212, 0.938)
    padding: 0.2em
    border: thin solid  #6b787911
@@ -445,227 +433,209 @@
    background-color: #94909cef
    font-size: 50px
 .svg-inline--fa.fa-calendar-alt.fa-w-14.fa-null.fa-rotate-null.fa-pull-null.iconCalendar
-
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911
+  color: #32A1CE
+  padding: 0.2em
   
-  @media only screen and (max-width : 475px)
-   margin: 0% 0% 0% 55%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
+  @media only screen and (min-width : 200px)
    border-radius: 100px
-   background-color: #6b787911
-   font-size: 40px
-  @media only screen and (min-width : 800px)
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
+   font-size: 30px
+   position: absolute
+   left: 60%
+   top: 25%
+  @media only screen and (min-width : 450px)
    border-radius: 100px
-   background-color: #6b787911
    font-size: 50px
    position: absolute
-   left: 90%
+   left: 85%
    top: 15%
-  @media only screen and (min-width : 1050px)
-   margin: 0% 0% 0% 35%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
+  @media only screen and (min-width : 800px)
    border-radius: 100px
-   background-color: #6b787911
+   font-size: 50px
+   position: absolute
+   left: 85%
+   top: 10%
+  @media only screen and (min-width : 1050px)
+   margin: 0% 0% 0% 15%
+ 
    font-size: 50px
 
 .svg-inline--fa.fa-user.fa-w-14.fa-null.fa-rotate-null.fa-pull-null.iconMan
-
+  color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911
+  position: absolute
   
-  @media only screen and (max-width : 475px)
-   margin: 0% 0% 0% 55%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
-   font-size: 40px
+  @media only screen and (min-width : 200px)
+   margin: 0% 0% 0% 15%
+   font-size: 30px
+   left: 18%
+   top: 40%
+  @media only screen and (min-width : 450px)
+   margin: 0% 0% 0% 15%
+   font-size: 50px
+   left: 70%
+   top: 18%
   @media only screen and (min-width : 800px)
    margin: 0% 0% 0% 15%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
+   font-size: 50px
+   left: 70%
+   top: 18%
+  @media only screen and (min-width : 1050px)
+   margin: 0% 0% 0% 27%
+   font-size: 50px
+
+.svg-inline--fa.fa-video.fa-w-18.fa-null.fa-rotate-null.fa-pull-null.iconVideo
+  color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911
+  
+  @media only screen and (min-width : 200px)
+   margin: 0% 0% 0% 25%
+   font-size: 30px
+   position: absolute
+   left: 8%
+   top: 45%
+  @media only screen and (min-width : 450px)
+   margin: 0% 0% 0% 25%
+   font-size: 50px
+   position: absolute
+   left: 60%
+   top: 18%
+  @media only screen and (min-width : 800px)
+   margin: 0% 0% 0% 25%
    font-size: 50px
    position: absolute
    left: 60%
    top: 18%
   @media only screen and (min-width : 1050px)
    margin: 0% 0% 0% 35%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
-   font-size: 50px
-
-.svg-inline--fa.fa-video.fa-w-18.fa-null.fa-rotate-null.fa-pull-null.iconVideo
-
-  
-  @media only screen and (max-width : 475px)
-   margin: 0% 0% 0% 55%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
-   font-size: 40px
-  @media only screen and (min-width : 800px)
-   margin: 0% 0% 0% 25%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
-   font-size: 50px
-   position: absolute
-   left: 50%
-   top: 18%
-  @media only screen and (min-width : 1050px)
-   margin: 0% 0% 0% 35%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    font-size: 50px
 .svg-inline--fa.fa-fighter-jet.fa-w-20.fa-null.fa-rotate-null.fa-pull-null.iconDrone
-
-  
-  @media only screen and (max-width : 475px)
-   margin: 0% 0% 0% 55%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
-   font-size: 40px
-  @media only screen and (min-width : 800px)
+  color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911
+  @media only screen and (min-width : 200px)
    margin: 0% 0% 0% 22%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
+   font-size: 30px
+   position: absolute
+   left: 10%
+   top: 30%
+  @media only screen and (min-width : 450px)
+   margin: 0% 0% 0% 22%
    font-size: 50px
    position: absolute
-   left: 50%
+   left: 60%
+   top: 15%
+  @media only screen and (min-width : 800px)
+   margin: 0% 0% 0% 22%
+   font-size: 50px
+   position: absolute
+   left: 60%
    top: 15%
   @media only screen and (min-width : 1050px)
    margin: 0% 0% 0% 35%
-   color: #32A1CE
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    font-size: 50px
 
 .photoCadrage
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    
    height: 40em
    margin: 5% 0% 40px 25px
    bottom: 70px
    left: 800px
-  @media only screen and (min-width : 475px) 
+  @media only screen and (min-width : 200px) 
    margin: 0% 0% 0px 0px
    
    height: 180px
    width: 120px
    
 .borisBureau
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    display: none
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 0% 0% 0px 10px
    
    height: 180px
    width: 120px
 .pilotageDrone
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    display: none
   
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 0% 0% 0px 10px
    
    height: 180px
    width: 120px
 .borisFilm
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    display: none
   
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 0% 0% 77px 0px
    
    height: 180px
    width: 120px
 .micros
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    display: none
   
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 0% 0% 77px 10px
    
    height: 180px
    width: 120px
 .borisDrone2
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    display: none
   
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 0% 0% 77px 10px
-   
    height: 180px
    width: 120px
-
-.videoSkillsContainer 
-  @media only screen and (min-width : 475px)
-   max-width: 400px
-   height: 300px
-   display: block
-  @media only screen and (min-width : 800px)
-   max-width: 400px
-   height: 300px
-   margin-right: 100px
-   margin-left: 50px
-  @media only screen and (min-width : 1050px)
-   max-width: 400px
-   height: 750px
-   
-   margin-right: 100px
-   margin-left: 50px
-   
-  
-  
-.videoSkillsContainer iframe
-  @media only screen and (min-width : 475px)
    max-width: 300px
-   height: 300px
-  @media only screen and (min-width : 800px)
-   max-width: 400px
    height: 300px
    margin-right: 180px
    margin-left: 250px
+   
+  
+  
+.videoSkillsContainer 
+  @media only screen and (min-width : 200px)
+   max-width: 200px
+   height: 300px
+   margin-right: 40%
+   margin-left: 40%
+   
+   
+   
+  @media only screen and (min-width : 800px)
+   max-width: 300px
+   height: 300px
+   margin-right: 180px
+   margin-left: 40%
+   
   @media only screen and (min-width : 1050px)
    max-width: 500px
    height: 750px
-   margin-right: 180px
-   margin-left: 80px
+   margin-left: 110px
    
 .photoPresentationTop
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    width: 500px
    height: 200px
    margin-bottom: 0px
    position: absolute
    top: 2960px
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 400px
    height: 200px
    margin-bottom: 0px
@@ -674,7 +644,7 @@
    left: 41%
    
 .photoPresentationCenter
-  @media only screen and (max-width : 475px)
+  @media only screen and (max-width : 200px)
    width: 400px
    height: 200px
    position: absolute
@@ -683,7 +653,7 @@
    display: inline-block
   
   
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 500px
    height: 200px
    position: absolute
@@ -692,7 +662,7 @@
    
 
 .photoPresentationBottom
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    width: 500px
    height: 200px
    position: absolute
@@ -703,11 +673,12 @@
   
 .competencesDroite
   
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    
-   margin: 3.5% 20% 10% 10%
+   left: 70%
+   top: 50px
+   margin: 40px 8% 0% 0%
    height: auto
-   width: 18em
   @media only screen and (min-width : 800px)
    
    left: 70%
@@ -727,6 +698,19 @@
 
 
 .title-droite1
+
+  @media only screen and (min-width : 200px)
+   margin: 5% 60% 0% 0%
+   font-style: normal
+   font-weight: 600
+   font-size: 15px
+   font-family: "texgyreadventorregular"
+   line-height: 25.65px
+   text-transform: none
+   letter-spacing: 0px
+   color: #28262b
+   display: block
+   text-align: right 
   @media only screen and (min-width : 800px)
    margin: 5% 60% 0% 0%
    font-style: normal
@@ -753,6 +737,19 @@
    text-align: right 
 
 .title-droite2
+  
+  @media only screen and (min-width : 300px)
+   margin: 4% 48% 0% 0%
+   font-style: normal
+   font-weight: 600
+   font-size: 15px
+   font-family: "texgyreadventorregular"
+   line-height: 25.65px
+   text-transform: none
+   letter-spacing: 0px
+   color: #28262b
+   display: block
+   text-align: right 
   @media only screen and (min-width : 800px)
    margin: 4% 48% 0% 0%
    font-style: normal
@@ -781,7 +778,7 @@
   
 
 .title-droite3
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 10% 50% 0% 0%
    font-style: normal
    font-weight: 600
@@ -821,7 +818,7 @@
   
 
 .title-droite4
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 15% 43% 0% 0%
    font-style: normal
    font-weight: 600
@@ -833,7 +830,7 @@
    color: #28262b
    display: block
    text-align: right 
-  @media only screen and (min-width : 475px)
+  @media only screen and (min-width : 200px)
    margin: 15% 43% 0% 0%
    font-style: normal
    font-weight: 600
@@ -850,31 +847,25 @@
  
 
 .title-droite5
+  font-style: normal
+  font-weight: 600
+  font-size: 15px
+  font-family: "texgyreadventorregular"
+  line-height: 25.65px
+  text-transform: none
+  letter-spacing: 0px
+  color: #28262b
+  display: block
+  text-align: right 
+  @media only screen and (min-width : 300px)
+   margin: 15% 50% 0% 0%
+  @media only screen and (min-width : 550px)
+   margin: 4% 50% 0% 0%
   @media only screen and (min-width : 800px)
    margin: 4% 50% 0% 0%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-   color: #28262b
-   display: block
-   text-align: right 
   @media only screen and (min-width : 1050px)
-   
    margin: 18% 40% 0% 0%
-   font-style: normal
-   font-weight: 600
-   font-size: 15px
-   font-family: "texgyreadventorregular"
-   line-height: 25.65px
-   text-transform: none
-   letter-spacing: 0px
-   color: #28262b
-   display: block
-   text-align: right 
+   
   
   
   
@@ -889,14 +880,14 @@
   text-transform: none
   letter-spacing: 0px
   color: #565656
-  @media only screen and (max-width : 475px)
-   margin: 4% 0% 0% 20%
-   width: 40em
+  @media only screen and (min-width : 200px)
+   margin: 20px 0% 0% 18%
+   width: 14em
   @media only screen and (min-width : 800px)
-   margin: 4% 0% 0% 18%
-   width: 40em
+   margin: 20px 0% 0% 18%
+   width: 30em
   @media only screen and (min-width : 1050px) 
-   margin: 4% 0% 0% 18%
+   margin: 20px 0% 0% 18%
    width: 20em
 .text-droite2
   
@@ -909,15 +900,19 @@
   text-transform: none
   letter-spacing: 0px
   color: #565656
-  @media only screen and (max-width : 475px)
-   margin: 4% 0% 0% 0%
-   width: 40em
+  @media only screen and (min-width : 200px)
+   margin: 20px 0% 0% 21%
+   width: 20em
+  
+  @media only screen and (min-width : 550px)
+   margin: 20px 0% 0% 15%
+   width: 20em
   @media only screen and (min-width : 800px)
-   margin: 4% 0% 0% 8%
+   margin: 20px 0% 0% 11%
    width: 40em
   @media only screen and (min-width : 1050px) 
   
-   margin: 4% 0% 0% 25%
+   margin: 15px 0% 0% 25%
    width: 40em
 .iconPenRight
   margin-right: 60px
@@ -925,7 +920,17 @@
   text-align: left
 
 .competencesDroite1
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
+   position: relative
+   width: 100%
+   height: 120px
+   margin-left: 20%
+   display: bloc
+   width: 300px
+   margin-top: 4%
+   position: relative
+  
+  @media only screen and (min-width : 550px)
    position: relative
    width: 100%
    height: 120px
@@ -947,7 +952,18 @@
    display: bloc
    width: 300px
 .competencesDroite2
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
+   position: relative
+   width: 100%
+   height: 120px
+   margin-left: 20%
+   display: bloc
+   width: 300px
+   margin-top: 15%
+   position: relative
+  
+  
+  @media only screen and (min-width : 550px)
    position: relative
    width: 100%
    height: 120px
@@ -969,7 +985,18 @@
    display: bloc
    width: 300px
 .competencesDroite3
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
+   position: relative
+   width: 100%
+   height: 120px
+   margin-left: 20%
+   display: bloc
+   width: 300px
+   margin-top: 4%
+   position: relative
+  
+  
+  @media only screen and (min-width : 550px)
    position: relative
    width: 100%
    height: 120px
@@ -991,7 +1018,18 @@
    display: bloc
    width: 300px
 .competencesDroite4
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
+   position: relative
+   width: 100%
+   height: 120px
+   margin-left: 20%
+   display: bloc
+   width: 300px
+   margin-top: 4%
+   position: relative
+  
+  
+  @media only screen and (min-width : 550px)
    position: relative
    width: 100%
    height: 120px
@@ -1013,7 +1051,17 @@
    display: bloc
    width: 300px
 .competencesDroite5
-  @media only screen and (max-width : 475px)
+  @media only screen and (min-width : 200px)
+   position: relative
+   width: 100%
+   height: 120px
+   margin-left: 20%
+   display: bloc
+   width: 300px
+   margin-top: 4%
+   position: relative
+  
+  @media only screen and (min-width : 550px)
    position: relative
    width: 100%
    height: 120px
@@ -1033,37 +1081,32 @@
    position: relative
   @media only screen and (min-width : 1050px) 
    display: bloc
-   margin-left: 0px
+   margin-left: 27%
    width: 300px
 .svg-inline--fa.fa-laptop-code.fa-w-20.fa-null.fa-rotate-null.fa-pull-null
-  @media only screen and (max-width : 475px)
-   color: #32A1CE
+  color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911 
+  @media only screen and (min-width : 200px)
+   font-size: 30px
+   position: absolute
+   left: 55%
+   top: -20%
+  @media only screen and (min-width : 450px)
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
-
   @media only screen and (min-width : 800px)
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
+   padding: 0.2em 
    position: absolute
    left: 85%
    top: -15%
   @media only screen and (min-width : 1050px) 
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    left: -5%
    top: 2
   
@@ -1076,34 +1119,29 @@
   background-color:  #94909cef
   margin: 0% 30% 0% 0%
 .svg-inline--fa.fa-photo-video.fa-w-20.fa-null.fa-rotate-null.fa-pull-null
-  @media only screen and (max-width : 475px)
-   color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911 
+  color: #32A1CE
+  @media only screen and (min-width : 200px)
+   font-size: 30px
+   position: absolute
+   left: 55%
+   top: -15%
+  @media only screen and (min-width : 450px)
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
 
   @media only screen and (min-width : 800px)
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
   @media only screen and (min-width : 1050px) 
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    margin: 0% 40% 0% 0%
    position: absolute
    left: -5%
@@ -1119,34 +1157,31 @@
   background-color: #94909cef
   margin: 0% 30% 0% 0%
 .svg-inline--fa.fa-camera-retro.fa-w-16.fa-null.fa-rotate-null.fa-pull-null
-  @media only screen and (max-width : 475px)
-   color: #32A1CE
+  color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911 
+  
+  @media only screen and (min-width : 200px)
+   font-size: 30px
+   position: absolute
+   left: 55%
+   top: -15%
+  @media only screen and (min-width : 450px)
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
 
   @media only screen and (min-width : 800px)
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
   @media only screen and (min-width : 1050px) 
-   color: #32A1CE
    font-size: 50px
    padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    margin: 0% 40% 0% 0%
    position: absolute
    left: -5%
@@ -1162,35 +1197,29 @@
   margin: 0% 30% 0% 0%
 
 .svg-inline--fa.fa-thumbs-up.fa-w-16.fa-null.fa-rotate-null.fa-pull-null
-  @media only screen and (max-width : 475px)
-   color: #32A1CE
+  color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911 
+  
+  @media only screen and (min-width : 200px)
+   font-size: 30px
+   position: absolute
+   left: 60%
+   top: -15%
+  @media only screen and (min-width : 450px)
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
-
-
   @media only screen and (min-width : 800px)
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
   @media only screen and (min-width : 1050px) 
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    margin: 0% 40% 0% 0%
    position: absolute
    left: -5%
@@ -1205,34 +1234,28 @@
   margin: 0% 30% 0% 0%
 
 .svg-inline--fa.fa-music.fa-w-16.fa-null.fa-rotate-null.fa-pull-null
-  @media only screen and (min-width : 475px)
-   color: #32A1CE
+  color: #32A1CE
+  padding: 0.2em
+  border: thin solid  #6b787911
+  border-radius: 100px
+  background-color: #6b787911
+  @media only screen and (min-width : 200px)
+   font-size: 30px
+   position: absolute
+   left: 60%
+   top: -15%
+  @media only screen and (min-width : 450px)
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
-
   @media only screen and (min-width : 800px)
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911 
    position: absolute
    left: 85%
    top: -15%
   @media only screen and (min-width : 1050px) 
-   color: #32A1CE
    font-size: 50px
-   padding: 0.2em
-   border: thin solid  #6b787911
-   border-radius: 100px
-   background-color: #6b787911
    margin: 0% 40% 0% 0%
    position: absolute
    left: -5%
@@ -1246,6 +1269,9 @@
   background-color: #94909cef
   margin: 0% 30% 0% 0%
 .scenarisationDroite
+  
+  @media only screen and (min-width : 300px)
+   width: 16em
   @media only screen and (min-width : 800px)
    width: 100%
   @media only screen and (min-width : 1050px)
