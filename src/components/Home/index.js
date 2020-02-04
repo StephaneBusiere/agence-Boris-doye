@@ -23,7 +23,7 @@ import Teaser from 'src/components/Home/TeaserContainer'
 import './home.sass';
 
 let iFrame
-if (window.innerWidth<475) {
+if (window.innerWidth<420) {
 iFrame=<YouTubeVideoResponsive/>
 } else {
 iFrame=<YouTubeVideo/>
@@ -35,7 +35,7 @@ const Home= () => {
  
   return <div>
     <div className="mainVideoContainer">
-    <p className="NomBoris">Boris Doye</p>
+  <h2 className="NomBoris">Boris Doye</h2>
     <Link to="#quisommesnous"> <div className="ensavoirplus">En savoir plus</div></Link>
     
     <div className="iframeHome">

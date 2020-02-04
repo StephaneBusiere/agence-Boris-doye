@@ -5,7 +5,9 @@ import annecyPhoto from 'src/assets/images/Kinaphoto-Photo-gallerie-accueil.jpg'
 import paysagePhoto from 'src/assets/images/Kinaphoto-Photo-Outdoor-Sport-Extreme-Paysage-6.jpg'
 import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 import logoBorisSVG from 'src/assets/images/logoborisNew.svg'
-class YouTubeVideoResponsive extends React.PureComponent {
+
+import './youtubevideoResponsive.sass';
+class YouTubeVideo extends React.PureComponent {
   static propTypes = {
     id: PropTypes.string.isRequired,
   };
@@ -33,12 +35,12 @@ class YouTubeVideoResponsive extends React.PureComponent {
     const { id } = this.props;
     
     this.player = new window.YT.Player(`youtube-player-${id}`, {
-      videoId: 'PEwa4Eehfpk',
+      videoId: 'hTMIc4TD7ds',
       
       
-      height: '400',
-      width: '375',
       
+      width: '100%',
+      height: '100%',
       playerVars:{
       mute:1,
       autoplay:1,
@@ -53,7 +55,7 @@ class YouTubeVideoResponsive extends React.PureComponent {
       
       origin: window.location.origin,
 
-      playlist: 'PEwa4Eehfpk',
+      playlist: 'S5bWQnTUHv8',
   },
       events: {
       onReady: this.onPlayerReady,
@@ -77,7 +79,7 @@ class YouTubeVideoResponsive extends React.PureComponent {
         var remains=YTP.getDuration() - YTP.getCurrentTime();
         background.style.opacity=1;
         title.style.opacity=0;
-        logo.style.opacity=0;
+        logo.style.opacity=1;
         if(this.rewindTO)
                     clearTimeout(this.rewindTO);
                 this.rewindTO=setTimeout(function(){
@@ -92,7 +94,7 @@ class YouTubeVideoResponsive extends React.PureComponent {
     
     var divStyle={
     backgroundImage: `url(${paysagePhoto})`,
-    width: '375px',
+    
     height: '400px',
     backgroundSize: 'cover',
     opacity: '1'
@@ -113,7 +115,7 @@ class YouTubeVideoResponsive extends React.PureComponent {
       <div className="presentationAgenceTitle" ref='Ref2' >REALISATEUR AUDIO-VISUEL</div>
       <object className="logoBorisNoir" ref='Ref3' data={logoBorisSVG}>svg-animation</object>
       <div class="foreground-video" style={backgroundStyle} ref='Ref1'>
-        <div id={`youtube-player-${id}`} >
+        <div id={`youtube-player-${id}`} className="ytplayer2">
       </div>
       </div>
       </div>
@@ -122,5 +124,5 @@ class YouTubeVideoResponsive extends React.PureComponent {
   };
 }
 
-export default YouTubeVideoResponsive;
+export default YouTubeVideo;
 

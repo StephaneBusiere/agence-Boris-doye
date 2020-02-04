@@ -6,7 +6,8 @@ import paysagePhoto from 'src/assets/images/Kinaphoto-Photo-Outdoor-Sport-Extrem
 import logoBorisNoirPetit from 'src/assets/images/LogoBorisNoirPetit.png'
 import logoBorisSVG from 'src/assets/images/logoborisNew.svg'
 
-import './youtubevideo.sass';
+import './youtubevideo2.sass';
+
 class YouTubeVideo extends React.PureComponent {
   static propTypes = {
     id: PropTypes.string.isRequired,
@@ -35,12 +36,12 @@ class YouTubeVideo extends React.PureComponent {
     const { id } = this.props;
     
     this.player = new window.YT.Player(`youtube-player-${id}`, {
-      videoId: 'hTMIc4TD7ds',
+      videoId: 'S5bWQnTUHv8',
       
       
-      
-      width: '100%',
       height: '100%',
+      width: '100%',
+      
       playerVars:{
       mute:1,
       autoplay:1,
@@ -94,7 +95,7 @@ class YouTubeVideo extends React.PureComponent {
     
     var divStyle={
     backgroundImage: `url(${paysagePhoto})`,
-    height: '1010px',
+    height: '70rem',
     backgroundSize: 'cover',
     opacity: '1'
         }
@@ -124,4 +125,3 @@ class YouTubeVideo extends React.PureComponent {
 }
 
 export default YouTubeVideo;
-
