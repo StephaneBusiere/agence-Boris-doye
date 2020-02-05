@@ -63,12 +63,13 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 8% 5% 5%",
+    margin: "0% 0% 5% 1%",
    
     backgroundImage: `url(${showreel})`,
     backgroundSize: "cover",
+    backgroundPosition: 'center',
     display:"inline-block",
-    overflow: 'hidden',
+   
     
 
   }
@@ -78,10 +79,11 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 7%",
+    margin: "0% 5% 0% 2%",
    
     backgroundImage: `url(${queyras})`,
     backgroundSize: "cover",
+    backgroundPosition: 'center',
     display:"inline-block"
 
   }
@@ -90,10 +92,11 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 5%",
+    margin: "0% 0% 0% 0.9%",
    
     backgroundImage: `url(${vietnam})`,
     backgroundSize: "cover",
+    backgroundPosition: 'center',
     display:"inline-bloc"
 
   }
@@ -103,10 +106,11 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 7%",
+    margin: "0% 0% 0% 2%",
    
     backgroundImage: `url(${outdoormix})`,
     backgroundSize: "cover",
+    backgroundPosition: 'center',
     display:"inline-bloc"
 
   }
@@ -116,10 +120,11 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 5%",
+    margin: "0% 0% 0% 1%",
    
     backgroundImage: `url(${fasboa})`,
     backgroundSize: "cover",
+    backgroundPosition: 'center',
     
 
   }
@@ -129,10 +134,11 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 7%",
+    margin: "0% 0% 0% 2%",
    
     backgroundImage: `url(${inde})`,
     backgroundSize: "cover",
+    backgroundPosition: 'center',
     display:"inline-block",
     }
     let sectionStyle8={
