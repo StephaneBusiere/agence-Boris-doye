@@ -43,6 +43,8 @@ class SimpleSlider extends React.Component {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            infinite: true,
+            dots: true
             
           }
         },
@@ -50,7 +52,9 @@ class SimpleSlider extends React.Component {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
           }
         }
       ]
@@ -62,25 +66,25 @@ class SimpleSlider extends React.Component {
       <Slider {...settings}>
         <div>
         <h3 className="vidéo1">
-        <iframe  src="https://player.vimeo.com/video/377802996?autoplay=0&loop=1&title=0&byline=0&portrait=0" width="600" height="600"  frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe  src="https://player.vimeo.com/video/377802996?autoplay=0&loop=1" width="100%" height="100%"  frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
         </h3>
         </div>
         <div>
         <h3 className="vidéo2">
-        <iframe src="https://player.vimeo.com/video/351352450?autoplay=0&loop=1" width="600" height="600" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/351352450?autoplay=0&loop=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </h3>
         </div>
         <div>
-          <h3 className="vidéo3"><iframe src="https://player.vimeo.com/video/318212490?autoplay=0&loop=1&title=0&byline=0&portrait=0" width="600" height="600" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
+          <h3 className="vidéo3"><iframe src="https://player.vimeo.com/video/318212490?autoplay=0&loop=1&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
         </div>
         <div>
-          <h3 className="vidéo4"><iframe src="https://player.vimeo.com/video/317049588?autoplay=0&loop=1" width="600" height="600" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
+          <h3 className="vidéo4"><iframe src="https://player.vimeo.com/video/317049588?autoplay=0&loop=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
         </div>
         <div>
-          <h3 className="vidéo5"><iframe src="https://player.vimeo.com/video/263159851?autoplay=0&loop=1" width="600" height="600" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
+          <h3 className="vidéo5"><iframe src="https://player.vimeo.com/video/263159851?autoplay=0&loop=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
         </div>
         <div>
-          <h3 className="vidéo6"><iframe src="https://player.vimeo.com/video/204153178?autoplay=0&loop=1" width="600" height="600" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
+          <h3 className="vidéo6"><iframe src="https://player.vimeo.com/video/204153178?autoplay=0&loop=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></h3>
         </div>
        
       </Slider>

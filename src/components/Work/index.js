@@ -11,19 +11,26 @@ import bigPictureRealmobile from 'src/assets/images/alpesRealisateurMobile.jpg'
 import vietnam from 'src/assets/images/Vietnam.jpg'
 import fasboa from 'src/assets/images/Fasboa.jpg'
 import inde from 'src/assets/images/Inde.png'
-
+import iconPlay from 'src/assets/images/play-button.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
+import { faPlayCircle as farPlayCircle } from '@fortawesome/fontawesome-free-regular'
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 
 import './styles.sass';
+import './infos.sass';
+import './svg.sass';
 
 const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,onClick15,onClick16,onClick17,onClick18,onClick19,onClick20,onClick21,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On,info2On,info3On,info4On}) => {
   
-  const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={faPlay}/>
-  const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={faPlay}/>
+  const iconPlay1 = <FontAwesomeIcon className="iconPlay1" icon={farPlayCircle}/>
+  const iconPlay2 = <FontAwesomeIcon className="iconPlay2" icon={farPlayCircle}/>
+  const iconPlay3 = <FontAwesomeIcon className="iconPlay3" icon={farPlayCircle}/>
+  const iconPlay4 = <FontAwesomeIcon className="iconPlay4" icon={farPlayCircle}/>
+  const iconPlay5 = <FontAwesomeIcon className="iconPlay5" icon={farPlayCircle}/>
+  const iconPlay6 = <FontAwesomeIcon className="iconPlay6" icon={farPlayCircle}/>
   const cross = <FontAwesomeIcon className="iconCross" icon={faWindowClose}/>
   const cross2 = <FontAwesomeIcon className="iconCross2" icon={faWindowClose}/>
   const cross3 = <FontAwesomeIcon className="iconCross3" icon={faWindowClose}/>
@@ -120,7 +127,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 1%",
+    margin: "0% 0% 0% 1.3%",
    
     backgroundImage: `url(${fasboa})`,
     backgroundSize: "cover",
@@ -134,7 +141,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 2%",
+    margin: "0% 0% 0% 2.4%",
    
     backgroundImage: `url(${inde})`,
     backgroundSize: "cover",
@@ -256,20 +263,26 @@ if (videoShowreellOn) {
     showReellShow = <div className="videoPresentContainer1"><div className="showReelContainer">
     <div  style={sectionStyle2}  >
     <div className="showReelContent">
+    <div className="showReelTitle">
     <p>Show reel</p>
-  
-  <p>Best-off</p>
-  
+    <p>Best-off</p>
+    </div>
   <image onClick={onClick}>{iconPlay1}</image>
   <div className="ensavoirPlus2"onClick={onClick13}>En savoir plus</div>
-    
+  
     </div>
+    
+  
+    
     </div>
     </div>
     <div className="queyrasContainer">
     <div className="queyras" style={sectionStyle3}  >
-    <div className="queyrasContent"><p>Queyras-été</p>
+    <div className="queyrasContent">
+    <div className="queyrasTitle">
+    <p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
+    </div>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
     <div className="ensavoirPlus3" onClick={onClick15}>En savoir plus</div>
     </div>
@@ -305,8 +318,8 @@ if (videoShowreellOn) {
     <div className="vietnamContainer">
     <div className="vietnam" style={sectionStyle4} >
     <div className="vietnamContent"><p>Vietnam</p>
-    <p>Marque de vêtement</p>
-    <image onClick={onClick5}className="iconPlay1">{iconPlay1}</image>
+    <p>Vêtements</p>
+    <image onClick={onClick5} className="iconPlay3">{iconPlay3}</image>
     <div className="ensavoirPlus4"onClick={onClick17}>En savoir plus</div>
     </div>
     </div>
@@ -317,7 +330,7 @@ if (videoShowreellOn) {
     <div className="outdoormix" style={sectionStyle5} >
     <div className="outdoormixContent"><p>Outdoormix</p>
     <p>Festival</p>
-    <image onClick={onClick7} className="iconPlay2">{iconPlay2}</image>
+    <image onClick={onClick7} className="iconPlay4">{iconPlay4}</image>
     <div className="ensavoirPlus5" onClick={onClick19}>En savoir plus</div>
     </div>
     </div>
@@ -347,7 +360,7 @@ if (videoShowreellOn) {
     <div className="fasboa" style={sectionStyle6} >
     <div className="fasboaContent"><p>Fasboa</p>
     <p>Sports Extrêmes</p>
-    <image onClick={onClick9} className="iconPlay2">{iconPlay2}</image>
+    <image onClick={onClick9} className="iconPlay5">{iconPlay5}</image>
     </div>
     </div>
     </div>
@@ -357,7 +370,7 @@ if (videoShowreellOn) {
     <div className="inde" style={sectionStyle7} >
     <div className="indeContent"><p>Inde</p>
     <p>Kayak Extrême</p>
-    <image onClick={onClick11} className="iconPlay2">{iconPlay1}</image>
+    <image onClick={onClick11} className="iconPlay6">{iconPlay6}</image>
     </div>
     </div>
     </div>
@@ -400,14 +413,14 @@ if (videoShowreellOn) {
     <div className="infosContainer">
     <image  onClick={onClick14}>  {cross2} </image>
     <div className="infoShowreelContent"><p className="infoTitleShowReel">Show Reel 2016</p>
-    <p className="infoDescriptionShowReel">Vidéo best-off de promotion de notre travail de l'année</p>
+    <h3 className="infoDescriptionShowReel">Vidéo best-off de promotion de notre travail de l'année</h3>
     <div className="infodescriptionContainer">
     <p className="infoBloc">genre : généraliste</p>
     <p className="infoBloc">durée : 01:51</p>
     <p className="infoBloc">Lieux de tournages : Queyras, Briançon, Embrum, Lac de serre Ponçon, </p>
     <p className="infoBloc">Matériel utilisé : Caméra Sony FS7, drone phamtom 4, Movi M10 </p>
     </div>
-    <p className="infoTexte">Si exhaustive que soit ma production de vidéos, je ne cesse jamais d’apprendre et de m’enrichir de nouvelles expériences dans l’audiovisuel. Chaque projet, chaque personne rencontrée est une source d’inspiration et de progrès dont je ne me lasse pas. J’attends avec impatience de vous rencontrer afin de mettre en commun nos connaissances et construire ensemble une vidéo ou un film qui surpassera tous les autres.</p>
+    <p className="infoTexte">Si exhaustive que soit ma production de vidéos, je ne cesse jamais d’apprendre et de m’enrichir de nouvelles expériences dans l’audiovisuel. Chaque projet, chaque personne rencontrée est une source d’inspiration et de progrès dont je ne me lasse pas. J’attends avec impatience de vous rencontrer afin de mettre en commun nos connaissances.</p>
     </div>
     </div>
     </div>
@@ -460,8 +473,8 @@ if (info3On){
   <div className="vietnamContainer">
     <div className="vietnam" style={sectionStyle4} >
     <div className="vietnamContent"><p>Vietnam</p>
-    <p>Marque de vêtement</p>
-    <image onClick={onClick5} className="iconPlay1">{iconPlay1}</image>
+    <p>Vêtements</p>
+    <image onClick={onClick5} className="iconPlay3">{iconPlay3}</image>
     
     </div>
     </div>
@@ -512,7 +525,7 @@ vietnamShow =
     <div className="outdoormix" style={sectionStyle5} >
     <div className="outdoormixContent"><p>Outdoormix</p>
     <p>Festival</p>
-    <image onClick={onClick7} className="iconPlay2">{iconPlay2}</image>
+    <image onClick={onClick7} className="iconPlay4">{iconPlay4}</image>
     
     </div>
     </div>
@@ -554,9 +567,10 @@ vietnamShow =
   </div>
   
   <div className={videoSliderContainerClass}>
-  <p className="moreVideo">Plus de vidéos</p>
+  <h2 className="moreVideo">Plus de vidéos</h2>
   <SimpleSlider />
   </div>
+  
   </div>
   
   </div>

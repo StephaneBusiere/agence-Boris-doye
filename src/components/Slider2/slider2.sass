@@ -1,25 +1,26 @@
 .slick-slider
  
-  height: 600px
+  display: block !important
   background: #0948611c
   overflow: hidden
   @media only screen and (min-width : 200px)
-   width: 10em
-   font-size: 1.5em
-  
+   width: 100%
+   height: 300px
    
-  @media only screen and (min-width : 375px)
-   width: 15em
+  @media only screen and (min-width : 475px)
+   width: 100%
+   height: 5%
    
   @media only screen and (min-width : 550px)
-   width: 15em
+   width: 100%
    
 
   @media only screen and (min-width : 800px) 
-   width: 13em
+   width: 100%
     
   @media only screen and (min-width : 1050px) 
    width: 100%
+   height: 600px
 
 .slick-arrow.slick-next
     background-color: #083a4e
@@ -27,6 +28,14 @@
     height: 40px
     margin-right: 26px
 .slick-arrow.slick-prev
+  
+  @media only screen and (min-width : 200px)  
+    background-color: #083a4e
+    width: 30px
+    height: 40px
+    margin-left: 25px
+    z-index: 9999
+  @media only screen and (min-width : 1050px)  
     background-color: #083a4e
     width: 30px
     height: 40px
@@ -37,16 +46,82 @@
 .slick-arrow.slick-next:hover
     background-color: #15779e
 .vidéo1
-    margin: 0px 0px 0px 36px
+  @media only screen and (min-width : 200px) 
+    max-width: 100%
+    margin: 0px 0px 0px 0px
+    padding-bottom: 0px
+    height: 300px
+  @media only screen and (min-width : 1050px)  
+    max-width: 100%
+    margin: 0px 0px 0px 45px
+    padding-bottom: 40px
+    height: 630px
    
 
 .vidéo2
-    margin: 0px 0px 0px 18px
-
+  @media only screen and (min-width : 200px)
+    max-width: 100%
+    height: 300px
+    margin: 0px 0px 0px 0px
+    padding-top: 0px
+  @media only screen and (min-width : 1050px)
+    max-width: 93.5%
+    height: 450px
+    margin: 70px 0px 0px 20px
+    padding-top: 0px
+.vidéo3
+  @media only screen and (min-width : 200px)
+    max-width: 100%
+    height: 300px
+    margin: 0px 0px 0px 0px
+    padding-top: 0px
+  @media only screen and (min-width : 1050px)
+    max-width: 100%
+    height: 600px
+    margin: 0px 40px 0px 0px
+    padding-bottom: 5px
 .vidéo4
-    margin: 0px 0px 0px 36px
+  @media only screen and (min-width : 200px)
+    max-width: 100%
+    height: 300px
+    margin: 0px 0px 0px 0px
+    padding-top: 0px
+  @media only screen and (min-width : 1050px)
+    margin: 0px 0px 0px 45px
+    padding-bottom: 40px
+    height: 630px
 .vidéo5
-    margin: 0px 0px 0px 18px
-
+  @media only screen and (min-width : 200px)
+    max-width: 100%
+    height: 300px
+    margin: 0px 0px 0px 0px
+    padding-top: 0px
+  @media only screen and (min-width : 1050px)
+    max-width: 93.5%
+    height: 450px
+    margin: 70px 0px 0px 20px
+    padding-top: 0px
+.vidéo6
+  @media only screen and (min-width : 200px)
+    max-width: 100%
+    height: 300px
+    margin: 0px 0px 0px 0px
+    padding-top: 0px
+  @media only screen and (min-width : 1050px)
+    max-width: 100%
+    height: 600px
+    margin: 0px 40px 0px 0px
+    padding-bottom: 5px
 .slick-dots.li.button
     color: #ee82ee
+.SliderContainer
+ @media only screen and (min-width : 200px)  
+   width: 100% 
+   height: 350px   
+@media only screen and (min-width : 1050px)  
+   width: 100% 
+   height: 700px 
+.SliderContainerOverlay
+   width: 100% 
+   height: 700px
+   margin-top: 200px
