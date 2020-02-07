@@ -22,6 +22,7 @@ import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import './styles.sass';
 import './infos.sass';
 import './svg.sass';
+import './iframes.sass';
 
 const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onClick6,onClick7,onClick8,onClick9,onClick10,onClick11,onClick12,onClick13,onClick14,onClick15,onClick16,onClick17,onClick18,onClick19,onClick20,onClick21,videoQueyrasOn,videoVietnamOn,videoOutdoormixOn, videoFasboaOn,videoIndeOn,response,info1On,info2On,info3On,info4On}) => {
   
@@ -70,7 +71,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 5% 1%",
+    margin: "0% 1% 5% 1.2%",
    
     backgroundImage: `url(${showreel})`,
     backgroundSize: "cover",
@@ -86,7 +87,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 5% 0% 2%",
+    margin: "0% 0% 0% 2%",
    
     backgroundImage: `url(${queyras})`,
     backgroundSize: "cover",
@@ -99,7 +100,7 @@ const Work= ({onClick,videoShowreellOn,onClick2,onClick3,onClick4,onClick5,onCli
     
     width: "100%", 
     height: "100%",
-    margin: "0% 0% 0% 0.9%",
+    margin: "0% 0% 0% 1.2%",
    
     backgroundImage: `url(${vietnam})`,
     backgroundSize: "cover",
@@ -178,7 +179,7 @@ iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&
 
 
   } else {
-    iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="1920" height="800"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    iFrameShowRellRes=<iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=1" width="100%" height="100%"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 }
 
   
@@ -187,7 +188,7 @@ if (window.innerWidth<475) {
   iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="380" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   
     } else {
-      iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="1920" height="800" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      iFrameQueyrasRes=<iframe src="https://player.vimeo.com/video/274647795?autoplay=1&loop=1&transparent=false" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   } 
 if (window.innerWidth<475) {
 
@@ -293,14 +294,14 @@ if (videoShowreellOn) {
   }  else   {
    showReellShow=
     
-    <div className="showReelIframe">{iFrameShowRellRes}
+    <div className="IframeClass">{iFrameShowRellRes}
     <image onClick={onClick2}>  {cross} </image>
     </div> 
     vietnamShow=(<div></div>)
     
   } 
   if (videoQueyrasOn){
-    showReellShow=<div className={queyrasIframeClass}>{iFrameQueyrasRes}
+    showReellShow=<div className="IframeClass">{iFrameQueyrasRes}
     <image onClick={onClick4}>  {cross} </image>
     </div>
     
@@ -317,8 +318,11 @@ if (videoShowreellOn) {
   
     <div className="vietnamContainer">
     <div className="vietnam" style={sectionStyle4} >
-    <div className="vietnamContent"><p>Vietnam</p>
+    <div className="vietnamContent">
+    <div className="vietnamTitle">
+    <p>Vietnam</p>
     <p>Vêtements</p>
+    </div>
     <image onClick={onClick5} className="iconPlay3">{iconPlay3}</image>
     <div className="ensavoirPlus4"onClick={onClick17}>En savoir plus</div>
     </div>
@@ -328,8 +332,11 @@ if (videoShowreellOn) {
     
     <div className="outdoormixContainer">
     <div className="outdoormix" style={sectionStyle5} >
-    <div className="outdoormixContent"><p>Outdoormix</p>
+    <div className="outdoormixContent">
+    <div className="outdoormixTitle">
+    <p>Outdoormix</p>
     <p>Festival</p>
+    </div>
     <image onClick={onClick7} className="iconPlay4">{iconPlay4}</image>
     <div className="ensavoirPlus5" onClick={onClick19}>En savoir plus</div>
     </div>
@@ -358,8 +365,11 @@ if (videoShowreellOn) {
   
     <div className="fasboaContainer">
     <div className="fasboa" style={sectionStyle6} >
-    <div className="fasboaContent"><p>Fasboa</p>
+    <div className="fasboaContent">
+    <div className="fasboaTitle">
+    <p>Fasboa</p>
     <p>Sports Extrêmes</p>
+    </div>
     <image onClick={onClick9} className="iconPlay5">{iconPlay5}</image>
     </div>
     </div>
@@ -368,8 +378,12 @@ if (videoShowreellOn) {
     
     <div className="indeContainer">
     <div className="inde" style={sectionStyle7} >
-    <div className="indeContent"><p>Inde</p>
+    <div className="indeContent">
+    <div className="indeTitle">
+    <p>Inde</p>
     <p>Kayak Extrême</p>
+    </div>
+
     <image onClick={onClick11} className="iconPlay6">{iconPlay6}</image>
     </div>
     </div>
@@ -400,10 +414,10 @@ if (videoShowreellOn) {
     <div className="showReelContainer">
     <div  style={sectionStyle2}  >
     <div className="showReelContent">
+    <div className="showReelTitle">   
     <p>Show reel</p>
-  
-  <p>Best-off</p>
-  
+    <p>Best-off</p>
+  </div> 
   <image onClick={onClick}>{iconPlay1}</image>
   
     
@@ -450,8 +464,11 @@ if (info2On){
   </div>
   <div className="queyrasContainer">
     <div className="queyrasInfos" style={sectionStyle8}  >
-    <div className="queyrasContent"><p>Queyras-été</p>
+    <div className="queyrasContent">
+    <div className="queyrasTitle">
+    <p>Queyras-été</p>
     <p>Office du tourisme du Queyras</p>
+    </div>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
     
     </div>
@@ -472,8 +489,11 @@ if (info3On){
   <div className="videoPresentContainer2">
   <div className="vietnamContainer">
     <div className="vietnam" style={sectionStyle4} >
-    <div className="vietnamContent"><p>Vietnam</p>
+    <div className="vietnamContent">
+    <div className="vietnamTitle">
+    <p>Vietnam</p>
     <p>Vêtements</p>
+    </div>
     <image onClick={onClick5} className="iconPlay3">{iconPlay3}</image>
     
     </div>
@@ -523,8 +543,11 @@ vietnamShow =
 </div>
 <div className="outdoormixContainer">
     <div className="outdoormix" style={sectionStyle5} >
-    <div className="outdoormixContent"><p>Outdoormix</p>
+    <div className="outdoormixContent">
+    <div className="outdoormixTitle">
+    <p>Outdoormix</p>
     <p>Festival</p>
+    </div>
     <image onClick={onClick7} className="iconPlay4">{iconPlay4}</image>
     
     </div>

@@ -150,7 +150,7 @@
   font-weight: 600
   @media only screen and (min-width : 200px)
    opacity: 1
-   font-size: 70px
+   font-size: 50px
    height: 40px
    line-height: 70px
    margin: 0% auto
@@ -175,7 +175,9 @@
   
 .showReelTitle
   @media only screen and (min-width : 200px)
-   margin: 8% auto
+   margin-left: auto
+   margin-right: auto
+   margin-top: 5%
    display: block
    text-align: center
   @media only screen and (min-width : 1370px)
@@ -191,6 +193,45 @@
    margin: 8% auto
    display: block
    text-align: center
+.vietnamTitle
+  @media only screen and (min-width : 200px)
+   margin: 8% auto
+   display: block
+   text-align: center
+  @media only screen and (min-width : 1370px)
+   margin: 8% auto
+   display: block
+   text-align: center
+.outdoormixTitle
+  @media only screen and (min-width : 200px)
+   margin: 8% auto
+   display: block
+   text-align: center
+  @media only screen and (min-width : 1370px)
+   margin: 8% auto
+   display: block
+   text-align: center
+
+.fasboaTitle
+  @media only screen and (min-width : 200px)
+   margin: 8% auto
+   display: block
+   text-align: center
+  @media only screen and (min-width : 1370px)
+   margin: 8% auto
+   display: block
+   text-align: center
+
+.indeTitle
+  @media only screen and (min-width : 200px)
+   margin: 8% auto
+   display: block
+   text-align: center
+  @media only screen and (min-width : 1370px)
+   margin: 8% auto
+   display: block
+   text-align: center
+
 .showReelContainer
   @media only screen and (min-width : 200px) 
    width: 340px
@@ -243,79 +284,32 @@
    margin: 0% 0% 0% 0%
    width: 100% 
    height: 100%
-
-.vp-target.hidden
-  @media only screen and (max-width : 475px)
-   width: 50em
-   height: 50px
-  @media only screen and (min-width : 475px) 
-   width: 100%
-   height: 100%
-
-  
-.showReelIframeContainer
-  @media only screen and (max-width : 475px)
-   width: 50px
-   height: 50px
-  @media only screen and (min-width : 475px) 
-   width: 100%
-   height: 100%
    
-
-.showReelIframe 
-  @media only screen and (max-width : 475px)
-   width: 50px
-   height: 50px
-  @media only screen and (min-width : 475px) 
-   margin: 0% 0% 0% 0%
-   hoverflow: hidden
-   z-index: 900
-   width: 100%
-   height: 700px
-   position: relative  
-
-.queyrasIframe
-  margin: 0% 100px 0% 0%
-  transform: none 
-  z-index: 900
-  hoverflow: hidden
-
-.vietnamIframe
-  margin: 0% 0% 0% 0%
-
-  hoverflow: hidden
-  z-index: 900
-
-.outdoormixIframe
-  margin: 0% 100px 0% 0%
-  transform: none 
-  z-index: 900
-  hoverflow: hidden
-.fasboaIframe
-  margin: 0% 100px 0% 0%
-  transform: none 
-  z-index: 900
-  hoverflow: hidden
-.indeIframe
-  margin: 0% 100px 0% 0%
-  transform: none 
-  z-index: 900
-  hoverflow: hidden
-
- 
 .queyrasContainer
   @media only screen and (min-width : 200px) 
    width: 340px
    height: 300px
-   margin-bottom: 0px
    margin-left: auto
    margin-right: auto
+   margin-bottom: 15px
   @media only screen and (min-width : 475px) 
    max-width: 56rem
    width: 56rem
    height: 600px
    margin-left: 5px
+   margin-right: 55px
+  @media only screen and (min-width : 1440px) 
+   max-width: 56rem
+   width: 56rem
+   height: 600px
+   margin-left: 5px
    margin-right: 50px
+  @media only screen and (min-width : 1681px) 
+   max-width: 56rem
+   width: 56rem
+   height: 600px
+   margin-left: 5px
+   margin-right: 65px
 
 
   
@@ -360,7 +354,7 @@
   
   @media only screen and (min-width : 800px) 
    opacity: 1
-   margin: 20% auto
+   margin: 0% auto
   @media only screen and (min-width : 1050px) 
    opacity: 1
    margin: 6% auto
@@ -380,27 +374,31 @@
   font-family: 'TeXGyreAdventorRegular'
   color: #dd9933
   @media only screen and (min-width : 200px)
-   width: 200px
    opacity: 1
    font-size: 40px
    font-weight: 600
-   
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    line-height: 40px
-   margin: 5% 0% 0% 25%
    padding-top: 2%
   
   @media only screen and (min-width : 800px)
-   width: 300px
    opacity: 1
    font-size: 60px
    font-weight: 600
    height: 10px
    line-height: 60px
-   margin: 0% 0% 0% 15%
-   padding-top: 20%
+   width: 100%
+   margin-left: auto
+   margin-right: auto
+   
   @media only screen and (min-width : 1370px) 
-   width: 300px
    opacity: 0
+   width: 100%
+   margin-left: auto
+   margin-right: auto
+   margin-top: 0%
    font-size: 80px
    font-weight: 600
    height: 30px
@@ -441,17 +439,17 @@
 .vietnamContainer:hover .vietnamContent
   @media only screen and (min-width : 200px)
    opacity: 1
-   margin: 0% 0% 0% 15%
+   margin: 0% auto
    transition: all 0.35s 0.1s linear
   @media only screen and (min-width : 1050px)
    opacity: 1
-   margin: 0% 0% 0% 30%
+   margin: 0% auto
    transition: all 0.35s 0.1s linear
 
  
 .outdoormixContent
   @media only screen and (min-width : 200px)
-   width: 200px
+   
    opacity: 1
    font-family: 'TeXGyreAdventorRegular'
    font-size: 40px
@@ -461,8 +459,12 @@
    color:  #32a1ce
    margin: 0px 0% 0% 24%
    padding-top: 70px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
+   
   @media only screen and (min-width : 600px) 
-   width: 350px
+   
    opacity: 1
    font-family: 'TeXGyreAdventorRegular'
    font-size: 55px
@@ -471,9 +473,14 @@
    line-height: 70px
    color: #32a1ce
    padding-top: 15%
-   margin: 0px 0% 0% 24%
+   width: 100%
+   margin-left: auto
+   margin-right: auto
+   
   @media only screen and (min-width : 1370px) 
-   width: 350px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    opacity: 0
    font-family: 'TeXGyreAdventorRegular'
    font-size: 80px
@@ -488,15 +495,15 @@
 .outdoormixContainer:hover .outdoormixContent
   @media only screen and (min-width : 200px)
    opacity: 1
-   margin: 0% 0% 0% 20%
+   margin: 0% auto
    transition:  0.35s 0.1s 
   @media only screen and (min-width : 800px)
    opacity: 1
-   margin: 0% 0% 0% 24%
+   margin: 0% auto
    transition:  0.35s 0.1s 
   @media only screen and (min-width : 1050px)
    opacity: 1
-   margin: 0% 0% 0% 30%
+   margin: 0% auto
    transition:  0.35s 0.1s 
 
 .outdoormixContainer
@@ -528,7 +535,9 @@
   
 .fasboaContent
   @media only screen and (min-width : 200px)
-   width: 200px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    opacity: 1
    font-family: 'TeXGyreAdventorRegular'
    font-size: 55px
@@ -536,9 +545,10 @@
    height: 10px
    line-height: 40px
    color:  #32a1ce
-   margin: 0% 0% 0% 20%
   @media only screen and (min-width : 600px)
-   width: 300px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    opacity: 1
    font-family: 'TeXGyreAdventorRegular'
    font-size: 55px
@@ -546,10 +556,11 @@
    height: 10px
    line-height: 40px
    color:  #32a1ce
-   margin: 0% 0% 0% 25%
    padding-top: 15%
   @media only screen and (min-width : 1370px) 
-   width: 300px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    opacity: 0
    font-family: 'TeXGyreAdventorRegular'
    font-size: 100px
@@ -557,7 +568,7 @@
    height: 30px
    line-height: 70px
    color: #32a1ce
-   padding-top: 15%
+   padding-top: 10%
    margin-left: 30%
 
  
@@ -594,13 +605,16 @@
    margin-right: 0%
   
 .fasboaContainer:hover .fasboaContent
+  margin: 0 auto
   opacity: 1
   transition: all 0.35s 0.1s linear
   
 
 .indeContent
   @media only screen and (min-width : 200px)
-   width: 200px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    opacity: 1
    font-family: 'TeXGyreAdventorRegular'
    font-size: 40px
@@ -608,9 +622,11 @@
    height: 10px
    line-height: 30px
    color: #dd9933
-   margin: 5% 0% 0% 30%
+   
   @media only screen and (min-width : 600px)
-   width: 300px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    opacity: 1
    font-family: 'TeXGyreAdventorRegular'
    font-size: 55px
@@ -618,9 +634,11 @@
    height: 60px
    line-height: 50px
    color: #dd9933
-   margin: 15% 0% 0% 25%
+  
   @media only screen and (min-width : 1370px) 
-   width: 300px
+   width: 100%
+   margin-left: auto
+   margin-right: auto
    opacity: 0
    font-family: 'TeXGyreAdventorRegular'
    font-size: 100px
@@ -629,7 +647,7 @@
    line-height: 80px
    color: #dd9933
    padding-top: 4%
-   margin-left: 10%
+  
  
 .indeContainer
   @media only screen and (min-width : 200px) 
@@ -659,8 +677,7 @@
    
 .indeContainer:hover .indeContent
   opacity: 1
-  margin: 0% 0% 0% 30%
-  transition:  0.35s 0.1s 
+  margin: 0% auto
   transition: all 0.35s 0.1s linear
 
 
@@ -668,12 +685,20 @@
 
 .ensavoirPlus2
   @media only screen and (min-width : 200px)
-   display: none
+   font-size: 20px 
+   font-family: 'roboto'
+   width: 100%
+   text-align: center
+   color: rgb(221, 128, 51)
+   display: block
+   cursor: pointer
+   text-shadow: black 0.1em 0.1em 0.2em
   
   @media only screen and (min-width : 475px)
    font-size: 20px 
    font-family: 'roboto'
-   margin: 0.5em auto
+   width: 100%
+   text-align: center
    color: rgb(221, 128, 51)
    display: block
    cursor: pointer
@@ -687,103 +712,102 @@
   text-shadow: black 0.1em 0.1em 0.2em
   
 .ensavoirPlus3
+  display: block
+  font-family: 'roboto'
+  color: rgb(221, 128, 51)
+  cursor: pointer
+  text-shadow: black 0.1em 0.1em 0.2em
+  width: 100%
+  text-align: center
+
   @media only screen and (min-width : 200px)
    font-size: 20px 
    font-family: 'roboto'
-   margin: 0em 0em 0em 3em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 0em auto
   
   @media only screen and (min-width : 600px)
    font-size: 20px 
    font-family: 'roboto'
-   margin: 1.2em 0em 0em 4.2em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 1.2em auto
   
   @media only screen and (min-width : 1050px)
    font-size: 20px 
-   font-family: 'roboto'
-   margin: 0em 0em 0em 3em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 0 auto
+   
 
 .ensavoirPlus3:hover
   transform : scale(1.5)
-  margin-left: 6.5rem
+  margin: 0 auto
   color: #BF507B
   text-shadow: black 0.1em 0.1em 0.2em
 
 .ensavoirPlus4
+  display: block
+  font-family: 'roboto'
+  color: rgb(221, 128, 51)
+  cursor: pointer
+  text-shadow: black 0.1em 0.1em 0.2em
+  width: 100%
+  text-align: center
+
   @media only screen and (min-width : 200px)
    font-size: 20px 
    font-family: 'roboto'
-   margin: 0em 0em 0em 3em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 0em auto
   
   @media only screen and (min-width : 600px)
    font-size: 20px 
    font-family: 'roboto'
-   margin: 1.2em 0em 0em 5em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 1.2em auto
   
   @media only screen and (min-width : 1050px)
    font-size: 20px 
-   font-family: 'roboto'
-   margin: 0em 0em 0em 6em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 0 auto
+   
+
 
 
 .ensavoirPlus4:hover
   transform : scale(1.5)
-  margin-left: 8rem
+  margin: 0 auto
   color: #BF507B
   text-shadow: black 0.1em 0.1em 0.2em
   
 .ensavoirPlus5
+  display: block
+  font-family: 'roboto'
+  color: rgb(221, 128, 51)
+  cursor: pointer
+  text-shadow: black 0.1em 0.1em 0.2em
+  width: 100%
+  text-align: center
+
   @media only screen and (min-width : 200px)
    font-size: 20px 
    font-family: 'roboto'
-   margin: 0em 0em 0em 3em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 0em auto
   
   @media only screen and (min-width : 600px)
    font-size: 20px 
    font-family: 'roboto'
-   margin: 1.2em 0em 0em 4.5em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 1.2em auto
   
   @media only screen and (min-width : 1050px)
    font-size: 20px 
-   font-family: 'roboto'
-   margin: 0em 0em 0em 6.5em
-   color: rgb(221, 128, 51)
-   cursor: pointer
-   text-shadow: black 0.1em 0.1em 0.2em
+   margin: 0 auto
+   
+
 .ensavoirPlus5:hover
   @media only screen and (min-width : 200px)
    transform : scale(1.5)
-   margin-left: 6em
+   margin: 0 auto
    color: #BF507B
    text-shadow: black 0.1em 0.1em 0.2em
   
   @media only screen and (min-width : 1050px)
    transform : scale(1.5)
-   margin-left: 11em
-   olor: #BF507B
+   margin: 0 auto
+   color: #BF507B
    text-shadow: black 0.1em 0.1em 0.2em
 
 
