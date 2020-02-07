@@ -282,7 +282,7 @@ if (videoShowreellOn) {
     <div className="queyrasContent">
     <div className="queyrasTitle">
     <p>Queyras-été</p>
-    <p>Office du tourisme du Queyras</p>
+    <p>Office du tourisme</p>
     </div>
     <image onClick={onClick3} className="iconPlay2">{iconPlay2}</image>
     <div className="ensavoirPlus3" onClick={onClick15}>En savoir plus</div>
