@@ -8,63 +8,137 @@
   @media only screen and (min-width : 475px) 
    width: 100%
    height: 550px
-.teamContainer
-  height: 1400px
-  display: flex
-  flex-wrap: wrap
-  background-color: #282828
 
-.teamtitle
-  @media only screen and (max-width : 475px)
-   font-family: 'News Cycle', sans-serif
-   line-height: 25px
-   color: #3b17da9b
-   font-weight: 900
-   letter-spacing: 0.6rem
-   text-transform: uppercase
-   margin: 3% 0% 2% 35%
-   font-size: 1.87em
-   padding-top: 2.5em
-  @media only screen and (min-width : 475px) 
+.teamPresentationContainer
+  overflow: hidden
+  @media only screen and (min-width : 200px) 
+   width: 20rem
+   margin: 0 auto
+  @media only screen and (min-width : 700px) 
+   width: 46rem
+   margin: 0 auto
+   display: flex
+   flex-wrap: wrap
   
-   font-family: 'News Cycle', sans-serif
+  @media only screen and (min-width : 820px) 
+   width: 50rem
+   display: flex
+   flex-wrap: wrap
+   margin: 0 auto
+  @media only screen and (min-width : 1050px) 
+   width: 67rem
+   display: flex
+   flex-wrap: wrap
+   margin: 0 auto
+  @media only screen and (min-width : 1450px) 
+   width: 87rem
+   display: flex
+   flex-wrap: wrap
+   margin: 0 auto
+.teamContainer
+  background-color: #282828
+  @media only screen and (min-width : 200px)
+   height: 1400px
+  @media only screen and (min-width : 720px)
+   height: 700px
+  @media only screen and (min-width : 820px)
+   height: 800px
+  @media only screen and (min-width : 1050px)
+   height: 1000px
+  @media only screen and (min-width : 1450px)
+   height: 1400px
+  
+.teamtitle
+  font-family: 'News Cycle', sans-serif
+  color: #3b17da9b
+  font-weight: 900
+  letter-spacing: 0.6rem
+  text-transform: uppercase
+  text-shadow: white 0.5px 0.5px 0.5px
+
+  @media only screen and (min-width : 200px)
    line-height: 20px
-   color: #3b17da9b
-   font-weight: 900
-   letter-spacing: 0.5rem
-   text-transform: uppercase
-   margin: 3% 0% 2% 40%
+   text-align: center
+   font-size: 2em
+   padding-top: 4em
+  @media only screen and (min-width : 475px)
+   line-height: 20px
+   text-align: center
+   font-size: 4em
+   padding-top: 3.7em
+  @media only screen and (min-width : 1050px) 
+   line-height: 20px
+   text-align: center
    font-size: 4em
    padding-top: 2.5em
 
 .borisContainer
-  width: 40em
-  height: 40em
-  margin-left: 285px
-  margin-top: 48px
+  position: relative
+  @media only screen and (min-width : 200px)
+   width: 20em
+   height: 20em
+   margin-left: 0%
+   margin-top: 20px
+  @media only screen and (min-width : 720px)
+   width: 20em
+   height: 20em
+   margin-left: 5%
+   margin-top: 30px
+   
+  @media only screen and (min-width : 820px)
+   width: 20em
+   height: 20em
+   margin-left: 9%
+   margin-top: 30px
+   
+  @media only screen and (min-width : 1050px)
+   width: 30em
+   height: 25em
+   margin-left: 2.8%
+   margin-top: 48px
+
+  @media only screen and (min-width : 1450px)
+   width: 40em
+   height: 38em
+   margin-left: 2.8%
+   margin-top: 48px
 
 .borisPhoto
-  @media only screen and (max-width : 475px)
+  border: 5px solid white
+  @media only screen and (min-width : 200px)
    width: 20em
-   height: auto
-   margin: 6% 0% 2% 10%
-   border: 5px solid white
-  @media only screen and (min-width : 475px) 
+   height: 20em
+   margin: 4% 0% 0% 0%
+  @media only screen and (min-width : 1050px)
+   width: 30em
+   height: 25em
+   margin: 4% 0% 0% 0%
+  @media only screen and (min-width : 1450px) 
    width: 40em
    height: 35em
    margin: 4% 0% 0% 0%
-   border: 5px solid white
+  
  
 .borisSmallTexteTitle
   color: white
   font-weight: 600
-  font-size: 45px
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 500px
-  top: 680px
   opacity: 0
+  @media only screen and (min-width : 200px)
+   left: 95px
+   top: 25px
+   font-size: 25px
+  @media only screen and (min-width : 1050px)
+   left: 150px
+   top: 60px
+   font-size: 45px
+  @media only screen and (min-width : 1450px) 
+   left: 200px
+   top: 80px
+   font-size: 45px
+   
 .borisContainer:hover .borisSmallTexteTitle 
   opacity: 1
   transition-duration: 0.5s
@@ -91,45 +165,92 @@
 .borisSmallTexteDescription
   color: white
   font-weight: 600
-  font-size: 25px
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 450px
-  top: 740px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 55px
+   top: 50px
+   font-size: 15px
+  @media only screen and (min-width : 1050px)
+   left: 100px
+   top: 110px
+   font-size: 25px
+  @media only screen and (min-width : 1450px) 
+   left: 140px
+   top: 140px
+   font-size: 25px
+   
 .BorisTexteDescrition
   color: white
   font-weight: 600
-  font-size: 15px
   font-family: "texgyreadventorregular"
   line-height: 25.65px
-  width: 450px
   position: absolute
-  left: 385px
-  top: 800px
   border: 2px solid white
-  padding: 15px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 12px
+   top: 75px
+   font-size: 8px
+   width: 300px
+   padding: 4px
+  @media only screen and (min-width : 1050px)
+   left: 15px
+   top: 150px
+   font-size: 10px
+   width: 450px
+   padding: 15px
+  @media only screen and (min-width : 1450px) 
+   left: 90px
+   top: 190px
+   font-size: 15px
+   width: 450px
+   padding: 15px
 
 .hugoContainer
-  width: 40em
-  margin-left: 25px
-  margin-top: 48px 
-  
-.hugoPhoto
-  @media only screen and (max-width : 475px)
+  position: relative
+  @media only screen and (min-width : 200px)
    width: 20em
-   height: auto
-   margin: 6% 0% 2% 10%
-   border: 5px solid white
-  @media only screen and (min-width : 475px) 
+   height: 20em
+   margin-left: 0px
+   margin-top: 20px
+  @media only screen and (min-width : 720px)
+   width: 20em
+   height: 20em
+   margin-left: 10px
+   margin-top: 30px
+  @media only screen and (min-width : 1050px)
+   width: 30em
+   height: 25em
+   margin-left: 25px
+   margin-top: 48px
+  @media only screen and (min-width : 1450px)
+   width: 40em
+   height: 38em
+   margin-left: 25px
+   margin-right: 0%
+   margin-top: 48px 
+.hugoPhoto
+  border: 5px solid white
+  @media only screen and (min-width : 200px)
+   width: 20em
+   height: 20em
+   margin: 4% 0% 2% 0%
+  @media only screen and (min-width : 720px)
+   width: 20em
+   height: 20em
+   margin: 4% 0% 2% 2%
+  @media only screen and (min-width : 1050px) 
+   width: 30em
+   height: 25em
+   margin: 4% 0% 0% 2%
+  @media only screen and (min-width : 1450px) 
    width: 40em
    height: 35em
    margin: 4% 0% 0% 2%
-   border: 5px solid white
+  
 
 .hugoSmallTexteTitle
   color: white
@@ -138,9 +259,22 @@
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 1100px
-  top: 680px
+  left: 150px
+  top: 80px
   opacity: 0
+  @media only screen and (min-width : 200px)
+   left: 70px
+   top: 25px
+   font-size: 25px
+   
+  @media only screen and (min-width : 1050px)
+   left: 80px
+   top: 40px
+   font-size: 45px
+  @media only screen and (min-width : 1450px) 
+   left: 150px
+   top: 80px
+   font-size: 45px
 .hugoContainer:hover .hugoSmallTexteTitle 
   opacity: 1
   transition-duration: 0.5s
@@ -167,14 +301,22 @@
 .hugoSmallTexteDescription
   color: white
   font-weight: 600
-  font-size: 25px
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 1130px
-  top: 740px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 80px
+   top: 50px
+   font-size: 15px
+  @media only screen and (min-width : 1050px)
+   left: 100px
+   top: 110px
+   font-size: 25px
+  @media only screen and (min-width : 1450px) 
+   left: 180px
+   top: 140px
+   font-size: 25px
 .hugoTexteDescrition
   color: white
   font-weight: 600
@@ -183,28 +325,72 @@
   line-height: 25.65px
   width: 450px
   position: absolute
-  left: 1055px
-  top: 800px
   border: 2px solid white
   padding: 15px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 10px
+   top: 70px
+   font-size: 8px
+   width: 300px
+   padding: 4px
+  @media only screen and (min-width : 1050px)
+   left: 30px
+   top: 150px
+   font-size: 10px
+  @media only screen and (min-width : 1450px) 
+   left: 105px
+   top: 200px
+   font-size: 15px 
 .cleoContainer
-  width: 40em
-  margin-left: 190px
-  margin-top: -205px
-
-.cleoPhoto
-  @media only screen and (max-width : 475px)
+  position: relative
+  @media only screen and (min-width : 200px)
    width: 20em
-   height: auto
-   margin: 6% 0% 2% 10%
-   border: 5px solid white
-  @media only screen and (min-width : 475px) 
+   height: 20em
+   margin-left: 0px
+   margin-top: 13px
+  
+  @media only screen and (min-width : 720px)
+   width: 20em
+   height: 20em
+   margin-left: 5px
+   margin-top: 13px
+  
+  @media only screen and (min-width : 820px)
+   width: 20em
+   height: 20em
+   margin-left: 40px
+   margin-top: 13px
+  @media only screen and (min-width : 1050px)
+   width: 30em
+   height: 30em
+   margin-left: 2.8%
+   margin-top: 0px
+  @media only screen and (min-width : 1450px)
+   width: 40em
+   height: 40em
+   margin-left: 2.8%
+   margin-right: 0%
+   margin-top: 0px
+   
+.cleoPhoto
+  border: 5px solid white
+  @media only screen and (min-width : 200px)
+   width: 20em
+   height: 20em
+   margin: 6% 0% 0% 0%
+  @media only screen and (min-width : 720px)
+   width: 20em
+   height: 20em
+   margin: 6% 0% 0% 10%
+  @media only screen and (min-width : 1050px) 
+   width: 30em
+   height: 25em
+   margin: 12% 0% 0% 0%
+  @media only screen and (min-width : 1450px) 
    width: 40em
    height: 35em
-   margin: 2% 0% 0% 15%
-   border: 5px solid white
+   margin: 0% 0% 0% 0%
 .cleoSmallTexteTitle
   color: white
   font-weight: 600
@@ -212,9 +398,17 @@
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 500px
-  top: 1270px
   opacity: 0
+  @media only screen and (min-width : 200px)
+   left: 120px
+   top: 30px
+   font-size: 25px
+  @media only screen and (min-width : 1050px)
+   left: 100px
+   top: 70px
+  @media only screen and (min-width : 1450px) 
+   left: 190px
+   top: 70px
 .cleoContainer:hover .cleoSmallTexteTitle 
   opacity: 1
   transition-duration: 0.5s
@@ -241,56 +435,115 @@
 .cleoSmallTexteDescription
   color: white
   font-weight: 600
-  font-size: 25px
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 520px
-  top: 1320px
+  left: 225px
+  top: 120px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 130px
+   top: 60px
+   font-size: 15px
+  @media only screen and (min-width : 1050px)
+   left: 140px
+   top: 120px
+   font-size: 25px
+  @media only screen and (min-width : 1450px) 
+   left: 225px
+   top: 120px
+   font-size: 25px
 .cleoTexteDescrition
   color: white
   font-weight: 600
-  font-size: 15px
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   width: 450px
   position: absolute
-  left: 385px
-  top: 1380px
   border: 2px solid white
   padding: 15px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 10px
+   top: 100px
+   font-size: 8px
+   width: 300px
+   padding: 4px
+  @media only screen and (min-width : 720px)
+   left: 43px
+   top: 100px
+   font-size: 8px
+   width: 300px
+   padding: 4px
+  @media only screen and (min-width : 1050px)
+   left: 15px
+   top: 180px
+   font-size: 10px
+  @media only screen and (min-width : 1450px) 
+   left: 90px
+   top: 170px
+   font-size: 15px 
 .cleo2Container
-  width: 40em
-  margin-left: 123px
-  margin-top: -205px 
- 
-.cleo2Photo
-  @media only screen and (max-width : 475px)
+  position: relative
+  @media only screen and (min-width : 200px)
    width: 20em
-   height: auto
-   margin: 6% 0% 2% 10%
-   border: 5px solid white
-  @media only screen and (min-width : 475px) 
+   height: 20em
+   margin-left: 0px
+   margin-top: 13px
+  @media only screen and (min-width : 720px)
+   width: 20em
+   height: 20em
+   margin-left: 50px
+   margin-top: 13px
+  @media only screen and (min-width : 1050px)
+   width: 30em
+   height: 30em
+   margin-left: 35px
+   margin-top: 0px
+  @media only screen and (min-width : 1450px)
+   width: 40em
+   height: 40em
+   margin-left: 23px
+   margin-right: 0%
+
+.cleo2Photo
+  border: 5px solid white
+  @media only screen and (min-width : 200px)
+   width: 20em
+   height: 20em
+   margin: 6% 0% 2% 0%
+  @media only screen and (min-width : 720px)
+   width: 20em
+   height: 20em
+   margin: 6% 0% 2% 0%
+  @media only screen and (min-width : 1050px) 
+   width: 30em
+   height: 25em
+   margin: 12% 0% 0% 0.5%
+  @media only screen and (min-width : 1450px) 
    width: 40em
    height: 35em
-   margin: 2% 0% 0% 2%
-   border: 5px solid white
+   margin: 0% 0% 0% 3%
 
 .cleo2SmallTexteTitle
   color: white
   font-weight: 600
-  font-size: 45px
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 1200px
-  top: 1270px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 120px
+   top: 30px
+   font-size: 25px
+  @media only screen and (min-width : 1050px)
+   left: 150px
+   top: 70px
+   font-size: 45px
+  @media only screen and (min-width : 1450px) 
+   left: 230px
+   top: 70px
+   font-size: 45px
 .cleo2Container:hover .cleo2SmallTexteTitle 
   opacity: 1
   transition-duration: 0.5s
@@ -322,10 +575,19 @@
   font-family: "texgyreadventorregular"
   line-height: 25.65px
   position: absolute
-  left: 1200px
-  top: 1320px
   opacity: 0
-
+  @media only screen and (min-width : 200px)
+   left: 110px
+   top: 60px
+   font-size: 15px
+  @media only screen and (min-width : 1050px)
+   left: 140px
+   top: 120px
+   font-size: 25px
+  @media only screen and (min-width : 1450px) 
+   left: 230px
+   top: 120px
+   font-size: 25px
 .cleo2TexteDescrition
   color: white
   font-weight: 600
@@ -334,10 +596,27 @@
   line-height: 25.65px
   width: 450px
   position: absolute
-  left: 1055px
-  top: 1380px
   border: 2px solid white
   padding: 15px
   opacity: 0
+  @media only screen and (min-width : 200px)
+   left: 10px
+   top: 100px
+   font-size: 8px
+   width: 300px
+   padding: 4px
 
-  
+  @media only screen and (min-width : 720px)
+   left: 10px
+   top: 100px
+   font-size: 8px
+   width: 300px
+   padding: 4px
+  @media only screen and (min-width : 1050px)
+   left: 15px
+   top: 180px
+   font-size: 10px
+  @media only screen and (min-width : 1450px) 
+   left: 90px
+   top: 180px
+   font-size: 15px 

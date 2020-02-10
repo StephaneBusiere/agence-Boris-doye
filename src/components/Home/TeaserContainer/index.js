@@ -95,25 +95,7 @@ const Teaser = (
     </div>
     
     </div>
-    <div className="overlayOutdoorContainer">
-    <img className="outdoorPicture" src={indeMini} alt="outdoormix"/>
-    <div className="overlayOutdoorContent">
-    <NavLink
-    exact
-    to="/work"
     
-    activeClassName="nav-link--active"
-  >
-   <div className="video-LinkOutdoor">
-    <h3 className="videoLink-Regarder">regarder</h3>
-   
-    <h3 className="videoLink-Une">une</h3>   
-    <h3 className="videoLink-Video">video</h3> 
-    </div>
-    </NavLink>
-    </div>
-    
-    </div>
     
     </div>
     </div>

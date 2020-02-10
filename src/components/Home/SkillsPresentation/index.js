@@ -2,6 +2,7 @@ import { Parallax, Background } from 'react-parallax'
 
 
 import iconCamera from 'src/assets/images/iconCamera.png'
+import logoCamera from 'src/assets/images/logoCamera.svg'
 import photoCadrage from 'src/assets/images/photoCadrage.jpg'
 import photoDrone from 'src/assets/images/pilotageDrone.jpg'
 import BorisBureau from 'src/assets/images/borisBureau.jpg'
@@ -22,6 +23,7 @@ import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
 import { faCameraRetro} from '@fortawesome/free-solid-svg-icons'
 
 import './skillsPresentation.sass'
+import './iframeBack.sass'
 
 const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     const iconCalendar = <FontAwesomeIcon className="iconCalendar" icon={faCalendarAlt}/>
@@ -39,9 +41,15 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     
     
  <div className="competences">
-    
-    <h2 className="competencesTitle">Savoir faire</h2>
-    <img className="iconCamera" src={iconCamera} alt="iconCamera"/>
+    <div className="videoBanner">
+    <div className="textVideoContainer">
+    <iframe className="iframeBackground" src="https://player.vimeo.com/video/273483414?autoplay=1&loop=1&background=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <h2 className="competencesTitle">SAVOIR FAIRE</h2>
+    </div>
+    </div>
+    <div className="iconCameraContainer">
+    <img className="iconCamera" src={logoCamera} alt="iconCamera"/>
+    </div>
    
    <Parallax 
    

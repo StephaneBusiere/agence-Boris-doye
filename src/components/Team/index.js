@@ -14,6 +14,7 @@ const Team= () => {
    
     backgroundImage: `url(${teamDauphins})`,
     backgroundSize: 'cover',
+    backgroundposition: 'center',
     overflow: 'hidden',
     
   }
@@ -29,6 +30,7 @@ const Team= () => {
      
      
      <div className="teamContainer">
+    <div className="teamPresentationContainer">
     
     <div className="borisContainer">
      <img className="borisPhoto" src={borisBureau} />
@@ -53,6 +55,7 @@ const Team= () => {
      <img className="hugoPhoto" src={hugo } />
      
      </div>
+     
      <div className="cleoContainer">
      <p className="cleoSmallTexteTitle">
      Cleo Lhote</p>
@@ -60,7 +63,7 @@ const Team= () => {
      <p className="cleoTexteDescrition">Hugo fait des films comme un artisan où chaque objet, chaque film est unique.
      Hugo est investi dans tout le processus de création et de production. Aujourd'hui, en parallèle de travailler pour le secteur du documentaire il réalise ses propres projets et fusionne sa passion pour la production avec celle pour le kayak et l'aventure.
      
-     Le collectif vidéo « We are Hungry » est composé des kayakistes français : Stéphane Pion, Mathieu Coldebella, Louis Hétier, Guillaume Fievez et Hugo Clouzeau. Ils aiment mettre en image lerus virées kayak.Plus que jamais sur ce type de rivière il faut coopérer, communiquer, se faire confiance et bien se connaître pour éviter l’accident.</p>
+     Le collectif vidéo « We are Hungry » est composé des kayakistes français : Stéphane Pion, Mathieu Coldebella, Louis Hétier, Guillaume Fievez et Hugo Clouzeau. Ils aiment mettre en image lerus virées kayak.</p>
      
      <img className="cleoPhoto" src={cleo} />
      </div>
@@ -72,12 +75,14 @@ const Team= () => {
      <p className="cleo2TexteDescrition">Hugo fait des films comme un artisan où chaque objet, chaque film est unique.
      Hugo est investi dans tout le processus de création et de production. Aujourd'hui, en parallèle de travailler pour le secteur du documentaire il réalise ses propres projets et fusionne sa passion pour la production avec celle pour le kayak et l'aventure.
      
-     Le collectif vidéo « We are Hungry » est composé des kayakistes français : Stéphane Pion, Mathieu Coldebella, Louis Hétier, Guillaume Fievez et Hugo Clouzeau. Ils aiment mettre en image lerus virées kayak.Plus que jamais sur ce type de rivière il faut coopérer, communiquer, se faire confiance et bien se connaître pour éviter l’accident.</p>
+     Le collectif vidéo « We are Hungry » est composé des kayakistes français : Stéphane Pion, Mathieu Coldebella, Louis Hétier, Guillaume Fievez et Hugo Clouzeau. Ils aiment mettre en image lerus virées kayak.</p>
      
      <img className="cleo2Photo" src={cleo} />
      
      </div>
      </div>
+     </div>
+     
      </div>
      
      
