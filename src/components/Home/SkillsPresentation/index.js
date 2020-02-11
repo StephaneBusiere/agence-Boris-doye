@@ -24,6 +24,7 @@ import { faCameraRetro} from '@fortawesome/free-solid-svg-icons'
 
 import './skillsPresentation.sass'
 import './iframeBack.sass'
+import './svgSkills.sass'
 
 const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     const iconCalendar = <FontAwesomeIcon className="iconCalendar" icon={faCalendarAlt}/>
@@ -36,16 +37,21 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     const iconSocial = <FontAwesomeIcon className="iconSocial" icon={ faThumbsUp}/>
     const iconPhoto = <FontAwesomeIcon className="iconPhoto" icon={faCameraRetro}/>
   
-  
+    let iFrame
+    if (window.innerWidth<1050) {
+    iFrame=<iframe className="iframeSkills" src="https://player.vimeo.com/video/363516014?autoplay=1&loop=1&background=1" width="340" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    } else {
+    iFrame=<iframe className="iframeSkills" src="https://player.vimeo.com/video/363516014?autoplay=1&loop=1&background=1" width="640" height="800" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    }
   const Skills = (
     
     
  <div className="competences">
     <div className="videoBanner">
-    <div className="textVideoContainer">
+    
     <iframe className="iframeBackground" src="https://player.vimeo.com/video/273483414?autoplay=1&loop=1&background=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     <h2 className="competencesTitle">SAVOIR FAIRE</h2>
-    </div>
+    
     </div>
     <div className="iconCameraContainer">
     <img className="iconCamera" src={logoCamera} alt="iconCamera"/>
@@ -109,7 +115,7 @@ const iconPen = <FontAwesomeIcon className="iconPen" icon={faPencilAlt}/>
     </div>
     </div>
     <div className="videoSkillsContainer">
-    <iframe  src="https://player.vimeo.com/video/198345088?loop=1&autoplay=0" width="100%" height="100%"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    {iFrame}
 
     </div>
     
